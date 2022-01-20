@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&display=swap');
+
+.font_bold{
+    font-family: 'Heebo', sans-serif;
+    font-weight: bold;
+}
+.font_orange{
+    color: darken($orange_dark, 20);
+}

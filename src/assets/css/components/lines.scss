@@ -1,0 +1,58 @@
+.odds-span,
+.date-hour-span,
+.odds-spanTeam,
+.odds-span-box {
+    width: 8.5%;
+    min-width: 75px;
+    float: left;
+    padding: 5px 0;
+}
+
+.odds-spanTeam {
+    width: 15%;
+}
+
+.odds-span-box {
+    width: 12.5%;
+}
+
+.odds-span-box-nascar {
+    width: 11.1%;
+}
+
+.lines {
+    &:hover {
+        background: lighten($orange,  19);
+        color: $white;
+    }
+}
+
+.date-hour-span {
+    width: 18%;
+    min-width: 150px;
+}
+
+.odds-list {
+    min-width: 1420px;
+}
+
+.bb1px {
+    border-bottom: 1px solid rgba($grey, .20);
+}
+
+.bg_lines {
+    background: $orange;
+}
+
+.overflowX_scroll {
+    overflow-x: scroll;
+}
+
+.img_logo {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.eight_spans {
+    width: 12.5%;
+}

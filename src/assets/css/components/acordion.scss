@@ -1,0 +1,43 @@
+.accordion-button:not(.collapsed) {
+    color: $white;
+    background-color:$orange;
+}
+#football_acordion,#basket_acordion,#baseball_acordion,#marcial_acordion{
+    .accordion-button:not(.collapsed) {
+        color: $white;
+        background-color:$orange_light;
+    }
+}
+#second_nfl,#second_ncaa,#second_nba,#second_ncaa_basket,#second_mlb,#second_ncaa_baseball,#second_hockey,#second_golf,#second_racing,#second_box,#second_mma,#second_soccer{
+    .accordion-button:not(.collapsed) {
+        color: $white;
+        background-color:lighten($orange_light, 15);
+    }
+}
+
+.accordion-item:first-of-type .accordion-button {
+    border-top-left-radius: 0; 
+    border-top-right-radius: 0; 
+}
+.accordion-item:first-of-type {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.accordion-item:last-of-type .accordion-button.collapsed {
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:0;
+}
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(-90deg);
+}
+.accordion-button:focus {
+    z-index: 3;
+    border-color:none;
+    outline: 0;
+    box-shadow: none;
+}
+.accordion-item {
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid $grey;
+}
