@@ -6,7 +6,6 @@ import { Context } from "../store/appContext";
 import AOS from "aos";
 import "../../node_modules/aos/dist/aos.css";
 /*componentes*/
-import { Header } from "../components/header";
 //acordion
 import { Tabs } from "../acordion/tabs";
 import { Items } from "../acordion/items"
@@ -20,7 +19,6 @@ function Home(){
 	}, []);
 	return (
 		<div className="container-fluid p-0 ">
-			<Header/>
 			<div className="row g-0 bg_grey"  id="accordion_general">
 				<div className="col-lg-3">
 					<div className="col-12 bg_orange_dark text-white p-0 py-3 ps-5 fs-5 d-flex align-items-center">

@@ -9,6 +9,7 @@ import { Nf2_1half } from "../../../display_lines/nfl/nfl_2half";
 import { Results_Nfl } from "../../../display_lines/nfl/results_nfl";
 import { Nfl_Props } from "../../../display_lines/nfl/nfl_props";
 import { Nfl_Team_stats } from "../../../display_lines/nfl/nfl_team_stats";
+import PY_STATS from "../../../display_lines/nfl/py_stats";
 
 export const NFL_ITEMS = () => {
     return (
@@ -51,12 +52,7 @@ export const NFL_ITEMS = () => {
                 <Nfl_Team_stats/>
             </div>
             <div id="player_stats_nfl" className="accordion-collapse collapse" aria-labelledby="player_stats_nfl" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    PLAYER STATS NFL
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
+                <PY_STATS/>
             </div>
             <div id="alarms_nfl" className="accordion-collapse collapse" aria-labelledby="alarms_nfl" data-bs-parent="#items_tab_master">
                 <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">

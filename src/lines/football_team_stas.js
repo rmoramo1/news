@@ -1,10 +1,37 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
+import { Context } from "../store/appContext";
 
 export const Football_Team_Stats = props => {
+    const { store } = useContext(Context);
     return (
         <div>
-            <div className="col-12 text-center fs-2 text-decoration-underline font_orange">{props.team}</div>
+            <div className="col-12 fs-2 team_stats">
+                <div className="row g-0">
+                    <div className="col-6 pe-2 d-flex align-items-center justify-content-end">
+                        {props.team}
+
+                    </div>
+                    <div className="col-6">
+                        {
+                            store.logos_nfl.map((item, index) => {
+                                let url_aw = "";
+                                if (item.team == props.team) {
+                                    url_aw = item.url;
+                                    return (
+                                        <div>
+                                            <img className="img_logo" src={url_aw} alt="logo"></img>
+                                        </div>
+                                    )
+                                }
+                            })
+                        }
+                    </div>
+                </div>
+
+
+
+            </div>
             <div className="col fs-3 py-3">Scoring</div>
             <div className="row g-0 bg_lines text-white text-center">
                 <div className="col-4">Total Points Per Game</div>
