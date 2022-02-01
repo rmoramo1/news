@@ -32,6 +32,8 @@ export const Results_Nfl = () => {
     const [month, setmonth] = useState(monthShow);
     const [week, setweek] = useState(dateShow);
     
+    let R_date = year+"-"+month+"-"+week;
+    
     let selectYear = [];
     for (let i = 2002; i < 2025; i++) {
         selectYear.push(i);
@@ -58,7 +60,7 @@ export const Results_Nfl = () => {
         <div className="col-12" id="sports">
             <div className="title_sport bg_orange_dark text-white p-lg-1 fs-5 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-4">NFL 1ST H</div>
+                    <div className="col-lg-4">Results NFL</div>
                     <div className="col-lg-8">
                     <div className="row g-0">
                             <div className="col-2 text-center">Year</div>
@@ -75,7 +77,7 @@ export const Results_Nfl = () => {
                             </div>
                             <div className="col-2 text-center">Month</div>
                             <div className="col-lg-2 d-flex align-items-center">
-                                <select className="form-select" name="month" aria-label="Default select example" defaultValue={monthLux} onChange={e => setmonth(e.target.value)} required>
+                                <select className="form-select" name="month" aria-label="Default select example" defaultValue={month} onChange={e => setmonth(e.target.value)} required>
                                     {
                                         selectMonth.map((index) => {
                                             return (
@@ -106,7 +108,7 @@ export const Results_Nfl = () => {
                     <div className="row g-0">
                         {
                             store.nfl.map((item, index) => {
-                                if (item.date.includes(year) && item.date.includes(month) && item.date.includes(week)) {
+                                if (item.date == R_date) {
                                     let url_aw="";
                                     let url_hm="";
                                     store.logos_nfl.map((item2)=>{
@@ -128,8 +130,8 @@ export const Results_Nfl = () => {
                                                 away={item.away}
                                                 home={item.home}
                                                 date={item.date}
-                                                final_score_away={item.first_half_final_score_away}
-                                                final_score_home={item.first_half_final_score_home}
+                                                final_score_away={item.final_score_away}
+                                                final_score_home={item.final_score_home}
                                             />
                                         </div>
                                     );

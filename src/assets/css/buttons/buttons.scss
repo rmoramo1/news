@@ -1,0 +1,8 @@
+.btn_gradient{
+    background:$btn_gradient;
+    color:$white;
+    &:hover{
+    color:$white;
+        background: $btn_gradient_reverse;
+    }
+}

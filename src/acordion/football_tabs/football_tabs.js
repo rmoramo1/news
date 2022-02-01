@@ -8,7 +8,7 @@ export const Football_Tabs = () => {
         <div className="accordion" id="football_acordion">
             <div className="accordion-item">
                 <h2 className="accordion-header" id="nfl_tabs">
-                    <button className="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#nfl_ac" aria-expanded="true" aria-controls="nfl_ac">
+                    <button className="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#nfl_ac" aria-expanded="true" aria-controls="nfl_ac">
                         NFL
                     </button>
                 </h2>
@@ -19,7 +19,7 @@ export const Football_Tabs = () => {
             </div>
             <div className="accordion-item">
                 <h2 className="accordion-header" id="ncaa_tabs">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ncaa" aria-expanded="false" aria-controls="ncaa">
+                    <button className="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#ncaa" aria-expanded="false" aria-controls="ncaa">
                         NCAA FOOTBALL
                     </button>
                 </h2>

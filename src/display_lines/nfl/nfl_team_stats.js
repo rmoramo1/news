@@ -46,7 +46,6 @@ export const Nfl_Team_stats = () => {
                                 </select>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

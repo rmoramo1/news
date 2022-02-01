@@ -6,3 +6,7 @@ $orange_dark:#CF5225;
 $orange_light:#F59720;
 $grey:#5E5E5E;
 $text:#232942;
+/*GRADIENTES*/
+$orange_to_white: linear-gradient(135deg, $black 0%,$orange_dark 70%);
+$btn_gradient: linear-gradient(to bottom, $orange 0%, darken($orange_dark,20) 70%);
+$btn_gradient_reverse: linear-gradient(to bottom, darken($orange_dark,20) 0%, $orange 70%);

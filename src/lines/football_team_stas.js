@@ -6,11 +6,10 @@ export const Football_Team_Stats = props => {
     const { store } = useContext(Context);
     return (
         <div>
-            <div className="col-12 fs-2 team_stats">
+            <div className="col-12 fs-5 team_stats">
                 <div className="row g-0">
                     <div className="col-6 pe-2 d-flex align-items-center justify-content-end">
                         {props.team}
-
                     </div>
                     <div className="col-6">
                         {
@@ -28,11 +27,8 @@ export const Football_Team_Stats = props => {
                         }
                     </div>
                 </div>
-
-
-
             </div>
-            <div className="col fs-3 py-3">Scoring</div>
+            <div className="col fs-5 py-3">Scoring</div>
             <div className="row g-0 bg_lines text-white text-center">
                 <div className="col-4">Total Points Per Game</div>
                 <div className="col-4">Total Points</div>
@@ -43,7 +39,7 @@ export const Football_Team_Stats = props => {
                 <div className="col-4 bb1px lines">{props.TP}</div>
                 <div className="col-4 bb1px lines">{props.t_td}</div>
             </div>
-            <div className="col fs-3 py-3">1ST DOWNS</div>
+            <div className="col fs-5 py-3">1ST DOWNS</div>
             <div className="row g-0 bg_lines text-white text-center">
                 <div className="eight_spans">T 1st D</div>
                 <div className="eight_spans">R 1st D</div>
@@ -64,7 +60,7 @@ export const Football_Team_Stats = props => {
                 <div className="eight_spans bb1px lines">{props.down_4_eff}</div>
                 <div className="eight_spans bb1px lines">{props.down_4_AVG}</div>
             </div>
-            <div className="col fs-3 py-3">PASSING</div>
+            <div className="col fs-5 py-3">PASSING</div>
             <div className="row g-0 text-white text-center">
                 <div className="eight_spans bg_lines">Comp-Att</div>
                 <div className="eight_spans bg_lines">NP Y</div>
@@ -83,7 +79,7 @@ export const Football_Team_Stats = props => {
                 <div className="eight_spans bb1px lines">{props.int_t}</div>
                 <div className="eight_spans bb1px lines">{props.sacks_y_lost}</div>
             </div>
-            <div className="col fs-3 py-3">RUSHING</div>
+            <div className="col fs-5 py-3">RUSHING</div>
             <div className="row g-0 text-white text-center">
                 <div className="col-2 bg_lines">RA</div>
                 <div className="col-2 bg_lines">RY</div>
@@ -98,7 +94,7 @@ export const Football_Team_Stats = props => {
                 <div className="col-2 bb1px lines">{props.russ_y_pg}</div>
                 <div className="col-2 bb1px lines">{props.russ_td}</div>
             </div>
-            <div className="col fs-3 py-3">OFFENSE</div>
+            <div className="col fs-5 py-3">OFFENSE</div>
             <div className="row g-0 text-white text-center">
                 <div className="col-2 bg_lines">TO P</div>
                 <div className="col-2 bg_lines">TY</div>
@@ -109,7 +105,7 @@ export const Football_Team_Stats = props => {
                 <div className="col-2 bb1px lines">{props.total_y}</div>
                 <div className="col-2 bb1px lines">{props.y_pg}</div>
             </div>
-            <div className="col fs-3 py-3">RETURNS</div>
+            <div className="col fs-5 py-3">RETURNS</div>
             <div className="row g-0 bg_lines text-white text-center">
                 <div className="col-2">KT</div>
                 <div className="col-2">AVGK R Y</div>
@@ -126,7 +122,7 @@ export const Football_Team_Stats = props => {
                 <div className="col-2 bb1px lines">{props.int_t}</div>
                 <div className="col-2 bb1px lines">{props.AVG_intercept_y}</div>
             </div>
-            <div className="col fs-3 py-3">KICKING</div>
+            <div className="col fs-5 py-3">KICKING</div>
             <div className="row g-0 text-white text-center">
                 <div className="col-2 bg_lines">N AVG PY</div>
                 <div className="col-2 bg_lines">Punt TY</div>
@@ -141,7 +137,7 @@ export const Football_Team_Stats = props => {
             </div>
             <div className="row g-0">
                 <div className="col-lg-4 p-1">
-                    <div className="col fs-3 py-3">PENALTIES</div>
+                    <div className="col fs-5 py-3">PENALTIES</div>
                     <div className="row g-0 bg_lines text-white text-center">
                         <div className="col-6">Total-Yards</div>
                         <div className="col-6">Avg. Per Game (YDS)</div>
@@ -152,7 +148,7 @@ export const Football_Team_Stats = props => {
                     </div>
                 </div>
                 <div className="col-lg-4 p-1">
-                    <div className="col fs-3 py-3">TIME OF POSSESSION</div>
+                    <div className="col fs-5 py-3">TIME OF POSSESSION</div>
                     <div className="row g-0 bg_lines text-white text-center">
                         <div className="col-12">Possession Time Seconds</div>
                     </div>
@@ -161,7 +157,7 @@ export const Football_Team_Stats = props => {
                     </div>
                 </div>
                 <div className="col-lg-4 p-1 pb-5">
-                    <div className="col fs-3 py-3">MISCELLANEOUS</div>
+                    <div className="col fs-5 py-3">MISCELLANEOUS</div>
                     <div className="row g-0 bg_lines text-white text-center">
                         <div className="col-6">Fumbles-Lost</div>
                         <div className="col-6">Turnover Ratio</div>

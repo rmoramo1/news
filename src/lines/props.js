@@ -33,4 +33,5 @@ Props.propTypes = {
     line: PropTypes.string,
     feature: PropTypes.string,
     type_prop: PropTypes.string,
+    date: PropTypes.string,
 };

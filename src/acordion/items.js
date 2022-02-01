@@ -19,6 +19,8 @@ import { MMA_ITEMS } from "./marcial_arts_tabs/mma_tabs/mma_items";
 
 import { SOCCER_ITEMS } from "./soccer_tabs/soccer_items";
 
+import { Globals_Tabs } from "./globals_tabs/globals._tabs";
+
 export const Items = () => {
     return (
         <div id="items_tab_master">
@@ -34,6 +36,7 @@ export const Items = () => {
             <BOX_ITEMS/>
             <MMA_ITEMS/>
             <SOCCER_ITEMS/>
+            <Globals_Tabs/>
         </div>
     )
 }

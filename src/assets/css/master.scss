@@ -24,3 +24,17 @@ body {
 .border_top{
   border-top: 3px groove $orange;
 }
+.chart{
+  width: 11.3%;
+}
+@media only screen and (max-width: 600px) {
+  .chart{
+    width: 100%;
+  }
+}
+.modal-content{
+  z-index: 1236;
+}
+.modal-backdrop{
+  display: none;
+}

@@ -27,6 +27,7 @@ export const Nfl_Four_q = () => {
     const [year, setyear] = useState(yearLux);
     const [month, setmonth] = useState(monthShow);
     const [week, setweek] = useState(dateShow);
+    let R_date = year+"-"+month+"-"+week;
     
     let selectYear = [];
     for (let i = 2002; i < 2025; i++) {
@@ -72,7 +73,7 @@ export const Nfl_Four_q = () => {
                             </div>
                             <div className="col-2 text-center">Month</div>
                             <div className="col-lg-2 d-flex align-items-center">
-                                <select className="form-select" name="month" aria-label="Default select example" defaultValue={monthLux} onChange={e => setmonth(e.target.value)} required>
+                                <select className="form-select" name="month" aria-label="Default select example" defaultValue={month} onChange={e => setmonth(e.target.value)} required>
                                     {
                                         selectMonth.map((index) => {
                                             return (
@@ -101,7 +102,7 @@ export const Nfl_Four_q = () => {
             <div className="accordion-item">
                 <div className="accordion-collapse collapse show" id="nflCollapse" data-bs-parent="#sports">
                     {store.nfl.map((item, index) => {
-                        if (item.date.includes(year) && item.date.includes(month) && item.date.includes(week)) {
+                        if (item.date == R_date) {
                             return (
                                 <div key={index}>
                                     <Four_q

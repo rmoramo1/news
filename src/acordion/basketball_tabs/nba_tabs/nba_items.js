@@ -1,63 +1,45 @@
 import React from "react";
 
+import { Nba_Games } from "../../../display_lines/nba/nba_games";
+import { NBA_one_q } from "../../../display_lines/nba/nba_one_q";
+import { NBA_1half } from "../../../display_lines/nba/nba_1half";
+import { NBA_2half } from "../../../display_lines/nba/nba_2half";
+import { NBA_Two_q } from "../../../display_lines/nba/nba_two_q";
+import { NBA_Thre_q } from "../../../display_lines/nba/nba_thre";
+import { NBA_Four_q } from "../../../display_lines/nba/nba_four_q";
+import { Futures_NBA } from "../../../display_lines/nba/future_nba";
+import { NBA_Team_stats_display } from "../../../display_lines/nba/nba_team_stats";
+
+import { Results_NBA } from "../../../display_lines/nba/results_nba";
 export const NBA_ITEMS = () => {
     return (
         <div className="col">
-            <div id="nba_1stq" className="accordion-collapse collapse" aria-labelledby="nba_1stq_ac" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    1ST Q NBA
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
+            <div id="nba_games" className="accordion-collapse collapse" aria-labelledby="nba_games" data-bs-parent="#items_tab_master">
+                <Nba_Games />
             </div>
-            <div id="QUARTERS_NBA" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    QUARTERS NBA
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
+            <div id="nba_1stq" className="accordion-collapse collapse" aria-labelledby="nba_1stq_ac" data-bs-parent="#items_tab_master">
+                <NBA_one_q />
+            </div>
+            <div id="secondQNBA" className="accordion-collapse collapse" aria-labelledby="secondQNBA" data-bs-parent="#items_tab_master">
+                <NBA_Two_q />
+            </div>
+            <div id="threeQNBA" className="accordion-collapse collapse" aria-labelledby="threeQNBA" data-bs-parent="#items_tab_master">
+                <NBA_Thre_q />
+            </div>
+            <div id="fourQNBA" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#items_tab_master">
+                <NBA_Four_q/>
             </div>
             <div id="nba1st_H" className="accordion-collapse collapse" aria-labelledby="nba_1stH_ac" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    1ST H NBA
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
+                <NBA_1half />
             </div>
             <div id="nba2st_H" className="accordion-collapse collapse" aria-labelledby="nba_2stH_ac" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    2ST H NBA
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
+                <NBA_2half />
             </div>
-            <div id="props_nba" className="accordion-collapse collapse" aria-labelledby="props_nba" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    PROPS NBA
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
-            </div>
-            <div id="features_nba" className="accordion-collapse collapse" aria-labelledby="features_nba" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    FEATURES NBA
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
+            <div id="features_nba" className="accordion-collapse collapse" aria-labelledby="features_nba" data-bs-parent="#items_tab_master">   
+                <Futures_NBA/>
             </div>
             <div id="team_stats_nba" className="accordion-collapse collapse" aria-labelledby="team_stats_nba" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    TEAM STANDINGS NBA
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
+                <NBA_Team_stats_display/>
             </div>
             <div id="player_stats_nba" className="accordion-collapse collapse" aria-labelledby="player_stats_nba" data-bs-parent="#items_tab_master">
                 <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
@@ -76,12 +58,7 @@ export const NBA_ITEMS = () => {
                 </div>
             </div>
             <div id="results_nba" className="accordion-collapse collapse" aria-labelledby="results_nba" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    RESULTS NBA
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
+                <Results_NBA/>
             </div>
         </div>
     )

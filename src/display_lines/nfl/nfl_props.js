@@ -19,7 +19,7 @@ export const Nfl_Props = () => {
         <div className="col-12" id="sports">
             <div className="title_sport bg_orange_dark text-white ps-lg-5 fs-1 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-4">NFL Props</div>
+                    <div className="col-lg-4">Props</div>
                     <div className="col-lg-8">
                         <div className="row g-0">
                             <div className="col-3 text-center">Sport</div>
@@ -43,7 +43,7 @@ export const Nfl_Props = () => {
                 <div className="accordion-collapse collapse show" id="nflCollapse" data-bs-parent="#sports">
                     <div className="row g-0">
                         {
-                            store.nfl_props.map((item, index) => {
+                            store.props.map((item, index) => {
                                 if (item.sport == sport) {
                                     return (
                                         <div className="col p-2" key={index}>

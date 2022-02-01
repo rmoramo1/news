@@ -10,6 +10,7 @@ import { Results_Nfl } from "../../../display_lines/nfl/results_nfl";
 import { Nfl_Props } from "../../../display_lines/nfl/nfl_props";
 import { Nfl_Team_stats } from "../../../display_lines/nfl/nfl_team_stats";
 import PY_STATS from "../../../display_lines/nfl/py_stats";
+import { Futures_Nfl } from "../../../display_lines/nfl/future_nfl";
 
 export const NFL_ITEMS = () => {
     return (
@@ -41,12 +42,7 @@ export const NFL_ITEMS = () => {
                 <Nfl_Props/>
             </div>
             <div id="features_nfl" className="accordion-collapse collapse" aria-labelledby="features_nfl" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    FEATURES NFL
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
+                <Futures_Nfl/>
             </div>
             <div id="team_stats_nfl" className="accordion-collapse collapse" aria-labelledby="team_stats_nfl" data-bs-parent="#items_tab_master">
                 <Nfl_Team_stats/>

@@ -20,13 +20,15 @@ function Home(){
 	return (
 		<div className="container-fluid p-0 ">
 			<div className="row g-0 bg_grey"  id="accordion_general">
-				<div className="col-lg-3">
+				<div className="col-lg-2">
 					<div className="col-12 bg_orange_dark text-white p-0 py-3 ps-5 fs-5 d-flex align-items-center">
 						Sports
 					</div>
-					<Tabs/>
+					<div className="sticky-top">
+						<Tabs/>
+					</div>
 				</div>
-				<div className="col-lg-9 p-1 ">
+				<div className="col-lg-10 p-1 ">
 					<div className="col-12 bg-white sticky-top">
 						<Items/>
 					</div> 

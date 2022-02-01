@@ -48,7 +48,6 @@ export const Nfl_Tabs = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
             <div className="accordion-item">
                 <h2 className="accordion-header" id="nfl_1stH_ac">
@@ -65,16 +64,9 @@ export const Nfl_Tabs = () => {
                 </h2>
             </div>
             <div className="accordion-item">
-                <h2 className="accordion-header" id="props_nfl_tab">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#props_nfl" aria-expanded="false" aria-controls="props_nfl">
-                        PROPS
-                    </button>
-                </h2>
-            </div>
-            <div className="accordion-item">
                 <h2 className="accordion-header" id="features_nfl_tab">
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#features_nfl" aria-expanded="false" aria-controls="features_nfl">
-                        FEATURES
+                        FUTURES
                     </button>
                 </h2>
             </div>
