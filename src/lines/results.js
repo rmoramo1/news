@@ -7,14 +7,14 @@ export const Results = props => {
             <div className="col-12 text-center bg_lines text-white">
                 {props.date}
             </div>
-            <div className="col-3 d-flex align-items-center justify-content-center">
+            <div className="col-2 d-flex align-items-center justify-content-center">
                 <img src={props.logo_away} alt="logo away team" className="img_logo"></img>
                 </div>
             <div className="col-2 d-flex align-items-center justify-content-center">{props.away}</div>
-            <div className="col-1 fs-3 d-flex align-items-center justify-content-center">{props.final_score_away}</div>
-            <div className="col-1 fs-3 d-flex align-items-center justify-content-center">{props.final_score_home}</div>
+            <div className="col-2 fs-3 d-flex align-items-center justify-content-center">{props.final_score_away}</div>
+            <div className="col-2 fs-3 d-flex align-items-center justify-content-center">{props.final_score_home}</div>
             <div className="col-2 d-flex align-items-center justify-content-center">{props.home}</div>
-            <div className="col-3 d-flex align-items-center justify-content-center">
+            <div className="col-2 d-flex align-items-center justify-content-center">
                 <img src={props.logo_home} alt="logo home team" className="img_logo"></img>
                 </div>
         </div>

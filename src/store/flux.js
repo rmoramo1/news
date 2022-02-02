@@ -725,19 +725,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"first_half_total": "-", 
 					"first_half_tt_away": "-", 
 					"first_half_tt_home": "-", 
-					"home": "Dallas Mavericks", 
-					"hour": "19:30", 
+					"home": "-", 
+					"hour": "-", 
 					"id": 6, 
-					"juice_over_away": "-115", 
-					"juice_over_home": "-115", 
+					"juice_over_away": "-", 
+					"juice_over_home": "-", 
 					"juice_spread_away": "-", 
 					"juice_spread_home": "-", 
 					"juice_total_over": "-", 
 					"juice_total_under": "-", 
-					"juice_under_away": "-115", 
-					"juice_under_home": "-115", 
-					"moneyLineAway": "-150", 
-					"moneyLineHome": "+130", 
+					"juice_under_away": "-", 
+					"juice_under_home": "-", 
+					"moneyLineAway": "-", 
+					"moneyLineHome": "-", 
 					"q1_half_final_score_away": "-", 
 					"q1_half_final_score_home": "-", 
 					"q1_half_juice_over_away": "-", 
@@ -806,8 +806,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"q4_half_tt_home": "-", 
 					"q4_juice_over": "-", 
 					"q4_juice_under": "-", 
-					"rotation_away": "529", 
-					"rotation_home": "530", 
+					"rotation_away": "-", 
+					"rotation_home": "-", 
 					"second_half_final_score_away": "-", 
 					"second_half_final_score_home": "-", 
 					"second_half_juice_over_away": "-", 
@@ -825,13 +825,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"second_half_tt_home": "-", 
 					"sh_juice_total_over": "-", 
 					"sh_juice_total_under": "-", 
-					"spread_away": "-3", 
-					"spread_home": "+3", 
-					"status": "Pending", 
-					"total": "216", 
-					"tt_away": "109.5", 
-					"tt_home": "106.5", 
-					"week": "03"
+					"spread_away": "-", 
+					"spread_home": "-", 
+					"status": "-", 
+					"total": "-", 
+					"tt_away": "1", 
+					"tt_home": "-", 
+					"week": "-"
 				  }
 			],
 			stats_nba_team:[
@@ -856,6 +856,330 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"strk": "-", 
 					"team": "-", 
 					"w": "-"
+				  }
+			],
+			stats_nba_player:[
+				{
+					"Or": "-", 
+					"ast": "-", 
+					"birth": "-", 
+					"blk": "-", 
+					"college": "-", 
+					"dorsal": "-", 
+					"dr": "-", 
+					"fg": "-", 
+					"fg_AVG": "-", 
+					"ft": "-", 
+					"ft_AVG": "-", 
+					"gp": "-", 
+					"gs": "-", 
+					"headshot": "https://i.postimg.cc/09bnr20R/avatar.png", 
+					"height": "-", 
+					"id": 1, 
+					"minutes": "-", 
+					"name": "-", 
+					"pf": "-", 
+					"position": "--", 
+					"pts": "-", 
+					"reb": "-", 
+					"season": "-", 
+					"stl": "-", 
+					"team": "1", 
+					"three_pt": "-", 
+					"three_pt_AVG": "-", 
+					"to": "-", 
+					"weight": "-"
+				  }
+			],
+			//ncaa basket
+			ncaa_basket_games:[
+				{
+					"away": "-", 
+					"casino": "-", 
+					"date": "-", 
+					"fh_juice_total_over": "-", 
+					"fh_juice_total_under": "-", 
+					"final_score_away": "-", 
+					"final_score_home": "-", 
+					"first_half_final_score_away": "-", 
+					"first_half_final_score_home": "-", 
+					"first_half_juice_over_away": "-", 
+					"first_half_juice_over_home": "-", 
+					"first_half_juice_spread_away": "-", 
+					"first_half_juice_spread_home": "-", 
+					"first_half_juice_under_away": "-", 
+					"first_half_juice_under_home": "-", 
+					"first_half_moneyLineAway": "-", 
+					"first_half_moneyLineHome": "-", 
+					"first_half_spread_away": "-", 
+					"first_half_spread_home": "-", 
+					"first_half_total": "-", 
+					"first_half_tt_away": "-", 
+					"first_half_tt_home": "-", 
+					"home": "-", 
+					"hour": "-", 
+					"id": 6, 
+					"juice_over_away": "-", 
+					"juice_over_home": "-", 
+					"juice_spread_away": "-", 
+					"juice_spread_home": "-", 
+					"juice_total_over": "-", 
+					"juice_total_under": "-", 
+					"juice_under_away": "-", 
+					"juice_under_home": "-", 
+					"moneyLineAway": "-", 
+					"moneyLineHome": "-", 
+					"q1_half_final_score_away": "-", 
+					"q1_half_final_score_home": "-", 
+					"q1_half_juice_over_away": "-", 
+					"q1_half_juice_over_home": "-", 
+					"q1_half_juice_spread_away": "-", 
+					"q1_half_juice_spread_home": "-", 
+					"q1_half_juice_under_away": "-", 
+					"q1_half_juice_under_home": "-", 
+					"q1_half_moneyLineAway": "-", 
+					"q1_half_moneyLineHome": "-", 
+					"q1_half_spread_away": "-", 
+					"q1_half_spread_home": "-", 
+					"q1_half_total": "-", 
+					"q1_half_tt_away": "-", 
+					"q1_half_tt_home": "-", 
+					"q1_juice_over": "-", 
+					"q1_juice_under": "-", 
+					"q2_half_final_score_away": "-", 
+					"q2_half_final_score_home": "-", 
+					"q2_half_juice_over_away": "-", 
+					"q2_half_juice_over_home": "-", 
+					"q2_half_juice_spread_away": "-", 
+					"q2_half_juice_spread_home": "-", 
+					"q2_half_juice_under_away": "-", 
+					"q2_half_juice_under_home": "-", 
+					"q2_half_moneyLineAway": "-", 
+					"q2_half_moneyLineHome": "-", 
+					"q2_half_spread_away": "-", 
+					"q2_half_spread_home": "-", 
+					"q2_half_total": "-", 
+					"q2_half_tt_away": "-", 
+					"q2_half_tt_home": "-", 
+					"q2_juice_over": "-", 
+					"q2_juice_under": "-", 
+					"q3_half_final_score_away": "-", 
+					"q3_half_final_score_home": "-", 
+					"q3_half_juice_over_away": "-", 
+					"q3_half_juice_over_home": "-", 
+					"q3_half_juice_spread_away": "-", 
+					"q3_half_juice_spread_home": "-", 
+					"q3_half_juice_under_away": "-", 
+					"q3_half_juice_under_home": "-", 
+					"q3_half_moneyLineAway": "-", 
+					"q3_half_moneyLineHome": "-", 
+					"q3_half_spread_away": "-", 
+					"q3_half_spread_home": "-", 
+					"q3_half_total": "-", 
+					"q3_half_tt_away": "-", 
+					"q3_half_tt_home": "-", 
+					"q3_juice_over": "-", 
+					"q3_juice_under": "-", 
+					"q4_half_final_score_away": "-", 
+					"q4_half_final_score_home": "-", 
+					"q4_half_juice_over_away": "-", 
+					"q4_half_juice_over_home": "-", 
+					"q4_half_juice_spread_away": "-", 
+					"q4_half_juice_spread_home": "-", 
+					"q4_half_juice_under_away": "-", 
+					"q4_half_juice_under_home": "-", 
+					"q4_half_moneyLineAway": "-", 
+					"q4_half_moneyLineHome": "-", 
+					"q4_half_spread_away": "-", 
+					"q4_half_spread_home": "-", 
+					"q4_half_total": "-", 
+					"q4_half_tt_away": "-", 
+					"q4_half_tt_home": "-", 
+					"q4_juice_over": "-", 
+					"q4_juice_under": "-", 
+					"rotation_away": "-", 
+					"rotation_home": "-", 
+					"second_half_final_score_away": "-", 
+					"second_half_final_score_home": "-", 
+					"second_half_juice_over_away": "-", 
+					"second_half_juice_over_home": "-", 
+					"second_half_juice_spread_away": "-", 
+					"second_half_juice_spread_home": "-", 
+					"second_half_juice_under_away": "-", 
+					"second_half_juice_under_home": "-", 
+					"second_half_moneyLineAway": "-", 
+					"second_half_moneyLineHome": "-", 
+					"second_half_spread_away": "-", 
+					"second_half_spread_home": "-", 
+					"second_half_total": "-", 
+					"second_half_tt_away": "-", 
+					"second_half_tt_home": "-", 
+					"sh_juice_total_over": "-", 
+					"sh_juice_total_under": "-", 
+					"spread_away": "-", 
+					"spread_home": "-", 
+					"status": "-", 
+					"total": "-", 
+					"tt_away": "-", 
+					"tt_home": "-", 
+					"week": "-"
+				  }
+			],
+			stats_ncaa_basket_team:[
+				{
+					"L": "-", 
+					"away": "-", 
+					"conf": "-", 
+					"conference": "-", 
+					"diff": "-", 
+					"div": "-", 
+					"division": "-", 
+					"gb": "-", 
+					"group_type_comparation": "-", 
+					"home": "-", 
+					"id": 1, 
+					"l10": "-", 
+					"opp_ppg": "-", 
+					"ppg": "-", 
+					"ptc": "-", 
+					"season": "-", 
+					"season_type": "-", 
+					"strk": "-", 
+					"team": "-", 
+					"w": "-"
+				  }
+			],
+			stats_ncaa_basket_player:[
+				{
+					"Or": "-", 
+					"ast": "-", 
+					"birth": "-", 
+					"blk": "-", 
+					"college": "-", 
+					"dorsal": "-", 
+					"dr": "-", 
+					"fg": "-", 
+					"fg_AVG": "-", 
+					"ft": "-", 
+					"ft_AVG": "-", 
+					"gp": "-", 
+					"gs": "-", 
+					"headshot": "https://i.postimg.cc/09bnr20R/avatar.png", 
+					"height": "-", 
+					"id": 1, 
+					"minutes": "-", 
+					"name": "-", 
+					"pf": "-", 
+					"position": "--", 
+					"pts": "-", 
+					"reb": "-", 
+					"season": "-", 
+					"stl": "-", 
+					"team": "1", 
+					"three_pt": "-", 
+					"three_pt_AVG": "-", 
+					"to": "-", 
+					"weight": "-"
+				  }
+			],
+			//mbl
+			mlb:[
+				{
+					"away": "-", 
+					"casino": "-", 
+					"date": "-", 
+					"final_score_away": "-", 
+					"final_score_home": "-", 
+					"fs_away_f5": "-", 
+					"fs_home_f5": "-", 
+					"home": "-", 
+					"hour": "-", 
+					"id": 1, 
+					"juice_over_away": "-", 
+					"juice_over_away_f5": "-", 
+					"juice_over_home": "-", 
+					"juice_over_home_f5": "-", 
+					"juice_rl_away": "-", 
+					"juice_rl_away_f5": "-", 
+					"juice_rl_home": "-", 
+					"juice_rl_home_f5": "-", 
+					"juice_total_over": "-", 
+					"juice_total_over_f5": "-", 
+					"juice_total_under": "--", 
+					"juice_total_under_f5": "-", 
+					"juice_under_away": "-", 
+					"juice_under_away_f5": "-", 
+					"juice_under_home": "-", 
+					"juice_under_home_f5": "-", 
+					"moneyLineAway": "-", 
+					"moneyLineAway_f5": "-", 
+					"moneyLineHome": "-", 
+					"moneyLineHome_f5": "-", 
+					"pitcher_a": "-", 
+					"pitcher_h": "-", 
+					"rl_away": "-", 
+					"rl_away_f5": "-", 
+					"rl_home": "-", 
+					"rl_home_f5": "-", 
+					"rotation_away": "-", 
+					"rotation_home": "-", 
+					"sa_10inning": "-", 
+					"sa_11inning": "-", 
+					"sa_12inning": "-", 
+					"sa_13inning": "-", 
+					"sa_14inning": "-", 
+					"sa_15inning": "-", 
+					"sa_16inning": "-", 
+					"sa_17inning": "-", 
+					"sa_18inning": "-", 
+					"sa_19inning": "-", 
+					"sa_1inning": "-", 
+					"sa_20inning": "-", 
+					"sa_21inning": "-", 
+					"sa_22inning": "-", 
+					"sa_23inning": "-", 
+					"sa_24inning": "-", 
+					"sa_25inning": "-", 
+					"sa_2inning": "-", 
+					"sa_3inning": "-", 
+					"sa_4inning": "-", 
+					"sa_5inning": "-", 
+					"sa_6inning": "-", 
+					"sa_7inning": "-", 
+					"sa_8inning": "-", 
+					"sa_9inning": "-", 
+					"sh_10inning": "-", 
+					"sh_11inning": "-", 
+					"sh_12inning": "-", 
+					"sh_13inning": "-", 
+					"sh_14inning": "-", 
+					"sh_15inning": "-", 
+					"sh_16inning": "-", 
+					"sh_17inning": "-", 
+					"sh_18inning": "-", 
+					"sh_19inning": "-", 
+					"sh_1inning": "-", 
+					"sh_20inning": "-", 
+					"sh_21inning": "-", 
+					"sh_22inning": "-", 
+					"sh_23inning": "-", 
+					"sh_24inning": "-", 
+					"sh_25inning": "-", 
+					"sh_2inning": "-", 
+					"sh_3inning": "-", 
+					"sh_4inning": "-", 
+					"sh_5inning": "-", 
+					"sh_6inning": "-", 
+					"sh_7inning": "-", 
+					"sh_8inning": "-", 
+					"sh_9inning": "-", 
+					"status": "-", 
+					"total": "-", 
+					"total_f5": "-", 
+					"tt_away": "-", 
+					"tt_away_f5": "-", 
+					"tt_home": "-", 
+					"tt_home_f5": "-"
 				  }
 			],
 			//teams
@@ -904,31 +1228,31 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ nfl_team_stats: results });
 			},
 			nfl_player_offensive_stats: async () => {
-				const url = "http://www.sportsdata365.com/stats_offensive_player_nfl";
+				const url = "https://www.sportsdata365.com/stats_offensive_player_nfl";
 				const response = await fetch(url);
 				const results = await response.json();
 				setStore({ nfl_player_offensive_stats: results });
 			},
 			nfl_player_deffensive_stats: async () => {
-				const url = "http://www.sportsdata365.com/stats_defensive_player_nfl";
+				const url = "https://www.sportsdata365.com/stats_defensive_player_nfl";
 				const response = await fetch(url);
 				const results = await response.json();
 				setStore({ nfl_player_deffensive_stats: results });
 			},
 			nfl_player_returning_stats: async () => {
-				const url = "http://www.sportsdata365.com/stats_returning_player_nfl";
+				const url = "https://www.sportsdata365.com/stats_returning_player_nfl";
 				const response = await fetch(url);
 				const results = await response.json();
 				setStore({ nfl_player_returning_stats: results });
 			},
 			nfl_player_punting_stats: async () => {
-				const url = "http://www.sportsdata365.com/stats_punting_player_nfl";
+				const url = "https://www.sportsdata365.com/stats_punting_player_nfl";
 				const response = await fetch(url);
 				const results = await response.json();
 				setStore({ nfl_player_punting_stats: results });
 			},
 			nfl_player_kicking_stats: async () => {
-				const url = "http://www.sportsdata365.com/stats_kiking_player_nfl";
+				const url = "https://www.sportsdata365.com/stats_kiking_player_nfl";
 				const response = await fetch(url);
 				const results = await response.json();
 				setStore({ nfl_player_kicking_stats: results });
@@ -1001,17 +1325,48 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const results = await response.json();
 				setStore({ stats_nba_team: results });
 			},
-			
+			stats_nba_player: async () => {
+				const url = "https://www.sportsdata365.com/stats_nba_player";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ stats_nba_player: results });
+			},
+			//ncaa_basket_games
+			ncaa_basket_games: async () => {
+				const url = "https://www.sportsdata365.com/ncaa_basketball";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ ncaa_basket_games: results });
+			},
+			stats_ncaa_basket_team: async () => {
+				const url = "https://www.sportsdata365.com/stats_ncaa_basket_team";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ stats_ncaa_basket_team: results });
+			},
+			stats_ncaa_basket_player: async () => {
+				const url = "https://www.sportsdata365.com/stats_ncaa_basket_player";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ stats_ncaa_basket_player: results });
+			},
+			//mlb
+			mlb: async () => {
+				const url = "https://www.sportsdata365.com/mlb";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ mlb: results });
+			},
 			//injueries
 			injuries: async () => {
-				const url = "http://www.sportsdata365.com/injuries";
+				const url = "https://www.sportsdata365.com/injuries";
 				const response = await fetch(url);
 				const results = await response.json();
 				setStore({ injuries: results });
 			},
 			//futures
 			futures: async () => {
-				const url = "http://www.sportsdata365.com/futures";
+				const url = "https://www.sportsdata365.com/futures";
 				const response = await fetch(url);
 				const results = await response.json();
 				setStore({ futures: results });

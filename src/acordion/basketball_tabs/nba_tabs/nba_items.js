@@ -9,6 +9,7 @@ import { NBA_Thre_q } from "../../../display_lines/nba/nba_thre";
 import { NBA_Four_q } from "../../../display_lines/nba/nba_four_q";
 import { Futures_NBA } from "../../../display_lines/nba/future_nba";
 import { NBA_Team_stats_display } from "../../../display_lines/nba/nba_team_stats";
+import NBA_PY_STATS from "../../../display_lines/nba/nba_py_stats";
 
 import { Results_NBA } from "../../../display_lines/nba/results_nba";
 export const NBA_ITEMS = () => {
@@ -42,12 +43,7 @@ export const NBA_ITEMS = () => {
                 <NBA_Team_stats_display/>
             </div>
             <div id="player_stats_nba" className="accordion-collapse collapse" aria-labelledby="player_stats_nba" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    PLAYER STATS NBA
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
+                <NBA_PY_STATS/>
             </div>
             <div id="alarms_nba" className="accordion-collapse collapse" aria-labelledby="alarms_nba" data-bs-parent="#items_tab_master">
                 <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
