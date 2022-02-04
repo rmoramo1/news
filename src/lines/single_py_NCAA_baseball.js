@@ -2,14 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-export const Single_PY_Basket = props => {
+export const Single_PY_NCAA_Baseball = props => {
     return (
         <div className="col-12 g-0">
             <div className="row g-0">
                 <div className="col-1 ">
                     <div className="col-12 bg-dark h-100 d-flex justify-content-center align-items-center ">
                         <div className="col-12 text-center">
-                            <Link className="text-white" to={`/nba_py_st/${props.id}`}><i className="far fa-eye"></i></Link>
+                            <Link className="text-white" to={`/ncaa_baseball_py_st/${props.id}`}><i className="far fa-eye"></i></Link>
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@ export const Single_PY_Basket = props => {
         </div>
     )
 };
-Single_PY_Basket.propTypes = {
+Single_PY_NCAA_Baseball.propTypes = {
     id: PropTypes.number,
     name: PropTypes.string,
     dorsal: PropTypes.string,

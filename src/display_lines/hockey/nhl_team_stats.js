@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../../store/appContext";
 
-import { BaseBall_Team_Stats } from "../../lines/baseball_team_stats";
-export const MLB_Team_stats_display = () => {
+import { NHL_Team_Stats } from "../../lines/nhl_team_stats";
+
+export const NHL_Team_stats_display = () => {
     const { store } = useContext(Context);
-    const [team, setTeam] = useState("Arizona Diamondbacks");
+    const [team, setTeam] = useState("Boston Bruins");
     const [year, setyear] = useState("2022");
 
     let selectYear = [];
@@ -16,14 +17,14 @@ export const MLB_Team_stats_display = () => {
         <div className="col-12" id="sports">
             <div className="title_sport bg_orange_dark text-white ps-lg-5 fs-2 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-4">MLB Team Stats</div>
+                    <div className="col-lg-4">NHL Team Stats</div>
                     <div className="col-lg-8">
                         <div className="row g-0">
                             <div className="col-3 text-center">TEAM</div>
                             <div className="col-lg-3 d-flex align-items-center">
                                 <select className="form-select" name="team" aria-label="Default select example" defaultValue={team} onChange={e => setTeam(e.target.value)} required>
                                     {
-                                        store.mlb_teams.map((item, index) => {
+                                        store.nhl_teams.map((item, index) => {
                                             return (
                                                 <option key={index} name="team" value={item}>{item}</option>
                                             )
@@ -49,23 +50,28 @@ export const MLB_Team_stats_display = () => {
             </div>
             <div className="accordion-item">
                 <div className="accordion-collapse collapse show" id="nba_stats_teamCollapse" data-bs-parent="#sports">
-                    {store.stats_mlb_team.map((item, index) => {
+                    {store.stats_nhl_team.map((item, index) => {
                         if (item.team == team && item.season == year) {
                             return (
                                 <div key={index}>
-                                    <BaseBall_Team_Stats
+                                    <NHL_Team_Stats
                                         team={item.team}
                                         w={item.w}
                                         L={item.L}
-                                        ptc={item.ptc}
-                                        gb={item.gb}
+                                        otl={item.otl}
+                                        pts={item.pts}
+                                        rw={item.rw}
+                                        row={item.row}
+                                        sow={item.sow}
+                                        sol={item.sol}
                                         home={item.home}
                                         away={item.away}
-                                        rs={item.rs}
-                                        ra={item.ra}
                                         diff={item.diff}
+                                        gf={item.gf}
+                                        ga={item.ga}
+                                        l10={item.l10}
                                         strk={item.strk}
-                                        L10={item.L10}
+                                        gp={item.gp}
                                     />
                                 </div>
                             );

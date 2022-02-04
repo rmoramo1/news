@@ -4,7 +4,7 @@ import { Context } from "../../store/appContext";
 
 import { Results } from "../../lines/results";
 
-export const Results_MLB = () => {
+export const Results_NCAA_BASEBALL = () => {
     let away_team="";
     let home_team="";
     const { store } = useContext(Context);
@@ -56,7 +56,7 @@ export const Results_MLB = () => {
         <div className="col-12" id="sports">
             <div className="title_sport bg_orange_dark text-white p-lg-1 fs-5 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-4">Results MLB</div>
+                    <div className="col-lg-4">Results NCAA</div>
                     <div className="col-lg-8">
                     <div className="row g-0">
                             <div className="col-2 text-center">Year</div>
@@ -103,7 +103,7 @@ export const Results_MLB = () => {
                 <div className="accordion-collapse collapse show" id="mlb_results_Collapse" data-bs-parent="#sports">
                     <div className="row g-0">
                         {
-                            store.mlb.map((item, index) => {
+                            store.ncaa_baseball.map((item, index) => {
                                 if (item.date == R_date) {
                                     let url_aw="";
                                     let url_hm="";

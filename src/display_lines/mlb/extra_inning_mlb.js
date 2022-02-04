@@ -51,7 +51,7 @@ export const Extra_Inning_MLB = () => {
         <div className="col-12" id="sports">
             <div className="title_sport bg_orange_dark text-white p-lg-1 fs-5 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-2">6-9 Inning</div>
+                    <div className="col-lg-2">Extra Inning</div>
                     <div className="col-lg-10">
                     <div className="row g-0">
                             <div className="col-2 text-center">Year</div>
@@ -128,48 +128,14 @@ export const Extra_Inning_MLB = () => {
                                         sh_19inning={item.sh_19inning}
                                         sh_20inning={item.sh_20inning}
                                         sh_21inning={item.sh_21inning}
-
                                         sa_22inning={item.sa_22inning}
                                         sa_23inning={item.sa_23inning}
                                         sa_24inning={item.sa_24inning}
                                         sa_25inning={item.sa_25inning}
-                                        sa_26inning={item.sa_26inning}
-                                        sa_27inning={item.sa_27inning}
-                                        sa_28inning={item.sa_28inning}
-                                        sa_29inning={item.sa_29inning}
-                                        sa_30inning={item.sa_30inning}
-                                        sa_31inning={item.sa_31inning}
-                                        sa_32inning={item.sa_32inning}
-                                        sa_33inning={item.sa_33inning}
-
                                         sh_22inning={item.sh_22inning}
                                         sh_23inning={item.sh_23inning}
                                         sh_24inning={item.sh_24inning}
                                         sh_25inning={item.sh_25inning}
-                                        sh_26inning={item.sh_26inning}
-                                        sh_27inning={item.sh_27inning}
-                                        sh_28inning={item.sh_28inning}
-                                        sh_29inning={item.sh_29inning}
-                                        sh_30inning={item.sh_30inning}
-                                        sh_31inning={item.sh_31inning}
-                                        sh_32inning={item.sh_32inning}
-                                        sh_33inning={item.sh_33inning}
-
-                                        sa_34inning={item.sa_34inning}
-                                        sa_35inning={item.sa_35inning}
-                                        sa_36inning={item.sa_36inning}
-                                        sa_37inning={item.sa_37inning}
-                                        sa_38inning={item.sa_38inning}
-                                        sa_39inning={item.sa_39inning}
-                                        sa_40inning={item.sa_40inning}
-
-                                        sh_34inning={item.sh_34inning}
-                                        sh_35inning={item.sh_35inning}
-                                        sh_36inning={item.sh_36inning}
-                                        sh_37inning={item.sh_37inning}
-                                        sh_38inning={item.sh_38inning}
-                                        sh_39inning={item.sh_39inning}
-                                        sh_40inning={item.sh_40inning}
 
                                     />
                                 </div>

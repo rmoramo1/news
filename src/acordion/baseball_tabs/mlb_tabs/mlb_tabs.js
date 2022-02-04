@@ -43,31 +43,11 @@ export const MLB_Tabs = () => {
                     </div>
                 </div>
             </div>
-            <div className="accordion-item">
-                <h2 className="accordion-header" id="mlb_1stH_ac">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mlb1st_H" aria-expanded="false" aria-controls="mlb1st_H">
-                        1ST H
-                    </button>
-                </h2>
-            </div>
-            <div className="accordion-item">
-                <h2 className="accordion-header" id="mlb_2stH_ac">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mlb2st_H" aria-expanded="false" aria-controls="mlb2st_H">
-                        2ST H
-                    </button>
-                </h2>
-            </div>
-            <div className="accordion-item">
-                <h2 className="accordion-header" id="props_mlb_tab">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#props_mlb" aria-expanded="false" aria-controls="props_mlb">
-                        PROPS
-                    </button>
-                </h2>
-            </div>
+
             <div className="accordion-item">
                 <h2 className="accordion-header" id="features_mlb_tab">
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#features_mlb" aria-expanded="false" aria-controls="features_mlb">
-                        FEATURES
+                        FUTURES
                     </button>
                 </h2>
             </div>

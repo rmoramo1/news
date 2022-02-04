@@ -1,12 +1,9 @@
 import React, { useContext, useState } from "react";
-import DateTime from 'luxon/src/datetime'
+import DateTime from '../../../node_modules/luxon/src/datetime.js'
 import { Context } from "../../store/appContext";
 
-import { Results } from "../../lines/results";
-
-export const Results_MLB = () => {
-    let away_team="";
-    let home_team="";
+import { PUCK_Lines } from "../../lines/puck_lines.js";
+export const NHL_Games = () => {
     const { store } = useContext(Context);
     const dateLux = DateTime.now().day;
     const monthLux = DateTime.now().month;
@@ -18,18 +15,17 @@ export const Results_MLB = () => {
     }else{
         dateShow.push(dateLux);
     }
-
     let monthShow =[];
     if(monthLux < 10){
         monthShow.push("0" + monthLux);
     }else{
         monthShow.push(monthLux);
     }
-
+    
     const [year, setyear] = useState(yearLux);
     const [month, setmonth] = useState(monthShow);
-    const [week, setweek] = useState(dateShow);
-    let R_date = year+"-"+month+"-"+week;
+    const [Day, setDay] = useState(dateShow);
+    let R_date = year+"-"+month+"-"+Day;    
     let selectYear = [];
     for (let i = 2002; i < 2025; i++) {
         selectYear.push(i);
@@ -52,16 +48,17 @@ export const Results_MLB = () => {
             selectDay.push(i);
         }
     }
+
     return (
         <div className="col-12" id="sports">
             <div className="title_sport bg_orange_dark text-white p-lg-1 fs-5 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-4">Results MLB</div>
-                    <div className="col-lg-8">
-                    <div className="row g-0">
+                    <div className="col-lg-2">NHL Games</div>
+                    <div className="col-lg-10">
+                        <div className="row g-0">
                             <div className="col-2 text-center">Year</div>
                             <div className="col-lg-2 d-flex align-items-center">
-                                <select className="form-select" name="week" aria-label="Default select example" defaultValue={year} onChange={e => setyear(e.target.value)} required>
+                                <select className="form-select" name="Day" aria-label="Default select example" defaultValue={year} onChange={e => setyear(e.target.value)} required>
                                     {
                                         selectYear.map((index) => {
                                             return (
@@ -85,7 +82,7 @@ export const Results_MLB = () => {
                             </div>
                             <div className="col-2 text-center">Day</div>
                             <div className="col-lg-2 d-flex align-items-center">
-                                <select className="form-select" name="week" aria-label="Default select example" defaultValue={week} onChange={e => setweek(e.target.value)} required>
+                                <select className="form-select" name="Day" aria-label="Default select example" defaultValue={Day} onChange={e => setDay(e.target.value)} required>
                                     {
                                         selectDay.map((index) => {
                                             return (
@@ -100,42 +97,39 @@ export const Results_MLB = () => {
                 </div>
             </div>
             <div className="accordion-item">
-                <div className="accordion-collapse collapse show" id="mlb_results_Collapse" data-bs-parent="#sports">
-                    <div className="row g-0">
-                        {
-                            store.mlb.map((item, index) => {
-                                if (item.date == R_date) {
-                                    let url_aw="";
-                                    let url_hm="";
-                                    store.logos_mlb.map((item2)=>{
-                                        if(item2.team == item.away){
-                                            url_aw = item2.url 
-                                        }
-                                    })
-                                    store.logos_mlb.map((item3)=>{
-                                        if(item3.team == item.home){
-                                            url_hm = item3.url 
-                                        }
-                                    })
-
-                                    return (
-                                        <div className="col-6 p-2" key={index}>
-                                            <Results
-                                                logo_away={url_aw}
-                                                logo_home={url_hm}
-                                                away={item.away}
-                                                home={item.home}
-                                                date={item.date}
-                                                final_score_away={item.final_score_away}
-                                                final_score_home={item.final_score_home}
-                                            />
-                                        </div>
-                                    );
-                                }
-                            })
+                <div className="accordion-collapse collapse show" id="nbaCollapse" data-bs-parent="#sports">
+                    {store.nhl.map((item, index) => {
+                        if (item.date == R_date) {
+                            return (
+                                <div key={index}>
+                                    <PUCK_Lines
+                                        away={item.away}
+                                        home={item.home}
+                                        hour={item.hour}
+                                        status={item.status}
+                                        date={item.date}
+                                        puck_line_away={item.puck_line_away}
+                                        puck_line_home={item.puck_line_home}
+                                        juice_puck_away={item.juice_puck_away}
+                                        juice_puck_home={item.juice_puck_home}
+                                        moneyLineAway={item.moneyLineAway}
+                                        moneyLineHome={item.moneyLineHome}
+                                        total={item.total}
+                                        juice_total_over={item.juice_total_over}
+                                        juice_total_under={item.juice_total_under}
+                                        tt_away={item.tt_away}
+                                        tt_home={item.tt_home}
+                                        juice_over_away={item.juice_over_away}
+                                        juice_under_away={item.juice_under_away}
+                                        juice_over_home={item.juice_over_home}
+                                        juice_under_home={item.juice_under_home}
+                                        final_score_away={item.final_score_away}
+                                        final_score_home={item.final_score_home}
+                                    />
+                                </div>
+                            );
                         }
-
-                    </div>
+                    })}
                 </div>
             </div>
         </div>

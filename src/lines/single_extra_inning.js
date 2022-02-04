@@ -9,29 +9,21 @@ export const Single_Extra_Inning = props => {
                 <div className=" odds-list">
                     <div className="col-12">
                         <div className="row g-0 text-center bg_lines text-white">
-                        </div>
-                        <div className="row g-0 text-center fs-4">
-                            <div className="col-2">TEAMS</div>
-                            <div className="col-3 lines">{props.away}</div>
-                            <div className="col-3 lines">{props.home}</div>
-                        </div>
-                    </div>
-                    <div className="col-12">
-                        <div className="row g-0 text-center bg_lines text-white">
-                            <div className="col-1">Inning 10</div>
-                            <div className="col-1">Inning 11</div>
-                            <div className="col-1">Inning 12</div>
-                            <div className="col-1">Inning 13</div>
-                            <div className="col-1">Inning 14</div>
-                            <div className="col-1">Inning 15</div>
-                            <div className="col-1">Inning 16</div>
-                            <div className="col-1">Inning 17</div>
-                            <div className="col-1">Inning 18</div>
-                            <div className="col-1">Inning 19</div>
-                            <div className="col-1">Inning 20</div>
-                            <div className="col-1">Inning 21</div>
+                            <div className="col-2">Teams</div>
+                            <div className="col-1">In 10</div>
+                            <div className="col-1">In 11</div>
+                            <div className="col-1">In 12</div>
+                            <div className="col-1">In 13</div>
+                            <div className="col-1">In 14</div>
+                            <div className="col-1">In 15</div>
+                            <div className="col-1">In 16</div>
+                            <div className="col-1">In 17</div>
+                            <div className="col-1">In 18</div>
+                            <div className="col-1">In 19</div>
+
                         </div>
                         <div className="row g-0 text-center">
+                        <div className="col-2 lines">{props.away}</div>
                             <div className="col-1 lines">{props.sa_10inning}</div>
                             <div className="col-1 lines">{props.sa_11inning}</div>
                             <div className="col-1 lines">{props.sa_12inning}</div>
@@ -42,10 +34,10 @@ export const Single_Extra_Inning = props => {
                             <div className="col-1 lines">{props.sa_17inning}</div>
                             <div className="col-1 lines">{props.sa_18inning}</div>
                             <div className="col-1 lines">{props.sa_19inning}</div>
-                            <div className="col-1 lines">{props.sa_20inning}</div>
-                            <div className="col-1 lines">{props.sa_21inning}</div>
+    
                         </div>
                         <div className="row g-0 text-center">
+                        <div className="col-2 lines">{props.home}</div>
                             <div className="col-1 lines">{props.sh_10inning}</div>
                             <div className="col-1 lines">{props.sh_11inning}</div>
                             <div className="col-1 lines">{props.sh_12inning}</div>
@@ -56,78 +48,35 @@ export const Single_Extra_Inning = props => {
                             <div className="col-1 lines">{props.sh_17inning}</div>
                             <div className="col-1 lines">{props.sh_18inning}</div>
                             <div className="col-1 lines">{props.sh_19inning}</div>
-                            <div className="col-1 lines">{props.sh_20inning}</div>
-                            <div className="col-1 lines">{props.sh_21inning}</div>
+
                         </div>
-                        <div className="row g-0 text-center bg_lines text-white">
-                            <div className="col-1">Inning 22</div>
-                            <div className="col-1">Inning 23</div>
-                            <div className="col-1">Inning 24</div>
-                            <div className="col-1">Inning 25</div>
-                            <div className="col-1">Inning 26</div>
-                            <div className="col-1">Inning 27</div>
-                            <div className="col-1">Inning 28</div>
-                            <div className="col-1">Inning 29</div>
-                            <div className="col-1">Inning 30</div>
-                            <div className="col-1">Inning 31</div>
-                            <div className="col-1">Inning 32</div>
-                            <div className="col-1">Inning 33</div>
+                        <div className="row g-0 text-center  text-white">
+                            <div className="col-1 bg_lines">In 20</div>
+                            <div className="col-1 bg_lines">In 21</div>
+                            <div className="col-1 bg_lines">In 22</div>
+                            <div className="col-1 bg_lines">In 23</div>
+                            <div className="col-1 bg_lines">In 24</div>
+                            <div className="col-1 bg_lines">In 25</div>
+
                         </div>
                         <div className="row g-0 text-center">
+                        <div className="col-1 lines">{props.sa_20inning}</div>
+                            <div className="col-1 lines">{props.sa_21inning}</div>
                             <div className="col-1 lines">{props.sa_22inning}</div>
                             <div className="col-1 lines">{props.sa_23inning}</div>
                             <div className="col-1 lines">{props.sa_24inning}</div>
                             <div className="col-1 lines">{props.sa_25inning}</div>
-                            <div className="col-1 lines">{props.sa_26inning}</div>
-                            <div className="col-1 lines">{props.sa_27inning}</div>
-                            <div className="col-1 lines">{props.sa_28inning}</div>
-                            <div className="col-1 lines">{props.sa_29inning}</div>
-                            <div className="col-1 lines">{props.sa_30inning}</div>
-                            <div className="col-1 lines">{props.sa_31inning}</div>
-                            <div className="col-1 lines">{props.sa_32inning}</div>
-                            <div className="col-1 lines">{props.sa_33inning}</div>
+
                         </div>
                         <div className="row g-0 text-center">
+                        <div className="col-1 lines">{props.sh_20inning}</div>
+                            <div className="col-1 lines">{props.sh_21inning}</div>
                             <div className="col-1 lines">{props.sh_22inning}</div>
                             <div className="col-1 lines">{props.sh_23inning}</div>
                             <div className="col-1 lines">{props.sh_24inning}</div>
                             <div className="col-1 lines">{props.sh_25inning}</div>
-                            <div className="col-1 lines">{props.sh_26inning}</div>
-                            <div className="col-1 lines">{props.sh_27inning}</div>
-                            <div className="col-1 lines">{props.sh_28inning}</div>
-                            <div className="col-1 lines">{props.sh_29inning}</div>
-                            <div className="col-1 lines">{props.sh_30inning}</div>
-                            <div className="col-1 lines">{props.sh_31inning}</div>
-                            <div className="col-1 lines">{props.sh_32inning}</div>
-                            <div className="col-1 lines">{props.sh_33inning}</div>
                         </div>
-                        <div className="row g-0 text-center bg_lines text-white">
-                            <div className="col-1">Inning 34</div>
-                            <div className="col-1">Inning 35</div>
-                            <div className="col-1">Inning 36</div>
-                            <div className="col-1">Inning 37</div>
-                            <div className="col-1">Inning 38</div>
-                            <div className="col-1">Inning 39</div>
-                            <div className="col-1">Inning 40</div>
-                        </div>
-                        <div className="row g-0 text-center">
-                            <div className="col-1 lines">{props.sa_34inning}</div>
-                            <div className="col-1 lines">{props.sa_35inning}</div>
-                            <div className="col-1 lines">{props.sa_36inning}</div>
-                            <div className="col-1 lines">{props.sa_37inning}</div>
-                            <div className="col-1 lines">{props.sa_38inning}</div>
-                            <div className="col-1 lines">{props.sa_39inning}</div>
-                            <div className="col-1 lines">{props.sa_40inning}</div>
-                        </div>
-                        <div className="row g-0 text-center">
-                            <div className="col-1 lines">{props.sh_34inning}</div>
-                            <div className="col-1 lines">{props.sh_35inning}</div>
-                            <div className="col-1 lines">{props.sh_36inning}</div>
-                            <div className="col-1 lines">{props.sh_37inning}</div>
-                            <div className="col-1 lines">{props.sh_38inning}</div>
-                            <div className="col-1 lines">{props.sh_39inning}</div>
-                            <div className="col-1 lines">{props.sh_40inning}</div>
-                        </div>
+
                     </div>
                 </div>
             </div>

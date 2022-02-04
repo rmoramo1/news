@@ -2,9 +2,10 @@ import React, { useContext, useState } from "react";
 import { Context } from "../../store/appContext";
 
 import { BaseBall_Team_Stats } from "../../lines/baseball_team_stats";
-export const MLB_Team_stats_display = () => {
+
+export const NCAA_BASEBALL_Team_stats_display = () => {
     const { store } = useContext(Context);
-    const [team, setTeam] = useState("Arizona Diamondbacks");
+    const [team, setTeam] = useState("Davidson");
     const [year, setyear] = useState("2022");
 
     let selectYear = [];
@@ -14,16 +15,16 @@ export const MLB_Team_stats_display = () => {
 
     return (
         <div className="col-12" id="sports">
-            <div className="title_sport bg_orange_dark text-white ps-lg-5 fs-2 font_bold">
+            <div className="title_sport bg_orange_dark text-white p-2 fs-5 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-4">MLB Team Stats</div>
+                    <div className="col-lg-4">NCAA Team Stats</div>
                     <div className="col-lg-8">
                         <div className="row g-0">
                             <div className="col-3 text-center">TEAM</div>
                             <div className="col-lg-3 d-flex align-items-center">
                                 <select className="form-select" name="team" aria-label="Default select example" defaultValue={team} onChange={e => setTeam(e.target.value)} required>
                                     {
-                                        store.mlb_teams.map((item, index) => {
+                                        store.ncaa_baseball_teams.map((item, index) => {
                                             return (
                                                 <option key={index} name="team" value={item}>{item}</option>
                                             )
@@ -48,8 +49,8 @@ export const MLB_Team_stats_display = () => {
                 </div>
             </div>
             <div className="accordion-item">
-                <div className="accordion-collapse collapse show" id="nba_stats_teamCollapse" data-bs-parent="#sports">
-                    {store.stats_mlb_team.map((item, index) => {
+                <div className="accordion-collapse collapse show" id="stats_ncaa_baseball_teamCollapse" data-bs-parent="#sports">
+                    {store.stats_ncaa_baseball_team.map((item, index) => {
                         if (item.team == team && item.season == year) {
                             return (
                                 <div key={index}>
@@ -57,7 +58,7 @@ export const MLB_Team_stats_display = () => {
                                         team={item.team}
                                         w={item.w}
                                         L={item.L}
-                                        ptc={item.ptc}
+                                        pct={item.pct}
                                         gb={item.gb}
                                         home={item.home}
                                         away={item.away}

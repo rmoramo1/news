@@ -20,6 +20,10 @@ const Punting_Player_Stats_Ncaa = lazy(() => import('./lines/ncaa_py_stats/punti
 const Kicking_Player_Stats_Ncaa = lazy(() => import('./lines/ncaa_py_stats/kicking_player_stats_ncaa'));
 const NBA_Player_Stats = lazy(() => import('./lines/nba_py_st'));
 const NCAA_BASKET_Player_Stats = lazy(() => import('./lines/ncaa_basket_py'));
+const Mlb_py_st = lazy(() => import('./lines/mlb_py_st'));
+const Ncaa_Baseball_py_st = lazy(() => import('./lines/ncaa_baseball_py_st'));
+
+
 
 
 /*components*/
@@ -50,6 +54,8 @@ function App() {
 						<Route path="/kicking_player_stats_ncaa/:theid" component={Kicking_Player_Stats_Ncaa} />
 						<Route path="/nba_py_st/:theid" component={NBA_Player_Stats} />
 						<Route path="/ncaa_basket_py_stats/:theid" component={NCAA_BASKET_Player_Stats} />
+						<Route path="/mlb_py_st/:theid" component={Mlb_py_st} />
+						<Route path="/ncaa_baseball_py_st/:theid" component={Ncaa_Baseball_py_st} />
 						<Route>
 							<h1>Error</h1>
 						</Route>

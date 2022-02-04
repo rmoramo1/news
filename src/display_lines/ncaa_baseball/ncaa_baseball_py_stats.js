@@ -2,14 +2,13 @@ import React, { useContext, useState, useEffect } from "react";
 import { Context } from "../../store/appContext";
 import DateTime from 'luxon/src/datetime';
 
-import { Single_PY_Baseball } from "../../lines/single_py_baseball";
+import { Single_PY_NCAA_Baseball } from "../../lines/single_py_NCAA_baseball";
 
-
-function MLB_PY_STATS() {
+function NCAA_BASEBALL_PY_STATS() {
     const { store } = useContext(Context);
     const dateLux = DateTime.now().day;
     const yearLux = DateTime.now().year;
-    let teams = store.mlb_teams;
+    let teams = store.ncaa_baseball_teams;
 
     let dateShow = [];
     if (dateLux < 10) {
@@ -19,7 +18,7 @@ function MLB_PY_STATS() {
     }
 
     const [year, setyear] = useState(yearLux);
-    const [team, setTeam] = useState("Arizona Diamondbacks");
+    const [team, setTeam] = useState("Davidson");
   
     let selectYear = [];
     for (let i = 2002; i < 2025; i++) {
@@ -47,7 +46,7 @@ function MLB_PY_STATS() {
                             </div>
                             <div className="col-2 text-center">Team</div>
                             <div className="col-lg-4 d-flex align-items-center">
-                                <select className="form-select" name="setTeam" aria-label="Default select example" defaultValue={"Arizona Diamondbacks"} onChange={e => setTeam(e.target.value)} required>
+                                <select className="form-select" name="setTeam" aria-label="Default select example" defaultValue={"Davidson"} onChange={e => setTeam(e.target.value)} required>
                                     {
                                         teams.map((index) => {
                                             return (
@@ -63,11 +62,11 @@ function MLB_PY_STATS() {
             </div>
             <div className="row g-0">
                 {
-                    store.stats_mlb_player.map((item, index) => {
+                    store.stats_ncaa_baseball_player.map((item, index) => {
                         if (item.season == year && item.team == team) {
                             return (
                                 <div key={index} className="col-lg-6 p-1">
-                                    <Single_PY_Baseball
+                                    <Single_PY_NCAA_Baseball
                                         id={index}
                                         name={item.name}
                                         dorsal={item.dorsal}
@@ -82,4 +81,4 @@ function MLB_PY_STATS() {
         </div>
     )
 }
-export default MLB_PY_STATS;
+export default NCAA_BASEBALL_PY_STATS;

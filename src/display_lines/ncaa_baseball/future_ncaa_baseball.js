@@ -4,7 +4,7 @@ import { Context } from "../../store/appContext";
 
 import { Futures_Lines } from "../../lines/futures_lines";
 
-export const Futures_MLB = () => {
+export const Futures_NCAA_BASEBALL = () => {
     const { store } = useContext(Context);
     const dateLux = DateTime.now().weekNumber;
     const [team, setTeam] = useState("FOOTBALL");
@@ -43,7 +43,7 @@ export const Futures_MLB = () => {
             <div className="row g-0">
                 {
                     store.futures.map((item, index) => {
-                        if (item.sport == "BASEBALL") {
+                        if (item.sport == "NCAA BASEBALL") {
                             return (
                                 <div className="col-6 p-1" key={index}>
                                     <Futures_Lines

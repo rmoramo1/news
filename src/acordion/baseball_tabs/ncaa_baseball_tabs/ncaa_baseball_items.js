@@ -1,71 +1,39 @@
 import React from "react";
+import { NCAA_BASEBALL_Games } from "../../../display_lines/ncaa_baseball/ncaa_baseball_games";
+import { NCAA_BASEBALL_F5 } from "../../../display_lines/ncaa_baseball/ncaa_baseball_f5";
+import { Six_Nine_Inning_NCCAA_Baseball } from "../../../display_lines/ncaa_baseball/six_nine_inning_ncaa_baseball";
+import { Extra_Inning_NCAA_BASEBALL } from "../../../display_lines/ncaa_baseball/extra_inning_ncaa_baseball";
+import { Futures_NCAA_BASEBALL } from "../../../display_lines/ncaa_baseball/future_ncaa_baseball";
+import { NCAA_BASEBALL_Team_stats_display } from "../../../display_lines/ncaa_baseball/ncaa_baseball_team_stats";
+import NCAA_BASEBALL_PY_STATS from "../../../display_lines/ncaa_baseball/ncaa_baseball_py_stats";
+import { Results_NCAA_BASEBALL } from "../../../display_lines/ncaa_baseball/results_ncaa_baseball";
+
 
 export const NCAA_BASEBALL_ITEMS = () => {
     return (
         <div className="col">
-            <div id="ncaa_baseball_1stq" className="accordion-collapse collapse" aria-labelledby="ncaa_1stq" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    1ST Q NCAA baseball
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
+            <div id="ncaa_baseball_games" className="accordion-collapse collapse" aria-labelledby="ncaa_1stq" data-bs-parent="#items_tab_master">
+                <NCAA_BASEBALL_Games/>
             </div>
-            <div id="QUARTERS_NCAA_baseball" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    QUARTERS NCAA baseball
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
+            <div id="ncaa_baseball_F5" className="accordion-collapse collapse" aria-labelledby="ncaa_1stq" data-bs-parent="#items_tab_master">
+                <NCAA_BASEBALL_F5/>
             </div>
-            <div id="ncaa_baseball_1st_H" className="accordion-collapse collapse" aria-labelledby="ncaa_1stH_ac" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    1ST H NCAA baseball
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
+
+            <div id="E6_9_score_ncaa_base" className="accordion-collapse collapse" aria-labelledby="ncaa_1stH_ac" data-bs-parent="#items_tab_master">
+                <Six_Nine_Inning_NCCAA_Baseball/>
             </div>
-            <div id="ncaa_baseball_2st_H" className="accordion-collapse collapse" aria-labelledby="ncaa_2stH_ac" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    2ST H NCAA baseball
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
+            <div id="Extra_Inning_Score_ncaa_base" className="accordion-collapse collapse" aria-labelledby="ncaa_1stH_ac" data-bs-parent="#items_tab_master">
+                <Extra_Inning_NCAA_BASEBALL/>
             </div>
-            <div id="props_ncaa_baseball" className="accordion-collapse collapse" aria-labelledby="props_ncaa" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    PROPS NCAA baseball
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
-            </div>
+
             <div id="features_ncaa_baseball" className="accordion-collapse collapse" aria-labelledby="features_ncaa" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    FEATURES NCAA baseball 
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
+                <Futures_NCAA_BASEBALL/>
             </div>
             <div id="team_stats_ncaa_baseball" className="accordion-collapse collapse" aria-labelledby="team_stats_ncaa" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    TEAM STANDINGS NCAA baseball
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
+                <NCAA_BASEBALL_Team_stats_display/>
             </div>
             <div id="player_stats_ncaa_baseball" className="accordion-collapse collapse" aria-labelledby="player_stats_ncaa" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    PLAYER STATS NCAA baseball
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
+                <NCAA_BASEBALL_PY_STATS/>
             </div>
             <div id="alarms_ncaa_baseball" className="accordion-collapse collapse" aria-labelledby="alarms_ncaa" data-bs-parent="#items_tab_master">
                 <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
@@ -76,12 +44,7 @@ export const NCAA_BASEBALL_ITEMS = () => {
                 </div>
             </div>
             <div id="results_ncaa_baseball" className="accordion-collapse collapse" aria-labelledby="results_ncaa" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    RESULTS NCAA baseball
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
+                <Results_NCAA_BASEBALL/>
             </div>
         </div>
     )
