@@ -9,7 +9,7 @@ export const MARCIAL_Tabs = () => {
         <div className="accordion" id="marcial_acordion">
             <div className="accordion-item">
                 <h2 className="accordion-header" id="box_tabs">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#box_ac" aria-expanded="true" aria-controls="box_ac">
+                    <button className="accordion-button collapsed font_bold" type="button" data-bs-toggle="collapse" data-bs-target="#box_ac" aria-expanded="true" aria-controls="box_ac">
                         BOX
                     </button>
                 </h2>
@@ -20,7 +20,7 @@ export const MARCIAL_Tabs = () => {
             </div>
             <div className="accordion-item">
                 <h2 className="accordion-header" id="mma_tabs">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mma" aria-expanded="false" aria-controls="mma">
+                    <button className="accordion-button collapsed font_bold" type="button" data-bs-toggle="collapse" data-bs-target="#mma" aria-expanded="false" aria-controls="mma">
                         MMA
                     </button>
                 </h2>

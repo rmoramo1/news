@@ -5,6 +5,8 @@ import { NHL_ONE_Q } from "../../display_lines/hockey/nhl_one_q";
 import { Result_Quarters_Hockey } from "../../display_lines/hockey/result_quarters_hockey";
 import { Futures_NHL } from "../../display_lines/hockey/future_nhl";
 import { NHL_Team_stats_display } from "../../display_lines/hockey/nhl_team_stats";
+import NHL_PY_STATS from "../../display_lines/hockey/nhl_py_stats";
+import { Results_NHL } from "../../display_lines/hockey/results_nhl";
 
 export const HOCKEY_ITEMS = () => {
     return (
@@ -25,12 +27,7 @@ export const HOCKEY_ITEMS = () => {
                 <NHL_Team_stats_display/>
             </div>
             <div id="player_stats_hockey" className="accordion-collapse collapse" aria-labelledby="player_stats_hockey" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    PLAYER STATS hockey
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
+                <NHL_PY_STATS/>
             </div>
             <div id="alarms_hockey" className="accordion-collapse collapse" aria-labelledby="alarms_hockey" data-bs-parent="#items_tab_master">
                 <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
@@ -41,12 +38,7 @@ export const HOCKEY_ITEMS = () => {
                 </div>
             </div>
             <div id="results_hockey" className="accordion-collapse collapse" aria-labelledby="results_hockey" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
-                    RESULTS hockey
-                </div>
-                <div className="accordion-body">
-                    aqui van las lineas
-                </div>
+                <Results_NHL/>
             </div>
         </div>
     )

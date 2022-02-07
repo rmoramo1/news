@@ -1211,9 +1211,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 			ncaa_baseball:[],
 			stats_ncaa_baseball_team:[],
 			stats_ncaa_baseball_player:[],
-			stats_nhl_team:[],
 			//nhl
 			nhl:[],
+			stats_nhl_team:[],
+			stats_nhl_player:[],
+			//golf
+			golf:[],
+			golfer:[],
+			//nascar
+			nascar:[],
+			nascar_drivers:[],
+			//boxeo
+			boxeo:[],
+			stats_box_fighter:[],
+			//mma
+			mma:[],
+			stats_mma_fighter:[],
 			//teams
 			nfl_teams: [
 				"Arizona Cardinals", "Atlanta Falcons", "Baltimore Ravens", "Buffalo Bills", "Carolina Panthers", "Chicago Bears", "Cincinnati Bengals", "Cleveland Browns", "Dallas Cowboys", "Denver Broncos", "Detroit Lions", "Green Bay Packers", "Houston Texans", "Indianapolis Colts", "Jacksonville Jaguars", "Kansas City Chiefs", "Las Vegas Raiders", "Los Angeles Chargers", "Los Angeles Rams", "Miami Dolphins", "Minnesota Vikings", "New England Patriots", "New Orleans Saints", "New York Giants", "New York Jets", "Philadelphia Eagles", "Pittsburgh Steelers", "San Francisco 49ers", "Seattle Seahawks", "Tampa Bay Buccaneers", "Tennessee Titans", "Washington Football Team"
@@ -1444,6 +1457,64 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const response = await fetch(url);
 				const results = await response.json();
 				setStore({ stats_nhl_team: results });
+			},
+			stats_nhl_player: async () => {
+				const url = "https://www.sportsdata365.com/stats_nhl_player";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ stats_nhl_player: results });
+			},
+			//golf
+			golf: async () => {
+				const url = "https://www.sportsdata365.com/golf";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ golf: results });
+			},
+			golfer: async () => {
+				const url = "https://www.sportsdata365.com/golfer";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ golfer: results });
+			},
+			//nascar
+			nascar: async () => {
+				const url = "https://www.sportsdata365.com/nascar";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ nascar: results });
+			},
+			nascar_drivers: async () => {
+				const url = "https://www.sportsdata365.com/nascar_drivers";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ nascar_drivers: results });
+			},
+			//boxeo
+			boxeo: async () => {
+				const url = "https://www.sportsdata365.com/boxeo";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ boxeo: results });
+			},
+			stats_box_fighter: async () => {
+				const url = "https://www.sportsdata365.com/stats_box_fighter";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ stats_box_fighter: results });
+			},
+			//mma
+			mma: async () => {
+				const url = "https://www.sportsdata365.com/mma";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ mma: results });
+			},
+			stats_mma_fighter: async () => {
+				const url = "https://www.sportsdata365.com/stats_mma_fighter";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ stats_mma_fighter: results });
 			},
 			//injueries
 			injuries: async () => {
