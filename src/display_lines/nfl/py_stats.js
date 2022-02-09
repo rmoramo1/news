@@ -23,8 +23,6 @@ function PY_STATS() {
 
     const [year, setyear] = useState(yearLux);
     const [team, setTeam] = useState("Arizona Cardinals");
-    console.log(team + " teams");
-
 
     let selectYear = [];
     for (let i = 2002; i < 2025; i++) {
@@ -33,7 +31,7 @@ function PY_STATS() {
 
     return (
         <div>
-            <div className="title_sport bg_orange_dark text-white p-lg-1 fs-5 font_bold">
+            <div className=" title_sport bg_orange_dark text-white p-1 fs-5 font_bold">
                 <div className="row g-0">
                     <div className="col-lg-2">Player Stats</div>
                     <div className="col-lg-10">

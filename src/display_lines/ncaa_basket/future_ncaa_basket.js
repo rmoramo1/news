@@ -45,7 +45,7 @@ export const Futures_NCAA_BASKET = () => {
                     store.futures.map((item, index) => {
                         if (item.sport == "NCAA BASKETBALL") {
                             return (
-                                <div className="col-6 p-1" key={index}>
+                                <div className="col-lg-6 p-1" key={index}>
                                     <Futures_Lines
                                         future={item.future}
                                         sport={item.sport}

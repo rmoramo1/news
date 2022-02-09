@@ -34,7 +34,7 @@ function Boxer_st() {
                 borderWidth: 1,
             },
         ],
-    };
+    }; 
     store.stats_box_fighter.map((index) => {
         if (index.name == store.stats_box_fighter[params.theid].name) {
             data.labels.push(index.season);
@@ -53,30 +53,30 @@ function Boxer_st() {
             <div className="fs-5">
                 <div className="row g-0">
                     <div className="col-lg-2 p-2">
-                        <img className="img-fluid" src={store.stats_box_fighter[params.theid].headshot} alt="headshot of the player"></img>
+                        <img className="img-fluid" src={store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].headshot} alt="headshot of the player"></img>
                     </div>
                     <div className="col-lg-2 d-flex justify-content-center align-items-center p-1">
                         <div className="row g-0">
                             <div className="col-12">
-                                {store.stats_box_fighter[params.theid].name}
+                                {store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].name}
                             </div>
-                            <div className="col-12"><span className="fw-bold">Nickname:</span> {store.stats_box_fighter[params.theid].nickname}</div>
-                            <div className="col-12"><span className="fw-bold">Height:</span>  {store.stats_box_fighter[params.theid].height}</div>
-                            <div className="col-12"><span className="fw-bold">Weight:</span>  {store.stats_box_fighter[params.theid].weight}</div>
+                            <div className="col-12"><span className="fw-bold">Nickname:</span> {store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].nickname}</div>
+                            <div className="col-12"><span className="fw-bold">Height:</span>  {store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].height}</div>
+                            <div className="col-12"><span className="fw-bold">Weight:</span>  {store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].weight}</div>
                         </div>
                     </div>
                     <div className="col-lg-2 d-flex justify-content-center align-items-center p-1">
                         <div className="row g-0">
-                            <div className="col-12"><span className="fw-bold">Birth:</span> {store.stats_box_fighter[params.theid].birth}</div>
-                            <div className="col-12"><span className="fw-bold">Country:</span> {store.stats_box_fighter[params.theid].country}</div>
-                            <div className="col-12"><span className="fw-bold">Association:</span> {store.stats_box_fighter[params.theid].association}</div>
-                            <div className="col-12"><span className="fw-bold">Category:</span> {store.stats_box_fighter[params.theid].category}</div>
+                            <div className="col-12"><span className="fw-bold">Birth:</span> {store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].birth}</div>
+                            <div className="col-12"><span className="fw-bold">Country:</span> {store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].country}</div>
+                            <div className="col-12"><span className="fw-bold">Association:</span> {store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].association}</div>
+                            <div className="col-12"><span className="fw-bold">Category:</span> {store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].category}</div>
                         </div>
                     </div>
                     <div className="col-lg-1 d-flex justify-content-center align-items-center">
                        Wins per Year
                     </div>
-                    <div className="chart mh-25">
+                    <div className="chart mh-25 py-2">
                         <Pie data={data} />
                     </div>
                 </div>
@@ -88,10 +88,10 @@ function Boxer_st() {
                 <div className="eight_spans bg_lines">L By</div>
             </div>
             <div className="row g-0 text-center">
-                <div className="eight_spans bb1px lines">{store.stats_box_fighter[params.theid].w}</div>
-                <div className="eight_spans bb1px lines">{store.stats_box_fighter[params.theid].w_by}</div>
-                <div className="eight_spans bb1px lines">{store.stats_box_fighter[params.theid].L}</div>
-                <div className="eight_spans bb1px lines">{store.stats_box_fighter[params.theid].L_by}</div>
+                <div className="eight_spans bb1px lines">{store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].w}</div>
+                <div className="eight_spans bb1px lines">{store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].w_by}</div>
+                <div className="eight_spans bb1px lines">{store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].L}</div>
+                <div className="eight_spans bb1px lines">{store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].L_by}</div>
             </div>
         </div>
     )

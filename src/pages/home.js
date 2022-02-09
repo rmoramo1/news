@@ -11,6 +11,7 @@ import { Tabs } from "../acordion/tabs";
 import { Items } from "../acordion/items"
 /* img */
 
+export const config = { amp: true }
 
 function Home(){
 	const { store, actions } = useContext(Context);

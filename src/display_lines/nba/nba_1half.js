@@ -51,7 +51,7 @@ export const NBA_1half = () => {
 
     return (
         <div className="col-12" id="sports">
-            <div className="title_sport bg_orange_dark text-white p-lg-1 fs-5 font_bold">
+            <div className=" title_sport bg_orange_dark text-white p-1 fs-5 font_bold">
                 <div className="row g-0">
                     <div className="col-lg-2">NBA 1ST H</div>
                     <div className="col-lg-10">

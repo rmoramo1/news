@@ -40,25 +40,27 @@ export const Football_Team_Stats = props => {
                 <div className="col-4 bb1px lines">{props.t_td}</div>
             </div>
             <div className="col fs-5 py-3">1ST DOWNS</div>
-            <div className="row g-0 bg_lines text-white text-center">
-                <div className="eight_spans">T 1st D</div>
-                <div className="eight_spans">R 1st D</div>
-                <div className="eight_spans">P 1st D</div>
-                <div className="eight_spans">1st D P</div>
-                <div className="eight_spans">3rd D E</div>
-                <div className="eight_spans">3rd D %s</div>
-                <div className="eight_spans">4th D E</div>
-                <div className="eight_spans">4th D %</div>
-            </div>
-            <div className="row g-0 text-center">
-                <div className="eight_spans bb1px lines">{props.t_1_down}</div>
-                <div className="eight_spans bb1px lines">{props.Russ_1_d}</div>
-                <div className="eight_spans bb1px lines">{props.pass_1_d}</div>
-                <div className="eight_spans bb1px lines">{props.down_1_penal}</div>
-                <div className="eight_spans bb1px lines">{props.down_3_eff}</div>
-                <div className="eight_spans bb1px lines">{props.down_3_AVG}</div>
-                <div className="eight_spans bb1px lines">{props.down_4_eff}</div>
-                <div className="eight_spans bb1px lines">{props.down_4_AVG}</div>
+            <div className="overflowX_scroll">
+                <div className="row g-0 bg_lines text-white text-center odds-list">
+                    <div className="eight_spans">T 1st D</div>
+                    <div className="eight_spans">R 1st D</div>
+                    <div className="eight_spans">P 1st D</div>
+                    <div className="eight_spans">1st D P</div>
+                    <div className="eight_spans">3rd D E</div>
+                    <div className="eight_spans">3rd D %s</div>
+                    <div className="eight_spans">4th D E</div>
+                    <div className="eight_spans">4th D %</div>
+                </div>
+                <div className="row g-0 text-center  odds-list">
+                    <div className="eight_spans bb1px lines">{props.t_1_down}</div>
+                    <div className="eight_spans bb1px lines">{props.Russ_1_d}</div>
+                    <div className="eight_spans bb1px lines">{props.pass_1_d}</div>
+                    <div className="eight_spans bb1px lines">{props.down_1_penal}</div>
+                    <div className="eight_spans bb1px lines">{props.down_3_eff}</div>
+                    <div className="eight_spans bb1px lines">{props.down_3_AVG}</div>
+                    <div className="eight_spans bb1px lines">{props.down_4_eff}</div>
+                    <div className="eight_spans bb1px lines">{props.down_4_AVG}</div>
+                </div>
             </div>
             <div className="col fs-5 py-3">PASSING</div>
             <div className="row g-0 text-white text-center">

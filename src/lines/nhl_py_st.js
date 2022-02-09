@@ -56,73 +56,78 @@ function NHL_py_st() {
             <div className="fs-5">
                 <div className="row g-0">
                     <div className="col-lg-2 p-2">
-                        <img className="img-fluid" src={store.stats_nhl_player[params.theid].headshot} alt="headshot of the player"></img>
+                        <img className="img-fluid" src={store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].headshot} alt="headshot of the player"></img>
                     </div>
                     <div className="col-lg-2 d-flex justify-content-center align-items-center p-1">
                         <div className="row g-0">
                             <div className="col-12">
-                                {store.stats_nhl_player[params.theid].name}
+                                {store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].name}
                             </div>
-                            <div className="col-12">{store.stats_nhl_player[params.theid].team}</div>
-                            <div className="col-12"><span className="fw-bold">Dorsal:</span>  #{store.stats_nhl_player[params.theid].dorsal}</div>
-                            <div className="col-12"><span className="fw-bold">Position:</span>  {store.stats_nhl_player[params.theid].position}</div>
-                            <div className="col-12"><span className="fw-bold">Season:</span>  {store.stats_nhl_player[params.theid].season}</div>
+                            <div className="col-12">{store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].team}</div>
+                            <div className="col-12"><span className="fw-bold">Dorsal:</span>  #{store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].dorsal}</div>
+                            <div className="col-12"><span className="fw-bold">Position:</span>  {store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].position}</div>
+                            <div className="col-12"><span className="fw-bold">Season:</span>  {store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].season}</div>
                         </div>
                     </div>
-                    <div className="col-lg-2 d-flex justify-content-center align-items-center p-1">
+                    <div className="col-lg-2 d-flex align-items-center p-1">
                         <div className="row g-0">
-                            <div className="col-12"><span className="fw-bold">Birth:</span> {store.stats_nhl_player[params.theid].birth}</div>
-                            <div className="col-12"><span className="fw-bold">Height:</span>  {store.stats_nhl_player[params.theid].height}</div>
-                            <div className="col-12"><span className="fw-bold">Weight:</span> {store.stats_nhl_player[params.theid].weight}</div>
+                            <div className="col-12"><span className="fw-bold">Birth:</span> {store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].birth}</div>
+                            <div className="col-12"><span className="fw-bold">Height:</span>  {store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].height}</div>
+                            <div className="col-12"><span className="fw-bold">Weight:</span> {store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].weight}</div>
                         </div>
                     </div>
                     <div className="col-lg-1 d-flex justify-content-center align-items-center">
                         Goals per Year
                     </div>
-                    <div className="chart mh-25">
+                    <div className="chart mh-25 py-2">
                         <Pie data={data} />
                     </div>
                 </div>
             </div>
-            <div className="row g-0 bg_lines text-white text-center">
-                <div className="eight_spans">GP</div>
-                <div className="eight_spans">G</div>
-                <div className="eight_spans">A</div>
-                <div className="eight_spans">Pts</div>
-                <div className="eight_spans">P M Rating</div>
-                <div className="eight_spans">Pim</div>
-                <div className="eight_spans">Sog</div>
-                <div className="eight_spans">Spct</div>
-            </div>
-            <div className="row g-0 text-center">
-                <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid].gp}</div>
-                <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid].g}</div>
-                <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid].a}</div>
-                <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid].pts}</div>
-                <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid].p_m_rating}</div>
-                <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid].pim}</div>
-                <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid].sog}</div>
-                <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid].spct}</div>
-            </div>
-            <div className="row g-0 bg_lines text-white text-center mt-3">
-                <div className="eight_spans">Ppg</div>
-                <div className="eight_spans">Ppa</div>
-                <div className="eight_spans">Shg</div>
-                <div className="eight_spans">Sha</div>
-                <div className="eight_spans">Gwg</div>
-                <div className="eight_spans">Gtg</div>
-                <div className="eight_spans">Toi G</div>
-                <div className="eight_spans">Prod</div>
-            </div>
-            <div className="row g-0 text-center">
-                <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid].ppg}</div>
-                <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid].ppa}</div>
-                <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid].shg}</div>
-                <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid].sha}</div>
-                <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid].gwg}</div>
-                <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid].gtg}</div>
-                <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid].toi_g}</div>
-                <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid].prod}</div>
+            <div className="overflowX_scroll">
+                <div className="odds-list">
+
+                    <div className="row g-0 bg_lines text-white text-center">
+                        <div className="eight_spans">GP</div>
+                        <div className="eight_spans">G</div>
+                        <div className="eight_spans">A</div>
+                        <div className="eight_spans">Pts</div>
+                        <div className="eight_spans">P M Rating</div>
+                        <div className="eight_spans">Pim</div>
+                        <div className="eight_spans">Sog</div>
+                        <div className="eight_spans">Spct</div>
+                    </div>
+                    <div className="row g-0 text-center">
+                        <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].gp}</div>
+                        <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].g}</div>
+                        <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].a}</div>
+                        <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].pts}</div>
+                        <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].p_m_rating}</div>
+                        <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].pim}</div>
+                        <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].sog}</div>
+                        <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].spct}</div>
+                    </div>
+                    <div className="row g-0 bg_lines text-white text-center mt-3">
+                        <div className="eight_spans">Ppg</div>
+                        <div className="eight_spans">Ppa</div>
+                        <div className="eight_spans">Shg</div>
+                        <div className="eight_spans">Sha</div>
+                        <div className="eight_spans">Gwg</div>
+                        <div className="eight_spans">Gtg</div>
+                        <div className="eight_spans">Toi G</div>
+                        <div className="eight_spans">Prod</div>
+                    </div>
+                    <div className="row g-0 text-center">
+                        <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].ppg}</div>
+                        <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].ppa}</div>
+                        <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].shg}</div>
+                        <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].sha}</div>
+                        <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].gwg}</div>
+                        <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].gtg}</div>
+                        <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].toi_g}</div>
+                        <div className="eight_spans bb1px lines">{store.stats_nhl_player[params.theid] && store.stats_nhl_player[params.theid].prod}</div>
+                    </div>
+                </div>
             </div>
         </div>
     )

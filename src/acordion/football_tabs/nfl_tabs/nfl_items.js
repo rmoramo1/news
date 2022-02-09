@@ -7,7 +7,7 @@ import { Nfl_Four_q } from "../../../display_lines/nfl/nfl_four_q";
 import { Nfl_1half } from "../../../display_lines/nfl/nfl_1half";
 import { Nf2_1half } from "../../../display_lines/nfl/nfl_2half";
 import { Results_Nfl } from "../../../display_lines/nfl/results_nfl";
-import { Nfl_Props } from "../../../display_lines/nfl/nfl_props";
+import { Nfl_Props } from "../../../display_lines/globals/global_props";
 import { Nfl_Team_stats } from "../../../display_lines/nfl/nfl_team_stats";
 import PY_STATS from "../../../display_lines/nfl/py_stats";
 import { Futures_Nfl } from "../../../display_lines/nfl/future_nfl";

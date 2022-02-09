@@ -35,7 +35,7 @@ function Golfer_st() {
                 borderWidth: 1,
             },
         ],
-    };
+    }; 
     store.golfer.map((index) => {
         if (index.name == store.golfer[params.theid].name) {
             data.labels.push(index.season);
@@ -55,46 +55,46 @@ function Golfer_st() {
             <div className="fs-5">
                 <div className="row g-0">
                     <div className="col-lg-2 p-2">
-                        <img className="img-fluid" src={store.golfer[params.theid].headshot} alt="headshot of the player"></img>
+                        <img className="img-fluid" src={store.golfer[params.theid] && store.golfer[params.theid].headshot} alt="headshot of the player"></img>
                     </div>
-                    <div className="col-lg-2 d-flex justify-content-center align-items-center p-1">
+                    <div className="col-lg-2 d-flex align-items-center p-1">
                         <div className="row g-0">
                             <div className="col-12">
-                                {store.golfer[params.theid].name}
+                                {store.golfer[params.theid] && store.golfer[params.theid].name}
                             </div>
-                            <div className="col-12">{store.golfer[params.theid].team}</div>
-                            <div className="col-12"><span className="fw-bold">Swing:</span>  #{store.golfer[params.theid].swing}</div>
-                            <div className="col-12"><span className="fw-bold">Country:</span>  {store.golfer[params.theid].country}</div>
+                            <div className="col-12">{store.golfer[params.theid] && store.golfer[params.theid].team}</div>
+                            <div className="col-12"><span className="fw-bold">Swing:</span>  #{store.golfer[params.theid] && store.golfer[params.theid].swing}</div>
+                            <div className="col-12"><span className="fw-bold">Country:</span>  {store.golfer[params.theid] && store.golfer[params.theid].country}</div>
                         </div>
                     </div>
-                    <div className="col-lg-2 d-flex justify-content-center align-items-center p-1">
+                    <div className="col-lg-2 d-flex align-items-center p-1">
                         <div className="row g-0">
-                            <div className="col-12"><span className="fw-bold">Birth:</span> {store.golfer[params.theid].birth}</div>
+                            <div className="col-12"><span className="fw-bold">Birth:</span> {store.golfer[params.theid] && store.golfer[params.theid].birth}</div>
                         </div>
                     </div>
-                    <div className="col-lg-1 d-flex justify-content-center align-items-center">
+                    <div className="col-lg-1 d-flex  align-items-center">
                         Holes per Year
                     </div>
-                    <div className="chart mh-25">
+                    <div className="chart mh-25 py-2">
                         <Pie data={data} />
                     </div>
                 </div>
             </div>
-            <div className="row g-0 bg_lines text-white text-center">
-                <div className="eight_spans">Cuts</div>
-                <div className="eight_spans">Top 10</div>
-                <div className="eight_spans">W</div>
-                <div className="eight_spans">Rnds</div>
-                <div className="eight_spans">Holes</div>
-                <div className="eight_spans">Avg</div>
+            <div className="row g-0  text-white text-center">
+                <div className="eight_spans bg_lines">Cuts</div>
+                <div className="eight_spans bg_lines">Top 10</div>
+                <div className="eight_spans bg_lines">W</div>
+                <div className="eight_spans bg_lines">Rnds</div>
+                <div className="eight_spans bg_lines">Holes</div>
+                <div className="eight_spans bg_lines">Avg</div>
             </div>
             <div className="row g-0 text-center">
-                <div className="eight_spans bb1px lines">{store.golfer[params.theid].cuts}</div>
-                <div className="eight_spans bb1px lines">{store.golfer[params.theid].top10}</div>
-                <div className="eight_spans bb1px lines">{store.golfer[params.theid].w}</div>
-                <div className="eight_spans bb1px lines">{store.golfer[params.theid].rnds}</div>
-                <div className="eight_spans bb1px lines">{store.golfer[params.theid].holes}</div>
-                <div className="eight_spans bb1px lines">{store.golfer[params.theid].holes}</div>
+                <div className="eight_spans bb1px lines">{store.golfer[params.theid] && store.golfer[params.theid].cuts}</div>
+                <div className="eight_spans bb1px lines">{store.golfer[params.theid] && store.golfer[params.theid].top10}</div>
+                <div className="eight_spans bb1px lines">{store.golfer[params.theid] && store.golfer[params.theid].w}</div>
+                <div className="eight_spans bb1px lines">{store.golfer[params.theid] && store.golfer[params.theid].rnds}</div>
+                <div className="eight_spans bb1px lines">{store.golfer[params.theid] && store.golfer[params.theid].holes}</div>
+                <div className="eight_spans bb1px lines">{store.golfer[params.theid] && store.golfer[params.theid].holes}</div>
             </div>
         </div>
     )

@@ -25,8 +25,12 @@ const Ncaa_Baseball_py_st = lazy(() => import('./lines/ncaa_baseball_py_st'));
 const NHL_py_st = lazy(() => import('./lines/nhl_py_st'));
 const Golfer_st = lazy(() => import('./lines/golfer_st'));
 const Nascar_Driver_Stats = lazy(() => import('./lines/nascar_driver_st'));
+const BOX_lines = lazy(() => import('./lines/box_lines'));
 const Boxer_st = lazy(() => import('./lines/boxer_st'));
+const MMA_lines = lazy(() => import('./lines/mma_lines'));
 const MMA_st = lazy(() => import('./lines/mma_st'));
+const SOCCER_py_st = lazy(() => import('./lines/soccer_py_st'));
+const Error = lazy(() => import('./pages/404'));
 
 
 /*components*/
@@ -62,10 +66,13 @@ function App() {
 						<Route path="/nhl_py_st/:theid" component={NHL_py_st} />
 						<Route path="/golfer_st/:theid" component={Golfer_st} />
 						<Route path="/nascar_driver_st/:theid" component={Nascar_Driver_Stats} />
-						<Route path="/boxer_st/:theid" component={Boxer_st} />
+						<Route path="/box_lines/:theid" component={BOX_lines} />
+						<Route path="/mma_lines/:theid" component={MMA_lines} />
 						<Route path="/mma_st/:theid" component={MMA_st} />
+						<Route path="/soccer_py_st/:theid" component={SOCCER_py_st} />
+						<Route path="/boxer_st/:theid" component={Boxer_st} />
 						<Route>
-							<h1>Error</h1>
+							<Error/>
 						</Route>
 					</Switch>
 				</Suspense>

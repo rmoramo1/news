@@ -3,6 +3,7 @@ import DateTime from '../../../node_modules/luxon/src/datetime.js'
 import { Context } from "../../store/appContext";
 
 import { BOX_lines } from "../../lines/box_lines.js";
+import { Single_Box_Lines } from "../../lines/single_box_lines.js";
 export const Box_Event = () => {
     const { store } = useContext(Context);
     const dateLux = DateTime.now().day;
@@ -51,7 +52,7 @@ export const Box_Event = () => {
 
     return (
         <div className="col-12" id="sports">
-            <div className="title_sport bg_orange_dark text-white p-lg-1 fs-5 font_bold">
+            <div className=" title_sport bg_orange_dark text-white p-1 fs-5 font_bold">
                 <div className="row g-0">
                     <div className="col-lg-2">BOX EVENTS</div>
                     <div className="col-lg-10">
@@ -96,44 +97,20 @@ export const Box_Event = () => {
                     </div>
                 </div>
             </div>
-            <div className="accordion-item overflowX_scroll">
-                <div className="accordion-collapse collapse show" id="nbaCollapse" data-bs-parent="#sports">
+            <div className="row g-0">
                     {store.boxeo.map((item, index) => {
                         if (item.date == R_date) {
                             return (
-                                <div key={index}>
-                                    <BOX_lines
-                                        date={item.date}
-                                        hour={item.hour}
-                                        event={item.event}
-                                        rounds={item.rounds}
-                                        location_Fight={item.location_Fight}
+                                <div key={index} className="col-6">
+                                    <Single_Box_Lines
+                                        id={index}
                                         fighter_One={item.fighter_One}
-                                        money_Line_One={item.money_Line_One}
                                         fighter_Two={item.fighter_Two}
-                                        winner={item.winner}
-                                        finish_by={item.finish_by}
-                                        r1_result={item.r1_result}
-                                        r2_result={item.r2_result}
-                                        r3_result={item.r3_result}
-                                        r4_result={item.r4_result}
-                                        r5_result={item.r5_result}
-                                        r6_result={item.r6_result}
-                                        r7_result={item.r7_result}
-                                        r8_result={item.r8_result}
-                                        r9_result={item.r9_result}
-                                        r10_result={item.r10_result}
-                                        r11_result={item.r11_result}
-                                        r12_result={item.r12_result}
-                                        r13_result={item.r13_result}
-                                        r14_result={item.r14_result}
-                                        r15_result={item.r15_result}
                                     />
                                 </div>
                             );
                         }
                     })}
-                </div>
             </div>
         </div>
     )

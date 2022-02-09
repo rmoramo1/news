@@ -19,11 +19,11 @@ export const Nfl_Props = () => {
         <div className="col-12" id="sports">
             <div className="title_sport bg_orange_dark text-white ps-lg-5 fs-1 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-4">Props</div>
-                    <div className="col-lg-8">
+                    <div className="col-4">Props</div>
+                    <div className="col-8">
                         <div className="row g-0">
-                            <div className="col-3 text-center">Sport</div>
-                            <div className="col-lg-3 d-flex align-items-center">
+                            <div className="col-6 text-center">Sport</div>
+                            <div className="col-6 d-flex align-items-center">
                                 <select className="form-select" name="week" aria-label="Default select example" onChange={e => setSport(e.target.value)} required>
                                     {
                                         sports.map((item, index) => {

@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
 
 export const PUCK_Lines = props => {
-    const { store } = useContext(Context);
     return (
         <div className="col-12 overflowX_scroll p-1">
             <div className="row g-0 bg_lines text-white text-center odds-list">

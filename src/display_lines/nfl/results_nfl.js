@@ -58,7 +58,7 @@ export const Results_Nfl = () => {
     }
     return (
         <div className="col-12" id="sports">
-            <div className="title_sport bg_orange_dark text-white p-lg-1 fs-5 font_bold">
+            <div className=" title_sport bg_orange_dark text-white p-1 fs-5 font_bold">
                 <div className="row g-0">
                     <div className="col-lg-4">Results NFL</div>
                     <div className="col-lg-8">
@@ -123,7 +123,7 @@ export const Results_Nfl = () => {
                                     })
 
                                     return (
-                                        <div className="col-6 p-2" key={index}>
+                                        <div className="col-lg-6 p-2" key={index}>
                                             <Results
                                                 logo_away={url_aw}
                                                 logo_home={url_hm}

@@ -29,7 +29,8 @@ body {
 }
 @media only screen and (max-width: 600px) {
   .chart{
-    width: 100%;
+    width: 55%;
+    margin:auto ;
   }
 }
 .modal-content{
@@ -37,4 +38,11 @@ body {
 }
 .modal-backdrop{
   display: none;
+}
+.error{
+  background-image: url('../img/404.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
 }

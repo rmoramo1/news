@@ -26,7 +26,7 @@ export const Extra_Inning_NCAA_BASEBALL = () => {
     const [month, setmonth] = useState(monthShow);
     const [week, setweek] = useState(dateShow);
     let R_date = year+"-"+month+"-"+week;
-    console.log(R_date + " R_date")  
+       
     let selectYear = [];
     for (let i = 2002; i < 2025; i++) {
         selectYear.push(i);
@@ -49,7 +49,7 @@ export const Extra_Inning_NCAA_BASEBALL = () => {
     }
     return (
         <div className="col-12" id="sports">
-            <div className="title_sport bg_orange_dark text-white p-lg-1 fs-5 font_bold">
+            <div className=" title_sport bg_orange_dark text-white p-1 fs-5 font_bold">
                 <div className="row g-0">
                     <div className="col-lg-2">Extra Inning</div>
                     <div className="col-lg-10">

@@ -86,7 +86,11 @@ const injectContext = PassedComponent => {
 			//mma
 			state.actions.mma();
 			state.actions.stats_mma_fighter();
-			
+			//soccer
+			state.actions.soccer();
+			state.actions.stats_soccer_team();
+			state.actions.logos_soccer();
+			state.actions.stats_soccer_player();
 		}, []);
 
 		// The initial value for the context is not null anymore, but the current state of this component,

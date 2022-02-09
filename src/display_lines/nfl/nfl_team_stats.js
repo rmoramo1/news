@@ -50,7 +50,6 @@ export const Nfl_Team_stats = () => {
                 </div>
             </div>
             <div className="accordion-item">
-                <div className="accordion-collapse collapse show" id="nflCollapse" data-bs-parent="#sports">
                     {store.nfl_team_stats.map((item, index) => {
                      if(item.team == team && item.season == year){
                          return (
@@ -107,7 +106,6 @@ export const Nfl_Team_stats = () => {
                      
                     })}
                 </div>
-            </div>
         </div>
     )
 }
