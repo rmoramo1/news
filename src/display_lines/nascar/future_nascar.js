@@ -14,7 +14,7 @@ export const Futures_Nascar = () => {
         selectWeek.push(i);
     }
 
-    let sports = ["FOOTBALL", "BASKETBALL", "BASEBALL", "HOCKEY", "BOX", "MMA", "GOLF", "NACASCAR", "SOCCER", "NCAA FOOTABAL", "NCAA BASKETBALL", "NCAA BASEBALL"]
+    let sports = ["FOOTBALL", "BASKETBALL", "BASEBALL", "HOCKEY", "BOX", "MMA", "GOLF", "NASCAR", "SOCCER", "NCAA FOOTABAL", "NCAA BASKETBALL", "NCAA BASEBALL"]
 
     return (
         <div className="col-12" id="sports">
@@ -43,7 +43,7 @@ export const Futures_Nascar = () => {
             <div className="row g-0">
                 {
                     store.futures.map((item, index) => {
-                        if (item.sport == "NACASCAR") {
+                        if (item.sport == "NASCAR") {
                             return (
                                 <div className="col-lg-6 p-1" key={index}>
                                     <Futures_Lines

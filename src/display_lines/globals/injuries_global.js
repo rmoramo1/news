@@ -9,7 +9,7 @@ export const Injuries_Global = () => {
     const dateLux = DateTime.now().weekNumber;
     const [sport, setSport] = useState("FOOTBALL");
 
-    let sports = ["FOOTBALL", "BASKETBALL", "BASEBALL", "HOCKEY", "BOX", "MMA", "GOLF", "NACASCAR", "SOCCER", "NCAA FOOTABAL", "NCAA BASKETBALL", "NCAA BASEBALL"]
+    let sports = ["FOOTBALL", "BASKETBALL", "BASEBALL", "HOCKEY", "BOX", "MMA", "GOLF", "NASCAR", "SOCCER", "NCAA FOOTABAL", "NCAA BASKETBALL", "NCAA BASEBALL"]
     let selectWeek = [];
     for (let i = 1; i < 53; i++) {
         selectWeek.push(i);

@@ -14,7 +14,7 @@ export const Ncaa_Football_Futures = () => {
         selectWeek.push(i);
     }
 
-    let sports = ["FOOTBALL", "BASKETBALL", "BASEBALL", "HOCKEY", "BOX", "MMA", "GOLF", "NACASCAR", "SOCCER", "NCAA FOOTBALL", "NCAA BASKETBALL", "NCAA BASEBALL"]
+    let sports = ["FOOTBALL", "BASKETBALL", "BASEBALL", "HOCKEY", "BOX", "MMA", "GOLF", "NASCAR", "SOCCER", "NCAA FOOTBALL", "NCAA BASKETBALL", "NCAA BASEBALL"]
 
     return (
         <div className="col-12" id="sports">
