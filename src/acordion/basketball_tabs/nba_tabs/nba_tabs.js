@@ -35,7 +35,7 @@ export const NBA_Tabs = () => {
                         <div className="accordion-item">
                             <h2 className="accordion-header" id="tercerNBAQ_ac">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#threeQNBA" aria-expanded="false" aria-controls="threeQNBA">
-                                    3RT Q
+                                    3RD Q
                                 </button>
                             </h2>
                         </div>
@@ -59,7 +59,7 @@ export const NBA_Tabs = () => {
             <div className="accordion-item">
                 <h2 className="accordion-header" id="nba_2stH_ac">
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nba2st_H" aria-expanded="false" aria-controls="nba2st_H">
-                        2ST H
+                        2ND H
                     </button>
                 </h2>
             </div>

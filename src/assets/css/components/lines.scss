@@ -64,5 +64,16 @@
 .team_stats{
     background: $orange_to_white;
     color: $white;
-    
+}
+.diez_nueve_spans{
+    width: 5.2%;
+    white-space: nowrap;
+    overflow: hidden;
+    img{
+        width: 50px;
+    }
+}
+.font_small{
+    font-size: .8rem;
+    overflow: hidden;
 }

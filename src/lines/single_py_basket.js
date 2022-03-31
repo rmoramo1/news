@@ -6,23 +6,29 @@ export const Single_PY_Basket = props => {
     return (
         <div className="col-12 g-0">
             <div className="row g-0">
-                <div className="col-1 ">
-                    <div className="col-12 bg-dark h-100 d-flex justify-content-center align-items-center ">
-                        <div className="col-12 text-center">
-                            <Link className="text-white" to={`/nba_py_st/${props.id}`}><i className="far fa-eye"></i></Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-11  shadow">
-                    <div className="row g-0 text-center bg_lines text-white">
-                        <div className="col-4">Name</div>
-                        <div className="col-4">Position</div>
-                        <div className="col-4">Dorsal</div>
-                    </div>
+                <div className="col-12 bb1px">
                     <div className="row g-0 text-center">
-                        <div className="col-4 lines">{props.name}</div>
-                        <div className="col-4 lines">{props.position}</div>
-                        <div className="col-4 lines">{props.dorsal}</div>
+                        <div className="diez_nueve_spans lines">
+                            <img src={props.headshot}></img>
+                            </div>
+                        <div className="diez_nueve_spans pt-2 lines"><Link to={`/nba_py_st/${props.id}`}>{props.name}</Link></div>
+                        <div className="diez_nueve_spans pt-2 lines">{props.gp}</div>
+                        <div className="diez_nueve_spans pt-2 lines">{props.gs}</div>
+                        <div className="diez_nueve_spans pt-2 lines">{props.fg}</div>
+                        <div className="diez_nueve_spans pt-2 lines">{props.fg_AVG}</div>
+                        <div className="diez_nueve_spans pt-2 lines">{props.three_pt}</div>
+                        <div className="diez_nueve_spans pt-2 lines">{props.three_pt_AVG}</div>
+                        <div className="diez_nueve_spans pt-2 lines">{props.ft}</div>
+                        <div className="diez_nueve_spans pt-2 lines">{props.ft_AVG}</div>
+                        <div className="diez_nueve_spans pt-2 lines">{props.Or}</div>
+                        <div className="diez_nueve_spans pt-2 lines">{props.dr}</div>
+                        <div className="diez_nueve_spans pt-2 lines">{props.reb}</div>
+                        <div className="diez_nueve_spans pt-2 lines">{props.ast}</div>
+                        <div className="diez_nueve_spans pt-2 lines">{props.stl}</div>
+                        <div className="diez_nueve_spans pt-2 lines">{props.blk}</div>
+                        <div className="diez_nueve_spans pt-2 lines">{props.to}</div>
+                        <div className="diez_nueve_spans pt-2 lines">{props.pf}</div>
+                        <div className="diez_nueve_spans pt-2 lines">{props.pts}</div>
                     </div>
                 </div>
             </div>
@@ -32,6 +38,21 @@ export const Single_PY_Basket = props => {
 Single_PY_Basket.propTypes = {
     id: PropTypes.number,
     name: PropTypes.string,
-    dorsal: PropTypes.string,
-    position: PropTypes.string,
+    gp: PropTypes.string,
+    gs: PropTypes.string,
+    fg: PropTypes.string,
+    fg_AVG: PropTypes.string,
+    three_pt: PropTypes.string,
+    three_pt_AVG: PropTypes.string,
+    ft: PropTypes.string,
+    ft_AVG: PropTypes.string,
+    Or: PropTypes.string,
+    dr: PropTypes.string,
+    reb: PropTypes.string,
+    ast: PropTypes.string,
+    stl: PropTypes.string,
+    blk: PropTypes.string,
+    to: PropTypes.string,
+    pf: PropTypes.string,
+    pts: PropTypes.string
 };

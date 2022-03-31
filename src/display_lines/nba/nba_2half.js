@@ -49,7 +49,7 @@ export const NBA_2half = () => {
         <div className="col-12" id="sports">
             <div className=" title_sport bg_orange_dark text-white p-1 fs-5 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-2">NBA 2ST H</div>
+                    <div className="col-lg-2">NBA 2ND H</div>
                     <div className="col-lg-10">
                     <div className="row g-0">
                             <div className="col-2 text-center">Year</div>

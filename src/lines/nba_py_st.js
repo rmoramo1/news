@@ -52,7 +52,7 @@ function NBA_Player_Stats() {
     ChartJS.register(ArcElement, Tooltip, Legend);
 
     return (
-        <div className="container-fluid border_top">
+        <div className="container border_top">
             <div className="fs-5">
                 <div className="row g-0">
                     <div className="col-lg-2 p-2">

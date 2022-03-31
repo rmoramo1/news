@@ -35,7 +35,7 @@ export const Nfl_Tabs = () => {
                         <div className="accordion-item">
                             <h2 className="accordion-header" id="tercerQ_ac">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tercerQ" aria-expanded="false" aria-controls="tercerQ">
-                                    3RT Q
+                                    3RD Q
                                 </button>
                             </h2>
                         </div>
@@ -59,7 +59,7 @@ export const Nfl_Tabs = () => {
             <div className="accordion-item">
                 <h2 className="accordion-header" id="nfl_2stH_ac">
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nfl2st_H" aria-expanded="false" aria-controls="nfl2st_H">
-                        2ST H
+                        2ND H
                     </button>
                 </h2>
             </div>
