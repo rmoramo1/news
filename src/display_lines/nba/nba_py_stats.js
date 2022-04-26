@@ -61,8 +61,8 @@ function NBA_PY_STATS() {
                     </div>
                 </div>
             </div>
-            <div className="row g-0">
-                <div className="row g-0 text-center bg_lines text-white font_small">
+            <div className="row g-0 overflowX_scroll">
+                <div className="row g-0 text-center bg_lines text-white font_small odds-list">
                     <div className="diez_nueve_spans">Shot</div>
                     <div className="diez_nueve_spans">Name</div>
                     <div className="diez_nueve_spans">GP</div>
@@ -87,7 +87,7 @@ function NBA_PY_STATS() {
                     store.stats_nba_player.map((item, index) => {
                         if (item.season == year && item.team == team) {
                             return (
-                                <div key={index} className="col-12 p-1">
+                                <div key={index} className="col-12 p-1 odds-list">
                                     <Single_PY_Basket
                                         id={index}
                                         name={item.name}

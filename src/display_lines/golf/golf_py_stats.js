@@ -47,16 +47,33 @@ function Golfer_PY_STATS() {
                     </div>
                 </div>
             </div>
-            <div className="row g-0">
+            <div className="row g-0 overflowX_scroll">
+                <div className="row g-0 text-center bg_lines text-white odds-list">
+                    <div className="diez_spans"></div>
+                    <div className="diez_spans">Name</div>
+                    <div className="diez_spans">Swing</div>
+                    <div className="diez_spans bg_lines">Cuts</div>
+                    <div className="diez_spans bg_lines">Top 10</div>
+                    <div className="diez_spans bg_lines">W</div>
+                    <div className="diez_spans bg_lines">Rnds</div>
+                    <div className="diez_spans bg_lines">Holes</div>
+                    <div className="diez_spans bg_lines">Avg</div>
+                </div>
                 {
                     store.golfer.map((item, index) => {
                         return (
-                            <div key={index} className="col-lg-6 p-1">
+                            <div key={index} className="col-12">
                                 <Single_Golfer
                                     id={index}
                                     name={item.name}
+                                    headshot={item.headshot}
                                     holes={item.holes}
                                     swing={item.swing}
+                                    cuts={item.cuts}
+                                    top10={item.top10}
+                                    w={item.w}
+                                    rnds={item.rnds}
+                                    avg={item.avg}
                                 />
                             </div>
                         )

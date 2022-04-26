@@ -22,7 +22,7 @@
 
 .lines {
     &:hover {
-        background: lighten($orange,  19);
+        background: lighten($orange, 19);
         color: $white;
     }
 }
@@ -32,9 +32,6 @@
     min-width: 150px;
 }
 
-.odds-list {
-    min-width: 920px;
-}
 
 .bb1px {
     border-bottom: 1px solid rgba($grey, .20);
@@ -47,33 +44,73 @@
 .overflowX_scroll {
     overflow-x: scroll;
 }
+
+.odds-list {
+    min-width: 920px;
+}
+
 .img_logo {
     max-width: 80px;
     max-height: 80px;
 }
+
 @media only screen and (max-width: 600px) {
     .img_logo {
         max-width: 45px;
         max-height: 45px;
     }
-  }
+}
+
+.team_stats {
+    background: $orange_to_white;
+    color: $white;
+}
 
 .eight_spans {
     width: 12.5%;
 }
-.team_stats{
-    background: $orange_to_white;
-    color: $white;
-}
-.diez_nueve_spans{
-    width: 5.2%;
+
+.quince_spans {
+    width: 6.6%;
     white-space: nowrap;
     overflow: hidden;
-    img{
+
+    img {
         width: 50px;
     }
 }
-.font_small{
+
+.diez_spans {
+    width: 10%;
+    white-space: nowrap;
+    overflow: hidden;
+
+    img {
+        width: 50px;
+    }
+}
+
+.diez_nueve_spans {
+    width: 5.2%;
+    white-space: nowrap;
+    overflow: hidden;
+
+    img {
+        width: 50px;
+    }
+}
+
+.diezSiete_spans {
+    width: 5.8%;
+    white-space: nowrap;
+    overflow: hidden;
+
+    img {
+        width: 50px;
+    }
+}
+
+.font_small {
     font-size: .8rem;
     overflow: hidden;
 }

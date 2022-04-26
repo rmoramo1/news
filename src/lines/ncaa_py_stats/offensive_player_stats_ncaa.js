@@ -92,9 +92,9 @@ function Offensive_Player_Stats_Ncaa() {
                         <div className="eight_spans">GP</div>
                         <div className="eight_spans">Cmp</div>
                         <div className="eight_spans">Pass Att</div>
-                        <div className="eight_spans">Cmp AVG</div>
+                        <div className="eight_spans">Cmp %</div>
                         <div className="eight_spans">Yards</div>
-                        <div className="eight_spans">Yards AVG</div>
+                        <div className="eight_spans">Yards %</div>
                         <div className="eight_spans">Yards PG</div>
                         <div className="eight_spans">Pass TD</div>
                     </div>
@@ -110,12 +110,12 @@ function Offensive_Player_Stats_Ncaa() {
                     </div>
                     <div className="row g-0 bg_lines text-white text-center mt-3">
                         <div className="eight_spans">Int</div>
-                        <div className="eight_spans">Asck</div>
-                        <div className="eight_spans">S YL</div>
-                        <div className="eight_spans">R TG</div>
-                        <div className="eight_spans">Russ Att</div>
-                        <div className="eight_spans">Russ Yards</div>
-                        <div className="eight_spans">Yards P russ</div>
+                        <div className="eight_spans">Sack</div>
+                        <div className="eight_spans">SYL</div>
+                        <div className="eight_spans">RTG</div>
+                        <div className="eight_spans">RAtt</div>
+                        <div className="eight_spans">RY</div>
+                        <div className="eight_spans">YPR</div>
                         <div className="eight_spans">Big</div>
                     </div>
                     <div className="row g-0 text-center">
@@ -129,13 +129,13 @@ function Offensive_Player_Stats_Ncaa() {
                         <div className="eight_spans bb1px lines">{store.stats_offensive_player_ncaa_football[params.theid] && store.stats_offensive_player_ncaa_football[params.theid].big}</div>
                     </div>
                     <div className="row g-0 text-white text-center mt-3">
-                        <div className="eight_spans bg_lines">Rush TT</div>
-                        <div className="eight_spans bg_lines">Rush Yard PG</div>
+                        <div className="eight_spans bg_lines">RTT</div>
+                        <div className="eight_spans bg_lines">RYPG</div>
                         <div className="eight_spans bg_lines">Fum</div>
                         <div className="eight_spans bg_lines">Lst</div>
                         <div className="eight_spans bg_lines">FD</div>
                         <div className="eight_spans bg_lines">REC</div>
-                        <div className="eight_spans bg_lines">T tgts</div>
+                        <div className="eight_spans bg_lines">Ttgts</div>
                         <div className="eight_spans bg_lines">R Yards</div>
                     </div>
                     <div className="row g-0 text-center">
@@ -149,14 +149,14 @@ function Offensive_Player_Stats_Ncaa() {
                         <div className="eight_spans bb1px lines">{store.stats_offensive_player_ncaa_football[params.theid] && store.stats_offensive_player_ncaa_football[params.theid].r_yards}</div>
                     </div>
                     <div className="row g-0 text-white text-center mt-3">
-                        <div className="eight_spans bg_lines">Yards P R</div>
-                        <div className="eight_spans bg_lines">R TD</div>
+                        <div className="eight_spans bg_lines">YPR</div>
+                        <div className="eight_spans bg_lines">RTD</div>
                         <div className="eight_spans bg_lines">LR</div>
-                        <div className="eight_spans bg_lines">R Big</div>
-                        <div className="eight_spans bg_lines">R Y PG</div>
-                        <div className="eight_spans bg_lines">R FL</div>
-                        <div className="eight_spans bg_lines">R Y AC</div>
-                        <div className="eight_spans bg_lines">R FD</div>
+                        <div className="eight_spans bg_lines">RBig</div>
+                        <div className="eight_spans bg_lines">RYPG</div>
+                        <div className="eight_spans bg_lines">RFL</div>
+                        <div className="eight_spans bg_lines">RYAC</div>
+                        <div className="eight_spans bg_lines">RFD</div>
                     </div>
                     <div className="row g-0 text-center mt-3">
                         <div className="eight_spans bb1px lines">{store.stats_offensive_player_ncaa_football[params.theid] && store.stats_offensive_player_ncaa_football[params.theid].yards_p_r}</div>

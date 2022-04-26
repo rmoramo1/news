@@ -84,7 +84,7 @@ function Offensive_Player_Stats() {
                 </div>
             </div>
             <div className="overflowX_scroll">
-                <div className="odds-list">
+                <div className="/">
                     <div className="row g-0 bg_lines text-white text-center">
                         <div className="eight_spans">GP</div>
                         <div className="eight_spans">Cmp</div>

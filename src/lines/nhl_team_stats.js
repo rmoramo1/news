@@ -6,13 +6,11 @@ export const NHL_Team_Stats = props => {
     const { store } = useContext(Context);
     return (
         <div>
-            <div className="col-12 fs-5 team_stats">
-                <div className="row g-0">
-                    <div className="col-6 pe-2 d-flex align-items-center justify-content-end">
-                        {props.team}
-                    </div>
-                    <div className="col-6">
-                        {
+            <div className="container-fluid">
+
+                <div className="row g-0 text-center odds-list">
+                    <div className="diez_nueve_spans bb1px lines">
+                    {
                             store.logos_nhl.map((item, index) => {
                                 let url_aw = "";
                                 if (item.team == props.team) {
@@ -26,52 +24,23 @@ export const NHL_Team_Stats = props => {
                             })
                         }
                     </div>
-                </div>
-            </div>
-            <div className="container p-3">
-                <div className="row g-0 bg_lines text-white text-center">
-                    <div className="col-2">GP</div>
-                    <div className="col-2">W</div>
-                    <div className="col-2">L</div>
-                    <div className="col-2">Otl</div>
-                    <div className="col-2">Pts</div>
-                    <div className="col-2">RW</div>
-                </div>
-                <div className="row g-0 text-center">
-                    <div className="col-2 bb1px lines">{props.gp}</div>
-                    <div className="col-2 bb1px lines">{props.w}</div>
-                    <div className="col-2 bb1px lines">{props.L}</div>
-                    <div className="col-2 bb1px lines">{props.otl}</div>
-                    <div className="col-2 bb1px lines">{props.pts}</div>
-                    <div className="col-2 bb1px lines">{props.rw}</div>
-                </div>
-                <div className="row mt-3 g-0 bg_lines text-white text-center">
-                    <div className="col-2">ROW</div>
-                    <div className="col-2">SOW</div>
-                    <div className="col-2">SOL</div>
-                    <div className="col-2">Home</div>
-                    <div className="col-2">Away</div>
-                    <div className="col-2">GF</div>
-                </div>
-                <div className="row g-0 text-center">
-                    <div className="col-2 bb1px lines">{props.row}</div>
-                    <div className="col-2 bb1px lines">{props.sow}</div>
-                    <div className="col-2 bb1px lines">{props.sol}</div>
-                    <div className="col-2 bb1px lines">{props.home}</div>
-                    <div className="col-2 bb1px lines">{props.away}</div>
-                    <div className="col-2 bb1px lines">{props.gf}</div>
-                </div>
-                <div className="row mt-3 g-0 bg_lines text-white text-center">
-                    <div className="col-2">GA</div>
-                    <div className="col-2">DIFF</div>
-                    <div className="col-2">L10</div>
-                    <div className="col-2">Strk</div>
-                </div>
-                <div className="row g-0 text-center">
-                    <div className="col-2 bb1px lines">{props.ga}</div>
-                    <div className="col-2 bb1px lines">{props.diff}</div>
-                    <div className="col-2 bb1px lines">{props.l10}</div>
-                    <div className="col-2 bb1px lines">{props.strk}</div>
+                    <div className="diez_nueve_spans bb1px lines d-flex justify-content-start align-items-center"> {props.team}</div>
+                    <div className="diez_nueve_spans bb1px lines d-flex justify-content-center align-items-center">{props.gp}</div>
+                    <div className="diez_nueve_spans bb1px lines d-flex justify-content-center align-items-center">{props.w}</div>
+                    <div className="diez_nueve_spans bb1px lines d-flex justify-content-center align-items-center">{props.L}</div>
+                    <div className="diez_nueve_spans bb1px lines d-flex justify-content-center align-items-center">{props.otl}</div>
+                    <div className="diez_nueve_spans bb1px lines d-flex justify-content-center align-items-center">{props.pts}</div>
+                    <div className="diez_nueve_spans bb1px lines d-flex justify-content-center align-items-center">{props.rw}</div>
+                    <div className="diez_nueve_spans bb1px lines d-flex justify-content-center align-items-center">{props.row}</div>
+                    <div className="diez_nueve_spans bb1px lines d-flex justify-content-center align-items-center">{props.sow}</div>
+                    <div className="diez_nueve_spans bb1px lines d-flex justify-content-center align-items-center">{props.sol}</div>
+                    <div className="diez_nueve_spans bb1px lines d-flex justify-content-center align-items-center">{props.home}</div>
+                    <div className="diez_nueve_spans bb1px lines d-flex justify-content-center align-items-center">{props.away}</div>
+                    <div className="diez_nueve_spans bb1px lines d-flex justify-content-center align-items-center">{props.gf}</div>
+                    <div className="diez_nueve_spans bb1px lines d-flex justify-content-center align-items-center">{props.ga}</div>
+                    <div className="diez_nueve_spans bb1px lines d-flex justify-content-center align-items-center">{props.diff}</div>
+                    <div className="diez_nueve_spans bb1px lines d-flex justify-content-center align-items-center">{props.l10}</div>
+                    <div className="diez_nueve_spans bb1px lines d-flex justify-content-center align-items-center">{props.strk}</div>
                 </div>
             </div>
         </div>

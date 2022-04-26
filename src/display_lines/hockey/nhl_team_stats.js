@@ -20,18 +20,6 @@ export const NHL_Team_stats_display = () => {
                     <div className="col-lg-4">NHL Team Stats</div>
                     <div className="col-lg-8">
                         <div className="row g-0">
-                            <div className="col-3 text-center">TEAM</div>
-                            <div className="col-lg-3 d-flex align-items-center">
-                                <select className="form-select" name="team" aria-label="Default select example" defaultValue={team} onChange={e => setTeam(e.target.value)} required>
-                                    {
-                                        store.nhl_teams.map((item, index) => {
-                                            return (
-                                                <option key={index} name="team" value={item}>{item}</option>
-                                            )
-                                        })
-                                    }
-                                </select>
-                            </div>
                             <div className="col-3 text-center">SEASON</div>
                             <div className="col-lg-3 d-flex align-items-center">
                                 <select className="form-select" name="year" aria-label="Default select example" defaultValue={year} onChange={e => setyear(e.target.value)} required>
@@ -48,10 +36,30 @@ export const NHL_Team_stats_display = () => {
                     </div>
                 </div>
             </div>
-            <div className="accordion-item">
+            <div className="accordion-item overflowX_scroll">
+                <div className="row g-0 bg_lines text-white text-center odds-list">
+                    <div className="diez_nueve_spans"></div>
+                    <div className="diez_nueve_spans">Team</div>
+                    <div className="diez_nueve_spans">GP</div>
+                    <div className="diez_nueve_spans">W</div>
+                    <div className="diez_nueve_spans">L</div>
+                    <div className="diez_nueve_spans">Otl</div>
+                    <div className="diez_nueve_spans">Pts</div>
+                    <div className="diez_nueve_spans">RW</div>
+                    <div className="diez_nueve_spans">ROW</div>
+                    <div className="diez_nueve_spans">SOW</div>
+                    <div className="diez_nueve_spans">SOL</div>
+                    <div className="diez_nueve_spans">Home</div>
+                    <div className="diez_nueve_spans">Away</div>
+                    <div className="diez_nueve_spans">GF</div>
+                    <div className="diez_nueve_spans">GA</div>
+                    <div className="diez_nueve_spans">DIFF</div>
+                    <div className="diez_nueve_spans">L10</div>
+                    <div className="diez_nueve_spans">Strk</div>
+                </div>
                 <div className="accordion-collapse collapse show" id="nba_stats_teamCollapse" data-bs-parent="#sports">
                     {store.stats_nhl_team.map((item, index) => {
-                        if (item.team == team && item.season == year) {
+                        if (item.season == year) {
                             return (
                                 <div key={index}>
                                     <NHL_Team_Stats

@@ -19,18 +19,6 @@ export const MLB_Team_stats_display = () => {
                     <div className="col-lg-4">MLB Team Stats</div>
                     <div className="col-lg-8">
                         <div className="row g-0">
-                            <div className="col-3 text-center">TEAM</div>
-                            <div className="col-lg-3 d-flex align-items-center">
-                                <select className="form-select" name="team" aria-label="Default select example" defaultValue={team} onChange={e => setTeam(e.target.value)} required>
-                                    {
-                                        store.mlb_teams.map((item, index) => {
-                                            return (
-                                                <option key={index} name="team" value={item}>{item}</option>
-                                            )
-                                        })
-                                    }
-                                </select>
-                            </div>
                             <div className="col-3 text-center">SEASON</div>
                             <div className="col-lg-3 d-flex align-items-center">
                                 <select className="form-select" name="year" aria-label="Default select example" defaultValue={year} onChange={e => setyear(e.target.value)} required>
@@ -47,17 +35,32 @@ export const MLB_Team_stats_display = () => {
                     </div>
                 </div>
             </div>
-            <div className="accordion-item">
+            <div className="accordion-item overflowX_scroll">
+            <div className="row g-0 bg_lines text-white text-center odds-list">
+                    <div className="quince_spans"></div>
+                    <div className="quince_spans">Team</div>
+                    <div className="quince_spans">W</div>
+                    <div className="quince_spans">L</div>
+                    <div className="quince_spans">PCT</div>
+                    <div className="quince_spans">GB</div>
+                    <div className="quince_spans">Home</div>
+                    <div className="quince_spans">Away</div>
+                    <div className="quince_spans">Rs</div>
+                    <div className="quince_spans">Ra</div>
+                    <div className="quince_spans">Diff</div>
+                    <div className="quince_spans">Strk</div>
+                    <div className="quince_spans">L10</div>
+                </div>
                 <div className="accordion-collapse collapse show" id="nba_stats_teamCollapse" data-bs-parent="#sports">
                     {store.stats_mlb_team.map((item, index) => {
-                        if (item.team == team && item.season == year) {
+                        if ( item.season == year) {
                             return (
                                 <div key={index}>
                                     <BaseBall_Team_Stats
                                         team={item.team}
                                         w={item.w}
                                         L={item.L}
-                                        ptc={item.ptc}
+                                        pct={item.pct}
                                         gb={item.gb}
                                         home={item.home}
                                         away={item.away}

@@ -47,16 +47,40 @@ function NASCAR_PY_STATS() {
                     </div>
                 </div>
             </div>
-            <div className="row g-0">
+            <div className="row g-0 overflowX_scroll">
+                <div className="row g-0 text-center bg_lines text-white odds-list">
+                    <div className="quince_spans"></div>
+                    <div className="quince_spans">Name</div>
+                    <div className="quince_spans">Number Car</div>
+                    <div className="quince_spans">Rank</div>
+                    <div className="quince_spans">Starts</div>
+                    <div className="quince_spans">Poles</div>
+                    <div className="quince_spans">Top 5</div>
+                    <div className="quince_spans">Top 10</div>
+                    <div className="quince_spans">Laps Lead</div>
+                    <div className="quince_spans">Pts</div>
+                    <div className="quince_spans">AVG Laps</div>
+                    <div className="quince_spans">AVG Finish</div>
+                </div>
                 {
                     store.nascar_drivers.map((item, index) => {
                         return (
-                            <div key={index} className="col-lg-6 p-1">
+                            <div key={index} className="col-12">
                                 <Single_Nascar
                                     id={index}
                                     name={item.name}
+                                    headshot={item.headshot}
+                                    rank={item.rank}
                                     number_car={item.number_car}
+                                    starts={item.starts}
                                     country={item.country}
+                                    poles={item.poles}
+                                    top5={item.top5}
+                                    top10={item.top10}
+                                    laps_lead={item.laps_lead}
+                                    pts={item.pts}
+                                    AVG_laps={item.AVG_laps}
+                                    AVG_finish={item.AVG_finish}
                                 />
                             </div>
                         )

@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import DateTime from 'luxon/src/datetime'
 import { Context } from "../../store/appContext";
 
 import { Football_Team_Stats } from "../../lines/football_team_stas";
@@ -21,18 +20,6 @@ export const Ncaa_Football_Team_stats = () => {
                     <div className="col-lg-4">NCAA Team Stats</div>
                     <div className="col-lg-8">
                         <div className="row g-0">
-                            <div className="col-3 text-center">TEAM</div>
-                            <div className="col-lg-3 d-flex align-items-center">
-                                <select className="form-select" name="team" aria-label="Default select example" defaultValue={team} onChange={e => setTeam(e.target.value)} required>
-                                    {
-                                        store.ncaa_foot_teams.map((item,index) => {
-                                            return (
-                                                <option key={index} name="team" value={item}>{item}</option>
-                                            )
-                                        })
-                                    }
-                                </select>
-                            </div>
                             <div className="col-3 text-center">SEASON</div>
                             <div className="col-lg-3 d-flex align-items-center">
                                 <select className="form-select" name="year" aria-label="Default select example" defaultValue={year} onChange={e => setyear(e.target.value)} required>
@@ -49,12 +36,29 @@ export const Ncaa_Football_Team_stats = () => {
                     </div>
                 </div>
             </div>
-            <div className="accordion-item">
+            <div className="accordion-item overflowX_scroll">
+                <div className="row g-0 bg_lines text-white text-center odds-list">
+                    <div className="quince_spans"></div>
+                    <div className="quince_spans">Team</div>
+                    <div className="quince_spans">TPPG</div>
+                    <div className="quince_spans">TP</div>
+                    <div className="quince_spans">TT</div>
+                    <div className="quince_spans">T1sD</div>
+                    <div className="quince_spans">CA</div>
+                    <div className="quince_spans">RY</div>
+                    <div className="quince_spans">TOP</div>
+                    <div className="quince_spans">TY</div>
+                    <div className="quince_spans">YPG</div>
+                    <div className="quince_spans">kT</div>
+                    <div className="quince_spans">N%PY</div>
+                    <div className="quince_spans">PTY</div>
+                    <div className="quince_spans">%PYG</div>
+                </div>
                 <div className="accordion-collapse collapse show" id="nflCollapse" data-bs-parent="#sports">
                     {store.stats_ncaa_football_team.map((item, index) => {
-                     if(item.team == team && item.season == year){
-                         return (
-                             <div key={index}>
+                        if (team && item.season == year) {
+                            return (
+                                <div key={index} className="odds-list">
                                     <Football_Team_Stats
                                         ttpg={item.ttpg}
                                         TP={item.TP}
@@ -100,11 +104,11 @@ export const Ncaa_Football_Team_stats = () => {
                                         division={item.division}
                                         season={item.season}
                                         conference={item.conference}
-                                        />
+                                    />
                                 </div>
                             );
                         }
-                     
+
                     })}
                 </div>
             </div>

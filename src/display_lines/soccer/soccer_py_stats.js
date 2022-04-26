@@ -67,17 +67,46 @@ function SOCCER_PY_STATS() {
                     </div>
                 </div>
             </div>
-            <div className="row g-0">
+            <div className="row g-0 overflowX_scroll">
+            <div className="row g-0 text-center bg_lines text-white odds-list">
+                        <div className="quince_spans"></div>
+                        <div className="quince_spans">Name</div>
+                        <div className="quince_spans">Position</div>
+                        <div className="quince_spans">Dorsal</div>
+                        <div className="quince_spans">Games</div>
+                        <div className="quince_spans">Starts</div>
+                        <div className="quince_spans">FC</div>
+                        <div className="quince_spans">FS</div>
+                        <div className="quince_spans">YC</div>
+                        <div className="quince_spans">RC</div>
+                        <div className="quince_spans">G</div>
+                        <div className="quince_spans">Ast</div>
+                        <div className="quince_spans">SH</div>
+                        <div className="quince_spans">ST</div>
+                        <div className="quince_spans">Off</div>
+                    </div>
                 {
                     store.stats_soccer_player.map((item, index) => {
                         if (item.season == year && item.team == team) {
                             return (
-                                <div key={index} className="col-lg-6 p-1">
+                                <div key={index} className="col-12">
                                     <Single_PY_SOCCER
                                         id={index}
                                         name={item.name}
-                                        dorsal={item.dorsal}
+                                        headshot={item.headshot}
                                         position={item.position}
+                                        dorsal={item.dorsal}
+                                        games={item.games}
+                                        strt={item.strt}
+                                        fc={item.fc}
+                                        fa={item.fa}
+                                        yc={item.yc}
+                                        rc={item.rc}
+                                        goals={item.goals}
+                                        ast={item.ast}
+                                        sh={item.sh}
+                                        st={item.st}
+                                        off={item.off}
                                     />
                                 </div>
                             )

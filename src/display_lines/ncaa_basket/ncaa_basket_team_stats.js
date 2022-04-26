@@ -49,12 +49,29 @@ export const NCAA_BASKET_Team_stats_display = () => {
                     </div>
                 </div>
             </div>
-            <div className="accordion-item">
+            <div className="accordion-item overflowX_scroll">
+                <div className="row g-0 bg_lines text-white text-center odds-list">
+                    <div className="quince_spans d-flex justify-content-center align-items-center"> </div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center">Team</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center">W</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center">L</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center">PTC</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center">GB</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center">Home</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center">Away</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center">Div</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center">Conf</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center">PPG</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center">Opp Ppg</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center">Diff</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center">Strk</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center bg_lines">L 10</div>
+                </div>
                 <div className="accordion-collapse collapse show" id="nba_stats_teamCollapse" data-bs-parent="#sports">
                     {store.stats_ncaa_basket_team.map((item, index) => {
-                        if (item.team == team && item.season == year) {
+                        if (item.season == year) {
                             return (
-                                <div key={index}>
+                                <div key={index} className="odds-list">
                                     <NBA_Team_Stats
                                         team={item.team}
                                         w={item.w}

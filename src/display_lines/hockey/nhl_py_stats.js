@@ -61,17 +61,53 @@ function NHL_PY_STATS() {
                     </div>
                 </div>
             </div>
-            <div className="row g-0">
+            <div className="row g-0 overflowX_scroll">
+            <div className="row g-0 text-center bg_lines text-white odds-list">
+                        <div className="diez_nueve_spans"></div>
+                        <div className="diez_nueve_spans">NAME</div>
+                        <div className="diez_nueve_spans">GP</div>
+                        <div className="diez_nueve_spans">G</div>
+                        <div className="diez_nueve_spans">A</div>
+                        <div className="diez_nueve_spans">PTS</div>
+                        <div className="diez_nueve_spans">PMR</div>
+                        <div className="diez_nueve_spans">PIM</div>
+                        <div className="diez_nueve_spans">SOG</div>
+                        <div className="diez_nueve_spans">SPCT</div>
+                        <div className="diez_nueve_spans">PPG</div>
+                        <div className="diez_nueve_spans">PPA</div>
+                        <div className="diez_nueve_spans">SHG</div>
+                        <div className="diez_nueve_spans">SHA</div>
+                        <div className="diez_nueve_spans">GWG</div>
+                        <div className="diez_nueve_spans">GTG</div>
+                        <div className="diez_nueve_spans">TOIG</div>
+                        <div className="diez_nueve_spans">PROD</div>
+                    </div>
                 {
                     store.stats_nhl_player.map((item, index) => {
                         if (item.season == year && item.team == team) {
                             return (
-                                <div key={index} className="col-lg-6 p-1">
+                                <div key={index} className="col-12">
                                     <Single_PY_NHL
                                         id={index}
                                         name={item.name}
-                                        dorsal={item.dorsal}
-                                        position={item.position}
+                                        headshot={item.headshot} 
+                                        gp={item.gp}
+                                        g={item.g}
+                                        a={item.a}
+                                        pts={item.pts}
+                                        p_m_rating={item.p_m_rating}
+                                        pim={item.pim}
+                                        sog={item.sog}
+                                        ppg={item.ppg}
+                                        ppa={item.ppa}
+                                        shg={item.shg}
+                                        sha={item.sha}
+                                        gwg={item.gwg}
+                                        gtg={item.gtg}
+                                        toi_g={item.toi_g}
+                                        prod={item.prod}
+                                        spct={item.spct}
+
                                     />
                                 </div>
                             )

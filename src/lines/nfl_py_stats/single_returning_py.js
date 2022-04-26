@@ -6,23 +6,22 @@ export const Single_Returning_PY = props => {
     return (
         <div className="col-12 g-0">
             <div className="row g-0">
-                <div className="col-1">
-                    <div className="col-12 bg-dark h-100 d-flex justify-content-center align-items-center ">
-                        <div className="col-12 text-center">
-                            <Link className="text-white" to={`/returning_py/${props.id}`}><i className="far fa-eye"></i></Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-11  shadow">
-                    <div className="row g-0 text-center bg_lines text-white">
-                        <div className="col-4">Name</div>
-                        <div className="col-4">Position</div>
-                        <div className="col-4">Dorsal</div>
-                    </div>
+                <div className="col-12 bb1px">
                     <div className="row g-0 text-center">
-                        <div className="col-4 lines">{props.name}</div>
-                        <div className="col-4 lines">{props.position}</div>
-                        <div className="col-4 lines">{props.dorsal}</div>
+                        <div className="quince_spans lines"> <img src={props.headshot} alt="headshot"></img></div>
+                        <div className="quince_spans lines"> <Link to={`/returning_py/${props.id}`}>{props.name}</Link></div>
+                        <div className="quince_spans lines">{props.games}</div>
+                        <div className="quince_spans lines">{props.kick_returns}</div>
+                        <div className="quince_spans lines">{props.kick_returns_yards}</div>
+                        <div className="quince_spans lines">{props.y_ppr}</div>
+                        <div className="quince_spans lines">{props.l_k_r}</div>
+                        <div className="quince_spans lines">{props.k_r_td}</div>
+                        <div className="quince_spans lines">{props.punt_r}</div>
+                        <div className="quince_spans lines">{props.punt_r_y}</div>
+                        <div className="quince_spans lines">{props.y_ppr}</div>
+                        <div className="quince_spans lines">{props.lpr}</div>
+                        <div className="quince_spans lines">{props.pr_td}</div>
+                        <div className="quince_spans lines">{props.punt_r_fair_carches}</div>
                     </div>
                 </div>
             </div>
@@ -32,6 +31,16 @@ export const Single_Returning_PY = props => {
 Single_Returning_PY.propTypes = {
     id: PropTypes.number,
     name: PropTypes.string,
-    dorsal: PropTypes.string,
-    position: PropTypes.string,
+    games: PropTypes.string,
+    kick_returns: PropTypes.string,
+    kick_returns_yards: PropTypes.string,
+    y_ppr: PropTypes.string,
+    l_k_r: PropTypes.string,
+    k_r_td: PropTypes.string,
+    punt_r: PropTypes.string,
+    punt_r_y: PropTypes.string,
+    lpr: PropTypes.string,
+    pr_td: PropTypes.string,
+    punt_r_fair_carches: PropTypes.string,
+    y_ppr: PropTypes.string,
 };

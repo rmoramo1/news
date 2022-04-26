@@ -4,25 +4,25 @@ import { Link } from "react-router-dom";
 
 export const Single_Kicking_PY_Ncaa = props => {
     return (
-        <div className="col-12 g-0">
+        <div className="col-12 g-0 mb-5">
             <div className="row g-0">
-                <div className="col-1 ">
-                    <div className="col-12 bg-dark h-100 d-flex justify-content-center align-items-center ">
-                        <div className="col-12 text-center">
-                            <Link className="text-white" to={`/kicking_player_stats_ncaa/${props.id}`}><i className="far fa-eye"></i></Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-11  shadow">
-                    <div className="row g-0 text-center bg_lines text-white">
-                        <div className="col-4">Name</div>
-                        <div className="col-4">Position</div>
-                        <div className="col-4">Dorsal</div>
-                    </div>
+                <div className="col-12 bb1px">
                     <div className="row g-0 text-center">
-                        <div className="col-4 lines">{props.name}</div>
-                        <div className="col-4 lines">{props.position}</div>
-                        <div className="col-4 lines">{props.dorsal}</div>
+                        <div className="quince_spans lines"> <img src={props.headshot} alt="headshot"></img></div>
+                        <div className="quince_spans lines"><Link to={`/kicking_player_stats_ncaa/${props.id}`}>{props.name}</Link></div>
+                        <div className="quince_spans lines">{props.games}</div>
+                        <div className="quince_spans lines">{props.fgm}</div>
+                        <div className="quince_spans lines">{props.fga}</div>
+                        <div className="quince_spans lines">{props.fg_AVG}</div>
+                        <div className="quince_spans lines">{props.lng}</div>
+                        <div className="quince_spans lines">{props.yars_f_goals_1_19}</div>
+                        <div className="quince_spans lines">{props.yars_f_goals_20_29}</div>
+                        <div className="quince_spans lines">{props.yars_f_goals_30_49}</div>
+                        <div className="quince_spans lines">{props.yars_f_goals_40_49}</div>
+                        <div className="quince_spans lines">{props.more_50}</div>
+                        <div className="quince_spans lines">{props.xpm}</div>
+                        <div className="quince_spans lines">{props.xpa}</div>
+                        <div className="quince_spans lines">{props.xp_AVG}</div>
                     </div>
                 </div>
             </div>
@@ -32,6 +32,18 @@ export const Single_Kicking_PY_Ncaa = props => {
 Single_Kicking_PY_Ncaa.propTypes = {
     id: PropTypes.number,
     name: PropTypes.string,
-    dorsal: PropTypes.string,
-    position: PropTypes.string,
+    headshot: PropTypes.string,
+    games: PropTypes.string,
+    fgm: PropTypes.string,
+    fga: PropTypes.string,
+    fg_AVG: PropTypes.string,
+    lng: PropTypes.string,
+    yars_f_goals_1_19: PropTypes.string,
+    yars_f_goals_20_29: PropTypes.string,
+    yars_f_goals_30_49: PropTypes.string,
+    yars_f_goals_30_49: PropTypes.string,
+    yars_f_goals_40_49: PropTypes.string,
+    xpm: PropTypes.string,
+    xpa: PropTypes.string,
+    xp_AVG: PropTypes.string
 };

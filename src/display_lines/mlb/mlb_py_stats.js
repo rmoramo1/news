@@ -61,17 +61,54 @@ function MLB_PY_STATS() {
                     </div>
                 </div>
             </div>
-            <div className="row g-0">
+            <div className="row g-0 overflowX_scroll">
+            <div className="row g-0 text-center bg_lines text-white odds-list">
+                        <div className="diez_nueve_spans"></div>
+                        <div className="diez_nueve_spans">Name</div>
+                        <div className="diez_nueve_spans">GP</div>
+                        <div className="diez_nueve_spans">Ab</div>
+                        <div className="diez_nueve_spans">R</div>
+                        <div className="diez_nueve_spans">H</div>
+                        <div className="diez_nueve_spans">Two B</div>
+                        <div className="diez_nueve_spans">Three B</div>
+                        <div className="diez_nueve_spans">Hb</div>
+                        <div className="diez_nueve_spans">Rbi</div>
+                        <div className="diez_nueve_spans">Tb</div>
+                        <div className="diez_nueve_spans">Bb</div>
+                        <div className="diez_nueve_spans">So</div>
+                        <div className="diez_nueve_spans">Sb</div>
+                        <div className="diez_nueve_spans">Avg</div>
+                        <div className="diez_nueve_spans">Obp</div>
+                        <div className="diez_nueve_spans">Slg</div>
+                        <div className="diez_nueve_spans">Ops</div>
+                    </div>
                 {
                     store.stats_mlb_player.map((item, index) => {
                         if (item.season == year && item.team == team) {
                             return (
-                                <div key={index} className="col-lg-6 p-1">
+                                <div key={index} className="col-12 p-1">
                                     <Single_PY_Baseball
                                         id={index}
                                         name={item.name}
                                         dorsal={item.dorsal}
                                         position={item.position}
+                                        headshot={item.headshot}
+                                        gp={item.gp}
+                                        ab={item.ab}
+                                        r={item.r}
+                                        h={item.h}
+                                        two_b={item.two_b}
+                                        three_b={item.three_b}
+                                        hb={item.hb}
+                                        rbi={item.rbi}
+                                        tb={item.tb}
+                                        bb={item.bb}
+                                        so={item.so}
+                                        sb={item.sb}
+                                        avg={item.avg}
+                                        obp={item.obp}
+                                        slg={item.slg}
+                                        ops={item.ops}
                                     />
                                 </div>
                             )

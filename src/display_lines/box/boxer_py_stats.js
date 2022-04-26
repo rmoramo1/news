@@ -47,16 +47,35 @@ function Boxer_PY_STATS() {
                     </div>
                 </div>
             </div>
-            <div className="row g-0">
+            <div className="row g-0 overflowX_scroll">
+                <div className="row g-0 text-center bg_lines text-white odds-list">
+                    <div className="diez_spans"></div>
+                    <div className="diez_spans">Name</div>
+                    <div className="diez_spans">Nickname</div>
+                    <div className="diez_spans">Height</div>
+                    <div className="diez_spans">Weight</div>
+                    <div className="diez_spans">Category</div>
+                    <div className="diez_spans">W</div>
+                    <div className="diez_spans">W By</div>
+                    <div className="diez_spans">L</div>
+                    <div className="diez_spans">L By</div>
+                </div>
                 {
                     store.stats_box_fighter.map((item, index) => {
                         return (
-                            <div key={index} className="col-lg-6 p-1">
+                            <div key={index} className="col-12">
                                 <Single_Boxers
                                     id={index}
                                     name={item.name}
+                                    headshot={item.headshot}
+                                    nickname={item.nickname}
+                                    height={item.height}
+                                    weight={item.weight}
                                     category={item.category}
                                     w={item.w}
+                                    w_by={item.w_by}
+                                    L={item.L}
+                                    L_by={item.L_by}
                                 />
                             </div>
                         )

@@ -6,13 +6,10 @@ export const BaseBall_Team_Stats = props => {
     const { store } = useContext(Context);
     return (
         <div>
-            <div className="col-12 fs-5 team_stats">
-                <div className="row g-0">
-                    <div className="col-6 pe-2 d-flex align-items-center justify-content-end">
-                        {props.team}
-                    </div>
-                    <div className="col-6">
-                        {
+            <div className="container-fluid">
+                <div className="row g-0 text-center odds-list">
+                    <div className="quince_spans bb1px lines">
+                    {
                             store.logos_mlb.map((item, index) => {
                                 let url_aw = "";
                                 if (item.team == props.team) {
@@ -26,39 +23,18 @@ export const BaseBall_Team_Stats = props => {
                             })
                         }
                     </div>
-                </div>
-            </div>
-            <div className="container p-3">
-                <div className="row g-0 bg_lines text-white text-center">
-                    <div className="col-2">W</div>
-                    <div className="col-2">L</div>
-                    <div className="col-2">PTC</div>
-                    <div className="col-2">GB</div>
-                    <div className="col-2">Home</div>
-                    <div className="col-2">Away</div>
-                </div>
-                <div className="row g-0 text-center">
-                    <div className="col-2 bb1px lines">{props.w}</div>
-                    <div className="col-2 bb1px lines">{props.L}</div>
-                    <div className="col-2 bb1px lines">{props.pct}</div>
-                    <div className="col-2 bb1px lines">{props.gb}</div>
-                    <div className="col-2 bb1px lines">{props.home}</div>
-                    <div className="col-2 bb1px lines">{props.away}</div>
-                </div>
-
-                <div className="row mt-3 g-0 bg_lines text-white text-center">
-                    <div className="col-2">Rs</div>
-                    <div className="col-2">Ra</div>
-                    <div className="col-2">Diff</div>
-                    <div className="col-2">Strk</div>
-                    <div className="col-2">L10</div>
-                </div>
-                <div className="row g-0 text-center">
-                    <div className="col-2 bb1px lines">{props.rs}</div>
-                    <div className="col-2 bb1px lines">{props.ra}</div>
-                    <div className="col-2 bb1px lines">{props.diff}</div>
-                    <div className="col-2 bb1px lines">{props.strk}</div>
-                    <div className="col-2 bb1px lines">{props.L10}</div>
+                    <div className="quince_spans d-flex justify-content-start align-items-center bb1px lines">{props.team}</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center bb1px lines">{props.w}</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center bb1px lines">{props.L}</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center bb1px lines">{props.pct}</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center bb1px lines">{props.gb}</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center bb1px lines">{props.home}</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center bb1px lines">{props.away}</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center bb1px lines">{props.rs}</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center bb1px lines">{props.ra}</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center bb1px lines">{props.diff}</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center bb1px lines">{props.strk}</div>
+                    <div className="quince_spans d-flex justify-content-center align-items-center bb1px lines">{props.L10}</div>
                 </div>
             </div>
         </div>
