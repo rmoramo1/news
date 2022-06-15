@@ -21,6 +21,8 @@ import { SOCCER_ITEMS } from "./soccer_tabs/soccer_items";
 
 import { Globals_Tabs } from "./globals_tabs/globals._tabs";
 
+import { Moto_GP_ITEMS } from "./moto_gp_tabs/moto_gp_items";
+
 export const Items = () => {
     return (
         <div id="items_tab_master">
@@ -37,6 +39,7 @@ export const Items = () => {
             <MMA_ITEMS/>
             <SOCCER_ITEMS/>
             <Globals_Tabs/>
+            <Moto_GP_ITEMS/>
         </div>
     )
 }

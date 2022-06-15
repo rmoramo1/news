@@ -4,8 +4,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			logos_nfl: [],
 			logos_nba: [],
 			logos_mlb: [],
-			logos_nhl:[],
-			logos_soccer:[],
+			logos_nhl: [],
+			logos_soccer: [],
 			injuries: [],
 			futures: [],
 			props: [],
@@ -37,30 +37,36 @@ const getState = ({ getStore, getActions, setStore }) => {
 			stats_mlb_team: [],
 			stats_mlb_player: [],
 			//ncaa_baseball
-			ncaa_baseball:[],
-			stats_ncaa_baseball_team:[],
-			stats_ncaa_baseball_player:[],
+			ncaa_baseball: [],
+			stats_ncaa_baseball_team: [],
+			stats_ncaa_baseball_player: [],
 			//nhl
-			nhl:[],
-			stats_nhl_team:[],
-			stats_nhl_player:[],
+			nhl: [],
+			stats_nhl_team: [],
+			stats_nhl_player: [],
 			//golf
-			golf:[],
-			golfer:[],
+			golf: [],
+			golfer: [],
 			//nascar
-			nascar:[],
-			nascar_drivers:[],
+			nascar: [],
+			nascar_drivers: [],
+			//moto_gp
+			moto_gp: [],
+			moto_gp_drivers: [],
 			//boxeo
-			boxeo:[],
-			stats_box_fighter:[],
+			boxeo: [],
+			stats_box_fighter: [],
 			//mma
-			mma:[],
-			stats_mma_fighter:[],
+			mma: [],
+			stats_mma_fighter: [],
 			//soccer
-			soccer:[],
-			stats_soccer_team:[],
-			stats_soccer_player:[],
+			soccer: [],
+			stats_soccer_team: [],
+			stats_soccer_player: [],
+			//tipe of line
+			type_of_line: ["", "ALT"],
 			//teams
+
 			nfl_teams: [
 				"Arizona Cardinals", "Atlanta Falcons", "Baltimore Ravens", "Buffalo Bills", "Carolina Panthers", "Chicago Bears", "Cincinnati Bengals", "Cleveland Browns", "Dallas Cowboys", "Denver Broncos", "Detroit Lions", "Green Bay Packers", "Houston Texans", "Indianapolis Colts", "Jacksonville Jaguars", "Kansas City Chiefs", "Las Vegas Raiders", "Los Angeles Chargers", "Los Angeles Rams", "Miami Dolphins", "Minnesota Vikings", "New England Patriots", "New Orleans Saints", "New York Giants", "New York Jets", "Philadelphia Eagles", "Pittsburgh Steelers", "San Francisco 49ers", "Seattle Seahawks", "Tampa Bay Buccaneers", "Tennessee Titans", "Washington Football Team"
 			],
@@ -68,7 +74,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				"Atlanta Hawks", "Boston Celtics", "Brooklyn Nets", "Charlotte Hornets", "Chicago Bulls", "Cleveland Cavaliers", "Dallas Mavericks", "Denver Nuggets", "Detroit Pistons", "Golden State Warriors", "Houston Rockets", "Indiana Pacers", "Los Angeles Clippers", "Los Angeles Lakers", "Memphis Grizzlies", "Miami Heat", "Milwaukee Bucks", "Minnesota Timberwolves", "New Orleans Pelicans", "New York Knicks", "Oklahoma City Thunder", "Orlando Magic", "Philadelphia 76ers", "Phoenix Suns", "Portland Trail Blazers", "Sacramento Kings", "San Antonio Spurs", "Toronto Raptors", "Utah Jazz", "Washington Wizards"
 			],
 			mlb_teams: [
-				"Arizona Diamondbacks", "Atlanta Braves", "Baltimore Orioles", "Boston Red Sox", "Chicago Cubs", "Chicago White Sox", "Cincinnati Reds", "Cleveland Indians", "Colorado Rockies", "Detroit Tigers", "Houston Astros", "Kansas City Royals", "Los Angeles Angels", "Los Angeles Dodgers", "Miami Marlins", "Milwaukee Brewers", "Minnesota Twins", "New York Mets", "New York Yankees", "Oakland Athletics", "Philadelphia Phillies", "Pittsburgh Pirates", "San Diego Padres", "San Francisco Giants", "Seattle Mariners", "St. Louis Cardinals", "Tampa Bay Rays", "Texas Rangers", "Toronto Blue Jays", "Washington Nationals"
+				"Arizona Diamondbacks", "Atlanta Braves", "Baltimore Orioles", "Boston Red Sox", "Chicago Cubs", "Chicago White Sox", "Cincinnati Reds", "Cleveland Guardians", "Colorado Rockies", "Detroit Tigers", "Houston Astros", "Kansas City Royals", "Los Angeles Angels", "Los Angeles Dodgers", "Miami Marlins", "Milwaukee Brewers", "Minnesota Twins", "New York Mets", "New York Yankees", "Oakland Athletics", "Philadelphia Phillies", "Pittsburgh Pirates", "San Diego Padres", "San Francisco Giants", "Seattle Mariners", "St. Louis Cardinals", "Tampa Bay Rays", "Texas Rangers", "Toronto Blue Jays", "Washington Nationals"
 			],
 			nhl_teams: [
 				"Boston Bruins", "Buffalo Sabres", "Detroit Red Wings", "Montreal Canadiens", "Ottawa Senators", "Tampa Bay Lightning", "Toronto Maple Leafs", "Carolina Hurricanes", "Columbus Blue Jackets", "New Jersey Devils", "New York Islanders", "New York Rangers", "Philadelphia Flyers", "Pittsburgh Penguins", "Washington Capitals", "Arizona Coyotes", "Chicago Blackhawks", "Colorado Avalanche", "Dallas Stars", "Minnesota Wild", "Nashville Predators", "St. Louis Blues", "Winnipeg Jets", "Anaheim Ducks", "Calgary Flames", "Edmonton Oilers", "Los Angeles Kings", "San Jose Sharks", "Seattle Kraken", "Vancouver Canucks", "Vegas Golden Knights", "Florida Panthers"
@@ -316,6 +322,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const response = await fetch(url);
 				const results = await response.json();
 				setStore({ nascar_drivers: results });
+			},
+			//Moto_gp
+			moto_gp: async () => {
+				const url = "https://www.sportsdata365.com/moto_gp";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ moto_gp: results });
+			},
+			moto_gp_drivers: async () => {
+				const url = "https://www.sportsdata365.com/moto_gp_drivers";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ moto_gp_drivers: results });
 			},
 			//boxeo
 			boxeo: async () => {

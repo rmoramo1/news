@@ -5,31 +5,21 @@ import { Context } from "../../store/appContext";
 
 export const Nfl_Games = () => {
     const { store } = useContext(Context);
-    const dateLux = DateTime.now().day;
     const monthLux = DateTime.now().month;
     const yearLux = DateTime.now().year;
 
-    let dateShow =[];
-    if(dateLux < 10){
-        dateShow.push("0" + dateLux);
-    }else{
-        dateShow.push(dateLux);
-    }
-
-    let monthShow =[];
-    if(monthLux < 10){
+    let monthShow = [];
+    if (monthLux < 10) {
         monthShow.push("0" + monthLux);
-    }else{
+    } else {
         monthShow.push(monthLux);
     }
 
     const [year, setyear] = useState(yearLux);
     const [month, setmonth] = useState(monthShow);
-    const [Day, setDay] = useState(dateShow);
-
-    
-    let R_date = year+"-"+month+"-"+Day;
-    
+    const [typeOfLine, settypeOfLine] = useState("");
+    console.log(typeOfLine)
+    let R_date = month;
     let selectYear = [];
     for (let i = 2002; i < 2025; i++) {
         selectYear.push(i);
@@ -37,19 +27,10 @@ export const Nfl_Games = () => {
 
     let selectMonth = [];
     for (let i = 1; i < 13; i++) {
-        if(i < 10){
-            selectMonth.push("0"+i);
-        }else{
+        if (i < 10) {
+            selectMonth.push("0" + i);
+        } else {
             selectMonth.push(i);
-        }
-    }
-
-    let selectDay = [];
-    for (let i = 1; i < 32; i++) {
-        if(i < 10){
-            selectDay.push("0"+i);
-        }else{
-            selectDay.push(i);
         }
     }
 
@@ -84,13 +65,13 @@ export const Nfl_Games = () => {
                                     }
                                 </select>
                             </div>
-                            <div className="col-2 text-center">Day</div>
+                            <div className="col-2 text-center">Type of Line</div>
                             <div className="col-lg-2 d-flex align-items-center">
-                                <select className="form-select" name="Day" aria-label="Default select example" defaultValue={Day} onChange={e => setDay(e.target.value)} required>
+                                <select className="form-select" name="tipe" aria-label="Default select example" defaultValue={" "} onChange={e => settypeOfLine(e.target.value)} required>
                                     {
-                                        selectDay.map((index) => {
+                                        store.type_of_line.map((index) => {
                                             return (
-                                                <option key={index} name="promotions" value={index}>{index}</option>
+                                                <option key={index} name="tipe" value={index}>{index}</option>
                                             )
                                         })
                                     }
@@ -103,7 +84,9 @@ export const Nfl_Games = () => {
             <div className="accordion-item">
                 <div className="accordion-collapse collapse show" id="nflCollapse" data-bs-parent="#sports">
                     {store.nfl.map((item, index) => {
-                        if (item.date == R_date) {
+                        let mes = item.date.slice(5, 7);
+                        let ano = item.date.slice(0, 4);
+                        if (mes == R_date && ano == year && item.type_of_line == typeOfLine ) {
                             return (
                                 <div key={index}>
                                     <Spread_Lines

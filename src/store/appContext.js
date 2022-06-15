@@ -75,13 +75,16 @@ const injectContext = PassedComponent => {
 			state.actions.stats_nhl_team();
 			state.actions.stats_nhl_player();
 			//golf
-			state.actions.golf(); 
-			state.actions.golfer(); 
+			state.actions.golf();
+			state.actions.golfer();
 			//nascar	
-			state.actions.nascar(); 
-			state.actions.nascar_drivers(); 
+			state.actions.nascar();
+			state.actions.nascar_drivers();
+			//moto_gp	
+			state.actions.moto_gp();
+			state.actions.moto_gp_drivers();
 			//boxeo
-			state.actions.boxeo(); 
+			state.actions.boxeo();
 			state.actions.stats_box_fighter();
 			//mma
 			state.actions.mma();

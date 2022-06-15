@@ -8,6 +8,7 @@ import { GOLF_Tabs } from "./golf_tabs/golf_tabs";
 import { RACING_Tabs } from "./racing_tabs/racing_tabs";
 import { MARCIAL_Tabs } from "./marcial_arts_tabs/marcial_a_tabs";
 import { SOCCER_Tabs } from "./soccer_tabs/soccer_tabs";
+import { Moto_gp_Tabs } from "./moto_gp_tabs/moto_gp_tabs";
 
 export const Tabs = () => {
     return (
@@ -66,11 +67,21 @@ export const Tabs = () => {
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingSix">
                         <button className="accordion-button collapsed font_bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            RACING <i className="ps-5 fs-3 fas fa-car"></i>
+                            NASCAR <i className="ps-5 fs-3 fas fa-car"></i>
                         </button>
                     </h2>
                     <div id="collapseSix" className="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordion_general">
                         <RACING_Tabs />
+                    </div>
+                </div>
+                <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingTREIO">
+                        <button className="accordion-button collapsed font_bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMoto_gp" aria-expanded="false" aria-controls="collapseMoto_gp">
+                            MOTO GP <i className="ps-5 fs-3 fas fa-motorcycle"></i>
+                        </button>
+                    </h2>
+                    <div id="collapseMoto_gp" className="accordion-collapse collapse" aria-labelledby="headingTREIO" data-bs-parent="#accordion_general">
+                        <Moto_gp_Tabs />
                     </div>
                 </div>
                 <div className="accordion-item">

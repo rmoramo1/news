@@ -2,49 +2,53 @@ import React, { useContext } from "react";
 import { useParams } from 'react-router-dom';
 import { Context } from "../store/appContext";
 
-function BOX_lines() {
+function MMA_lines() {
     const params = useParams();
     const { store } = useContext(Context);
     return (
         <div className="p-2 shadow">
-            <div className="row g-0 text-center py-3">
-                <div className="col-2 font_bold">{store.mma[params.theid] && store.mma[params.theid].fighter_One}</div>
-                <div className="col-2">VRS</div>
-                <div className="col-2 font_bold">{store.mma[params.theid] && store.mma[params.theid].fighter_Two}</div>
-                <div className="col-2 font_bold bg_lines text-white">Winner</div>
-                <div className="col-2 font_bold bg_lines text-white">{store.mma[params.theid] && store.mma[params.theid].winner}</div>
-            </div>
-            <div className="row g-0  text-white text-center">
-                <div className="col-2 bg_lines">Date</div>
-                <div className="col-2 bg_lines">Hour</div>
-                <div className="col-2 bg_lines">Event</div>
-                <div className="col-2 bg_lines">Rounds</div>
-                <div className="col-2 bg_lines">Location</div>
-            </div>
-            <div className="row g-0 text-center">
-                <div className="col-2 bb1px lines">{store.mma[params.theid] && store.mma[params.theid].date}</div>
-                <div className="col-2 bb1px lines">{store.mma[params.theid] && store.mma[params.theid].hour}</div>
-                <div className="col-2 bb1px lines">{store.mma[params.theid] && store.mma[params.theid].event}</div>
-                <div className="col-2 bb1px lines">{store.mma[params.theid] && store.mma[params.theid].rounds}</div>
-                <div className="col-2 bb1px lines">{store.mma[params.theid] && store.mma[params.theid].location_Fight}</div>
+            <div className="row g-0 pb-5">
+                <div className="col-lg-6">
+                    <div className="col-12 fs-5">
+                        {store.mma[params.theid] && store.mma[params.theid].location_Fight} 
+                    </div>
+                    <div className="col-12">
+                        <div className="row g-0 fst-italic fs-1">
+                            <div className="col-lg-5 font_bold ">{store.mma[params.theid] && store.mma[params.theid].fighter_One}</div>
+                            <div className="col-lg-2">VR</div>
+                            <div className="col-lg-5 font_bold">{store.mma[params.theid] && store.mma[params.theid].fighter_Two}</div>
+                        </div>
+                    </div>
+                    <div className="col-12 font_bold fst-italic fs-5 font_orange">{store.mma[params.theid] && store.mma[params.theid].event} {store.mma[params.theid] && store.mma[params.theid].rounds} rounds</div>
+                    <div className="col-12">{store.mma[params.theid] && store.mma[params.theid].date} {store.mma[params.theid] && store.mma[params.theid].hour}</div>
+                </div>
+                <div className="col-lg-6 shadow border d-flex align-items-center justify-content-center">
+                    <div className="row py-3">
+                        <div className="col-6 text-end font_bold  fs-2">Winner: </div>
+                        <div className="col-6 text-start font_bold fs-2">{store.mma[params.theid] && store.mma[params.theid].winner}</div>
+                        <div className="col-12 text-start font_bold fs-2">Finish by: {store.mma[params.theid] && store.mma[params.theid].finish_by}</div>
+                    </div>
+                </div>
             </div>
             <div className="overflowX_scroll">
                 <div className="odds-list">
                     <div className="row g-0  text-white text-center">
-                        <div className="col-2 bg_lines">Fighter One</div>
+                        <div className="col-2 bg_lines">Fighter</div>
                         <div className="col-2 bg_lines">ML</div>
-                        <div className="col-2 bg_lines">Fighter Two</div>
-                        <div className="col-2 bg_lines">ML</div>
-                        <div className="col-2 bg_lines">Winner</div>
-                        <div className="col-2 bg_lines">Finish By</div>
+                        <div className="col-2 bg_lines">Total</div>
+                        <div className="col-2 bg_lines">Juice</div>
                     </div>
                     <div className="row g-0 text-center">
                         <div className="col-2 bb1px lines">{store.mma[params.theid] && store.mma[params.theid].fighter_One}</div>
                         <div className="col-2 bb1px lines">{store.mma[params.theid] && store.mma[params.theid].money_Line_One}</div>
+                        <div className="col-2 bb1px lines">{store.mma[params.theid] && store.mma[params.theid].total}</div>
+                        <div className="col-2 bb1px lines">{store.mma[params.theid] && store.mma[params.theid].juice_Over}</div>
+                    </div>
+                    <div className="row g-0 text-center mb-3">
                         <div className="col-2 bb1px lines">{store.mma[params.theid] && store.mma[params.theid].fighter_Two}</div>
                         <div className="col-2 bb1px lines">{store.mma[params.theid] && store.mma[params.theid].money_Line_Two}</div>
-                        <div className="col-2 bb1px lines">{store.mma[params.theid] && store.mma[params.theid].winner}</div>
-                        <div className="col-2 bb1px lines">{store.mma[params.theid] && store.mma[params.theid].finish_by}</div>
+                        <div className="col-2 bb1px lines"></div>
+                        <div className="col-2 bb1px lines">{store.mma[params.theid] && store.mma[params.theid].juice_Under}</div>
                     </div>
                     <div className="row g-0  text-white text-center">
                         <div className="col-1 bg_lines">R1</div>
@@ -89,4 +93,4 @@ function BOX_lines() {
         </div>
     )
 }
-export default BOX_lines;
+export default MMA_lines;

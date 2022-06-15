@@ -34,7 +34,10 @@
 
 
 .bb1px {
-    border-bottom: 1px solid rgba($grey, .20);
+    border-bottom: 1px solid rgba($grey, .40);
+}
+.bb2px {
+    border-bottom: 2px solid rgba($grey, .80);
 }
 
 .bg_lines {

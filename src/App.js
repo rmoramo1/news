@@ -24,7 +24,14 @@ const Mlb_py_st = lazy(() => import('./lines/mlb_py_st'));
 const Ncaa_Baseball_py_st = lazy(() => import('./lines/ncaa_baseball_py_st'));
 const NHL_py_st = lazy(() => import('./lines/nhl_py_st'));
 const Golfer_st = lazy(() => import('./lines/golfer_st'));
+const Golf_Event = lazy(() => import('./lines/golf_event'));
 const Nascar_Driver_Stats = lazy(() => import('./lines/nascar_driver_st'));
+const Nascar_Race = lazy(() => import('./lines/nascar_race'));
+
+const Moto_GP_PY_STATS = lazy(() => import('./lines/moto_gp_driver_st'));
+const Moto_GP_Race = lazy(() => import('./lines/moto_gp_race'));
+
+
 const BOX_lines = lazy(() => import('./lines/box_lines'));
 const Boxer_st = lazy(() => import('./lines/boxer_st'));
 const MMA_lines = lazy(() => import('./lines/mma_lines'));
@@ -71,6 +78,10 @@ function App() {
 						<Route path="/mma_st/:theid" component={MMA_st} />
 						<Route path="/soccer_py_st/:theid" component={SOCCER_py_st} />
 						<Route path="/boxer_st/:theid" component={Boxer_st} />
+						<Route path="/golf_event/:theid" component={Golf_Event} />
+						<Route path="/nascar_race/:theid" component={Nascar_Race} />
+						<Route path="/moto_gp_driver_stats/:theid" component={Moto_GP_PY_STATS} />
+						<Route path="/moto_gp_race/:theid" component={Moto_GP_Race} />
 						<Route>
 							<Error/>
 						</Route>
