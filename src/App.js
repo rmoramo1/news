@@ -5,6 +5,7 @@ import injectContext from "./store/appContext";
 //import { Offensive_Player_Stats } from './lines/nfl_py_stats/offensive_py';
 
 import { Header } from './components/header';
+import { Footer } from './components/footer';
 /* pages*/
 import Loader from './components/loader';
 const Home = lazy(() => import('./pages/home'));
@@ -88,6 +89,7 @@ function App() {
 							<Error/>
 						</Route>
 					</Switch>
+					<Footer/>
 				</Suspense>
 			</BrowserRouter>
 		</div>

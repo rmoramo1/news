@@ -1,0 +1,2 @@
+(this.webpackJsonpsportsstats247=this.webpackJsonpsportsstats247||[]).push([[32],{111:function(s,t,r){"use strict";r.r(t);r(1);var a=r(2);t.default=function(){return Object(a.jsx)("div",{className:"error"})}}}]);
+//# sourceMappingURL=32.0369d025.chunk.js.map
