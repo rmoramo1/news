@@ -7,9 +7,9 @@ import { Props } from "../../lines/props";
 export const NBA_Props = () => {
     const { store } = useContext(Context);
     const dateLux = DateTime.now().weekNumber;
-    const [sport, setSport] = useState("FOOTBALL");
+    const [sport, setSport] = useState("NBA");
 
-    let sports = ["FOOTBALL", "BASKETBALL", "BASEBALL", "HOCKEY", "BOX", "MMA", "GOLF", "NASCAR", "SOCCER", "NCAA FOOTABAL", "NCAA BASKETBALL", "NCAA BASEBALL"]
+    let sports = ["FOOTBALL", "NBA", "BASEBALL", "HOCKEY", "BOX", "MMA", "GOLF", "NASCAR", "SOCCER", "NCAA FOOTABAL", "NCAA BASKETBALL", "NCAA BASEBALL"]
     let selectWeek = [];
     for (let i = 1; i < 53; i++) {
         selectWeek.push(i);
@@ -44,7 +44,7 @@ export const NBA_Props = () => {
                     <div className="row g-0">
                         {
                             store.props.map((item, index) => {
-                                if (item.sport == "BASKETBALL") {
+                                if (item.sport == "NBA") {
                                     return (
                                         <div className="col p-2" key={index}>
                                             <Props

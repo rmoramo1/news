@@ -35,6 +35,7 @@ const Moto_GP_Race = lazy(() => import('./lines/moto_gp_race'));
 const BOX_lines = lazy(() => import('./lines/box_lines'));
 const Boxer_st = lazy(() => import('./lines/boxer_st'));
 const MMA_lines = lazy(() => import('./lines/mma_lines'));
+const Odds_To_Win = lazy(() => import('./display_lines/globals/odds_to_win'));
 const MMA_st = lazy(() => import('./lines/mma_st'));
 const SOCCER_py_st = lazy(() => import('./lines/soccer_py_st'));
 const Error = lazy(() => import('./pages/404'));
@@ -82,6 +83,7 @@ function App() {
 						<Route path="/nascar_race/:theid" component={Nascar_Race} />
 						<Route path="/moto_gp_driver_stats/:theid" component={Moto_GP_PY_STATS} />
 						<Route path="/moto_gp_race/:theid" component={Moto_GP_Race} />
+						<Route path="/odds_to_win/:theid" component={Odds_To_Win} />
 						<Route>
 							<Error/>
 						</Route>

@@ -45,6 +45,11 @@ export const Result_Quarters_Hockey = () => {
             selectDay.push(i);
         }
     }
+    let nhlFilter = store.nhl;
+	var byDate = nhlFilter;
+	byDate.sort(function(a,b) {
+		return b.id - a.id;
+	});
     return (
         <div className="col-12" id="sports">
             <div className=" title_sport bg_orange_dark text-white p-1 fs-5 font_bold">
@@ -94,7 +99,7 @@ export const Result_Quarters_Hockey = () => {
             </div>
             <div className="accordion-item">
                 <div className="accordion-collapse collapse show" id="nhlCollapse" data-bs-parent="#sports">
-                    {store.nhl.map((item, index) => {
+                    {nhlFilter.map((item, index) => {
                         if (item.date == R_date) {
                             return (
                                 <div key={index}>

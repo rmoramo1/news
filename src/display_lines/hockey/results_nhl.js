@@ -6,28 +6,19 @@ import { Results } from "../../lines/results";
 
 export const Results_NHL = () => {
     const { store } = useContext(Context);
-    const dateLux = DateTime.now().day;
     const monthLux = DateTime.now().month;
     const yearLux = DateTime.now().year;
 
-    let dateShow =[];
-    if(dateLux < 10){
-        dateShow.push("0" + dateLux);
-    }else{
-        dateShow.push(dateLux);
-    }
-
-    let monthShow =[];
-    if(monthLux < 10){
+    let monthShow = [];
+    if (monthLux < 10) {
         monthShow.push("0" + monthLux);
-    }else{
+    } else {
         monthShow.push(monthLux);
     }
 
     const [year, setyear] = useState(yearLux);
     const [month, setmonth] = useState(monthShow);
-    const [week, setweek] = useState(dateShow);
-    let R_date = year+"-"+month+"-"+week;
+    let R_date = month;
     let selectYear = [];
     for (let i = 2002; i < 2025; i++) {
         selectYear.push(i);
@@ -35,21 +26,17 @@ export const Results_NHL = () => {
 
     let selectMonth = [];
     for (let i = 1; i < 13; i++) {
-        if(i < 10){
-            selectMonth.push("0"+i);
-        }else{
+        if (i < 10) {
+            selectMonth.push("0" + i);
+        } else {
             selectMonth.push(i);
         }
     }
-
-    let selectDay = [];
-    for (let i = 1; i < 32; i++) {
-        if(i < 10){
-            selectDay.push("0"+i);
-        }else{
-            selectDay.push(i);
-        }
-    }
+    let nhlFilter = store.nhl;
+	var byDate = nhlFilter;
+	byDate.sort(function(a,b) {
+		return b.id - a.id;
+	});
     return (
         <div className="col-12" id="sports">
             <div className=" title_sport bg_orange_dark text-white p-1 fs-5 font_bold">
@@ -81,18 +68,6 @@ export const Results_NHL = () => {
                                     }
                                 </select>
                             </div>
-                            <div className="col-2 text-center">Day</div>
-                            <div className="col-lg-2 d-flex align-items-center">
-                                <select className="form-select" name="week" aria-label="Default select example" defaultValue={week} onChange={e => setweek(e.target.value)} required>
-                                    {
-                                        selectDay.map((index) => {
-                                            return (
-                                                <option key={index} name="promotions" value={index}>{index}</option>
-                                            )
-                                        })
-                                    }
-                                </select>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -101,8 +76,10 @@ export const Results_NHL = () => {
                 <div className="accordion-collapse collapse show" id="nhl_results_Collapse" data-bs-parent="#sports">
                     <div className="row g-0">
                         {
-                            store.nhl.map((item, index) => {
-                                if (item.date == R_date) {
+                            nhlFilter.map((item, index) => {
+                                let mes = item.date.slice(5, 7);
+                                let ano = item.date.slice(0, 4);
+                                if (mes == R_date && ano == year) {
                                     let url_aw="";
                                     let url_hm="";
                                     store.logos_nhl.map((item2)=>{

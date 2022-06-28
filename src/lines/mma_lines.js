@@ -5,24 +5,45 @@ import { Context } from "../store/appContext";
 function MMA_lines() {
     const params = useParams();
     const { store } = useContext(Context);
+    let head_fighter_one;
+    let head_fighter_two;
+    store.stats_mma_fighter.map((index) => {
+        if (index.name == store.mma[params.theid].fighter_One) {
+            head_fighter_one = index.headshot;
+            console.log(index.name)
+        }
+    })
+    store.stats_mma_fighter.map((index) => {
+        if (index.name == store.mma[params.theid].fighter_Two) {
+            head_fighter_two = index.headshot;
+        }
+    })
     return (
-        <div className="p-2 shadow">
-            <div className="row g-0 pb-5">
-                <div className="col-lg-6">
-                    <div className="col-12 fs-5">
-                        {store.mma[params.theid] && store.mma[params.theid].location_Fight} 
+        <div className="container bg_orange_dark py-3">
+            <div className="row g-0 pb-5  text-center">
+                <div className="col-lg-12">
+                    <div className="col-12 fs-3">
+                        <span className="font_bold">Location: </span>  {store.mma[params.theid] && store.mma[params.theid].location_Fight}
                     </div>
                     <div className="col-12">
-                        <div className="row g-0 fst-italic fs-1">
-                            <div className="col-lg-5 font_bold ">{store.mma[params.theid] && store.mma[params.theid].fighter_One}</div>
+                        <div className="row g-0 fst-italic shadow fs-1 bg_lines my-3">
+                            <div className="col-lg-5 font_bold ">
+                                <div className="col-6 mx-auto">
+                                    <img className="img-fluid" src={head_fighter_one} alt="headshot of the player"></img>
+                                </div>
+                                {store.mma[params.theid] && store.mma[params.theid].fighter_One}</div>
                             <div className="col-lg-2">VR</div>
-                            <div className="col-lg-5 font_bold">{store.mma[params.theid] && store.mma[params.theid].fighter_Two}</div>
+                            <div className="col-lg-5 font_bold">
+                                <div className="col-6 mx-auto">
+                                    <img className="img-fluid" src={head_fighter_two} alt="headshot of the player"></img>
+                                </div>
+                                {store.mma[params.theid] && store.mma[params.theid].fighter_Two}</div>
                         </div>
                     </div>
-                    <div className="col-12 font_bold fst-italic fs-5 font_orange">{store.mma[params.theid] && store.mma[params.theid].event} {store.mma[params.theid] && store.mma[params.theid].rounds} rounds</div>
-                    <div className="col-12">{store.mma[params.theid] && store.mma[params.theid].date} {store.mma[params.theid] && store.mma[params.theid].hour}</div>
+                    <div className="col-12 font_bold fst-italic fs-5 text-white py-3"> <span className="font_bold">Event: </span> {store.mma[params.theid] && store.mma[params.theid].event} {store.mma[params.theid] && store.mma[params.theid].rounds} rounds</div>
+                    <div className="col-12 fs-4"> <span className="font_bold">Date: </span> {store.mma[params.theid] && store.mma[params.theid].date} {store.mma[params.theid] && store.mma[params.theid].hour}</div>
                 </div>
-                <div className="col-lg-6 shadow border d-flex align-items-center justify-content-center">
+                <div className="col-lg-6 mx-auto my-4 shadow text-white font_shadow d-flex align-items-center justify-content-center">
                     <div className="row py-3">
                         <div className="col-6 text-end font_bold  fs-2">Winner: </div>
                         <div className="col-6 text-start font_bold fs-2">{store.mma[params.theid] && store.mma[params.theid].winner}</div>
@@ -30,7 +51,7 @@ function MMA_lines() {
                     </div>
                 </div>
             </div>
-            <div className="overflowX_scroll">
+            <div className="overflowX_scroll bg-white shadow">
                 <div className="odds-list">
                     <div className="row g-0  text-white text-center">
                         <div className="col-2 bg_lines">Fighter</div>

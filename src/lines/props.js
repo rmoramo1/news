@@ -1,39 +1,33 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 export const Props = props => {
     return (
-        <div className="overflowX_scroll">
-            <div className="odds-list">
-                <div className="row g-0 bg_lines text-white text-center">
-                    <div className="col-2">Title</div>
-                    <div className="col-2">Away</div>
-                    <div className="col-2">Home</div>
-                    <div className="col-2">Type</div>
-                    <div className="col-2">Line</div>
-                    <div className="col-2">Feature</div>
+        <div className="">
+            <div className="row g-0 bg_lines text-white text-center">
+                <div className="col-4">Sport</div>
+                <div className="col-4">
+                    Title
                 </div>
-                <div>
-                    <div className="row g-0 text-center">
-                        <div className="col-2 bb1px lines">{props.title}</div>
-                        <div className="col-2 bb1px lines">{props.away}</div>
-                        <div className="col-2 bb1px lines">{props.home}</div>
-                        <div className="col-2 bb1px lines">{props.type_prop}</div>
-                        <div className="col-2 bb1px lines">{props.line}</div>
-                        <div className="col-2 bb1px lines">{props.feature}</div>
-                    </div>
+                <div className="col-4">Date</div>
+
+            </div>
+            <div className="row g-0 text-center">
+                <div className="col-4 bb1px lines">{props.sport}</div>
+                <div className="col-4 bb1px lines">
+                    <Link to={`/odds_to_win/${props.id}`}>
+                        {props.title}
+                    </Link>
                 </div>
+                <div className="col-4 bb1px lines">{props.date}</div>
             </div>
         </div>
     )
 }
 Props.propTypes = {
-    away: PropTypes.string,
-    home: PropTypes.string,
+    id: PropTypes.string,
     sport: PropTypes.string,
     title: PropTypes.string,
-    line: PropTypes.string,
-    feature: PropTypes.string,
-    type_prop: PropTypes.string,
     date: PropTypes.string,
 };

@@ -34,7 +34,11 @@ export const NBA_Thre_q = () => {
             selectMonth.push(i);
         }
     }
-
+	let nbaFilter = store.nba_games;
+	var byDate = nbaFilter;
+	byDate.sort(function(a,b) {
+		return b.id - a.id;
+	});
     return (
         <div className="col-12" id="sports">
             <div className=" title_sport bg_orange_dark text-white p-1 fs-5 font_bold">
@@ -86,7 +90,7 @@ export const NBA_Thre_q = () => {
             </div>
             <div className="accordion-item">
                 <div className="accordion-collapse collapse show" id="nflCollapse" data-bs-parent="#sports">
-                    {store.nba_games.map((item, index) => {
+                    {nbaFilter.map((item, index) => {
                         let mes = item.date.slice(5, 7);
                         let ano = item.date.slice(0, 4);
                         if (mes == R_date && ano == year && item.type_of_line == typeOfLine) {

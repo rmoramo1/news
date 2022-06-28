@@ -33,6 +33,12 @@ export const Nba_Games = () => {
             selectMonth.push(i);
         }
     }
+	let nbaFilter = store.nba_games;
+
+	var byDate = nbaFilter;
+	byDate.sort(function(a,b) {
+		return b.id - a.id;
+	});
 
     return (
         <div className="col-12" id="sports">
@@ -83,7 +89,7 @@ export const Nba_Games = () => {
             </div>
             <div className="accordion-item">
                 <div className="accordion-collapse collapse show" id="nbaCollapse" data-bs-parent="#sports">
-                    {store.nba_games.map((item, index) => {
+                    {nbaFilter.map((item, index) => {
                         let mes = item.date.slice(5, 7);
                         let ano = item.date.slice(0, 4);
                         if (mes == R_date && ano == year && item.type_of_line == typeOfLine) {

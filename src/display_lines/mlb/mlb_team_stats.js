@@ -11,7 +11,11 @@ export const MLB_Team_stats_display = () => {
     for (let i = 2002; i < 2025; i++) {
         selectYear.push(i);
     }
-
+	let mlbFilter = store.stats_mlb_team;
+	var byDate = mlbFilter;
+	byDate.sort(function(a,b) {
+		return b.w - a.w;
+	});
     return (
         <div className="col-12" id="sports">
             <div className="title_sport bg_orange_dark text-white ps-lg-5 fs-2 font_bold">
@@ -52,7 +56,7 @@ export const MLB_Team_stats_display = () => {
                     <div className="quince_spans">L10</div>
                 </div>
                 <div className="accordion-collapse collapse show" id="nba_stats_teamCollapse" data-bs-parent="#sports">
-                    {store.stats_mlb_team.map((item, index) => {
+                    {mlbFilter.map((item, index) => {
                         if ( item.season == year) {
                             return (
                                 <div key={index}>

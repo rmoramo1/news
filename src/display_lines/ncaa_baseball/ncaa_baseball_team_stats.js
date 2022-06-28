@@ -12,7 +12,11 @@ export const NCAA_BASEBALL_Team_stats_display = () => {
     for (let i = 2002; i < 2025; i++) {
         selectYear.push(i);
     }
-
+	let ncaa_baseballFilter = store.stats_ncaa_baseball_team;
+	var byDate = ncaa_baseballFilter;
+	byDate.sort(function(a,b) {
+		return b.id - a.id;
+	});
     return (
         <div className="col-12" id="sports">
             <div className="title_sport bg_orange_dark text-white p-2 fs-5 font_bold">
@@ -53,7 +57,7 @@ export const NCAA_BASEBALL_Team_stats_display = () => {
                     <div className="quince_spans">L10</div>
                 </div>
                 <div className="accordion-collapse collapse show" id="stats_ncaa_baseball_teamCollapse" data-bs-parent="#sports">
-                    {store.stats_ncaa_baseball_team.map((item, index) => {
+                    {ncaa_baseballFilter.map((item, index) => {
                         if (item.season == year) {
                             return (
                                 <div key={index} className="odds-list">

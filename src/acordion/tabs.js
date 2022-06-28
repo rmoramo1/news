@@ -107,7 +107,7 @@ export const Tabs = () => {
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="props_nfl_tab">
                         <button className="accordion-button collapsed font_bold" type="button" data-bs-toggle="collapse" data-bs-target="#props_nfl" aria-expanded="false" aria-controls="props_nfl">
-                            PROPS
+                            ODDS TO WIN  <i className="ps-5 fs-3 fas fa-star"></i>
                         </button>
                     </h2>
                 </div>

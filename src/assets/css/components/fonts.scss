@@ -7,3 +7,6 @@
 .font_orange{
     color: darken($orange_dark, 20);
 }
+.font_shadow{
+    text-shadow: 0 0 5px $black;
+}

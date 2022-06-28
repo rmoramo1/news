@@ -52,6 +52,8 @@ export const Injuries_Global = () => {
                                         date={item.date}
                                         time_injurie={item.time_injurie}
                                         sport={item.sport}
+                                        id={item.id}
+
                                     />
                                 </div>
                             );

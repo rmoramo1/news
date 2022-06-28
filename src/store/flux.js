@@ -88,25 +88,25 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			//nfl
 			nfl: async () => {
-				const url = "https://allfansports.herokuapp.com/nfl";
+				const url = "https://www.sportsdata365.com/nfl";
 				const response = await fetch(url);
 				const results = await response.json();
 				setStore({ nfl: results });
 			},
 			logos_nfl: async () => {
-				const url = "https://allfansports.herokuapp.com/logos_nfl";
+				const url = "https://www.sportsdata365.com/logos_nfl";
 				const response = await fetch(url);
 				const results = await response.json();
 				setStore({ logos_nfl: results });
 			},
 			props: async () => {
-				const url = "https://allfansports.herokuapp.com/props";
+				const url = "https://sportsdata365.com/odds_to_win";
 				const response = await fetch(url);
 				const results = await response.json();
 				setStore({ props: results });
 			},
 			nfl_team_stats: async () => {
-				const url = "https://allfansports.herokuapp.com/stats_nfl_team";
+				const url = "https://www.sportsdata365.com/stats_nfl_team";
 				const response = await fetch(url);
 				const results = await response.json();
 				setStore({ nfl_team_stats: results });
@@ -186,7 +186,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			//nba
 			logos_nba: async () => {
-				const url = "https://allfansports.herokuapp.com/logos_nba";
+				const url = "https://www.sportsdata365.com/logos_nba";
 				const response = await fetch(url);
 				const results = await response.json();
 				setStore({ logos_nba: results });

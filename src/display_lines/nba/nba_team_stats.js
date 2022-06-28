@@ -12,7 +12,11 @@ export const NBA_Team_stats_display = () => {
     for (let i = 2002; i < 2025; i++) {
         selectYear.push(i);
     }
-
+	let nbaFilter = store.stats_nba_team;
+	var byDate = nbaFilter;
+	byDate.sort(function(a,b) {
+		return b.w - a.w;
+	});
     return (
         <div className="col-12" id="sports">
             <div className="title_sport bg_orange_dark text-white ps-lg-5 fs-2 font_bold">
@@ -55,7 +59,7 @@ export const NBA_Team_stats_display = () => {
                     <div className="quince_spans d-flex justify-content-center align-items-center bg_lines">L 10</div>
                 </div>
                 <div className="accordion-collapse collapse show" id="nba_stats_teamCollapse" data-bs-parent="#sports">
-                    {store.stats_nba_team.map((item, index) => {
+                    {nbaFilter.map((item, index) => {
                         if (item.season == year) {
                             return (
                                 <div key={index} className="odds-list">
