@@ -44,7 +44,7 @@ export const NCAA_ITEMS = () => {
                 <Ncaa_Football_PY_STATS/>
             </div>
             <div id="alarms_ncaa" className="accordion-collapse collapse" aria-labelledby="alarms_ncaa" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
+                <div className="title_sport bg_base_dark text-white ps-5 fs-1 font_bold">
                     ALARMS NCAA FOOTBALL
                 </div>
                 <div className="accordion-body">

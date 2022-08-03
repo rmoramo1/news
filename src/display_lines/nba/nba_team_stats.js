@@ -4,7 +4,7 @@ import { Context } from "../../store/appContext";
 
 import { NBA_Team_Stats } from "../../lines/nba_team_stats";
 
-export const NBA_Team_stats_display = () => {
+function NBA_Team_stats_display(){
     const { store } = useContext(Context);
     const [year, setyear] = useState("2022");
 
@@ -18,10 +18,10 @@ export const NBA_Team_stats_display = () => {
 		return b.w - a.w;
 	});
     return (
-        <div className="col-12" id="sports">
-            <div className="title_sport bg_orange_dark text-white ps-lg-5 fs-2 font_bold">
+        <div className="rounded_span m-2 bg-white shadow_spans mh_display">
+            <div className="title_sport bg_base_dark text-white ps-lg-5 fs-2 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-4">NBA Team Stats</div>
+                    <div className="col-lg-4">NBA Team Stadings</div>
                     <div className="col-lg-8">
                         <div className="row g-0">
                             <div className="col-3 text-center">SEASON</div>
@@ -42,21 +42,21 @@ export const NBA_Team_stats_display = () => {
             </div>
             <div className="accordion-item overflowX_scroll">
                 <div className="row g-0 bg_lines text-white text-center odds-list">
-                    <div className="quince_spans d-flex justify-content-center align-items-center"> </div>
-                    <div className="quince_spans d-flex justify-content-center align-items-center">Team</div>
-                    <div className="quince_spans d-flex justify-content-center align-items-center">W</div>
-                    <div className="quince_spans d-flex justify-content-center align-items-center">L</div>
-                    <div className="quince_spans d-flex justify-content-center align-items-center">PTC</div>
-                    <div className="quince_spans d-flex justify-content-center align-items-center">GB</div>
-                    <div className="quince_spans d-flex justify-content-center align-items-center">Home</div>
-                    <div className="quince_spans d-flex justify-content-center align-items-center">Away</div>
-                    <div className="quince_spans d-flex justify-content-center align-items-center">Div</div>
-                    <div className="quince_spans d-flex justify-content-center align-items-center">Conf</div>
-                    <div className="quince_spans d-flex justify-content-center align-items-center">PPG</div>
-                    <div className="quince_spans d-flex justify-content-center align-items-center">Opp Ppg</div>
-                    <div className="quince_spans d-flex justify-content-center align-items-center">Diff</div>
-                    <div className="quince_spans d-flex justify-content-center align-items-center">Strk</div>
-                    <div className="quince_spans d-flex justify-content-center align-items-center bg_lines">L 10</div>
+                    <div className="diezSiete_spans"> </div>
+                    <div className="diez_spans">Team</div>
+                    <div className="diezSiete_spans">W</div>
+                    <div className="diezSiete_spans">L</div>
+                    <div className="quince_spans">PTC</div>
+                    <div className="quince_spans">GB</div>
+                    <div className="quince_spans">Home</div>
+                    <div className="quince_spans">Away</div>
+                    <div className="quince_spans">Div</div>
+                    <div className="quince_spans">Conf</div>
+                    <div className="quince_spans">PPG</div>
+                    <div className="quince_spans">Opp Ppg</div>
+                    <div className="quince_spans">Diff</div>
+                    <div className="diezSiete_spans">Strk</div>
+                    <div className="diezSiete_spans bg_lines">L 10</div>
                 </div>
                 <div className="accordion-collapse collapse show" id="nba_stats_teamCollapse" data-bs-parent="#sports">
                     {nbaFilter.map((item, index) => {
@@ -88,4 +88,5 @@ export const NBA_Team_stats_display = () => {
             </div>
         </div>
     )
-}
+};
+export default NBA_Team_stats_display;

@@ -42,7 +42,7 @@ export const Extra_Inning_MLB = () => {
 
     return (
         <div className="col-12" id="sports">
-            <div className=" title_sport bg_orange_dark text-white p-1 fs-5 font_bold">
+            <div className=" title_sport bg_base_dark text-white p-1 fs-5 font_bold">
                 <div className="row g-0">
                     <div className="col-lg-2">Extra Inning</div>
                     <div className="col-lg-10">
@@ -93,6 +93,18 @@ export const Extra_Inning_MLB = () => {
                         let mes = item.date.slice(5, 7);
                         let ano = item.date.slice(0, 4);
                         if (mes == R_date && ano == year && item.type_of_line == typeOfLine) {
+                            let url_aw = "";
+                            let url_hm = "";
+                            store.logos_mlb.map((item2) => {
+                                if (item2.team == item.away) {
+                                    url_aw = item2.url
+                                }
+                            })
+                            store.logos_mlb.map((item3) => {
+                                if (item3.team == item.home) {
+                                    url_hm = item3.url
+                                }
+                            })
                             return (
                                 <div key={index}>
                                     <Single_Extra_Inning
@@ -110,6 +122,11 @@ export const Extra_Inning_MLB = () => {
                                         sa_19inning={item.sa_19inning}
                                         sa_20inning={item.sa_20inning}
                                         sa_21inning={item.sa_21inning}
+                                        sa_22inning={item.sa_22inning}
+                                        sa_23inning={item.sa_23inning}
+                                        sa_24inning={item.sa_24inning}
+                                        sa_25inning={item.sa_25inning}
+                         
 
                                         sh_10inning={item.sh_10inning}
                                         sh_11inning={item.sh_11inning}
@@ -123,15 +140,12 @@ export const Extra_Inning_MLB = () => {
                                         sh_19inning={item.sh_19inning}
                                         sh_20inning={item.sh_20inning}
                                         sh_21inning={item.sh_21inning}
-                                        sa_22inning={item.sa_22inning}
-                                        sa_23inning={item.sa_23inning}
-                                        sa_24inning={item.sa_24inning}
-                                        sa_25inning={item.sa_25inning}
                                         sh_22inning={item.sh_22inning}
                                         sh_23inning={item.sh_23inning}
                                         sh_24inning={item.sh_24inning}
                                         sh_25inning={item.sh_25inning}
-
+                                        logo_away={url_aw}
+                                        logo_home={url_hm}
                                     />
                                 </div>
                             );

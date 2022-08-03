@@ -1,0 +1,19 @@
+@font-face {
+    font-family: impact;
+    src: url('../../fonts/impact.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.font_impact{
+    font-family: impact;
+}
+.font_color_base{
+    color: $base_light;
+}
+.font_destacado{
+    color: $text;
+}
+.font_grey{
+    color: lighten($black,50);
+}

@@ -1,12 +1,21 @@
 /*solids*/
 $black:#000;
 $white:#fff;
-$orange:#E85C29;
-$orange_dark:#CF5225;
-$orange_light:#F59720;
-$grey:#5E5E5E;
-$text:#232942;
+$base:#4F4F4F;
+
+$text:$base;
+$base_extra_light:#F15A29;
+$base_dark:$text;
+$base_light:#F15A29;
+$grey:#b6b7b7;
+
+$fished: $base_light;
+$cancelled:rgb(250, 61, 61);
+$in_progress:rgb(18, 169, 18);
+$pending:#2bcbff;
 /*GRADIENTES*/
-$orange_to_white: linear-gradient(135deg, $black 0%,$orange_dark 70%);
-$btn_gradient: linear-gradient(to bottom, $orange 0%, darken($orange_dark,20) 70%);
-$btn_gradient_reverse: linear-gradient(to bottom, darken($orange_dark,20) 0%, $orange 70%);
+$gradient_w_g: linear-gradient(to bottom, $white 0%,darken($white,20) 80%);
+$gradient_w_g_reverse: linear-gradient(to bottom, darken($white,20) 0%,$white 80%);
+$base_to_white: linear-gradient(135deg, $black 0%,$base_dark 70%);
+$btn_gradient: linear-gradient(to bottom, $base_extra_light 0%,darken($base_extra_light,30) 70%);
+$btn_gradient_reverse: linear-gradient(to bottom, darken($base_extra_light,30) 0%, $base_extra_light 70%);

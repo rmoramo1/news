@@ -13,7 +13,7 @@ export const Nascar_Lines = props => {
             </div>
             <div>
                 <div className="row g-0 text-center">
-                    <div className="col-4 bb1px lines"><Link to={`/nascar_race/${props.id}`}>{props.race}</Link></div>
+                    <div className="col-4 bb1px lines"><Link className="event_link" to={`/nascar_race/${props.id}`}>{props.race}</Link></div>
                     <div className="col-4 bb1px lines">{props.track}</div>
                     <div className="col-4 bb1px lines">{props.location}</div>
                 </div>

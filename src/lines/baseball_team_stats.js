@@ -23,7 +23,7 @@ export const BaseBall_Team_Stats = props => {
                             })
                         }
                     </div>
-                    <div className="quince_spans d-flex justify-content-start align-items-center bb1px lines">{props.team}</div>
+                    <div className="diez_spans d-flex justify-content-start align-items-center bb1px lines">{props.team}</div>
                     <div className="quince_spans d-flex justify-content-center align-items-center bb1px lines">{props.w}</div>
                     <div className="quince_spans d-flex justify-content-center align-items-center bb1px lines">{props.L}</div>
                     <div className="quince_spans d-flex justify-content-center align-items-center bb1px lines">{props.pct}</div>

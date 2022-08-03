@@ -1,0 +1,12 @@
+.bb1{
+    border-bottom: 1px solid $black;
+}
+.shadow_news{
+    box-shadow: 0 0 5px $black;
+    border-radius: 10px;
+    min-height: 150px;
+}
+.title_noticias{
+    color: $base_light;
+    font-size: 2.5rem;
+}

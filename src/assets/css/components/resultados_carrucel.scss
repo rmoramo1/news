@@ -1,0 +1,17 @@
+.campo_resultado{
+    width: 250px;
+    float: left;
+    color: $black;
+}
+.display_en_linea{
+    display:-webkit-box
+}
+.bb_resultados {
+    border-bottom: 1px solid rgba(#000, .30);
+}
+.b_r{
+    border-right:1px solid rgba(#000, .30) ;
+}
+.scroll_over {
+    overflow-x: scroll;
+}

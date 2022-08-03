@@ -3,7 +3,7 @@ import DateTime from '../../../node_modules/luxon/src/datetime.js'
 import { Context } from "../../store/appContext";
 
 import { Single_MMA_Lines } from "../../lines/single_mma_lines.js";
-export const MMA_Event = () => {
+function MMA_Event(){
     const { store } = useContext(Context);
     const monthLux = DateTime.now().month;
     const yearLux = DateTime.now().year;
@@ -33,8 +33,8 @@ export const MMA_Event = () => {
     }
 
     return (
-        <div className="col-12" id="sports">
-            <div className=" title_sport bg_orange_dark text-white p-1 fs-5 font_bold">
+        <div className="rounded_span m-2 bg-white shadow_spans mh_display">
+            <div className=" title_sport bg_base_dark text-white p-1 fs-5 font_bold">
                 <div className="row g-0">
                     <div className="col-lg-2">MMA EVENTS</div>
                     <div className="col-lg-10">
@@ -86,4 +86,5 @@ export const MMA_Event = () => {
             </div>
         </div>
     )
-}
+};
+export default MMA_Event;

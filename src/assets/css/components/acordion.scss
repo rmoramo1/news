@@ -1,17 +1,17 @@
 .accordion-button:not(.collapsed) {
     color: $white;
-    background-color:$orange;
+    background-color:$base;
 }
 #football_acordion,#basket_acordion,#baseball_acordion,#marcial_acordion{
     .accordion-button:not(.collapsed) {
         color: $white;
-        background-color:$orange_light;
+        background-color:$base_light;
     }
 }
 #second_nfl,#second_ncaa,#second_nba,#second_ncaa_basket,#second_mlb,#second_ncaa_baseball,#second_hockey,#second_golf,#second_racing,#second_box,#second_mma,#second_soccer{
     .accordion-button:not(.collapsed) {
         color: $white;
-        background-color:lighten($orange_light, 15);
+        background-color:lighten($base_light, 15);
     }
 }
 

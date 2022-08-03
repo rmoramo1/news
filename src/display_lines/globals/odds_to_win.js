@@ -7,7 +7,7 @@ function Odds_To_Win() {
     const { store } = useContext(Context);
     return (
         <div className="container-fluid">
-            <div className='col-12 mt-3 bg_orange_dark p-4 text-white'>
+            <div className='col-12 mt-3 bg_base_dark p-4 text-white'>
                 <h1 className='text-center'>
                     {store.props[params.theid] && store.props[params.theid].title} <i className="fas fa-check-double"></i>
                 </h1>
@@ -24,11 +24,11 @@ function Odds_To_Win() {
                     </h4>
                 </div>
             </div>
-            <div className='col-lg-12 mt-3 bg_orange_dark p-5 text-white'>
+            <div className='col-lg-12 mt-3 bg_base_dark p-5 text-white'>
                 <h2 className='text-center'><i className="fas fa-trophy"></i>  WINNER: {store.props[params.theid] && store.props[params.theid].winner}
                 </h2>
             </div>
-            <div className="row g-0 mt-3 bg_orange_dark text-center text-white">
+            <div className="row g-0 mt-3 bg_base_dark text-center text-white">
                 <div className="col-3">Rotation #</div>
                 <div className="col-6">Name</div>
                 <div className="col-3">Line</div>

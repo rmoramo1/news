@@ -41,7 +41,7 @@ export const Six_Nine_Inning_Mlb = () => {
 	});
     return (
         <div className="col-12" id="sports">
-            <div className=" title_sport bg_orange_dark text-white p-1 fs-5 font_bold">
+            <div className=" title_sport bg_base_dark text-white p-1 fs-5 font_bold">
                 <div className="row g-0">
                     <div className="col-lg-2">6-9 Inning</div>
                     <div className="col-lg-10">
@@ -92,6 +92,18 @@ export const Six_Nine_Inning_Mlb = () => {
                      let mes = item.date.slice(5, 7);
                      let ano = item.date.slice(0, 4);
                      if (mes == R_date && ano == year && item.type_of_line == typeOfLine) {
+                        let url_aw = "";
+                        let url_hm = "";
+                        store.logos_mlb.map((item2) => {
+                            if (item2.team == item.away) {
+                                url_aw = item2.url
+                            }
+                        })
+                        store.logos_mlb.map((item3) => {
+                            if (item3.team == item.home) {
+                                url_hm = item3.url
+                            }
+                        })
                             return (
                                 <div key={index}>
                                     <Single_6_9_Inning
@@ -105,6 +117,8 @@ export const Six_Nine_Inning_Mlb = () => {
                                         sh_7inning={item.sh_7inning}
                                         sh_8inning={item.sh_8inning}
                                         sh_9inning={item.sh_9inning}
+                                        logo_away={url_aw}
+                                        logo_home={url_hm}
                                     />
                                 </div>
                             );

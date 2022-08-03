@@ -11,8 +11,8 @@ export const Single_Quarters_hockey = props => {
                         <div className="col-12">TEAMS</div>
                     </div>
                     <div className="row g-0 text-center">
-                        <div className="col-12 lines">{props.away}</div>
-                        <div className="col-12 lines">{props.home}</div>
+                        <div className="col-12 lines"><img src={props.logo_away} alt="logo away team" className="img_logo_game_day"></img>{props.away}</div>
+                        <div className="col-12 lines"><img src={props.logo_home} alt="logo home team" className="img_logo_game_day"></img>{props.home}</div>
                     </div>
                 </div>
                 <div className="col-8">
@@ -45,5 +45,7 @@ Single_Quarters_hockey.propTypes = {
     sa_3Q: PropTypes.string,
     sh_1Q: PropTypes.string,
     sh_2Q: PropTypes.string,
-    sh_3Q: PropTypes.string
+    sh_3Q: PropTypes.string,
+    logo_away: PropTypes.string,
+    logo_home: PropTypes.string
 };

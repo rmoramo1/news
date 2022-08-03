@@ -28,7 +28,7 @@ export const SOCCER_ITEMS = () => {
                 <Futures_SOCCER/>
             </div>
             <div id="team_stats_soccer" className="accordion-collapse collapse" aria-labelledby="team_stats_soccer" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
+                <div className="title_sport bg_base_dark text-white ps-5 fs-1 font_bold">
                     TEAM STANDINGS soccer
                 </div>
                 <div className="accordion-body">
@@ -36,7 +36,7 @@ export const SOCCER_ITEMS = () => {
                 </div>
             </div>
             <div id="player_stats_soccer" className="accordion-collapse collapse" aria-labelledby="player_stats_soccer" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
+                <div className="title_sport bg_base_dark text-white ps-5 fs-1 font_bold">
                     PLAYER STATS soccer
                 </div>
                 <div className="accordion-body">
@@ -44,7 +44,7 @@ export const SOCCER_ITEMS = () => {
                 </div>
             </div>
             <div id="alarms_soccer" className="accordion-collapse collapse" aria-labelledby="alarms_soccer" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
+                <div className="title_sport bg_base_dark text-white ps-5 fs-1 font_bold">
                     ALARMS soccer
                 </div>
                 <div className="accordion-body">

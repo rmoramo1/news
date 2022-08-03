@@ -52,9 +52,9 @@ export const Result_Quarters_Hockey = () => {
 	});
     return (
         <div className="col-12" id="sports">
-            <div className=" title_sport bg_orange_dark text-white p-1 fs-5 font_bold">
+            <div className=" title_sport bg_base_dark text-white p-1 fs-5 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-2">6-9 Inning</div>
+                    <div className="col-lg-2">Result Quarters Hockey</div>
                     <div className="col-lg-10">
                     <div className="row g-0">
                             <div className="col-2 text-center">Year</div>
@@ -101,6 +101,18 @@ export const Result_Quarters_Hockey = () => {
                 <div className="accordion-collapse collapse show" id="nhlCollapse" data-bs-parent="#sports">
                     {nhlFilter.map((item, index) => {
                         if (item.date == R_date) {
+                            let url_aw = "";
+                            let url_hm = "";
+                            store.logos_nhl.map((item2) => {
+                                if (item2.team == item.away) {
+                                    url_aw = item2.url
+                                }
+                            })
+                            store.logos_nhl.map((item3) => {
+                                if (item3.team == item.home) {
+                                    url_hm = item3.url
+                                }
+                            })
                             return (
                                 <div key={index}>
                                     <Single_Quarters_hockey
@@ -114,6 +126,8 @@ export const Result_Quarters_Hockey = () => {
                                         sh_7inning={item.sh_7inning}
                                         sh_8inning={item.sh_8inning}
                                         sh_9inning={item.sh_9inning}
+                                        logo_away={url_aw}
+                                        logo_home={url_hm}
                                     />
                                 </div>
                             );

@@ -2,7 +2,8 @@ import React, { useContext, useState } from "react";
 import DateTime from '../../../node_modules/luxon/src/datetime.js'
 import { Context } from "../../store/appContext";
 import { Golf_lines } from "../../lines/golf_lines.js";
-export const GOLF_Games = () => {
+
+function GOLF_Games(){
     const { store } = useContext(Context);
     const monthLux = DateTime.now().month;
     const yearLux = DateTime.now().year;
@@ -31,10 +32,9 @@ export const GOLF_Games = () => {
         }
     }
 
-
     return (
-        <div className="col-12" id="sports">
-            <div className=" title_sport bg_orange_dark text-white p-1 fs-5 font_bold">
+        <div className="rounded_span m-2 bg-white shadow_spans mh_display">
+            <div className=" title_sport bg_base_dark text-white p-1 fs-5 font_bold">
                 <div className="row g-0">
                     <div className="col-lg-2">GOLF MATCHUPS</div>
                     <div className="col-lg-10">
@@ -90,4 +90,5 @@ export const GOLF_Games = () => {
             </div>
         </div>
     )
-}
+};
+export default GOLF_Games;

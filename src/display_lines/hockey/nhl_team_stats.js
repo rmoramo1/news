@@ -3,7 +3,7 @@ import { Context } from "../../store/appContext";
 
 import { NHL_Team_Stats } from "../../lines/nhl_team_stats";
 
-export const NHL_Team_stats_display = () => {
+function NHL_Team_stats_display(){
     const { store } = useContext(Context);
     const [team, setTeam] = useState("Boston Bruins");
     const [year, setyear] = useState("2022");
@@ -18,10 +18,10 @@ export const NHL_Team_stats_display = () => {
 		return b.id - a.id;
 	});
     return (
-        <div className="col-12" id="sports">
-            <div className="title_sport bg_orange_dark text-white ps-lg-5 fs-2 font_bold">
+        <div className="rounded_span m-2 bg-white shadow_spans mh_display">
+            <div className="title_sport bg_base_dark text-white ps-lg-5 fs-2 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-4">NHL Team Stats</div>
+                    <div className="col-lg-4">NHL Team Stadings</div>
                     <div className="col-lg-8">
                         <div className="row g-0">
                             <div className="col-3 text-center">SEASON</div>
@@ -42,24 +42,24 @@ export const NHL_Team_stats_display = () => {
             </div>
             <div className="accordion-item overflowX_scroll">
                 <div className="row g-0 bg_lines text-white text-center odds-list">
-                    <div className="diez_nueve_spans"></div>
-                    <div className="diez_nueve_spans">Team</div>
-                    <div className="diez_nueve_spans">GP</div>
-                    <div className="diez_nueve_spans">W</div>
-                    <div className="diez_nueve_spans">L</div>
-                    <div className="diez_nueve_spans">Otl</div>
-                    <div className="diez_nueve_spans">Pts</div>
-                    <div className="diez_nueve_spans">RW</div>
-                    <div className="diez_nueve_spans">ROW</div>
-                    <div className="diez_nueve_spans">SOW</div>
-                    <div className="diez_nueve_spans">SOL</div>
-                    <div className="diez_nueve_spans">Home</div>
-                    <div className="diez_nueve_spans">Away</div>
-                    <div className="diez_nueve_spans">GF</div>
-                    <div className="diez_nueve_spans">GA</div>
-                    <div className="diez_nueve_spans">DIFF</div>
-                    <div className="diez_nueve_spans">L10</div>
-                    <div className="diez_nueve_spans">Strk</div>
+                    <div className="diez_ocho_spans"></div>
+                    <div className="diez_ocho_spans">Team</div>
+                    <div className="diez_ocho_spans">GP</div>
+                    <div className="diez_ocho_spans">W</div>
+                    <div className="diez_ocho_spans">L</div>
+                    <div className="diez_ocho_spans">Otl</div>
+                    <div className="diez_ocho_spans">Pts</div>
+                    <div className="diez_ocho_spans">RW</div>
+                    <div className="diez_ocho_spans">ROW</div>
+                    <div className="diez_ocho_spans">SOW</div>
+                    <div className="diez_ocho_spans">SOL</div>
+                    <div className="diez_ocho_spans">Home</div>
+                    <div className="diez_ocho_spans">Away</div>
+                    <div className="diez_ocho_spans">GF</div>
+                    <div className="diez_ocho_spans">GA</div>
+                    <div className="diez_ocho_spans">DIFF</div>
+                    <div className="diez_ocho_spans">L10</div>
+                    <div className="diez_ocho_spans">Strk</div>
                 </div>
                 <div className="accordion-collapse collapse show" id="nba_stats_teamCollapse" data-bs-parent="#sports">
                     {nhlFilter.map((item, index) => {
@@ -94,4 +94,5 @@ export const NHL_Team_stats_display = () => {
             </div>
         </div>
     )
-}
+};
+export default NHL_Team_stats_display;

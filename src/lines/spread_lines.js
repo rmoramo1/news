@@ -33,7 +33,7 @@ export const Spread_Lines = props => {
             <div>
                 <div className="row g-0 text-center odds-list">
                     <div className="odds-span fw-bold">{props.date}</div>
-                    <div className="odds-spanTeam bb1px lines fw-bold">{props.away}</div>
+                    <div className="odds-spanTeam bb1px lines fw-bold"><img src={props.logo_away} alt="logo away team" className="img_logo_game_day"></img>{props.away}</div>
                     <div className="odds-span bb1px lines">{props.spread_away}</div>
                     <div className="odds-span bb1px lines">{props.juice_spread_away}</div>
                     <div className="odds-span bb1px lines">{props.moneyLineAway}</div>
@@ -46,7 +46,7 @@ export const Spread_Lines = props => {
                 </div>
                 <div className="row g-0 text-center odds-list">
                     <div className="odds-span fw-bold">{props.hour}</div>
-                    <div className="odds-spanTeam lines fw-bold">{props.home}</div>
+                    <div className="odds-spanTeam lines fw-bold"><img src={props.logo_home} alt="logo home team" className="img_logo_game_day"></img>{props.home}</div>
                     <div className="odds-span lines">{props.spread_home}</div>
                     <div className="odds-span lines">{props.juice_spread_home}</div>
                     <div className="odds-span lines">{props.moneyLineHome}</div>
@@ -83,5 +83,6 @@ Spread_Lines.propTypes = {
     juice_under_home: PropTypes.string,
     final_score_away: PropTypes.string,
     final_score_home: PropTypes.string,
-
+    logo_away: PropTypes.string,
+    logo_home: PropTypes.string
 };

@@ -34,55 +34,53 @@ export const NBA_Thre_q = () => {
             selectMonth.push(i);
         }
     }
-	let nbaFilter = store.nba_games;
-	var byDate = nbaFilter;
-	byDate.sort(function(a,b) {
-		return b.id - a.id;
-	});
+    let nbaFilter = store.nba_games;
+    var byDate = nbaFilter;
+    byDate.sort(function (a, b) {
+        return b.id - a.id;
+    });
     return (
         <div className="col-12" id="sports">
-            <div className=" title_sport bg_orange_dark text-white p-1 fs-5 font_bold">
+            <div className=" title_sport bg_base_dark text-white p-1 fs-5 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-2">3ST Q NBA</div>
+                    <div className="col-lg-2">3RD Q NBA</div>
                     <div className="col-lg-10">
-                        <div className="col-lg-10">
-                            <div className="row g-0">
-                                <div className="col-2 text-center">Year</div>
-                                <div className="col-lg-2 d-flex align-items-center">
-                                    <select className="form-select" name="week" aria-label="Default select example" defaultValue={year} onChange={e => setyear(e.target.value)} required>
-                                        {
-                                            selectYear.map((index) => {
-                                                return (
-                                                    <option key={index} name="promotions" value={index}>{index}</option>
-                                                )
-                                            })
-                                        }
-                                    </select>
-                                </div>
-                                <div className="col-2 text-center">Month</div>
-                                <div className="col-lg-2 d-flex align-items-center">
-                                    <select className="form-select" name="month" aria-label="Default select example" defaultValue={month} onChange={e => setmonth(e.target.value)} required>
-                                        {
-                                            selectMonth.map((index) => {
-                                                return (
-                                                    <option key={index} name="month" value={index}>{index}</option>
-                                                )
-                                            })
-                                        }
-                                    </select>
-                                </div>
-                                <div className="col-2 text-center">Type of Line</div>
-                                <div className="col-lg-2 d-flex align-items-center">
-                                    <select className="form-select" name="tipe" aria-label="Default select example" defaultValue={" "} onChange={e => settypeOfLine(e.target.value)} required>
-                                        {
-                                            store.type_of_line.map((index) => {
-                                                return (
-                                                    <option key={index} name="tipe" value={index}>{index}</option>
-                                                )
-                                            })
-                                        }
-                                    </select>
-                                </div>
+                        <div className="row g-0">
+                            <div className="col-2 text-center">Year</div>
+                            <div className="col-lg-2 d-flex align-items-center">
+                                <select className="form-select" name="week" aria-label="Default select example" defaultValue={year} onChange={e => setyear(e.target.value)} required>
+                                    {
+                                        selectYear.map((index) => {
+                                            return (
+                                                <option key={index} name="promotions" value={index}>{index}</option>
+                                            )
+                                        })
+                                    }
+                                </select>
+                            </div>
+                            <div className="col-2 text-center">Month</div>
+                            <div className="col-lg-2 d-flex align-items-center">
+                                <select className="form-select" name="month" aria-label="Default select example" defaultValue={month} onChange={e => setmonth(e.target.value)} required>
+                                    {
+                                        selectMonth.map((index) => {
+                                            return (
+                                                <option key={index} name="month" value={index}>{index}</option>
+                                            )
+                                        })
+                                    }
+                                </select>
+                            </div>
+                            <div className="col-2 text-center">Type of Line</div>
+                            <div className="col-lg-2 d-flex align-items-center">
+                                <select className="form-select" name="tipe" aria-label="Default select example" defaultValue={" "} onChange={e => settypeOfLine(e.target.value)} required>
+                                    {
+                                        store.type_of_line.map((index) => {
+                                            return (
+                                                <option key={index} name="tipe" value={index}>{index}</option>
+                                            )
+                                        })
+                                    }
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -94,6 +92,18 @@ export const NBA_Thre_q = () => {
                         let mes = item.date.slice(5, 7);
                         let ano = item.date.slice(0, 4);
                         if (mes == R_date && ano == year && item.type_of_line == typeOfLine) {
+                            let url_aw = "";
+                            let url_hm = "";
+                            store.logos_nba.map((item2) => {
+                                if (item2.team == item.away) {
+                                    url_aw = item2.url
+                                }
+                            })
+                            store.logos_nba.map((item3) => {
+                                if (item3.team == item.home) {
+                                    url_hm = item3.url
+                                }
+                            })
                             return (
                                 <div key={index}>
                                     <ThreSTq
@@ -120,6 +130,8 @@ export const NBA_Thre_q = () => {
                                         q3_half_juice_under_home={item.q3_half_juice_under_home}
                                         q3_half_final_score_away={item.q3_half_final_score_away}
                                         q3_half_final_score_home={item.q3_half_final_score_home}
+                                        logo_away={url_aw}
+                                        logo_home={url_hm}
                                     />
                                 </div>
                             );

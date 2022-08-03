@@ -4,7 +4,7 @@ import { Context } from "../../store/appContext";
 
 import { Football_Team_Stats } from "../../lines/football_team_stas";
 
-export const Nfl_Team_stats = () => {
+function Nfl_Team_stats(){
     const { store } = useContext(Context);
     const [team, setTeam] = useState("Arizona Cardinals");
     const [year, setyear] = useState("2022");
@@ -15,10 +15,10 @@ export const Nfl_Team_stats = () => {
     }
 
     return (
-        <div className="col-12" id="sports">
-            <div className="title_sport bg_orange_dark text-white ps-lg-5 fs-2 font_bold">
+        <div className="rounded_span m-2 bg-white shadow_spans mh_display">
+            <div className="title_sport bg_base_dark text-white ps-5 fs-2 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-4">NFL Team Stats</div>
+                    <div className="col-lg-4">NFL Team Stadings</div>
                     <div className="col-lg-8">
                         <div className="row g-0">
                             <div className="col-3 text-center">SEASON</div>
@@ -112,4 +112,5 @@ export const Nfl_Team_stats = () => {
             </div>
         </div>
     )
-}
+};
+export default Nfl_Team_stats;

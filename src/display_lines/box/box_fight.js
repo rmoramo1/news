@@ -3,7 +3,7 @@ import DateTime from '../../../node_modules/luxon/src/datetime.js'
 import { Context } from "../../store/appContext";
 
 import { Single_Box_Lines } from "../../lines/single_box_lines.js";
-export const Box_Event = () => {
+function Box_Event () {
     const { store } = useContext(Context);
     const monthLux = DateTime.now().month;
     const yearLux = DateTime.now().year;
@@ -33,8 +33,8 @@ export const Box_Event = () => {
     }
 
     return (
-        <div className="col-12" id="sports">
-            <div className=" title_sport bg_orange_dark text-white p-1 fs-5 font_bold">
+        <div className="rounded_span m-2 bg-white shadow_spans mh_display">
+            <div className=" title_sport bg_base_dark text-white p-1 fs-5 font_bold">
                 <div className="row g-0">
                     <div className="col-lg-2">BOX EVENTS</div>
                     <div className="col-lg-10">
@@ -73,7 +73,7 @@ export const Box_Event = () => {
                     let ano = item.date.slice(0, 4);
                     if (mes == R_date && ano == year) {
                         return (
-                            <div key={index} className="col-lg-6 border p-2">
+                            <div key={index} className="col-lg-6 p-1">
                                 <Single_Box_Lines
                                     id={index}
                                     fighter_One={item.fighter_One}
@@ -87,3 +87,4 @@ export const Box_Event = () => {
         </div>
     )
 }
+export default Box_Event;

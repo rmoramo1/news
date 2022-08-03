@@ -1,3 +1,39 @@
-.logo{
+.logo {
     max-height: 100px;
+}
+
+.ul-drop {
+    z-index: 1231321;
+    ul {
+        color: rgba($black, .8);
+        position: absolute;
+        display: none;
+        list-style: none;
+        background: $white;
+        box-shadow: 0 0 4px rgba($black, .5);
+        word-break: normal;
+        padding:0;
+        li{
+            a{
+                color: rgba($black, .8);
+                &:hover{
+                    color:$white;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        ul {
+            display: block;
+        }
+    }
+}
+
+.li_drop {
+    text-align: center;
+    padding: 10px;
+    &:hover {
+        background: darken($base_extra_light, 15);
+    }
 }

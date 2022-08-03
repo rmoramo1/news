@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const Single_Extra_Inning = props => {
     return (
         <div className="col-12 g-0 p-1">
-            <div className="row g-0 shadow overflowX_scroll p-1">
+            <div className="row g-0 shadow overflowX_scroll p-1 bb2px">
                 <div className=" odds-list">
                     <div className="col-12">
                         <div className="row g-0 text-center bg_lines text-white">
@@ -23,7 +23,7 @@ export const Single_Extra_Inning = props => {
 
                         </div>
                         <div className="row g-0 text-center">
-                        <div className="col-2 lines">{props.away}</div>
+                            <div className="col-2 lines"><img src={props.logo_away} alt="logo away team" className="img_logo_game_day"></img>{props.away}</div>
                             <div className="col-1 lines">{props.sa_10inning}</div>
                             <div className="col-1 lines">{props.sa_11inning}</div>
                             <div className="col-1 lines">{props.sa_12inning}</div>
@@ -34,10 +34,10 @@ export const Single_Extra_Inning = props => {
                             <div className="col-1 lines">{props.sa_17inning}</div>
                             <div className="col-1 lines">{props.sa_18inning}</div>
                             <div className="col-1 lines">{props.sa_19inning}</div>
-    
+
                         </div>
                         <div className="row g-0 text-center">
-                        <div className="col-2 lines">{props.home}</div>
+                            <div className="col-2 lines"><img src={props.logo_home} alt="logo home team" className="img_logo_game_day"></img>{props.home}</div>
                             <div className="col-1 lines">{props.sh_10inning}</div>
                             <div className="col-1 lines">{props.sh_11inning}</div>
                             <div className="col-1 lines">{props.sh_12inning}</div>
@@ -60,7 +60,7 @@ export const Single_Extra_Inning = props => {
 
                         </div>
                         <div className="row g-0 text-center">
-                        <div className="col-1 lines">{props.sa_20inning}</div>
+                            <div className="col-1 lines">{props.sa_20inning}</div>
                             <div className="col-1 lines">{props.sa_21inning}</div>
                             <div className="col-1 lines">{props.sa_22inning}</div>
                             <div className="col-1 lines">{props.sa_23inning}</div>
@@ -69,7 +69,7 @@ export const Single_Extra_Inning = props => {
 
                         </div>
                         <div className="row g-0 text-center">
-                        <div className="col-1 lines">{props.sh_20inning}</div>
+                            <div className="col-1 lines">{props.sh_20inning}sadasd</div>
                             <div className="col-1 lines">{props.sh_21inning}</div>
                             <div className="col-1 lines">{props.sh_22inning}</div>
                             <div className="col-1 lines">{props.sh_23inning}</div>
@@ -91,6 +91,23 @@ Single_Extra_Inning.propTypes = {
     sa_11inning: PropTypes.string,
     sa_12inning: PropTypes.string,
     sa_13inning: PropTypes.string,
+    sa_14inning: PropTypes.string,
+    sa_15inning: PropTypes.string,
+    sa_16inning: PropTypes.string,
+    sa_17inning: PropTypes.string,
+    sa_18inning: PropTypes.string,
+    sa_19inning: PropTypes.string,
+    sa_20inning: PropTypes.string,
+    sa_21inning: PropTypes.string,
+    sa_22inning: PropTypes.string,
+    sa_23inning: PropTypes.string,
+    sa_24inning: PropTypes.string,
+    sa_25inning: PropTypes.string,
+
+    sh_10inning: PropTypes.string,
+    sh_11inning: PropTypes.string,
+    sh_12inning: PropTypes.string,
+    sh_13inning: PropTypes.string,
     sh_14inning: PropTypes.string,
     sh_15inning: PropTypes.string,
     sh_16inning: PropTypes.string,
@@ -103,19 +120,7 @@ Single_Extra_Inning.propTypes = {
     sh_23inning: PropTypes.string,
     sh_24inning: PropTypes.string,
     sh_25inning: PropTypes.string,
-    sh_26inning: PropTypes.string,
-    sh_27inning: PropTypes.string,
-    sh_28inning: PropTypes.string,
-    sh_29inning: PropTypes.string,
-    sh_30inning: PropTypes.string,
-    sh_31inning: PropTypes.string,
-    sh_32inning: PropTypes.string,
-    sh_33inning: PropTypes.string,
-    sh_34inning: PropTypes.string,
-    sh_35inning: PropTypes.string,
-    sh_36inning: PropTypes.string,
-    sh_37inning: PropTypes.string,
-    sh_38inning: PropTypes.string,
-    sh_39inning: PropTypes.string,
-    sh_40inning: PropTypes.string,
+
+    logo_away: PropTypes.string,
+    logo_home: PropTypes.string
 };

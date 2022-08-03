@@ -2,7 +2,8 @@ import React, { useContext, useState } from "react";
 import { Context } from "../../store/appContext";
 
 import { BaseBall_Team_Stats } from "../../lines/baseball_team_stats";
-export const MLB_Team_stats_display = () => {
+
+function MLB_Team_stats_display(){
     const { store } = useContext(Context);
     const [team, setTeam] = useState("Arizona Diamondbacks");
     const [year, setyear] = useState("2022");
@@ -17,10 +18,10 @@ export const MLB_Team_stats_display = () => {
 		return b.w - a.w;
 	});
     return (
-        <div className="col-12" id="sports">
-            <div className="title_sport bg_orange_dark text-white ps-lg-5 fs-2 font_bold">
+        <div className="rounded_span m-2 bg-white shadow_spans mh_display">
+            <div className="title_sport bg_base_dark text-white ps-lg-5 fs-2 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-4">MLB Team Stats</div>
+                    <div className="col-lg-4">MLB Team Stadings</div>
                     <div className="col-lg-8">
                         <div className="row g-0">
                             <div className="col-3 text-center">SEASON</div>
@@ -42,7 +43,7 @@ export const MLB_Team_stats_display = () => {
             <div className="accordion-item overflowX_scroll">
             <div className="row g-0 bg_lines text-white text-center odds-list">
                     <div className="quince_spans"></div>
-                    <div className="quince_spans">Team</div>
+                    <div className="diez_spans">Team</div>
                     <div className="quince_spans">W</div>
                     <div className="quince_spans">L</div>
                     <div className="quince_spans">PCT</div>
@@ -83,4 +84,5 @@ export const MLB_Team_stats_display = () => {
             </div>
         </div>
     )
-}
+};
+export default MLB_Team_stats_display;

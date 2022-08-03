@@ -3,7 +3,7 @@ import DateTime from 'luxon/src/datetime.js'
 import { Context } from "../../store/appContext";
 
 import { Moto_GP_Lines } from "../../lines/moto_gp_lines";
-export const Moto_GP_Runs = () => {
+function Moto_GP_Runs(){
     const { store } = useContext(Context);
     const monthLux = DateTime.now().month;
     const yearLux = DateTime.now().year;
@@ -33,8 +33,8 @@ export const Moto_GP_Runs = () => {
     }
 
     return (
-        <div className="col-12" id="sports">
-            <div className=" title_sport bg_orange_dark text-white p-1 fs-5 font_bold">
+        <div className="rounded_span m-2 bg-white shadow_spans mh_display">
+            <div className=" title_sport bg_base_dark text-white p-1 fs-5 font_bold">
                 <div className="row g-0">
                     <div className="col-lg-2">MOTO GP MATCHUPS</div>
                     <div className="col-lg-10">
@@ -90,4 +90,5 @@ export const Moto_GP_Runs = () => {
             </div>
         </div>
     )
-}
+};
+export default Moto_GP_Runs

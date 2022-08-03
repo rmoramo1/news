@@ -1,5 +1,4 @@
 import React from "react";
-import { Nfl_Games } from "../../../display_lines/nfl/nfl_games";
 import { Nfl_one_q } from "../../../display_lines/nfl/nfl_one_q";
 import { Nfl_Two_q } from "../../../display_lines/nfl/nfl_two_q";
 import { Nfl_Thre_q } from "../../../display_lines/nfl/nfl_thre";
@@ -8,7 +7,6 @@ import { Nfl_1half } from "../../../display_lines/nfl/nfl_1half";
 import { Nf2_1half } from "../../../display_lines/nfl/nfl_2half";
 import { Results_Nfl } from "../../../display_lines/nfl/results_nfl";
 import { Nfl_Props } from "../../../display_lines/globals/global_props";
-import { Nfl_Team_stats } from "../../../display_lines/nfl/nfl_team_stats";
 import PY_STATS from "../../../display_lines/nfl/py_stats";
 import { Futures_Nfl } from "../../../display_lines/nfl/future_nfl";
 
@@ -17,7 +15,7 @@ export const NFL_ITEMS = () => {
         <div className="col" >
             <div id="nfl_games" className="accordion-collapse collapse show" aria-labelledby="nfl_1stq_ac" data-bs-parent="#items_tab_master">
                 <div className="y">
-                    <Nfl_Games />
+              
                 </div>
             </div>
             <div id="nfl_1stq" className="accordion-collapse collapse" aria-labelledby="nfl_1stq_ac" data-bs-parent="#items_tab_master">
@@ -44,14 +42,11 @@ export const NFL_ITEMS = () => {
             <div id="features_nfl" className="accordion-collapse collapse" aria-labelledby="features_nfl" data-bs-parent="#items_tab_master">
                 <Futures_Nfl/>
             </div>
-            <div id="team_stats_nfl" className="accordion-collapse collapse" aria-labelledby="team_stats_nfl" data-bs-parent="#items_tab_master">
-                <Nfl_Team_stats/>
-            </div>
             <div id="player_stats_nfl" className="accordion-collapse collapse" aria-labelledby="player_stats_nfl" data-bs-parent="#items_tab_master">
                 <PY_STATS/>
             </div>
             <div id="alarms_nfl" className="accordion-collapse collapse" aria-labelledby="alarms_nfl" data-bs-parent="#items_tab_master">
-                <div className="title_sport bg_orange_dark text-white ps-5 fs-1 font_bold">
+                <div className="title_sport bg_base_dark text-white ps-5 fs-1 font_bold">
                     ALARMS NFL
                 </div>
                 <div className="accordion-body">

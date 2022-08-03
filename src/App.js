@@ -39,11 +39,31 @@ const MMA_lines = lazy(() => import('./lines/mma_lines'));
 const Odds_To_Win = lazy(() => import('./display_lines/globals/odds_to_win'));
 const MMA_st = lazy(() => import('./lines/mma_st'));
 const SOCCER_py_st = lazy(() => import('./lines/soccer_py_st'));
+const Noticia_Individual = lazy(() => import('./noticias/new'));
+
+const Nfl_All_Data = lazy(() => import('./display_lines/nfl/nfl_all_data'));
+const NBA_All_Data = lazy(()=>import('./display_lines/nba/nba_all_data'));
+const MLB_All_Data = lazy(()=>import('./display_lines/mlb/mlb_all_data'));
+const NHL_All_Data =lazy(()=>import('./display_lines/hockey/nhl_all_data'));
+
+const Nba_Games = lazy(() => import('./display_lines/nba/nba_games'));
+const MLB_Games = lazy(() => import('./display_lines/mlb/mbl_games'));
+const NHL_Games = lazy(() => import('./display_lines/hockey/nhl_games'));
+const Box_Event = lazy(() => import('./display_lines/box/box_fight'));
+const MMA_Event = lazy(()=> import('./display_lines/mma/mma_fight'));
+const Nascar_Runs =lazy(()=>import('./display_lines/nascar/nascar_runs'));
+const Moto_GP_Runs =lazy(()=>import('./display_lines/moto_gp/moto_gp_runs'));
+const GOLF_Games =lazy(()=>import('./display_lines/golf/golf_games'));
+
+const Nfl_Team_stats = lazy(() =>import('./display_lines/nfl/nfl_team_stats'));
+const NBA_Team_stats_display = lazy(() =>import('./display_lines/nba/nba_team_stats'));
+const MLB_Team_stats_display = lazy(() =>import('./display_lines/mlb/mlb_team_stats'));
+const NHL_Team_stats_display = lazy(() =>import('./display_lines/hockey/nhl_team_stats'));
+
+
 const Error = lazy(() => import('./pages/404'));
 
-
 /*components*/
-
 
 function App() {
 	return (
@@ -58,6 +78,25 @@ function App() {
 						<Route exact path="/home">
 							<Home />
 						</Route>
+
+						<Route path="/nfl_all_data" component={Nfl_All_Data} />
+						<Route path="/nba_all_data" component={NBA_All_Data} />
+						<Route path="/mlb_all_data" component={MLB_All_Data} />
+						<Route path="/nhl_all_data" component={NHL_All_Data} />
+						<Route path="/nba_games" component={Nba_Games} />
+						<Route path="/mlb_games" component={MLB_Games} />
+						<Route path="/nhl_games" component={NHL_Games} />
+						<Route path="/box_fight" component={Box_Event} />
+						<Route path="/mma_fight" component={MMA_Event} />
+						<Route path="/nascar_runs" component={Nascar_Runs} />
+						<Route path="/moto_gp_runs" component={Moto_GP_Runs} />
+						<Route path="/golf_games" component={GOLF_Games} />
+
+						<Route path="/nfl_team_stats" component={Nfl_Team_stats} />
+						<Route path="/nba_team_stats" component={NBA_Team_stats_display} />
+						<Route path="/mlb_team_stats" component={MLB_Team_stats_display} />
+						<Route path="/nhl_team_stats" component={NHL_Team_stats_display} />
+
 						<Route path="/offensive_py/:theid" component={Offensive_Player_Stats} />
 						<Route path="/deffensive_py/:theid" component={Deffensive_Player_Stats} />
 						<Route path="/returning_py/:theid" component={Returning_Player_Stats} />
@@ -68,6 +107,10 @@ function App() {
 						<Route path="/returning_player_stats_ncaa/:theid" component={Returning_Player_Stats_Ncaa} />
 						<Route path="/punting_player_stats_ncaa/:theid" component={Punting_Player_Stats_Ncaa} />
 						<Route path="/kicking_player_stats_ncaa/:theid" component={Kicking_Player_Stats_Ncaa} />
+
+
+
+
 						<Route path="/nba_py_st/:theid" component={NBA_Player_Stats} />
 						<Route path="/ncaa_basket_py_stats/:theid" component={NCAA_BASKET_Player_Stats} />
 						<Route path="/mlb_py_st/:theid" component={Mlb_py_st} />
@@ -85,6 +128,7 @@ function App() {
 						<Route path="/moto_gp_driver_stats/:theid" component={Moto_GP_PY_STATS} />
 						<Route path="/moto_gp_race/:theid" component={Moto_GP_Race} />
 						<Route path="/odds_to_win/:theid" component={Odds_To_Win} />
+						<Route path="/new/:theid" component={Noticia_Individual} />
 						<Route>
 							<Error/>
 						</Route>

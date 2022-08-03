@@ -71,7 +71,7 @@ export const Soccer_Games = () => {
 
     return (
         <div className="col-12" id="sports">
-            <div className=" title_sport bg_orange_dark text-white p-1 fs-5 font_bold">
+            <div className=" title_sport bg_base_dark text-white p-1 fs-5 font_bold">
                 <div className="row g-0">
                     <div className="col-lg-2">Soccer Games</div>
                     <div className="col-lg-4 ">

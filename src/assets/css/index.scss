@@ -1,6 +1,13 @@
-@import "master.scss";
+@import 'colors/colors.scss';
+@import 'fonts/fonts.scss';
 @import "components/header.scss";
 @import "components/fonts.scss";
 @import "components/acordion.scss";
 @import "components/lines.scss";
+@import "components/resultados_carrucel.scss";
+@import "components/noticias.scss";
+@import "components/colores_resultados.scss";
+@import "components/games_of_day.scss";
+@import "components/events.scss";
 @import "buttons/buttons.scss";
+@import "master.scss";

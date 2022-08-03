@@ -3,21 +3,21 @@ import DateTime from '../../../node_modules/luxon/src/datetime.js'
 import { Context } from "../../store/appContext";
 
 import { Nascar_Lines } from "../../lines/nacar_lines.js";
-export const Nascar_Runs = () => {
+function Nascar_Runs() {
     const { store } = useContext(Context);
     const monthLux = DateTime.now().month;
     const yearLux = DateTime.now().year;
 
-    let monthShow =[];
-    if(monthLux < 10){
+    let monthShow = [];
+    if (monthLux < 10) {
         monthShow.push("0" + monthLux);
-    }else{
+    } else {
         monthShow.push(monthLux);
     }
-    
+
     const [year, setyear] = useState(yearLux);
     const [month, setmonth] = useState(monthShow);
-    let R_date = month;    
+    let R_date = month;
     let selectYear = [];
     for (let i = 2002; i < 2025; i++) {
         selectYear.push(i);
@@ -25,18 +25,18 @@ export const Nascar_Runs = () => {
 
     let selectMonth = [];
     for (let i = 1; i < 13; i++) {
-        if(i < 10){
-            selectMonth.push("0"+i);
-        }else{
+        if (i < 10) {
+            selectMonth.push("0" + i);
+        } else {
             selectMonth.push(i);
         }
     }
 
     return (
-        <div className="col-12" id="sports">
-            <div className=" title_sport bg_orange_dark text-white p-1 fs-5 font_bold">
+        <div className="rounded_span m-2 bg-white shadow_spans mh_display">
+            <div className=" title_sport bg_base_dark text-white p-1 fs-5 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-2">Nascar MATCHUPS</div>
+                    <div className="col-lg-2">NASCAR EVENTS</div>
                     <div className="col-lg-10">
                         <div className="row g-0">
                             <div className="col-2 text-center">Year</div>
@@ -67,30 +67,30 @@ export const Nascar_Runs = () => {
                     </div>
                 </div>
             </div>
-            <div className="accordion-item overflowX_scroll">
-                <div className="accordion-collapse collapse show row g-0" id="nbaCollapse" data-bs-parent="#sports">
-                    {store.nascar.map((item, index) => {
-                        let mes = item.date.slice(5,7);
-                        let ano = item.date.slice(0,4);
-                        if (mes == R_date && ano == year) {
-                            return (
-                                <div key={index} className="col-lg-4">
-                                    <Nascar_Lines
-                                        id={index}
-                                        race={item.race}
-                                        location={item.location}
-                                        track={item.track}
-                                        place1={item.place1}
-                                        place2={item.place2}
-                                        place3={item.place3}
-                                        date={item.date}
-                                    />
-                                </div>
-                            );
-                        }
-                    })}
-                </div>
+
+            <div className="row g-0">
+                {store.nascar.map((item, index) => {
+                    let mes = item.date.slice(5, 7);
+                    let ano = item.date.slice(0, 4);
+                    if (mes == R_date && ano == year) {
+                        return (
+                            <div key={index} className="col-lg-4">
+                                <Nascar_Lines
+                                    id={index}
+                                    race={item.race}
+                                    location={item.location}
+                                    track={item.track}
+                                    place1={item.place1}
+                                    place2={item.place2}
+                                    place3={item.place3}
+                                    date={item.date}
+                                />
+                            </div>
+                        );
+                    }
+                })}
             </div>
         </div>
     )
-}
+};
+export default Nascar_Runs;

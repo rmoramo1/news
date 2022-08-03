@@ -30,7 +30,7 @@ export const Q1_PUCK_Lines = props => {
             <div>
                 <div className="row g-0 text-center odds-list">
                     <div className="odds-span fw-bold">{props.date}</div>
-                    <div className="odds-spanTeam bb1px lines fw-bold">{props.away}</div>
+                    <div className="odds-spanTeam bb1px lines fw-bold"><img src={props.logo_away} alt="logo away team" className="img_logo_game_day"></img>{props.away}</div>
                     <div className="odds-span bb1px lines">{props.puck_away_1Q}</div>
                     <div className="odds-span bb1px lines">{props.juice_puck_away_1Q}</div>
                     <div className="odds-span bb1px lines">{props.moneyLineAway_1Q}</div>
@@ -42,7 +42,7 @@ export const Q1_PUCK_Lines = props => {
                 </div>
                 <div className="row g-0 text-center odds-list">
                     <div className="odds-span fw-bold">{props.hour}</div>
-                    <div className="odds-spanTeam lines fw-bold">{props.home}</div>
+                    <div className="odds-spanTeam lines fw-bold"><img src={props.logo_home} alt="logo home team" className="img_logo_game_day"></img>{props.home}</div>
                     <div className="odds-span lines">{props.puck_home_1Q}</div>
                     <div className="odds-span lines">{props.juice_puck_home_1Q}</div>
                     <div className="odds-span lines">{props.moneyLineHome_1Q}</div>
@@ -76,5 +76,7 @@ Q1_PUCK_Lines.propTypes = {
     juice_over_away_1Q: PropTypes.string,
     juice_over_home_1Q: PropTypes.string,
     juice_under_away_1Q: PropTypes.string,
-    juice_under_home_1Q: PropTypes.string
+    juice_under_home_1Q: PropTypes.string,
+    logo_away: PropTypes.string,
+    logo_home: PropTypes.string
 };

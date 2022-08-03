@@ -11,8 +11,8 @@ export const Single_6_9_Inning = props => {
                         <div className="col-12">TEAMS</div>
                     </div>
                     <div className="row g-0 text-center">
-                        <div className="col-12 lines">{props.away}</div>
-                        <div className="col-12 lines">{props.home}</div>
+                        <div className="col-12 lines"><img src={props.logo_away} alt="logo away team" className="img_logo_game_day"></img>{props.away}</div>
+                        <div className="col-12 lines"><img src={props.logo_home} alt="logo home team" className="img_logo_game_day"></img>{props.home}</div>
                     </div>
                 </div>
                 <div className="col-8">
@@ -50,4 +50,6 @@ Single_6_9_Inning.propTypes = {
     sh_7inning: PropTypes.string,
     sh_8inning: PropTypes.string,
     sh_9inning: PropTypes.string,
+    logo_away: PropTypes.string,
+    logo_home: PropTypes.string
 };

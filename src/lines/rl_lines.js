@@ -30,7 +30,7 @@ export const RL_Lines = props => {
             <div>
                 <div className="row g-0 text-center odds-list">
                     <div className="odds-span fw-bold">{props.date}</div>
-                    <div className="odds-spanTeam bb1px lines fw-bold">{props.away}</div>
+                    <div className="odds-spanTeam bb1px lines fw-bold"><img src={props.logo_away} alt="logo away team" className="img_logo_game_day"></img>{props.away}</div>
                     <div className="odds-span bb1px lines">{props.rl_away}</div>
                     <div className="odds-span bb1px lines">{props.juice_rl_away}</div>
                     <div className="odds-span bb1px lines">{props.moneyLineAway}</div>
@@ -43,7 +43,7 @@ export const RL_Lines = props => {
                 </div>
                 <div className="row g-0 text-center odds-list">
                     <div className="odds-span fw-bold">{props.hour}</div>
-                    <div className="odds-spanTeam lines fw-bold">{props.home}</div>
+                    <div className="odds-spanTeam lines fw-bold"><img src={props.logo_home} alt="logo home team" className="img_logo_game_day"></img>{props.home}</div>
                     <div className="odds-span lines">{props.rl_home}</div>
                     <div className="odds-span lines">{props.juice_rl_home}</div>
                     <div className="odds-span lines">{props.moneyLineHome}</div>

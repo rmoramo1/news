@@ -1,8 +1,27 @@
-.btn_gradient{
-    background:$btn_gradient;
-    color:$white;
-    &:hover{
-    color:$white;
+.btn_gradient,
+.btn_gradient_light {
+    background: $btn_gradient;
+    color: $white;
+
+    &:hover {
+        color: $white;
         background: $btn_gradient_reverse;
+    }
+}
+
+.btn_gradient_light {
+    background: $gradient_w_g;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: lighten($black,20);
+    border: 1px dotted $white;
+    min-width: 100px;
+    box-shadow: -2px -2px 5px lighten($black,50),2px 2px 5px lighten($black,50);
+    text-decoration: none;
+    &:hover {
+        color: $white;
+        background: $gradient_w_g_reverse;
+        color: gray;
     }
 }

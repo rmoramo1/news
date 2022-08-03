@@ -1,0 +1,26 @@
+.resultado_cancelled{
+    background: $cancelled;
+}
+.resultado_in_progress{
+    background: $in_progress;
+}
+.resultado_pending{
+    background: $pending;
+}
+.resultado_fished{
+    background: $fished;
+    color: $white !important;
+    font-weight: bold;
+}
+.resultado_text_cancelled{
+    color: $cancelled;
+}
+.resultado_text_in_progress{
+    color: $in_progress;
+}
+.resultado_text_pending{
+    color: $pending;
+}
+.resultado_text_fished{
+    color: $white;
+}

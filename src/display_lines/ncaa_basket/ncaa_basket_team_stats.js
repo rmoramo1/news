@@ -16,7 +16,7 @@ export const NCAA_BASKET_Team_stats_display = () => {
 
     return (
         <div className="col-12" id="sports">
-            <div className="title_sport bg_orange_dark text-white ps-lg-5 fs-2 font_bold">
+            <div className="title_sport bg_base_dark text-white ps-lg-5 fs-2 font_bold">
                 <div className="row g-0">
                     <div className="col-lg-4">NBA Team Stats</div>
                     <div className="col-lg-8">

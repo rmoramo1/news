@@ -65,6 +65,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			stats_soccer_player: [],
 			//tipe of line
 			type_of_line: ["", "ALT"],
+			//noticias
+			noticias: [],
 			//teams
 
 			nfl_teams: [
@@ -400,6 +402,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const response = await fetch(url);
 				const results = await response.json();
 				setStore({ futures: results });
+			},
+			//noticias
+			load_noticias: async () => {
+				const url = "https://noticiasdeportivas.herokuapp.com/noticias";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ noticias: results });
 			},
 		}
 	};

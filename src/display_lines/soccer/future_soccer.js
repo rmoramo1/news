@@ -18,7 +18,7 @@ export const Futures_SOCCER = () => {
 
     return (
         <div className="col-12" id="sports">
-            <div className="title_sport bg_orange_dark text-white ps-lg-5 fs-1 font_bold">
+            <div className="title_sport bg_base_dark text-white ps-lg-5 fs-1 font_bold">
                 <div className="row g-0">
                     <div className="col-lg-4">Futures</div>
                     {/* <div className="col-lg-8">
