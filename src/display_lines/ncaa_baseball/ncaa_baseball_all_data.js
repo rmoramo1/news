@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-import MLB_Games from "./mbl_games";
-import { MLB_F5 } from "./mlb_f5";
-import { Six_Nine_Inning_Mlb } from "./six_nine_inning_mlb";
-import { Extra_Inning_MLB } from "./extra_inning_mlb";
+import { NCAA_BASEBALL_Games } from "./ncaa_baseball_games";
+import { NCAA_BASEBALL_F5 } from "./ncaa_baseball_f5";
+import { Six_Nine_Inning_NCCAA_Baseball } from "./six_nine_inning_ncaa_baseball";
+import { Extra_Inning_NCAA_BASEBALL } from "./extra_inning_ncaa_baseball";
 
 
 
-function MLB_All_Data() {
+function NCAA_BASEBALL_All_Data() {
 
     const [estados, setEstados] = useState("MLB");
     if (estados === "MLB") {
@@ -60,18 +60,18 @@ function MLB_All_Data() {
                 </div>
             </div>
             <div className={MLB}>
-                <MLB_Games />
+                <NCAA_BASEBALL_Games />
             </div>
             <div className={MLB_F5_s}>
-                <MLB_F5 />
+                <NCAA_BASEBALL_F5 />
             </div>
             <div className={MLB_Extra}>
-                <Six_Nine_Inning_Mlb />
+                <Six_Nine_Inning_NCCAA_Baseball />
             </div>
             <div className={MLB_thre_q}>
-                <Extra_Inning_MLB />
+                <Extra_Inning_NCAA_BASEBALL />
             </div>
         </div>
     )
 }
-export default MLB_All_Data;
+export default NCAA_BASEBALL_All_Data;

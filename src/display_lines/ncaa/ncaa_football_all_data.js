@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import { Nfl_1half } from "./nfl_1half";
-import { Nf2_1half } from "./nfl_2half";
-import {Nfl_one_q} from "./nfl_one_q";
-import {Nfl_Two_q} from "./nfl_two_q";
-import { Nfl_Four_q } from "./nfl_four_q";
-import { Nfl_Thre_q } from "./nfl_thre";
-import Nfl_Games from "./nfl_games";
 
-function Nfl_All_Data() {
+import { Ncaa_Football_1half } from "./ncaa_football_1half";
+import { Ncaa_Football_2half } from "./ncaa_football_2half";
+import { Ncaa_Football_one_q } from "./ncaa_football_one_q";
+import {Ncaa_Football_Two_q} from "./ncaa_football_two_q";
+import { Ncaa_Football_Four_q } from "./ncaa_football_four_q";
+import { Ncaa_Football_Thre_q } from "./ncaa_football_thre";
+import { Ncaa_Football_Games } from "./ncaa_football_games";
+
+function NCAA_Football_All_Data() {
 
     const [estados, setEstados] = useState("NFL");
     if (estados === "NFL") {
@@ -99,27 +100,27 @@ function Nfl_All_Data() {
                 </div>
             </div>
             <div className={NFL}>
-                <Nfl_Games />
+                <Ncaa_Football_Games />
             </div>
             <div className={nfl_1half}>
-                <Nfl_1half />
+                <Ncaa_Football_1half />
             </div>
             <div className={nfl_2half}>
-                <Nf2_1half />
+                <Ncaa_Football_2half />
             </div>
             <div className={nfl_one_q}>
-                <Nfl_one_q />
+                <Ncaa_Football_one_q />
             </div>
             <div className={nfl_two_q}>
-                <Nfl_Two_q />
+                <Ncaa_Football_Two_q />
             </div>
             <div className={nfl_thre_q}>
-                <Nfl_Thre_q />
+                <Ncaa_Football_Thre_q />
             </div>
             <div className={nfl_four_q}>
-                <Nfl_Four_q />
+                <Ncaa_Football_Four_q />
             </div>
         </div>
     )
 }
-export default Nfl_All_Data;
+export default NCAA_Football_All_Data;

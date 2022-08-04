@@ -24,6 +24,19 @@ export const Lines_Span_Home = () => {
                         <Link to="/nhl_all_data" className="btn_gradient_light">NHL</Link>
                     </div>
                 </div>
+                <div className="row mt-4">
+                    <div className="col-6">
+                        <Link to="/ncaa_football_all_data" className="btn_gradient_light">NCAA F</Link>
+                    </div>
+                    <div className="col-6">
+                        <Link to="/ncaa_basketball_all_data" className="btn_gradient_light">NCAA B</Link>
+                    </div>
+                </div>
+                <div className="row mt-4">
+                    <div className="col-12">
+                        <Link to="/ncaa_baseball_all_data" className="btn_gradient_light">COLLEGE BASEBALL</Link>
+                    </div>
+                </div>
             </div>
         </div>
     )

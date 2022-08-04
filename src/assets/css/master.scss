@@ -20,7 +20,9 @@ body {
 .bg_light {
   background: $base_light;
 }
-
+.bg_azul{
+  background: $azul;
+}
 .bg_base_extra_light {
   background: $base_extra_light;
 }
@@ -53,7 +55,7 @@ body {
   border-right: 1px groove lighten($black, 98);
 }
 .bb1px {
-  border-bottom: 1px solid rgba($grey, .40);
+  border-bottom: 1px solid rgba($grey, .80);
 }
 .bb2px {
   border-bottom: 2px solid rgba($grey, .80);

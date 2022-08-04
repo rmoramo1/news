@@ -87,6 +87,18 @@ export const NCAA_BASKET_Games = () => {
                         let mes = item.date.slice(5, 7);
                         let ano = item.date.slice(0, 4);
                         if (mes == R_date && ano == year && item.type_of_line == typeOfLine) {
+                            let url_aw = "";
+                            let url_hm = "";
+                            store.logos_ncaa_basket.map((item2) => {
+                                if (item2.team == item.away) {
+                                    url_aw = item2.url
+                                }
+                            })
+                            store.logos_ncaa_basket.map((item3) => {
+                                if (item3.team == item.home) {
+                                    url_hm = item3.url
+                                }
+                            })
                             return (
                                 <div key={index}>
                                     <Spread_Lines
@@ -112,6 +124,8 @@ export const NCAA_BASKET_Games = () => {
                                         juice_under_home={item.juice_under_home}
                                         final_score_away={item.final_score_away}
                                         final_score_home={item.final_score_home}
+                                        logo_away={url_aw}
+                                        logo_home={url_hm}
                                     />
                                 </div>
                             );

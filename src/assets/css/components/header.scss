@@ -2,7 +2,7 @@
     max-height: 100px;
 }
 
-.ul-drop {
+.ul-drop,.ul-drop-2 {
     z-index: 1231321;
     ul {
         color: rgba($black, .8);
@@ -29,7 +29,15 @@
         }
     }
 }
-
+.ul-drop-2{
+    ul{
+        position: relative;
+    }
+    .drop_span{
+        position: absolute;
+        min-width: 700px;
+    }
+}
 .li_drop {
     text-align: center;
     padding: 10px;

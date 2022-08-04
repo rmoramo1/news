@@ -17,7 +17,7 @@ export const Ncaa_Football_Team_stats = () => {
         <div className="col-12" id="sports">
             <div className="title_sport bg_base_dark text-white ps-lg-5 fs-2 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-4">NCAA Team Stats</div>
+                    <div className="col-lg-4">NCAA FOOTBALL Team Stats</div>
                     <div className="col-lg-8">
                         <div className="row g-0">
                             <div className="col-3 text-center">SEASON</div>

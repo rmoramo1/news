@@ -43,7 +43,7 @@ export const Ncaa_Football_2half = () => {
         <div className="col-12" id="sports">
             <div className=" title_sport bg_base_dark text-white p-1 fs-5 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-2">2ND H NCAA </div>
+                    <div className="col-lg-2">NCAA FOOTBALL 2ND H</div>
                     <div className="col-lg-10">
                         <div className="row g-0">
                             <div className="col-2 text-center">Year</div>
@@ -92,6 +92,18 @@ export const Ncaa_Football_2half = () => {
                         let mes = item.date.slice(5, 7);
                         let ano = item.date.slice(0, 4);
                         if (mes == R_date && ano == year && item.type_of_line == typeOfLine) {
+                            let url_aw = "";
+                            let url_hm = "";
+                            store.logos_ncaa_football.map((item2) => {
+                                if (item2.team == item.away) {
+                                    url_aw = item2.url
+                                }
+                            })
+                            store.logos_ncaa_football.map((item3) => {
+                                if (item3.team == item.home) {
+                                    url_hm = item3.url
+                                }
+                            })
                             return (
                                 <div key={index}>
                                     <Spread_Lines
@@ -117,6 +129,8 @@ export const Ncaa_Football_2half = () => {
                                         juice_under_home={item.second_half_juice_under_home}
                                         final_score_away={item.second_half_final_score_away}
                                         final_score_home={item.second_half_final_score_home}
+                                        logo_away={url_aw}
+                                        logo_home={url_hm}
                                     />
                                 </div>
                             );

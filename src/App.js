@@ -9,6 +9,8 @@ import { Footer } from './components/footer';
 /* pages*/
 import Loader from './components/loader';
 const Home = lazy(() => import('./pages/home'));
+const Nfl_Inicio = lazy(()=>import('./pages/nfl/nfl_inicio'));
+
 const Offensive_Player_Stats = lazy(() => import('./lines/nfl_py_stats/offensive_py'));
 const Deffensive_Player_Stats = lazy(() => import('./lines/nfl_py_stats/deffensive_py'));
 const Returning_Player_Stats = lazy(() => import('./lines/nfl_py_stats/returning_py'));
@@ -45,6 +47,9 @@ const Nfl_All_Data = lazy(() => import('./display_lines/nfl/nfl_all_data'));
 const NBA_All_Data = lazy(()=>import('./display_lines/nba/nba_all_data'));
 const MLB_All_Data = lazy(()=>import('./display_lines/mlb/mlb_all_data'));
 const NHL_All_Data =lazy(()=>import('./display_lines/hockey/nhl_all_data'));
+const NCAA_Football_All_Data =lazy(()=>import('./display_lines/ncaa/ncaa_football_all_data'));
+const Ncaa_Basket_All_Data = lazy(()=>import('./display_lines/ncaa_basket/ncaa_basketball_all_data'));
+const NCAA_BASEBALL_All_Data = lazy(()=>import('./display_lines/ncaa_baseball/ncaa_baseball_all_data'));
 
 const Nba_Games = lazy(() => import('./display_lines/nba/nba_games'));
 const MLB_Games = lazy(() => import('./display_lines/mlb/mbl_games'));
@@ -78,11 +83,16 @@ function App() {
 						<Route exact path="/home">
 							<Home />
 						</Route>
+						<Route path="/nfl_inicio" component={Nfl_Inicio} />
 
 						<Route path="/nfl_all_data" component={Nfl_All_Data} />
 						<Route path="/nba_all_data" component={NBA_All_Data} />
 						<Route path="/mlb_all_data" component={MLB_All_Data} />
 						<Route path="/nhl_all_data" component={NHL_All_Data} />
+						<Route path="/ncaa_football_all_data" component={NCAA_Football_All_Data} />
+						<Route path="/ncaa_basketball_all_data" component={Ncaa_Basket_All_Data} />
+						<Route path="/ncaa_baseball_all_data" component={NCAA_BASEBALL_All_Data} />
+
 						<Route path="/nba_games" component={Nba_Games} />
 						<Route path="/mlb_games" component={MLB_Games} />
 						<Route path="/nhl_games" component={NHL_Games} />

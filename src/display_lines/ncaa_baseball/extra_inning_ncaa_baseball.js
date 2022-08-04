@@ -43,7 +43,7 @@ export const Extra_Inning_NCAA_BASEBALL = () => {
         <div className="col-12" id="sports">
             <div className=" title_sport bg_base_dark text-white p-1 fs-5 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-2">Extra Inning</div>
+                    <div className="col-lg-2">Extra Inning NCAA BASEBALL</div>
                     <div className="col-lg-10">
                         <div className="row g-0">
                             <div className="col-2 text-center">Year</div>
@@ -92,6 +92,18 @@ export const Extra_Inning_NCAA_BASEBALL = () => {
                         let mes = item.date.slice(5, 7);
                         let ano = item.date.slice(0, 4);
                         if (mes == R_date && ano == year && item.type_of_line == typeOfLine) {
+                            let url_aw = "";
+                            let url_hm = "";
+                            store.logos_ncaa_baseball.map((item2) => {
+                                if (item2.team == item.away) {
+                                    url_aw = item2.url
+                                }
+                            })
+                            store.logos_ncaa_baseball.map((item3) => {
+                                if (item3.team == item.home) {
+                                    url_hm = item3.url
+                                }
+                            })
                             return (
                                 <div key={index}>
                                     <Single_Extra_Inning
@@ -130,7 +142,8 @@ export const Extra_Inning_NCAA_BASEBALL = () => {
                                         sh_23inning={item.sh_23inning}
                                         sh_24inning={item.sh_24inning}
                                         sh_25inning={item.sh_25inning}
-
+                                        logo_away={url_aw}
+                                        logo_home={url_hm}
                                     />
                                 </div>
                             );

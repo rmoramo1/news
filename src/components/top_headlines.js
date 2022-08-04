@@ -2,8 +2,6 @@ import React,{useContext} from 'react';
 import { Context } from "../store/appContext";
 import { Single_Top_Headline } from './single_top_headline';
 
-
-
 export const Top_Headlines = () => {
     const { store } = useContext(Context);
     const fecha = new Date();

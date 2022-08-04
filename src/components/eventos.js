@@ -5,7 +5,7 @@ export const Eventos = () => {
     return (
         <div>
             <div className='col-12 font_impact fs-3 text-center'>
-                <span className="font_color_base"><i className="fa-solid fa-medal"></i></span> <span className="">Eventos</span>
+                <span className="font_color_base"><i className="fa-solid fa-medal"></i></span> <span className="">MATCHUPS</span>
             </div>
             <div className="col-12 text-center py-3">
                 <div className="row">

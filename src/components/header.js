@@ -34,7 +34,7 @@ export const Header = () => {
             .catch(err => console.log(err));
     };
     return (
-        <div className="container-fluid p-0 bg_base">
+        <div className="container-fluid p-0 bg-white fs-5">
             <div className="row g-0">
                 <div className="col-lg-3 text-center">
                     <Link to="/">
@@ -91,224 +91,235 @@ export const Header = () => {
                     </Link>
                 </div>
                 <div className="col-12 bg_light text-white">
-                    <div className="col-10 mx-auto ">
-                        <ul className="list-unstyled list-inline col-12 text-center fs-5 m-0 py-2">
-                            <li class="list-inline-item ul-drop">NFL
-                                <ul className="text-start rounded shadow_spans">
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Inicio
-                                        </Link>
+                    <div className="container">
+                        <div className="row g-0">
+                            <div className="col-lg-10">
+                                <ul className="list-unstyled list-inline col-12 m-0 ">
+                                    <li class="list-inline-item ul-drop px-3">NFL
+                                        <ul className="text-start rounded shadow_spans">
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none" to="/nfl_inicio">
+                                                    Inicio
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Marcadores
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Clasificación
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Equipos
+                                                </Link>
+                                            </li>
+                                        </ul>
                                     </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Marcadores
-                                        </Link>
+                                    <li class="list-inline-item ul-drop px-3">NBA
+                                        <ul className="text-start rounded shadow_spans">
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Inicio
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Marcadores
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Clasificación
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Equipos
+                                                </Link>
+                                            </li>
+                                        </ul>
                                     </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Clasificación
-                                        </Link>
+                                    <li class="list-inline-item ul-drop px-3">MLB
+                                        <ul className="text-start rounded shadow_spans">
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Inicio
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Marcadores
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Clasificación
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Equipos
+                                                </Link>
+                                            </li>
+                                        </ul>
                                     </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Equipos
-                                        </Link>
+                                    <li class="list-inline-item ul-drop px-3">NHL
+                                        <ul className="text-start rounded shadow_spans">
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Inicio
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Marcadores
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Clasificación
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Equipos
+                                                </Link>
+                                            </li>
+                                        </ul>
                                     </li>
-                                </ul>
-                            </li>
-                            <li class="list-inline-item ul-drop">NBA
-                                <ul className="text-start rounded shadow_spans">
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Inicio
-                                        </Link>
+                                    <li class="list-inline-item ul-drop px-3">SOCCER
+                                        <ul className="text-start rounded shadow_spans">
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Inicio
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Marcadores
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Clasificación
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Equipos
+                                                </Link>
+                                            </li>
+                                        </ul>
                                     </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Marcadores
-                                        </Link>
+                                    <li class="list-inline-item ul-drop px-3">MMA
+                                        <ul className="text-start rounded shadow_spans">
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Inicio
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Events
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link className="text-decoration-none">
+                                                    Stats
+                                                </Link>
+                                            </li>
+                                        </ul>
                                     </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Clasificación
-                                        </Link>
-                                    </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Equipos
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="list-inline-item ul-drop">MLB
-                                <ul className="text-start rounded shadow_spans">
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Inicio
-                                        </Link>
-                                    </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Marcadores
-                                        </Link>
-                                    </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Clasificación
-                                        </Link>
-                                    </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Equipos
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="list-inline-item ul-drop">NHL
-                                <ul className="text-start rounded shadow_spans">
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Inicio
-                                        </Link>
-                                    </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Marcadores
-                                        </Link>
-                                    </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Clasificación
-                                        </Link>
-                                    </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Equipos
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="list-inline-item ul-drop">SOCCER
-                                <ul className="text-start rounded shadow_spans">
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Inicio
-                                        </Link>
-                                    </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Marcadores
-                                        </Link>
-                                    </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Clasificación
-                                        </Link>
-                                    </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Equipos
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="list-inline-item ul-drop">BOX
-                                <ul className="text-start rounded shadow_spans">
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Inicio
-                                        </Link>
-                                    </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Events
-                                        </Link>
-                                    </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Stats
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="list-inline-item ul-drop">MMA
-                                <ul className="text-start rounded shadow_spans">
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Inicio
-                                        </Link>
-                                    </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Events
-                                        </Link>
-                                    </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Stats
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="list-inline-item ul-drop">GOLF
-                                <ul className="text-start rounded shadow_spans">
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Inicio
-                                        </Link>
-                                    </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Events
-                                        </Link>
-                                    </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Stats
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="list-inline-item ul-drop">NASCAR
-                                <ul className="text-start rounded shadow_spans">
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Inicio
-                                        </Link>
-                                    </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Events
-                                        </Link>
-                                    </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Stats
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="list-inline-item ul-drop">MOTO GP
-                                <ul className="text-start rounded shadow_spans">
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Inicio
-                                        </Link>
-                                    </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Events
-                                        </Link>
-                                    </li>
-                                    <li className="li_drop fs-5">
-                                        <Link className="text-decoration-none">
-                                            Stats
-                                        </Link>
+                                    <li class="list-inline-item ul-drop-2 px-3">
+                                        <i className="fa-solid fa-bars"></i>
+                                        <div className="row g-0 rounded shadow_spans drop_span bg-white">
+                                            <div className="col-4">
+                                                <ul className="text-start ">
+                                                    <li className="li_drop">
+                                                        <Link className="text-decoration-none">
+                                                            NCAA F
+                                                        </Link>
+                                                    </li>
+                                                    <li className="li_drop">
+                                                        <Link className="text-decoration-none">
+                                                            NCAA B
+                                                        </Link>
+                                                    </li>
+                                                    <li className="li_drop">
+                                                        <Link className="text-decoration-none">
+                                                            COLLEGE BASEBALL
+                                                        </Link>
+                                                    </li>
+                                                    <li className="li_drop">
+                                                        <Link className="text-decoration-none">
+                                                            BASEBALL MEXICANO
+                                                        </Link>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div className="col-4">
+                                                <ul className="text-start ">
+
+                                                    <li className="li_drop">
+                                                        <Link className="text-decoration-none">
+                                                            WNBA
+                                                        </Link>
+                                                    </li>
+                                                    <li className="li_drop">
+                                                        <Link className="text-decoration-none">
+                                                            GOLF
+                                                        </Link>
+                                                    </li>
+                                                    <li className="li_drop">
+                                                        <Link className="text-decoration-none">
+                                                            NASCAR
+                                                        </Link>
+                                                    </li>
+                                                    <li className="li_drop">
+                                                        <Link className="text-decoration-none">
+                                                            MOTO GP
+                                                        </Link>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div className="col-4">
+                                                <ul className="text-start ">
+
+                                                    <li className="li_drop">
+                                                        <Link className="text-decoration-none">
+                                                            BOXING
+                                                        </Link>
+                                                    </li>
+                                                    <li className="li_drop">
+                                                        <Link className="text-decoration-none">
+                                                            TENNIS
+                                                        </Link>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
                                     </li>
                                 </ul>
-                            </li>
-                        </ul>
+                            </div>
+                            <div className="col-lg-2 d-flex justify-content-center align-items-center">
+                                <div className="row w-100 g-0">
+                                    <div className="col-4">
+                                        <i className="fa-brands fa-facebook-f"></i>
+                                    </div>
+                                    <div className="col-4">
+                                        <i className="fa-brands fa-instagram"></i>
+                                    </div>
+                                    <div className="col-4">
+                                        <i className="fa-brands fa-youtube"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

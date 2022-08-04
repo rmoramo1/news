@@ -31,9 +31,9 @@ const injectContext = PassedComponent => {
 			 * state.actions.loadPlanets(); <---- calling this function from the flux.js actions
 			 *
 			 **/
-			state.actions.logos_nfl();
 			state.actions.props();
 			//nfl
+			state.actions.logos_nfl();
 			state.actions.nfl();
 			state.actions.nfl_team_stats();
 			state.actions.nfl_player_offensive_stats();
@@ -44,6 +44,7 @@ const injectContext = PassedComponent => {
 			state.actions.injuries();
 			state.actions.futures();
 			//ncaa_football
+			state.actions.logos_ncaa_football();
 			state.actions.ncaa_football();
 			state.actions.stats_ncaa_football_team();
 			state.actions.stats_offensive_player_ncaa_football();
@@ -57,6 +58,7 @@ const injectContext = PassedComponent => {
 			state.actions.stats_nba_team();
 			state.actions.stats_nba_player();
 			//ncaa basket
+			state.actions.logos_ncaa_basket();
 			state.actions.ncaa_basket_games();
 			state.actions.stats_ncaa_basket_team();
 			state.actions.stats_ncaa_basket_player();
@@ -67,6 +69,7 @@ const injectContext = PassedComponent => {
 			state.actions.stats_mlb_player();
 			//ncaa_baseball
 			state.actions.ncaa_baseball();
+			state.actions.logos_ncaa_baseball();
 			state.actions.stats_ncaa_baseball_team();
 			state.actions.stats_ncaa_baseball_player();
 			//nhl

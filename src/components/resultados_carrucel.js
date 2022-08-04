@@ -7,7 +7,7 @@ export const Resultados_Carrucel = () => {
     let fecha = new Date();
     let dia = fecha.getDate();
     let ayer = new Date(fecha.getTime() - 24 * 60 * 60 * 1000);
-    let mostrar_ayer = ayer.getDate() -5 ;//quitar el menos para mostrar fecha actual
+    let mostrar_ayer = ayer.getDate();//quitar el menos para mostrar fecha actual
     let year = fecha.getFullYear();
     let mes_actual = fecha.getMonth() + 1;
 

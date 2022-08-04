@@ -7,10 +7,6 @@ export const Noticias_Para_Desplegar = () => {
     const añoActual = fecha.getFullYear();
     const hoy = fecha.getDate();
     const mesActual = fecha.getMonth() + 1;
-    console.log(añoActual);
-    console.log(hoy);
-    console.log(mesActual);
-    
 
     let noticiasFilter = store.noticias;
     var byDate = noticiasFilter;

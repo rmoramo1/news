@@ -6,6 +6,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			logos_mlb: [],
 			logos_nhl: [],
 			logos_soccer: [],
+			logos_ncaa_football: [],
+			logos_ncaa_basket: [],
+			logos_ncaa_baseball: [],
 			injuries: [],
 			futures: [],
 			props: [],
@@ -144,6 +147,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ nfl_player_kicking_stats: results });
 			},
 			//ncaa_football
+			logos_ncaa_football: async () => {
+				const url = "https://www.sportsdata365.com/logos_ncaa_football";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ logos_ncaa_football: results });
+			},
 			ncaa_football: async () => {
 				const url = "https://www.sportsdata365.com/ncaa_football";
 				const response = await fetch(url);
@@ -212,6 +221,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ stats_nba_player: results });
 			},
 			//ncaa_basket_games
+			logos_ncaa_basket: async () => {
+				const url = "https://www.sportsdata365.com/logos_ncaa_basketball";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ logos_ncaa_basket: results });
+			},
 			ncaa_basket_games: async () => {
 				const url = "https://www.sportsdata365.com/ncaa_basketball";
 				const response = await fetch(url);
@@ -255,7 +270,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const results = await response.json();
 				setStore({ stats_mlb_player: results });
 			},
-			//ncaa baseball
+			//ncaa baseball 
+			logos_ncaa_baseball: async () => {
+				const url = "https://www.sportsdata365.com/logos_ncaa_baseball";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ logos_ncaa_baseball: results });
+			},
 			ncaa_baseball: async () => {
 				const url = "https://www.sportsdata365.com/ncaa_baseball";
 				const response = await fetch(url);

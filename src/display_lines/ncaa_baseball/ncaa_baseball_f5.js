@@ -33,18 +33,18 @@ export const NCAA_BASEBALL_F5 = () => {
             selectMonth.push(i);
         }
     }
-	let ncaa_baseballFilter = store.ncaa_baseball;
-	var byDate = ncaa_baseballFilter;
-	byDate.sort(function(a,b) {
-		return b.id - a.id;
-	});
+    let ncaa_baseballFilter = store.ncaa_baseball;
+    var byDate = ncaa_baseballFilter;
+    byDate.sort(function (a, b) {
+        return b.id - a.id;
+    });
     return (
         <div className="col-12" id="sports">
             <div className=" title_sport bg_base_dark text-white p-1 fs-5 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-2">F5 MLB</div>
+                    <div className="col-lg-2">F5 INNING NCAA BASEBALL</div>
                     <div className="col-lg-10">
-                    <div className="row g-0">
+                        <div className="row g-0">
                             <div className="col-2 text-center">Year</div>
                             <div className="col-lg-2 d-flex align-items-center">
                                 <select className="form-select" name="week" aria-label="Default select example" defaultValue={year} onChange={e => setyear(e.target.value)} required>
@@ -88,9 +88,21 @@ export const NCAA_BASEBALL_F5 = () => {
             <div className="accordion-item">
                 <div className="accordion-collapse collapse show" id="ncaa_baseball_F5_Collapse" data-bs-parent="#sports">
                     {ncaa_baseballFilter.map((item, index) => {
-                                               let mes = item.date.slice(5, 7);
-                                               let ano = item.date.slice(0, 4);
-                                               if (mes == R_date && ano == year && item.type_of_line == typeOfLine) {
+                        let mes = item.date.slice(5, 7);
+                        let ano = item.date.slice(0, 4);
+                        if (mes == R_date && ano == year && item.type_of_line == typeOfLine) {
+                            let url_aw = "";
+                            let url_hm = "";
+                            store.logos_ncaa_baseball.map((item2) => {
+                                if (item2.team == item.away) {
+                                    url_aw = item2.url
+                                }
+                            })
+                            store.logos_ncaa_baseball.map((item3) => {
+                                if (item3.team == item.home) {
+                                    url_hm = item3.url
+                                }
+                            })
                             return (
                                 <div key={index}>
                                     <OneSTq
@@ -117,6 +129,8 @@ export const NCAA_BASEBALL_F5 = () => {
                                         q1_half_juice_under_home={item.juice_under_home_f5}
                                         q1_half_final_score_away={item.fs_away_f5}
                                         q1_half_final_score_home={item.fs_home_f5}
+                                        logo_away={url_aw}
+                                        logo_home={url_hm}
                                     />
                                 </div>
                             );

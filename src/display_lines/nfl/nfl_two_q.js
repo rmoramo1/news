@@ -91,6 +91,18 @@ export const Nfl_Two_q = () => {
                         let mes = item.date.slice(5, 7);
                         let ano = item.date.slice(0, 4);
                         if (mes == R_date && ano == year && item.type_of_line == typeOfLine) {
+                            let url_aw = "";
+                            let url_hm = "";
+                            store.logos_nfl.map((item2) => {
+                                if (item2.team == item.away) {
+                                    url_aw = item2.url
+                                }
+                            })
+                            store.logos_nfl.map((item3) => {
+                                if (item3.team == item.home) {
+                                    url_hm = item3.url
+                                }
+                            })
                             return (
                                 <div key={index}>
                                     <TwoSTq
@@ -117,6 +129,8 @@ export const Nfl_Two_q = () => {
                                         q2_half_juice_under_home={item.q2_half_juice_under_home}
                                         q2_half_final_score_away={item.q2_half_final_score_away}
                                         q2_half_final_score_home={item.q2_half_final_score_home}
+                                        logo_away={url_aw}
+                                        logo_home={url_hm}
                                     />
                                 </div>
                             );
