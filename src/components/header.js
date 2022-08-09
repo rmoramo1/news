@@ -86,7 +86,7 @@ export const Header = () => {
                     </form>
                 </div>
                 <div className="col-lg-2 py-2 d-flex justify-content-center align-items-center">
-                    <Link className="text-white font_impact text-decoration-none fs-3">
+                    <Link className="font_impact text-decoration-none fs-3">
                         Registro <i className="fa-solid fa-user-astronaut"></i>
                     </Link>
                 </div>
@@ -95,7 +95,7 @@ export const Header = () => {
                         <div className="row g-0">
                             <div className="col-lg-10">
                                 <ul className="list-unstyled list-inline col-12 m-0 ">
-                                    <li class="list-inline-item ul-drop px-3">NFL
+                                    <li class="list-inline-item ul-drop px-3">NFL <i className="fa-solid fa-football"></i>
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
                                                 <Link className="text-decoration-none" to="/nfl_inicio">
@@ -103,23 +103,115 @@ export const Header = () => {
                                                 </Link>
                                             </li>
                                             <li className="li_drop">
-                                                <Link className="text-decoration-none">
-                                                    Marcadores
+                                                <Link to="/nfl_all_data" className="text-decoration-none">
+                                                    Juegos / Lineas
                                                 </Link>
                                             </li>
                                             <li className="li_drop">
-                                                <Link className="text-decoration-none">
-                                                    Clasificación
+                                                <Link to="/results_nfl" className="text-decoration-none">
+                                                    Resultados
                                                 </Link>
                                             </li>
                                             <li className="li_drop">
-                                                <Link className="text-decoration-none">
-                                                    Equipos
+                                                <Link to="/nfl_team_stats" className="text-decoration-none">
+                                                    Tabla de Posiciones
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link to="/jugadores_nfl" className="text-decoration-none">
+                                                    Jugadores
                                                 </Link>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="list-inline-item ul-drop px-3">NBA
+                                    <li class="list-inline-item ul-drop px-3">NBA <i className="fa-solid fa-baseball-bat-ball"></i>
+                                        <ul className="text-start rounded shadow_spans">
+                                            <li className="li_drop">
+                                                <Link to="/nba_inicio" className="text-decoration-none">
+                                                    Inicio
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link to="/nba_all_data" className="text-decoration-none">
+                                                    Juegos / Lineas
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link to="/results_nba" className="text-decoration-none">
+                                                    Resultados
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link to="/nba_team_stats" className="text-decoration-none">
+                                                    Tabla de Posiciones
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link to="/jugadores_nba" className="text-decoration-none">
+                                                    Jugadores
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-inline-item ul-drop px-3">MLB <i className="fa-solid fa-baseball-bat-ball"></i>
+                                        <ul className="text-start rounded shadow_spans">
+                                            <li className="li_drop">
+                                                <Link to="/mlb_inicio" className="text-decoration-none">
+                                                    Inicio
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link to="/mlb_all_data" className="text-decoration-none">
+                                                    Juegos / Lineas
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link to="/results_mlb" className="text-decoration-none">
+                                                    Resultados
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link to="mlb_team_stats" className="text-decoration-none">
+                                                    Tabla de Posiciones
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link to="/jugadores_mlb" className="text-decoration-none">
+                                                    Jugadores
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-inline-item ul-drop px-3">NHL <i className="fa-solid fa-hockey-puck"></i>
+                                        <ul className="text-start rounded shadow_spans">
+                                            <li className="li_drop">
+                                                <Link to="/nhl_inicio" className="text-decoration-none">
+                                                    Inicio
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link to="/nhl_all_data" className="text-decoration-none">
+                                                    Juegos / Lineas
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link to="/results_nhl" className="text-decoration-none">
+                                                    Resultados
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link to="/nhl_team_stats" className="text-decoration-none">
+                                                    Tabla de Posiciones
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
+                                                <Link to="/jugadores_nhl" className="text-decoration-none">
+                                                    Jugadores
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-inline-item ul-drop px-3">SOCCER <i className="fa-solid fa-futbol"></i>
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
                                                 <Link className="text-decoration-none">
@@ -143,93 +235,21 @@ export const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="list-inline-item ul-drop px-3">MLB
+                                    <li class="list-inline-item ul-drop px-3">MMA <i className="fa-solid fa-hand-fist"></i>
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
-                                                <Link className="text-decoration-none">
+                                                <Link to="/mma_inicio" className="text-decoration-none">
                                                     Inicio
                                                 </Link>
                                             </li>
                                             <li className="li_drop">
-                                                <Link className="text-decoration-none">
-                                                    Marcadores
+                                                <Link to="/mma_fight" className="text-decoration-none">
+                                                    Peleas
                                                 </Link>
                                             </li>
                                             <li className="li_drop">
-                                                <Link className="text-decoration-none">
-                                                    Clasificación
-                                                </Link>
-                                            </li>
-                                            <li className="li_drop">
-                                                <Link className="text-decoration-none">
-                                                    Equipos
-                                                </Link>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="list-inline-item ul-drop px-3">NHL
-                                        <ul className="text-start rounded shadow_spans">
-                                            <li className="li_drop">
-                                                <Link className="text-decoration-none">
-                                                    Inicio
-                                                </Link>
-                                            </li>
-                                            <li className="li_drop">
-                                                <Link className="text-decoration-none">
-                                                    Marcadores
-                                                </Link>
-                                            </li>
-                                            <li className="li_drop">
-                                                <Link className="text-decoration-none">
-                                                    Clasificación
-                                                </Link>
-                                            </li>
-                                            <li className="li_drop">
-                                                <Link className="text-decoration-none">
-                                                    Equipos
-                                                </Link>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="list-inline-item ul-drop px-3">SOCCER
-                                        <ul className="text-start rounded shadow_spans">
-                                            <li className="li_drop">
-                                                <Link className="text-decoration-none">
-                                                    Inicio
-                                                </Link>
-                                            </li>
-                                            <li className="li_drop">
-                                                <Link className="text-decoration-none">
-                                                    Marcadores
-                                                </Link>
-                                            </li>
-                                            <li className="li_drop">
-                                                <Link className="text-decoration-none">
-                                                    Clasificación
-                                                </Link>
-                                            </li>
-                                            <li className="li_drop">
-                                                <Link className="text-decoration-none">
-                                                    Equipos
-                                                </Link>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="list-inline-item ul-drop px-3">MMA
-                                        <ul className="text-start rounded shadow_spans">
-                                            <li className="li_drop">
-                                                <Link className="text-decoration-none">
-                                                    Inicio
-                                                </Link>
-                                            </li>
-                                            <li className="li_drop">
-                                                <Link className="text-decoration-none">
-                                                    Events
-                                                </Link>
-                                            </li>
-                                            <li className="li_drop">
-                                                <Link className="text-decoration-none">
-                                                    Stats
+                                                <Link to="/mma_py_stats" className="text-decoration-none">
+                                                    Estadísticas de Peleadores
                                                 </Link>
                                             </li>
                                         </ul>
@@ -240,23 +260,23 @@ export const Header = () => {
                                             <div className="col-4">
                                                 <ul className="text-start ">
                                                     <li className="li_drop">
-                                                        <Link className="text-decoration-none">
-                                                            NCAA F
+                                                        <Link to="/ncaa_f_inicio" className="text-decoration-none">
+                                                            NCAA <i className="fa-solid fa-football"></i>
+                                                        </Link>
+                                                    </li>
+                                                    <li className="li_drop">
+                                                        <Link to="/ncaa_basket_inicio" className="text-decoration-none">
+                                                            NCAA <i className="fa-solid fa-basketball"></i>
                                                         </Link>
                                                     </li>
                                                     <li className="li_drop">
                                                         <Link className="text-decoration-none">
-                                                            NCAA B
+                                                            NCAA <i className="fa-solid fa-baseball-bat-ball"></i>
                                                         </Link>
                                                     </li>
                                                     <li className="li_drop">
                                                         <Link className="text-decoration-none">
-                                                            COLLEGE BASEBALL
-                                                        </Link>
-                                                    </li>
-                                                    <li className="li_drop">
-                                                        <Link className="text-decoration-none">
-                                                            BASEBALL MEXICANO
+                                                        <i className="fa-solid fa-baseball-bat-ball"></i> MEXICANO
                                                         </Link>
                                                     </li>
                                                 </ul>
@@ -290,7 +310,7 @@ export const Header = () => {
                                                 <ul className="text-start ">
 
                                                     <li className="li_drop">
-                                                        <Link className="text-decoration-none">
+                                                        <Link to="/boxing_inicio" className="text-decoration-none">
                                                             BOXING
                                                         </Link>
                                                     </li>

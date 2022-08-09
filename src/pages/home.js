@@ -15,9 +15,7 @@ import { Games_of_Day } from "../components/games_of_day";
 import { Lines_Span_Home } from "../components/lines_span_home";
 import { Eventos } from "../components/eventos";
 //acordion
-import { Tabs } from "../acordion/tabs";
-import { Items } from "../acordion/items"
-/* img */
+
 
 export const config = { amp: true }
 

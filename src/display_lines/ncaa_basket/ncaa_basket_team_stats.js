@@ -4,7 +4,7 @@ import { Context } from "../../store/appContext";
 
 import { NBA_Team_Stats } from "../../lines/nba_team_stats";
 
-export const NCAA_BASKET_Team_stats_display = () => {
+function NCAA_BASKET_Team_stats_display(){
     const { store } = useContext(Context);
     const [team, setTeam] = useState("Bellarmine Knights");
     const [year, setyear] = useState("2022");
@@ -97,4 +97,5 @@ export const NCAA_BASKET_Team_stats_display = () => {
             </div>
         </div>
     )
-}
+};
+export default NCAA_BASKET_Team_stats_display;

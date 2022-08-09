@@ -4,7 +4,7 @@ import { Context } from "../../store/appContext";
 
 import { Results } from "../../lines/results";
 
-export const Results_NHL = () => {
+function Results_NHL(){
     const { store } = useContext(Context);
     const monthLux = DateTime.now().month;
     const yearLux = DateTime.now().year;
@@ -116,3 +116,4 @@ export const Results_NHL = () => {
         </div>
     )
 }
+export default Results_NHL

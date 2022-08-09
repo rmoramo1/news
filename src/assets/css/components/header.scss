@@ -26,6 +26,11 @@
     &:hover {
         ul {
             display: block;
+            &:hover{
+                .li_drop{
+                    color: $white;
+                }
+            }
         }
     }
 }
@@ -42,6 +47,6 @@
     text-align: center;
     padding: 10px;
     &:hover {
-        background: darken($base_extra_light, 15);
+        background:$azul;
     }
 }

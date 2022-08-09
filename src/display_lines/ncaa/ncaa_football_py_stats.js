@@ -10,7 +10,7 @@ import { Single_Kicking_PY_Ncaa } from "../../lines/ncaa_py_stats/single_kicking
 import { Single_Rushing_PY } from "../../lines/ncaa_py_stats/rushing_py_stats";
 import { Single_Passing_PY } from "../../lines/ncaa_py_stats/single_passing_py";
 
-function PY_STATS() {
+function NCAA_Football_PY_Stats() {
     const { store } = useContext(Context);
     const dateLux = DateTime.now().day;
     const yearLux = DateTime.now().year;
@@ -366,4 +366,4 @@ function PY_STATS() {
         </div>
     )
 }
-export default PY_STATS;
+export default NCAA_Football_PY_Stats;

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
 
-export const Football_Team_Stats = props => {
+export const Football_Team_Stats_DIS = props => {
     const { store } = useContext(Context);
     return (
         <div>
@@ -10,7 +10,7 @@ export const Football_Team_Stats = props => {
             <div className="row g-0 text-center">
                 <div className="quince_spans bb1px lines">
                 {
-                            store.logos_nfl.map((item, index) => {
+                            store.logos_ncaa_football.map((item, index) => {
                                 let url_aw = "";
                                 if (item.team == props.team) {
                                     url_aw = item.url;
@@ -42,7 +42,7 @@ export const Football_Team_Stats = props => {
         </div>
     )
 }
-Football_Team_Stats.propTypes = {
+Football_Team_Stats_DIS.propTypes = {
     ttpg: PropTypes.string,
     TP: PropTypes.string,
     t_td: PropTypes.string,

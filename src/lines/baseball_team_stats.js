@@ -8,7 +8,7 @@ export const BaseBall_Team_Stats = props => {
         <div>
             <div className="container-fluid">
                 <div className="row g-0 text-center odds-list">
-                    <div className="quince_spans bb1px lines">
+                    <div className="diez_spans bb1px lines">
                     {
                             store.logos_mlb.map((item, index) => {
                                 let url_aw = "";

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Context } from "../../store/appContext";
+import { Link } from 'react-router-dom';
 import { Single_noticias_Form_1 } from '../../noticias/single_noticias';
 import { Single_Top_Headline } from '../../components/single_top_headline';
 import { Single_More_Points } from '../../components/single_more_points';
@@ -20,6 +21,12 @@ function Nfl_Inicio() {
         mes_actual = fecha.getMonth();
     }
 
+    let dia_zero;
+    if (dia < 10) {
+        dia_zero = "0" + dia;
+    } else {
+        dia_zero = dia;
+    }
 
     let mes_a_dt;
     if (mes_actual < 10) {
@@ -27,7 +34,6 @@ function Nfl_Inicio() {
     } else {
         mes_a_dt = mes_actual;
     }
-
 
     let noticiasFilter = store.noticias;
     var byDate = noticiasFilter;
@@ -48,8 +54,17 @@ function Nfl_Inicio() {
     return (
         <div className="container-fluid p-2">
             <div className="rounded_span shadow_spans bg-white">
+
                 <div className="row g-0">
                     <div className="col-lg-2 border_right">
+                        <div className="row g-0">
+                            <div className="col-6 text-center py-3 bb1px">
+                                <Link to="/nfl_all_data" className="btn_gradient_light">Lineas</Link>
+                            </div>
+                            <div className="col-6 text-center py-3 bb1px">
+                                <Link to="/nfl_team_stats" className="btn_gradient_light">Estadísticas</Link>
+                            </div>
+                        </div>
                         <div className='col-12 font_impact fs-3 text-center'>
                             <span className="font_color_base"><i class="fa-solid fa-newspaper"></i></span> <span className="">Titulares Principales</span>
                         </div>
@@ -73,7 +88,7 @@ function Nfl_Inicio() {
                             </div>
                             {
                                 resultados_nfl.map((item, index) => {
-                                    let compara_day = year + "-" + mes_a_dt + "-" + dia;
+                                    let compara_day = year + "-" + mes_a_dt + "-" + dia_zero;
                                     if (item.date == compara_day) {
                                         return (
                                             <div className="col-12" key={index}>

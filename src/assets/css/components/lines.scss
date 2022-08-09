@@ -33,7 +33,7 @@
 }
 
 .bg_lines {
-    background: $base_light;
+    background: darken($azul,20);
 }
 
 .overflowX_scroll {
@@ -41,7 +41,7 @@
 }
 
 .odds-list {
-    min-width: 1280px;
+    min-width: 1060px;
 }
 
 .img_logo {

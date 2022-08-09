@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import { Context } from "../../store/appContext";
 import DateTime from 'luxon/src/datetime';
 
@@ -34,8 +34,8 @@ function PY_STATS() {
     return (
         <div className="overflow-hidden">
             <div className=" title_sport bg_base_dark text-white fs-5 font_bold">
-                <div className="row g-0">
-                    <div className="col-lg-2">Player Stats</div>
+                <div className="row g-0 py-2">
+                    <div className="col-lg-2">Jugadores de la NFL</div>
                     <div className="col-lg-10">
                         <div className="row g-0">
                             <div className="col-2 text-center">Year</div>

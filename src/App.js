@@ -10,6 +10,32 @@ import { Footer } from './components/footer';
 import Loader from './components/loader';
 const Home = lazy(() => import('./pages/home'));
 const Nfl_Inicio = lazy(()=>import('./pages/nfl/nfl_inicio'));
+const Results_Nfl = lazy(()=>import('./display_lines/nfl/results_nfl'));
+const Jugadores_NFL = lazy(()=>import('./pages/nfl/jugadores_nfl'));
+
+const NBA_Inicio = lazy(()=>import('./pages/nba/nba_inicio'));
+const Results_NBA = lazy(()=>import('./display_lines/nba/results_nba'));
+const Jugadores_NBA = lazy(()=>import('./pages/nba/jugadores_nba'));
+
+const MLB_Inicio =lazy(()=>import('./pages/mlb/mlb_inicio'));
+const Results_MLB = lazy(()=>import('./display_lines/mlb/results_mlb'));
+const Jugadores_MLB = lazy(()=>import('./pages/mlb/jugadores_mlb'));
+
+const NHL_Inicio = lazy(()=>import('./pages/nhl/nhl_inicio'));
+const Results_NHL = lazy(()=>import('./display_lines/hockey/results_nhl'));
+const Jugadores_NHL = lazy(()=>import('./pages/nhl/jugadores_nhl'));
+
+const MMA_Inicio = lazy(()=>import('./pages/mma/mma_inicio'));
+const MMA_PY_STATS = lazy(()=>import('./display_lines/mma/mma_py_stats'));
+
+const BOXING_Inicio = lazy(()=>import('./pages/boxing/boxing_inicio'));
+const Boxer_PY_STATS = lazy(()=>import('./display_lines/box/boxer_py_stats'));
+
+const NCAA_F_Inicio = lazy(()=>import('./pages/ncaa_f/ncaa_f_inicio'));
+const Ncaa_Football_Team_stats = lazy(()=>import('./display_lines/ncaa/ncaa_football_team_stats'));
+
+const NCAA_BASKET_Inicio = lazy(()=>import('./pages/ncaa_basket/ncaa_basket_inicio'));
+const NCAA_BASKET_Team_stats_display = lazy(()=>import('./display_lines/ncaa_basket/ncaa_basket_team_stats'));
 
 const Offensive_Player_Stats = lazy(() => import('./lines/nfl_py_stats/offensive_py'));
 const Deffensive_Player_Stats = lazy(() => import('./lines/nfl_py_stats/deffensive_py'));
@@ -34,7 +60,6 @@ const Nascar_Race = lazy(() => import('./lines/nascar_race'));
 const Moto_GP_PY_STATS = lazy(() => import('./lines/moto_gp_driver_st'));
 const Moto_GP_Race = lazy(() => import('./lines/moto_gp_race'));
 
-
 const BOX_lines = lazy(() => import('./lines/box_lines'));
 const Boxer_st = lazy(() => import('./lines/boxer_st'));
 const MMA_lines = lazy(() => import('./lines/mma_lines'));
@@ -47,6 +72,7 @@ const Nfl_All_Data = lazy(() => import('./display_lines/nfl/nfl_all_data'));
 const NBA_All_Data = lazy(()=>import('./display_lines/nba/nba_all_data'));
 const MLB_All_Data = lazy(()=>import('./display_lines/mlb/mlb_all_data'));
 const NHL_All_Data =lazy(()=>import('./display_lines/hockey/nhl_all_data'));
+
 const NCAA_Football_All_Data =lazy(()=>import('./display_lines/ncaa/ncaa_football_all_data'));
 const Ncaa_Basket_All_Data = lazy(()=>import('./display_lines/ncaa_basket/ncaa_basketball_all_data'));
 const NCAA_BASEBALL_All_Data = lazy(()=>import('./display_lines/ncaa_baseball/ncaa_baseball_all_data'));
@@ -84,6 +110,32 @@ function App() {
 							<Home />
 						</Route>
 						<Route path="/nfl_inicio" component={Nfl_Inicio} />
+						<Route path="/results_nfl" component={Results_Nfl} />
+						<Route path="/jugadores_nfl" component={Jugadores_NFL} />
+
+						<Route path="/nba_inicio" component={NBA_Inicio} />
+						<Route path="/results_nba" component={Results_NBA} />
+						<Route path="/jugadores_nba" component={Jugadores_NBA} />
+
+						<Route path="/mlb_inicio" component={MLB_Inicio} />
+						<Route path="/results_mlb" component={Results_MLB} />
+						<Route path="/jugadores_mlb" component={Jugadores_MLB} />
+
+						<Route path="/nhl_inicio" component={NHL_Inicio} />
+						<Route path="/results_nhl" component={Results_NHL} />
+						<Route path="/jugadores_nhl" component={Jugadores_NHL} />
+
+						<Route path="/mma_inicio" component={MMA_Inicio} />
+						<Route path="/mma_py_stats" component={MMA_PY_STATS} />
+
+						<Route path="/boxing_inicio" component={BOXING_Inicio} />
+						<Route path="/boxer_py_stats" component={Boxer_PY_STATS} />
+
+						<Route path="/ncaa_f_inicio" component={NCAA_F_Inicio} />
+						<Route path="/ncaa_football_team_stats" component={Ncaa_Football_Team_stats} />
+
+						<Route path="/ncaa_basket_inicio" component={NCAA_BASKET_Inicio} />
+						<Route path="/ncaa_basket_team_stats" component={NCAA_BASKET_Team_stats_display} />
 
 						<Route path="/nfl_all_data" component={Nfl_All_Data} />
 						<Route path="/nba_all_data" component={NBA_All_Data} />
@@ -117,9 +169,6 @@ function App() {
 						<Route path="/returning_player_stats_ncaa/:theid" component={Returning_Player_Stats_Ncaa} />
 						<Route path="/punting_player_stats_ncaa/:theid" component={Punting_Player_Stats_Ncaa} />
 						<Route path="/kicking_player_stats_ncaa/:theid" component={Kicking_Player_Stats_Ncaa} />
-
-
-
 
 						<Route path="/nba_py_st/:theid" component={NBA_Player_Stats} />
 						<Route path="/ncaa_basket_py_stats/:theid" component={NCAA_BASKET_Player_Stats} />

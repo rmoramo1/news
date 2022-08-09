@@ -1,19 +1,19 @@
 /*solids*/
 $black:#000;
 $white:#fff;
-$base:#4F4F4F;
+$azul:#4C80C2;
+$base:$azul;
 
 $text:$base;
 $base_extra_light:#F15A29;
 $base_dark:$text;
 $base_light:#F15A29;
-$grey:#b6b7b7;
-$azul:#4C80C2;
+$grey:$azul;
 
 $fished: $base_light;
 $cancelled:rgb(250, 61, 61);
 $in_progress:rgb(18, 169, 18);
-$pending:#2bcbff;
+$pending:#21aede;
 /*GRADIENTES*/
 $gradient_w_g: linear-gradient(to bottom, $white 0%,darken($white,20) 80%);
 $gradient_w_g_reverse: linear-gradient(to bottom, darken($white,20) 0%,$white 80%);
