@@ -43,4 +43,5 @@ Single_Returning_PY.propTypes = {
     pr_td: PropTypes.string,
     punt_r_fair_carches: PropTypes.string,
     y_ppr: PropTypes.string,
+    headshot: PropTypes.string,
 };

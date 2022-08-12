@@ -8,7 +8,7 @@ export const Single_Returning_PY_Ncaa    = props => {
             <div className="row g-0">
                 <div className="col-12 bb1px">
                     <div className="row g-0 text-center">
-                        <div className="quince_spans lines"> <img src={props.headshot} alt="headshot"></img></div>
+                        <div className="quince_spans lines"><img src={props.headshot} alt="headshot"></img></div>
                         <div className="quince_spans lines"> <Link to={`/returning_player_stats_ncaa/${props.id}`}>{props.name}</Link></div>
                         <div className="quince_spans lines">{props.games}</div>
                         <div className="quince_spans lines">{props.kick_returns}</div>
@@ -43,4 +43,5 @@ Single_Returning_PY_Ncaa    .propTypes = {
     pr_td: PropTypes.string,
     punt_r_fair_carches: PropTypes.string,
     y_ppr: PropTypes.string,
+    headshot: PropTypes.string,
 };

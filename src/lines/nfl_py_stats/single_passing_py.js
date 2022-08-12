@@ -45,5 +45,6 @@ Single_Passing_PY.propTypes = {
     Int: PropTypes.string,
     asck: PropTypes.string,
     syl: PropTypes.string,
-    rtg: PropTypes.string
+    rtg: PropTypes.string,
+    headshot: PropTypes.string,
 };

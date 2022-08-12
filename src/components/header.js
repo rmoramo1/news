@@ -124,7 +124,7 @@ export const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="list-inline-item ul-drop px-3">NBA <i className="fa-solid fa-baseball-bat-ball"></i>
+                                    <li class="list-inline-item ul-drop px-3">NBA <i className="fa-solid fa-basketball"></i>
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
                                                 <Link to="/nba_inicio" className="text-decoration-none">
@@ -270,7 +270,7 @@ export const Header = () => {
                                                         </Link>
                                                     </li>
                                                     <li className="li_drop">
-                                                        <Link className="text-decoration-none">
+                                                        <Link to="/ncaa_baseball_inicio" className="text-decoration-none">
                                                             NCAA <i className="fa-solid fa-baseball-bat-ball"></i>
                                                         </Link>
                                                     </li>
@@ -290,12 +290,12 @@ export const Header = () => {
                                                         </Link>
                                                     </li>
                                                     <li className="li_drop">
-                                                        <Link className="text-decoration-none">
+                                                        <Link to="/golf_inicio" className="text-decoration-none">
                                                             GOLF
                                                         </Link>
                                                     </li>
                                                     <li className="li_drop">
-                                                        <Link className="text-decoration-none">
+                                                        <Link to="/nascar_inicio" className="text-decoration-none">
                                                             NASCAR
                                                         </Link>
                                                     </li>

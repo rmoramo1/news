@@ -64,6 +64,9 @@ function NCAA_BASKET_Inicio() {
                             <div className="col-6 text-center py-3 bb1px">
                                 <Link to="/ncaa_basket_team_stats" className="btn_gradient_light">Estadísticas</Link>
                             </div>
+                            <div className="col text-center py-3 bb1px">
+                                <Link to="/jugadores_ncaa_basket" className="btn_gradient_light">Jugadores</Link>
+                            </div>
                         </div>
                         <div className='col-12 font_impact fs-3 text-center'>
                             <span className="font_color_base"><i class="fa-solid fa-newspaper"></i></span> <span className="">Titulares Principales</span>

@@ -48,5 +48,6 @@ Single_Defensive_PY.propTypes = {
     td: PropTypes.string,
     ff: PropTypes.string,
     ftd: PropTypes.string,
-    kb: PropTypes.string
+    kb: PropTypes.string,
+    headshot: PropTypes.string,
 };

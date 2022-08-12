@@ -14,7 +14,7 @@ function NCAA_Football_PY_Stats() {
     const { store } = useContext(Context);
     const dateLux = DateTime.now().day;
     const yearLux = DateTime.now().year;
-    let teams = store.nfl_teams;
+    let teams = store.ncaa_foot_teams;
 
     let dateShow = [];
     if (dateLux < 10) {
@@ -24,7 +24,7 @@ function NCAA_Football_PY_Stats() {
     }
 
     const [year, setyear] = useState(yearLux);
-    const [team, setTeam] = useState("Arizona Cardinals");
+    const [team, setTeam] = useState("Cincinnati");
 
     let selectYear = [];
     for (let i = 2002; i < 2025; i++) {
@@ -34,10 +34,10 @@ function NCAA_Football_PY_Stats() {
     return (
         <div className="overflow-hidden">
             <div className=" title_sport bg_base_dark text-white fs-5 font_bold">
-                <div className="row g-0 overflowX_scroll">
+                <div className="row g-0 p-2">
                     <div className="col-lg-2">Player Stats</div>
                     <div className="col-lg-10">
-                        <div className="row g-0 overflowX_scroll">
+                        <div className="row g-0">
                             <div className="col-2 text-center">Year</div>
                             <div className="col-lg-2 d-flex align-items-center">
                                 <select className="form-select" name="week" aria-label="Default select example" defaultValue={year} onChange={e => setyear(e.target.value)} required>
@@ -209,6 +209,7 @@ function NCAA_Football_PY_Stats() {
                                         ftd={item.ftd}
                                         kb={item.kb}
                                         games={item.games}
+                                        headshot={item.headshot}
                                     />
                                 </div>
                             )
@@ -255,6 +256,7 @@ function NCAA_Football_PY_Stats() {
                                         lpr={item.lpr}
                                         pr_td={item.pr_td}
                                         punt_r_fair_carches={item.punt_r_fair_carches}
+                                        headshot={item.headshot}
                                     />
                                 </div>
                             )

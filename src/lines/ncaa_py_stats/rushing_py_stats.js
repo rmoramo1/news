@@ -9,7 +9,7 @@ export const Single_Rushing_PY = props => {
                 <div className="col-12 shadow">
                     <div className="row g-0 text-center">
                         <div className="quince_spans"> <img src={props.headshot}></img> </div>
-                        <div className="quince_spans"> <Link to={`/offensive_py/${props.id}`}>{props.name}</Link></div>
+                        <div className="quince_spans"> <Link to={`/offensive_player_stats_ncaa/${props.id}`}>{props.name}</Link></div>
                         <div className="quince_spans">{props.games}</div>
                         <div className="quince_spans">{props.russ_att}</div>
                         <div className="quince_spans">{props.russ_yards}</div>

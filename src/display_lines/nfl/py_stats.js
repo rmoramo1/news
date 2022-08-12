@@ -209,6 +209,7 @@ function PY_STATS() {
                                         ftd={item.ftd}
                                         kb={item.kb}
                                         games={item.games}
+                                        headshot={item.headshot}
                                     />
                                 </div>
                             )
@@ -255,6 +256,7 @@ function PY_STATS() {
                                         lpr={item.lpr}
                                         pr_td={item.pr_td}
                                         punt_r_fair_carches={item.punt_r_fair_carches}
+                                        headshot={item.headshot}
                                     />
                                 </div>
                             )

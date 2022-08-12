@@ -28,16 +28,16 @@ export default function Nascar_Race() {
                     <div className="overflowX_scroll">
                         <div className="row g-0 text-white text-center odds-list">
                             <div className="col-3 bg_lines">Rotation #</div>
-                            <div className="col-3 bg_lines">nascarer</div>
-                            <div className="col-3 bg_lines">Line</div>
-                            <div className="col-3 bg_lines">Winner</div>
+                            <div className="col-3 bg_lines">Conductor</div>
+                            <div className="col-3 bg_lines">Línea</div>
+                            <div className="col-3 bg_lines">Ganador</div>
                         </div>
                         {/* primer */}
                         <div className="row g-0 text-center odds-list">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_1}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_1}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_1}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_1}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_1}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_2}</div>
@@ -50,7 +50,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_3}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_3}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_3}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_2}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_2}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_4}</div>
@@ -63,7 +63,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_5}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_5}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_5}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_3}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_3}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_6}</div>
@@ -76,7 +76,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_7}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_7}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_7}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_4}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_4}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_8}</div>
@@ -89,7 +89,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_9}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_9}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_9}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_5}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_5}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_10}</div>
@@ -102,7 +102,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_11}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_11}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_11}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_6}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_6}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_12}</div>
@@ -115,7 +115,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_13}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_13}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_13}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_7}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_7}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_14}</div>
@@ -128,7 +128,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_15}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_15}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_15}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_8}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_8}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_16}</div>
@@ -141,7 +141,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_17}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_17}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_17}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_9}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_9}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_18}</div>
@@ -154,7 +154,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_19}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_19}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_19}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_10}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_10}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_20}</div>
@@ -167,7 +167,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_21}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_21}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_21}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_11}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_11}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_22}</div>
@@ -180,7 +180,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_23}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_23}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_23}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_12}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_12}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_24}</div>
@@ -193,7 +193,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_25}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_25}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_25}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_13}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_13}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_26}</div>
@@ -206,7 +206,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_27}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_27}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_27}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_14}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_14}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_28}</div>
@@ -219,7 +219,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_29}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_29}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_29}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_15}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_15}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_30}</div>
@@ -232,7 +232,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_31}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_31}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_31}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_16}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_16}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_32}</div>
@@ -245,7 +245,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_33}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_33}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_33}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_17}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_17}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_34}</div>
@@ -258,7 +258,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_35}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_35}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_35}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_18}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_18}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_36}</div>
@@ -271,7 +271,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_37}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_37}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_37}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_19}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_19}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_38}</div>
@@ -284,7 +284,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_39}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_39}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_39}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_20}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_20}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_40}</div>
@@ -297,7 +297,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_41}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_41}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_41}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_21}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_21}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_42}</div>
@@ -310,7 +310,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_43}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_43}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_43}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_22}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_22}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_44}</div>
@@ -323,7 +323,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_45}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_45}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_45}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_23}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_23}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_46}</div>
@@ -336,7 +336,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_47}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_47}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_47}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_24}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_24}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_48}</div>
@@ -349,7 +349,7 @@ export default function Nascar_Race() {
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_49}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].competitor_49}</div>
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].money_line_49}</div>
-                            <div className="col-3 bb1px lines bg_base_extra_light">{store.nascar[params.theid] && store.nascar[params.theid].winner_25}</div>
+                            <div className="col-3 bb1px lines bg_base_extra_light text-white fw-bold">{store.nascar[params.theid] && store.nascar[params.theid].winner_25}</div>
                         </div>
                         <div className="row g-0 text-center odds-list bb2px">
                             <div className="col-3 bb1px lines">{store.nascar[params.theid] && store.nascar[params.theid].rotation_number_50}</div>

@@ -11,7 +11,7 @@ export const Single_PY__NCAA_Basket = props => {
                         <div className="diez_nueve_spans lines">
                             <img src={props.headshot}></img>
                             </div>
-                        <div className="diez_nueve_spans pt-2 lines"><Link to={`/nba_py_st/${props.id}`}>{props.name}</Link></div>
+                        <div className="diez_nueve_spans pt-2 lines"><Link to={`/ncaa_basket_py/${props.id}`}>{props.name}</Link></div>
                         <div className="diez_nueve_spans pt-2 lines">{props.gp}</div>
                         <div className="diez_nueve_spans pt-2 lines">{props.gs}</div>
                         <div className="diez_nueve_spans pt-2 lines">{props.fg}</div>

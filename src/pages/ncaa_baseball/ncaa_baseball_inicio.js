@@ -7,15 +7,15 @@ import { Single_More_Points } from '../../components/single_more_points';
 import { Single_Resultados } from '../../components/single_resultados';
 
 
-function NCAA_F_Inicio() {
+function NCAA_BASEBALL_Inicio() {
     const { store } = useContext(Context);
     let fecha = new Date();
     // let dia = fecha.getDate();
     // let year = fecha.getFullYear();
     // let mes_actual = fecha.getMonth() + 1;
-    let dia = "19";
-    let year = "2021";
-    let mes_actual = "9";
+    let dia = "1";
+    let year = "2022";
+    let mes_actual = "8";
 
     if (dia == "01") {
         mes_actual = fecha.getMonth();
@@ -41,14 +41,14 @@ function NCAA_F_Inicio() {
         return b.id - a.id;
     });
 
-    let teamFilter_ncaa_f = store.stats_ncaa_football_team;
-    var byDate_nfl = teamFilter_ncaa_f;
+    let teamFilter_ncaa_baseball = store.stats_ncaa_baseball_team;
+    var byDate_nfl = teamFilter_ncaa_baseball;
     byDate_nfl.sort(function (a, b) {
-        return b.id - a.id;
+        return b.w - a.w;
     });
-    let resultados_ncaa_f = store.ncaa_football;
-    var byDate_nfl = resultados_ncaa_f;
-    byDate_nfl.sort(function (a, b) {
+    let resultados_ncaa_baseball = store.ncaa_baseball;
+    var byDate_ncaa_baseball = resultados_ncaa_baseball;
+    byDate_ncaa_baseball.sort(function (a, b) {
         return b.id - a.id;
     });
     return (
@@ -59,13 +59,13 @@ function NCAA_F_Inicio() {
                     <div className="col-lg-2 border_right">
                         <div className="row g-0">
                             <div className="col-6 text-center py-3 bb1px">
-                                <Link to="/nfl_all_data" className="btn_gradient_light">Lineas</Link>
+                                <Link to="/ncaa_baseball_all_data" className="btn_gradient_light">Lineas</Link>
                             </div>
                             <div className="col-6 text-center py-3 bb1px">
-                                <Link to="/ncaa_football_team_stats" className="btn_gradient_light">Estadísticas</Link>
+                                <Link to="/ncaa_baseball_team_stats" className="btn_gradient_light">Estadísticas</Link>
                             </div>
                             <div className="col text-center py-3 bb1px">
-                                <Link to="/jugadores_ncaa_f" className="btn_gradient_light">Jugadores</Link>
+                                <Link to="/jugadores_ncaa_baseball" className="btn_gradient_light">Jugadores</Link>
                             </div>
                         </div>
                         <div className='col-12 font_impact fs-3 text-center'>
@@ -73,7 +73,7 @@ function NCAA_F_Inicio() {
                         </div>
                         <div className="col-12">
                             {noticiasFilter.map((item, index) => {
-                                if (index < 15 && item.top_head_line == "Si" && item.deporte == "NCAA_FOOTBALL") {
+                                if (index < 15 && item.top_head_line == "Si" && item.deporte == "NCAA_BASEBALL") {
                                     return (
                                         <div key={index} className="col-12">
                                             <Single_Top_Headline
@@ -90,7 +90,7 @@ function NCAA_F_Inicio() {
                                 <span className="font_color_base"><i className="fa-solid fa-list-ol"></i></span> <span className="">Resultados del Día</span>
                             </div>
                             {
-                                resultados_ncaa_f.map((item, index) => {
+                                resultados_ncaa_baseball.map((item, index) => {
                                     let compara_day = year + "-" + mes_a_dt + "-" + dia_zero;
                                     if (item.date == compara_day) {
                                         return (
@@ -112,7 +112,7 @@ function NCAA_F_Inicio() {
                     <div className="col-lg-8 border_right">
                         <div className="row g-0">
                             {noticiasFilter.map((item, index) => {
-                                if (item.deporte == "NCAA_FOOTBALL") {
+                                if (item.deporte == "NCAA_BASEBALL") {
                                     return (
                                         <div key={index} className="col-12 p-2">
                                             <Single_noticias_Form_1
@@ -143,11 +143,11 @@ function NCAA_F_Inicio() {
                             </div>
                             <div className="bb2px col-12 pb-3">
                                 {
-                                    teamFilter_ncaa_f.map((item, index) => {
+                                    teamFilter_ncaa_baseball.map((item, index) => {
                                         let compara_day = item.season;
-                                        if (item.season == compara_day) {
+                                        if (item.season == year) {
                                             let url_hm = "";
-                                            store.logos_ncaa_football.map((item3) => {
+                                            store.logos_ncaa_baseball.map((item3) => {
                                                 if (item3.team == item.team) {
                                                     url_hm = item3.url
                                                 }
@@ -156,7 +156,8 @@ function NCAA_F_Inicio() {
                                                 <div className="col-12" key={index}>
                                                     <Single_More_Points
                                                         team={item.team}
-                                                        TP={item.TP}
+                                                        L={item.L}
+                                                        w={item.w}
                                                         logo={url_hm}
                                                     />
                                                 </div>
@@ -173,4 +174,4 @@ function NCAA_F_Inicio() {
         </div>
     )
 };
-export default NCAA_F_Inicio;
+export default NCAA_BASEBALL_Inicio;

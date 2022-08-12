@@ -9,7 +9,7 @@ export const Single_Defensive_PY_Ncaa = props => {
                 <div className="col-12 bb1px">
                     <div className="row g-0 text-center">
                         <div className="diezSiete_spans lines"> <img src={props.headshot} alt="headshot"></img> </div>
-                        <div className="diezSiete_spans lines"><Link to={`/deffensive_py/${props.id}`}>{props.name}</Link></div>
+                        <div className="diezSiete_spans lines"><Link to={`/deffensive_player_stats_ncaa/${props.id}`}>{props.name}</Link></div>
                         <div className="diezSiete_spans lines">{props.games}</div>
                         <div className="diezSiete_spans lines">{props.tack_solo}</div>
                         <div className="diezSiete_spans lines">{props.tack_ast}</div>
@@ -48,5 +48,6 @@ Single_Defensive_PY_Ncaa.propTypes = {
     td: PropTypes.string,
     ff: PropTypes.string,
     ftd: PropTypes.string,
-    kb: PropTypes.string
+    kb: PropTypes.string,
+    headshot: PropTypes.string,
 };

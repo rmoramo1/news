@@ -9,7 +9,7 @@ export const Single_Passing_PY = props => {
                 <div className="col-12 bb1px">
                     <div className="row g-0 text-center">
                         <div className="quince_spans lines"> <img src={props.headshot}></img>  </div>
-                        <div className="quince_spans lines"> <Link to={`/offensive_py/${props.id}`}>{props.name}</Link></div>
+                        <div className="quince_spans lines"> <Link to={`/offensive_player_stats_ncaa/${props.id}`}>{props.name}</Link></div>
                         <div className="quince_spans lines">{props.games}</div>
                         <div className="quince_spans lines">{props.Cmp}</div>
                         <div className="quince_spans lines">{props.pass_att}</div>

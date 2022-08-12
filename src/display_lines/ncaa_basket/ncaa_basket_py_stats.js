@@ -86,27 +86,27 @@ function NCAA_BASKET_PY_STATS() {
                             return (
                                 <div key={index} className="col-12 p-1 odds-list">
                                     <Single_PY__NCAA_Basket
-                                                       id={index}
-                                                       name={item.name}
-                                                       dorsal={item.dorsal}
-                                                       gp={item.gp}
-                                                       gs={item.gs}
-                                                       headshot={item.headshot}
-                                                       fg={item.fg}
-                                                       fg_AVG={item.fg_AVG}
-                                                       three_pt={item.three_pt}
-                                                       three_pt_AVG={item.three_pt_AVG}
-                                                       ft={item.ft}
-                                                       ft_AVG={item.ft_AVG}
-                                                       Or={item.Or}
-                                                       dr={item.dr}
-                                                       reb={item.reb}
-                                                       ast={item.ast}
-                                                       stl={item.stl}
-                                                       blk={item.blk}
-                                                       to={item.to}
-                                                       pf={item.pf}
-                                                       pts={item.pts}
+                                        id={index}
+                                        name={item.name}
+                                        dorsal={item.dorsal}
+                                        gp={item.gp}
+                                        gs={item.gs}
+                                        headshot={item.headshot}
+                                        fg={item.fg}
+                                        fg_AVG={item.fg_AVG}
+                                        three_pt={item.three_pt}
+                                        three_pt_AVG={item.three_pt_AVG}
+                                        ft={item.ft}
+                                        ft_AVG={item.ft_AVG}
+                                        Or={item.Or}
+                                        dr={item.dr}
+                                        reb={item.reb}
+                                        ast={item.ast}
+                                        stl={item.stl}
+                                        blk={item.blk}
+                                        to={item.to}
+                                        pf={item.pf}
+                                        pts={item.pts}
                                     />
                                 </div>
                             )
