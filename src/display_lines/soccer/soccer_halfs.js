@@ -3,10 +3,13 @@ import DateTime from '../../../node_modules/luxon/src/datetime.js'
 import { Context } from "../../store/appContext";
 
 import { Goal_Lines } from "../../lines/goal_lines.js";
-export const Soccer_Halfs = () => {
+function Soccer_Halfs() {
     const { store } = useContext(Context);
-    const dateLux = DateTime.now().day;
-    const monthLux = DateTime.now().month;
+    // const dateLux = DateTime.now().day;
+    // const monthLux = DateTime.now().month;
+    // const yearLux = DateTime.now().year;
+    const dateLux = "14"
+    const monthLux = "8"
     const yearLux = DateTime.now().year;
 
     let dateShow = [];
@@ -42,8 +45,8 @@ export const Soccer_Halfs = () => {
     const [year, setyear] = useState(yearLux);
     const [month, setmonth] = useState(monthShow);
     const [Day, setDay] = useState(dateShow);
-    const [Country, setCountry] = useState("Costa Rica");
-    const [Tournament, setTournament] = useState("PRIMERA DIVICIO");
+    const [Country, setCountry] = useState("England Premier League");
+    const [Tournament, setTournament] = useState("LaLiga");
 
     let R_date = year + "-" + month + "-" + Day;
     let selectYear = [];
@@ -179,3 +182,4 @@ export const Soccer_Halfs = () => {
         </div>
     )
 }
+export default Soccer_Halfs;

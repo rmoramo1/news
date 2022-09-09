@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
 import logo from '../assets/img/logo.webp';
 import { Link } from "react-router-dom";
+import { Menu_Movil } from "./menu_movil";
 export const Header = () => {
     const { actions } = useContext(Context);
     const [mail, setMail] = useState("");
@@ -90,7 +91,7 @@ export const Header = () => {
                         Registro <i className="fa-solid fa-user-astronaut"></i>
                     </Link>
                 </div>
-                <div className="col-12 bg_light text-white">
+                <div className="col-12 bg_light text-white d-none d-lg-block">
                     <div className="container">
                         <div className="row g-0">
                             <div className="col-lg-10">
@@ -214,7 +215,7 @@ export const Header = () => {
                                     <li class="list-inline-item ul-drop px-3">SOCCER <i className="fa-solid fa-futbol"></i>
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
-                                                <Link className="text-decoration-none">
+                                                <Link to="/soccer_inicio" className="text-decoration-none">
                                                     Inicio
                                                 </Link>
                                             </li>
@@ -275,7 +276,7 @@ export const Header = () => {
                                                         </Link>
                                                     </li>
                                                     <li className="li_drop">
-                                                        <Link className="text-decoration-none">
+                                                        <Link className="text-decoration-none" to="/bs_mexico_inicio">
                                                         <i className="fa-solid fa-baseball-bat-ball"></i> MEXICANO
                                                         </Link>
                                                     </li>
@@ -285,7 +286,7 @@ export const Header = () => {
                                                 <ul className="text-start ">
 
                                                     <li className="li_drop">
-                                                        <Link className="text-decoration-none">
+                                                        <Link to="/wnba_inicio" className="text-decoration-none">
                                                             WNBA
                                                         </Link>
                                                     </li>
@@ -300,7 +301,7 @@ export const Header = () => {
                                                         </Link>
                                                     </li>
                                                     <li className="li_drop">
-                                                        <Link className="text-decoration-none">
+                                                        <Link to="/moto_gp_inicio" className="text-decoration-none">
                                                             MOTO GP
                                                         </Link>
                                                     </li>
@@ -308,21 +309,19 @@ export const Header = () => {
                                             </div>
                                             <div className="col-4">
                                                 <ul className="text-start ">
-
                                                     <li className="li_drop">
                                                         <Link to="/boxing_inicio" className="text-decoration-none">
                                                             BOXING
                                                         </Link>
                                                     </li>
                                                     <li className="li_drop">
-                                                        <Link className="text-decoration-none">
+                                                        <Link to="/tennis_inicio" className="text-decoration-none">
                                                             TENNIS
                                                         </Link>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
-
                                     </li>
                                 </ul>
                             </div>
@@ -341,6 +340,9 @@ export const Header = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="col-12 bg_light text-white d-block d-lg-none">
+                    <Menu_Movil/>
                 </div>
             </div>
         </div>

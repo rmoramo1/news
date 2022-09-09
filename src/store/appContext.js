@@ -57,6 +57,11 @@ const injectContext = PassedComponent => {
 			state.actions.nba_games();
 			state.actions.stats_nba_team();
 			state.actions.stats_nba_player();
+			//load_wnba
+			state.actions.logos_wnba();
+			state.actions.load_wnba();
+			state.actions.stats_wnba_team();
+			state.actions.stats_wnba_player();
 			//ncaa basket
 			state.actions.logos_ncaa_basket();
 			state.actions.ncaa_basket_games();
@@ -67,6 +72,11 @@ const injectContext = PassedComponent => {
 			state.actions.mlb();
 			state.actions.stats_mlb_team();
 			state.actions.stats_mlb_player();
+			//baseball_mexico
+			state.actions.baseball_mexico();
+			state.actions.logos_baseball_mexico();
+			state.actions.stats_baseball_mexico_team();
+			state.actions.stats_mexico_baseball_player();
 			//ncaa_baseball
 			state.actions.ncaa_baseball();
 			state.actions.logos_ncaa_baseball();
@@ -77,9 +87,14 @@ const injectContext = PassedComponent => {
 			state.actions.nhl();
 			state.actions.stats_nhl_team();
 			state.actions.stats_nhl_player();
+			//soccer_tournament
+			state.actions.soccer_tournament();
 			//golf
 			state.actions.golf();
 			state.actions.golfer();
+			//tennis
+			state.actions.tennis();
+			state.actions.tennista();
 			//nascar	
 			state.actions.nascar();
 			state.actions.nascar_drivers();

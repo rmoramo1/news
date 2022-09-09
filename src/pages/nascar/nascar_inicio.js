@@ -5,7 +5,7 @@ import { Single_noticias_Form_1 } from '../../noticias/single_noticias';
 import { Single_Top_Headline } from '../../components/single_top_headline';
 
 import { Single_Prox_Eventos_Golf } from '../../components/single_prox_eventos_golf';
-import { Single_Golfer_More_Wins } from '../../components/single_golfer_more_wins';
+import { Single_Race } from '../../components/single_race';
 
 
 function Nascar_Inicio() {
@@ -41,7 +41,7 @@ function Nascar_Inicio() {
         return b.id - a.id;
     });
 
-    let teamFilter_nascar = store.nascar;
+    let teamFilter_nascar = store.nascar_drivers;
     var byDate_mma = teamFilter_nascar;
     byDate_mma.sort(function (a, b) {
         return b.w - a.w;
@@ -136,8 +136,8 @@ function Nascar_Inicio() {
                                 <span className="font_color_base"><i className="fa-solid fa-table-list"></i></span> <span className="">Estadísticas del año</span>
                             </div>
                             <div className="row g-0 text-center fw-bold bg_azul text-white">
-                                <div className="col-8">Golfista</div>
-                                <div className="col-2">W</div>
+                                <div className="col-8">Conductor</div>
+                                <div className="col-2">Top5</div>
                                 <div className="col-2">Top10</div>
                             </div>
                             <div className="bb2px col-12 pb-3">
@@ -147,10 +147,10 @@ function Nascar_Inicio() {
                                         if (item.season == compara_day && index < 20) {
                                             return (
                                                 <div className="col-12" key={index}>
-                                                    <Single_Golfer_More_Wins
+                                                    <Single_Race
                                                         headshot={item.headshot}
                                                         top10={item.top10}
-                                                        w={item.w}
+                                                        top5={item.top5}
                                                         name={item.name}
                                                     />
                                                 </div>

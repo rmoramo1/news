@@ -54,6 +54,19 @@ export const Goal_Lines = props => {
                     <div className="odds-span lines">{props.juice_under_home}</div>
                     <div className="odds-span lines">{props.final_score_home}</div>
                 </div>
+                <div className="row g-0 text-center odds-list">
+                    <div className="odds-span fw-bold"></div>
+                    <div className="odds-spanTeam lines fw-bold"></div>
+                    <div className="odds-span lines"></div>
+                    <div className="odds-span lines"></div>
+                    <div className="odds-span lines">{props.draw}</div>
+                    <div className="odds-span lines"></div>
+                    <div className="odds-span lines"></div>
+                    <div className="odds-span lines"></div>
+                    <div className="odds-span lines"></div>
+                    <div className="odds-span lines"></div>
+                    <div className="odds-span lines"></div>
+                </div>
             </div>
         </div>
     )
@@ -81,5 +94,6 @@ Goal_Lines.propTypes = {
     juice_under_home: PropTypes.string,
     final_score_away: PropTypes.string,
     final_score_home: PropTypes.string,
+    draw: PropTypes.string,
 
 };

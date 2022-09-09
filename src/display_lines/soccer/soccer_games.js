@@ -3,10 +3,14 @@ import DateTime from '../../../node_modules/luxon/src/datetime.js'
 import { Context } from "../../store/appContext";
 
 import { Goal_Lines } from "../../lines/goal_lines.js";
-export const Soccer_Games = () => {
+
+function Soccer_Games(){
     const { store } = useContext(Context);
-    const dateLux = DateTime.now().day;
-    const monthLux = DateTime.now().month;
+    // const dateLux = DateTime.now().day;
+    // const monthLux = DateTime.now().month;
+    // const yearLux = DateTime.now().year;
+    const dateLux = "14"
+    const monthLux = "8"
     const yearLux = DateTime.now().year;
 
     let dateShow = [];
@@ -43,8 +47,8 @@ export const Soccer_Games = () => {
     const [year, setyear] = useState(yearLux);
     const [month, setmonth] = useState(monthShow);
     const [Day, setDay] = useState(dateShow);
-    const [Country, setCountry] = useState("Costa Rica");
-    const [Tournament, setTournament] = useState("PRIMERA DIVICIO");
+    const [Country, setCountry] = useState("England Premier League");
+    const [Tournament, setTournament] = useState("LaLiga");
     let R_date = year + "-" + month + "-" + Day;
     let selectYear = [];
     for (let i = 2002; i < 2025; i++) {
@@ -171,6 +175,7 @@ export const Soccer_Games = () => {
                                         juice_under_home={item.juice_under_home}
                                         final_score_away={item.final_score_away}
                                         final_score_home={item.final_score_home}
+                                        draw={item.draw}
                                     />
                                 </div>
                             );
@@ -180,4 +185,6 @@ export const Soccer_Games = () => {
             </div>
         </div>
     )
-}
+};
+
+export default Soccer_Games;

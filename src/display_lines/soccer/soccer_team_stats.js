@@ -1,9 +1,10 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../../store/appContext";
 
+
 import { Soccer_Team_Stats } from "../../lines/soccer_team_stats";
 
-export const Soccer_Team_stats_display = () => {
+function Soccer_Team_stats_display() {
     const { store } = useContext(Context);
     const [team, setTeam] = useState("Real Madrid");
     const [year, setyear] = useState("2022");
@@ -14,17 +15,17 @@ export const Soccer_Team_stats_display = () => {
     }
     let Team_drop = [];
     store.stats_soccer_team.map((item) => {
-        if(Team_drop.includes(item.name)){
+        if (Team_drop.includes(item.name)) {
 
-        }else{
+        } else {
             Team_drop.push(item.name);
         }
     })
     return (
-        <div className="col-12" id="sports">
+        <div className="rounded_span m-2 bg-white shadow_spans mh_display">
             <div className="title_sport bg_base_dark text-white ps-lg-5 fs-2 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-4">Soccer Statdsdsds</div>
+                    <div className="col-lg-4">Estadísticas de Soccer</div>
                     <div className="col-lg-8">
                         <div className="row g-0">
                             <div className="col-3 text-center">TEAM</div>
@@ -55,12 +56,24 @@ export const Soccer_Team_stats_display = () => {
                     </div>
                 </div>
             </div>
-            <div className="accordion-item">
-                <div className="accordion-collapse collapse show" id="nba_stats_teamCollapse" data-bs-parent="#sports">
+            <div className=" overflowX_scroll">
+            <div className="row g-0 bg_lines text-white text-center">
+                    <div className="diez_spans">Matches</div>
+                    <div className="diez_ocho_spans">Win</div>
+                    <div className="diez_ocho_spans">Loss</div>
+                    <div className="diez_ocho_spans">Pts</div>
+                    <div className="diez_spans">Goals For</div>
+                    <div className="diez_spans">Goals Against</div>
+                    <div className="diez_spans">More 2.5 Goals</div>
+                    <div className="diez_spans">Less 2.5 Goals</div>
+                    <div className="diez_spans">Zero Goal Gainst</div>
+                    <div className="diez_spans">Zero Goals For</div>
+                    <div className="diez_ocho_spans">Ties</div>
+                </div>
                     {store.stats_soccer_team.map((item, index) => {
                         if (item.name == team && item.season == year) {
                             return (
-                                <div key={index}>
+                                <div key={index} className="odds-list">
                                     <Soccer_Team_Stats
                                         team={item.team}
                                         matches={item.matches}
@@ -81,8 +94,9 @@ export const Soccer_Team_stats_display = () => {
                         }
 
                     })}
-                </div>
+        
             </div>
         </div>
     )
-}
+};
+export default Soccer_Team_stats_display;

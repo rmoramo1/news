@@ -2,11 +2,16 @@
     max-height: 100px;
 }
 
-.ul-drop,.ul-drop-2 {
+.ul-drop,
+.ul-drop-2,
+.ul-drop-3,
+.ul-drop-movil {
     z-index: 1231321;
-    &:hover{
+
+    &:hover {
         background-color: $azul;
     }
+
     ul {
         color: rgba($black, .8);
         position: absolute;
@@ -15,12 +20,14 @@
         background: $white;
         box-shadow: 0 0 4px rgba($black, .5);
         word-break: normal;
-        padding:0;
-        li{
-            a{
+        padding: 0;
+
+        li {
+            a {
                 color: rgba($black, .8);
-                &:hover{
-                    color:$white;
+
+                &:hover {
+                    color: $white;
                 }
             }
         }
@@ -29,27 +36,60 @@
     &:hover {
         ul {
             display: block;
-            &:hover{
-                .li_drop{
+
+            &:hover {
+                .li_drop {
                     color: $white;
                 }
             }
         }
     }
 }
-.ul-drop-2{
-    ul{
+
+.ul-drop-2 {
+    ul {
         position: relative;
     }
-    .drop_span{
+
+    .drop_span {
         position: absolute;
         min-width: 700px;
     }
 }
+
 .li_drop {
     text-align: center;
     padding: 10px;
+
     &:hover {
-        background:$azul;
+        background: $azul;
+    }
+}
+
+/* menu movil */
+
+.ul-drop-movil {
+    ul {
+        right: 5%;
+        li {
+            a {
+                color: rgba($black, .8);
+
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.ul-drop-3 {
+    ul{
+        position: relative;
+    }
+    .drop_span {
+        position: absolute;
+        min-width: 1200px;
+        right: 5%;
     }
 }
