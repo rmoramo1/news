@@ -19,7 +19,7 @@ export const Top_Headlines = () => {
             <div className="col-12">
                 {noticiasFilter.map((item, index) => {
                     //if (index < 5 && item.top_head_line == "Si" && item.mes == mesActual) {
-                        if (item.top_head_line == "Si") {
+                        if (item.top_head_line == "Si" && index < "10") {
                         return (
                             <div key={index} className="col-12">
                                 <Single_Top_Headline

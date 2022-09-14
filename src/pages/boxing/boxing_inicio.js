@@ -11,12 +11,9 @@ import { Single_Peleas } from '../../components/single_peleas';
 function BOXING_Inicio() {
     const { store } = useContext(Context);
     let fecha = new Date();
-    // let dia = fecha.getDate();
-    // let year = fecha.getFullYear();
-    // let mes_actual = fecha.getMonth() + 1;
-    let dia = "26";
-    let year = "2022";
-    let mes_actual = "6";
+    let dia = fecha.getDate();
+    let year = fecha.getFullYear();
+    let mes_actual = fecha.getMonth() + 1;
 
     if (dia == "01") {
         mes_actual = fecha.getMonth();
@@ -58,7 +55,7 @@ function BOXING_Inicio() {
                     <div className="col-lg-2 border_right">
                         <div className="row g-0">
                             <div className="col-6 text-center py-3 bb1px">
-                                <Link to="/mma_fight" className="btn_gradient_light">Peleas</Link>
+                                <Link to="/box_fight" className="btn_gradient_light">Peleas</Link>
                             </div>
                             <div className="col-6 text-center py-3 bb1px">
                                 <Link to="/boxer_py_stats" className="btn_gradient_light">Estadísticas</Link>

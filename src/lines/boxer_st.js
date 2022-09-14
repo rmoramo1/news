@@ -84,11 +84,11 @@ function Boxer_st() {
     return (
         <div className="rounded_span m-2 bg-white shadow_spans mh_display bg_light">
             <div className="row g-0">
-                <div className="col-3 border_right">
+                <div className="col-lg-3 border_right">
                     <Top_Headlines />
                     <Games_of_Day />
                 </div>
-                <div className="col-6 border_right">
+                <div className="col-lg-6 border_right">
                     <div className="row g-0">
                         <div className="col-lg-4 p-2 text-center">
                             <img className="img-fluid" src={store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].headshot} alt="headshot of the player"></img>
@@ -118,7 +118,7 @@ function Boxer_st() {
                                     let f1 = item.fighter_One;
                                     let f2 = item.fighter_Two;
                                     let name = store.stats_box_fighter[params.theid].name
-                                    if (f1 == name || f2 == name ) {
+                                    if (f1 == name || f2 == name) {
                                         return (
                                             <div key={index} className="col-lg-6 p-1">
                                                 <Single_Box_Lines
@@ -134,7 +134,7 @@ function Boxer_st() {
                         </div>
                     </div>
                 </div>
-                <div className="col-3 ">
+                <div className="col-lg-3">
                     <div className="row g-0 resultado_in_progress text-center fs-1 p-2">
                         <div className="col-6 text-white fw-bold font_shadow">Wins</div>
                         <div className="col-6 bg-white">{store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].w}</div>
@@ -143,8 +143,31 @@ function Boxer_st() {
                         <div className="col-6 text-white fw-bold font_shadow">Losses</div>
                         <div className="col-6 bg-white">{store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].L}</div>
                     </div>
-                    {/* <div className="col-12">{store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].w_by}</div>
-                        <div className="col-12">{store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].L_by}</div> */}
+                    <div className="row g-0 text-center resultado_in_progress text-white">
+                        <div className="col-3">W KO/TKO</div>
+                        <div className="col-3">W SUB</div>
+                        <div className="col-3">W DEC</div>
+                        <div className="col-3">W OTHERS</div>
+                    </div>
+                    <div className="row g-0 text-center">
+                        <div className="col-3 border_right">{store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].w_ko_tko}</div>
+                        <div className="col-3 border_right">{store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].w_sub}</div>
+                        <div className="col-3 border_right">{store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].w_dec}</div>
+                        <div className="col-3">{store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].w_others}</div>
+                    </div>
+                    <div className="row g-0 text-center resultado_cancelled text-white">
+                        <div className="col-3">L KO/TKO</div>
+                        <div className="col-3">L SUB</div>
+                        <div className="col-3">L DEC</div>
+                        <div className="col-3">L OTHERS</div>
+                    </div>
+                    <div className="row g-0 text-center bb1px">
+                        <div className="col-3 border_right">{store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].L_ko_tko}</div>
+                        <div className="col-3 border_right">{store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].L_sub}</div>
+                        <div className="col-3 border_right">{store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].L_dec}</div>
+                        <div className="col-3">{store.stats_box_fighter[params.theid] && store.stats_box_fighter[params.theid].L_others}</div>
+                    </div>
+
                     <div className="col-12 text-center fs-4">
                         Wins per Year
                     </div>

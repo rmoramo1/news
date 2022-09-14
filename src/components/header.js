@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { Context } from "../store/appContext";
 import logo from '../assets/img/logo.webp';
 import { Link } from "react-router-dom";
@@ -100,7 +100,7 @@ export const Header = () => {
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
                                                 <Link className="text-decoration-none" to="/nfl_inicio">
-                                                    Inicio
+                                                    Portada
                                                 </Link>
                                             </li>
                                             <li className="li_drop">
@@ -115,21 +115,21 @@ export const Header = () => {
                                             </li>
                                             <li className="li_drop">
                                                 <Link to="/nfl_team_stats" className="text-decoration-none">
-                                                    Tabla de Posiciones
+                                                    Estadísticas
                                                 </Link>
                                             </li>
-                                            <li className="li_drop">
+                                            {/* <li className="li_drop">
                                                 <Link to="/jugadores_nfl" className="text-decoration-none">
                                                     Jugadores
                                                 </Link>
-                                            </li>
+                                            </li> */}
                                         </ul>
                                     </li>
                                     <li class="list-inline-item ul-drop px-3">NBA <i className="fa-solid fa-basketball"></i>
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
                                                 <Link to="/nba_inicio" className="text-decoration-none">
-                                                    Inicio
+                                                    Portada
                                                 </Link>
                                             </li>
                                             <li className="li_drop">
@@ -144,21 +144,21 @@ export const Header = () => {
                                             </li>
                                             <li className="li_drop">
                                                 <Link to="/nba_team_stats" className="text-decoration-none">
-                                                    Tabla de Posiciones
+                                                    Estadísticas
                                                 </Link>
                                             </li>
-                                            <li className="li_drop">
+                                            {/* <li className="li_drop">
                                                 <Link to="/jugadores_nba" className="text-decoration-none">
                                                     Jugadores
                                                 </Link>
-                                            </li>
+                                            </li> */}
                                         </ul>
                                     </li>
                                     <li class="list-inline-item ul-drop px-3">MLB <i className="fa-solid fa-baseball-bat-ball"></i>
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
                                                 <Link to="/mlb_inicio" className="text-decoration-none">
-                                                    Inicio
+                                                    Portada
                                                 </Link>
                                             </li>
                                             <li className="li_drop">
@@ -173,21 +173,21 @@ export const Header = () => {
                                             </li>
                                             <li className="li_drop">
                                                 <Link to="mlb_team_stats" className="text-decoration-none">
-                                                    Tabla de Posiciones
+                                                    Estadísticas
                                                 </Link>
                                             </li>
-                                            <li className="li_drop">
+                                            {/* <li className="li_drop">
                                                 <Link to="/jugadores_mlb" className="text-decoration-none">
                                                     Jugadores
                                                 </Link>
-                                            </li>
+                                            </li> */}
                                         </ul>
                                     </li>
                                     <li class="list-inline-item ul-drop px-3">NHL <i className="fa-solid fa-hockey-puck"></i>
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
                                                 <Link to="/nhl_inicio" className="text-decoration-none">
-                                                    Inicio
+                                                    Portada
                                                 </Link>
                                             </li>
                                             <li className="li_drop">
@@ -202,21 +202,21 @@ export const Header = () => {
                                             </li>
                                             <li className="li_drop">
                                                 <Link to="/nhl_team_stats" className="text-decoration-none">
-                                                    Tabla de Posiciones
+                                                    Estadísticas
                                                 </Link>
                                             </li>
-                                            <li className="li_drop">
+                                            {/* <li className="li_drop">
                                                 <Link to="/jugadores_nhl" className="text-decoration-none">
                                                     Jugadores
                                                 </Link>
-                                            </li>
+                                            </li> */}
                                         </ul>
                                     </li>
                                     <li class="list-inline-item ul-drop px-3">SOCCER <i className="fa-solid fa-futbol"></i>
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
                                                 <Link to="/soccer_inicio" className="text-decoration-none">
-                                                    Inicio
+                                                    Portada
                                                 </Link>
                                             </li>
                                             <li className="li_drop">
@@ -240,7 +240,7 @@ export const Header = () => {
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
                                                 <Link to="/mma_inicio" className="text-decoration-none">
-                                                    Inicio
+                                                    Portada
                                                 </Link>
                                             </li>
                                             <li className="li_drop">
@@ -276,33 +276,33 @@ export const Header = () => {
                                                         </Link>
                                                     </li>
                                                     <li className="li_drop">
-                                                        <Link className="text-decoration-none" to="/bs_mexico_inicio">
-                                                        <i className="fa-solid fa-baseball-bat-ball"></i> MEXICANO
+                                                        <Link to="/wnba_inicio" className="text-decoration-none">
+                                                            WNBA <i className="fa-solid fa-basketball"></i>
                                                         </Link>
                                                     </li>
+
                                                 </ul>
                                             </div>
                                             <div className="col-4">
                                                 <ul className="text-start ">
-
                                                     <li className="li_drop">
-                                                        <Link to="/wnba_inicio" className="text-decoration-none">
-                                                            WNBA
+                                                        <Link className="text-decoration-none" to="/bs_mexico_inicio">
+                                                            MEX <i className="fa-solid fa-baseball-bat-ball"></i>
                                                         </Link>
                                                     </li>
                                                     <li className="li_drop">
                                                         <Link to="/golf_inicio" className="text-decoration-none">
-                                                            GOLF
+                                                            GOLF <i className="fa-solid fa-golf-ball-tee"></i>
                                                         </Link>
                                                     </li>
                                                     <li className="li_drop">
                                                         <Link to="/nascar_inicio" className="text-decoration-none">
-                                                            NASCAR
+                                                            NASCAR <i className="fa-solid fa-car-side"></i>
                                                         </Link>
                                                     </li>
                                                     <li className="li_drop">
                                                         <Link to="/moto_gp_inicio" className="text-decoration-none">
-                                                            MOTO GP
+                                                            MOTO GP <i className="fa-solid fa-motorcycle"></i>
                                                         </Link>
                                                     </li>
                                                 </ul>
@@ -311,7 +311,7 @@ export const Header = () => {
                                                 <ul className="text-start ">
                                                     <li className="li_drop">
                                                         <Link to="/boxing_inicio" className="text-decoration-none">
-                                                            BOXING
+                                                            BOXING <i className="fa-regular fa-hand-back-fist"></i>
                                                         </Link>
                                                     </li>
                                                     <li className="li_drop">
@@ -342,7 +342,7 @@ export const Header = () => {
                     </div>
                 </div>
                 <div className="col-12 bg_light text-white d-block d-lg-none">
-                    <Menu_Movil/>
+                    <Menu_Movil />
                 </div>
             </div>
         </div>

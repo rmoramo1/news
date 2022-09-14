@@ -10,12 +10,9 @@ import { Single_Resultados } from '../../components/single_resultados';
 function NCAA_BASEBALL_Inicio() {
     const { store } = useContext(Context);
     let fecha = new Date();
-    // let dia = fecha.getDate();
-    // let year = fecha.getFullYear();
-    // let mes_actual = fecha.getMonth() + 1;
-    let dia = "1";
-    let year = "2022";
-    let mes_actual = "8";
+    let dia = fecha.getDate();
+    let year = fecha.getFullYear();
+    let mes_actual = fecha.getMonth() + 1;
 
     if (dia == "01") {
         mes_actual = fecha.getMonth();

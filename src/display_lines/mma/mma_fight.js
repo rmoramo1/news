@@ -3,7 +3,7 @@ import DateTime from '../../../node_modules/luxon/src/datetime.js'
 import { Context } from "../../store/appContext";
 
 import { Single_MMA_Lines } from "../../lines/single_mma_lines.js";
-function MMA_Event(){
+function MMA_Event() {
     const { store } = useContext(Context);
     const monthLux = DateTime.now().month;
     const yearLux = DateTime.now().year;
@@ -31,7 +31,18 @@ function MMA_Event(){
             selectMonth.push(i);
         }
     }
-
+    let lista_eventos = [];
+    let events = store.mma.map((item, index) => {
+        if (lista_eventos.includes(item.event) ) {
+          
+        }
+        else if(item.date.slice(5, 7) == month && item.date.slice(0, 4) == year) {
+            lista_eventos.push(item.event)
+        }
+         else {
+            
+        }
+    });
     return (
         <div className="rounded_span m-2 bg-white shadow_spans mh_display">
             <div className=" title_sport bg_base_dark text-white p-1 fs-5 font_bold">
@@ -68,21 +79,35 @@ function MMA_Event(){
                 </div>
             </div>
             <div className="row g-0">
-                {store.mma.map((item, index) => {
-                    let mes = item.date.slice(5, 7);
-                    let ano = item.date.slice(0, 4);
-                    if (mes == R_date && ano == year) {
+                {
+                    lista_eventos.map((item_event, index) => {
                         return (
-                            <div key={index} className="col-lg-6">
-                                <Single_MMA_Lines
-                                    id={index}
-                                    fighter_One={item.fighter_One}
-                                    fighter_Two={item.fighter_Two}
-                                />
+                            <div className="col-lg-4 p-3">
+                                <div className="col-12 bg_base_dark text-center text-white">
+                                    {item_event}
+                                </div>
+                                <div className="col-12 maxH shadow_spans">
+                                    {store.mma.map((item, index) => {
+                                        let mes = item.date.slice(5, 7);
+                                        let ano = item.date.slice(0, 4);
+                                        if (mes == R_date && ano == year && item.event == item_event ) {
+                                            return (
+                                                <div key={index} className="col">
+                                                    <Single_MMA_Lines
+                                                        id={index}
+                                                        fighter_One={item.fighter_One}
+                                                        fighter_Two={item.fighter_Two}
+                                                    />
+                                                </div>
+                                            );
+                                        }
+                                    })}
+                                </div>
                             </div>
-                        );
-                    }
-                })}
+                        )
+                    })
+                }
+
             </div>
         </div>
     )

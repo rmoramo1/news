@@ -8,16 +8,22 @@ export const Single_Boxers = props => {
             <div className="row g-0">
                 <div className="col-12 shadow">
                     <div className="row g-0 text-center odds-list">
-                        <div className="diez_spans lines"><img src={props.headshot} alt="Headshot"></img></div>
-                        <div className="diez_spans lines d-flex justify-content-start align-items-center">  <Link to={`/boxer_st/${props.id}`}>{props.name}</Link></div>
-                        <div className="diez_spans lines d-flex justify-content-center align-items-center">{props.nickname}</div>
-                        <div className="diez_spans lines d-flex justify-content-center align-items-center">{props.height}</div>
-                        <div className="diez_spans lines d-flex justify-content-center align-items-center">{props.weight}</div>
+                        <div className="diezSiete_spans lines"><img src={props.headshot} alt="Headshot"></img></div>
+                        <div className="diezSiete_spans lines d-flex justify-content-start align-items-center">  <Link to={`/boxer_st/${props.id}`}>{props.name}</Link></div>
+                        <div className="diezSiete_spans lines d-flex justify-content-center align-items-center">{props.nickname}</div>
+                        <div className="diezSiete_spans lines d-flex justify-content-center align-items-center">{props.height}</div>
+                        <div className="diezSiete_spans lines d-flex justify-content-center align-items-center">{props.weight}</div>
                         <div className="diez_spans lines d-flex justify-content-center align-items-center">{props.category}</div>
-                        <div className="diez_spans lines d-flex justify-content-center align-items-center">{props.w}</div>
-                        <div className="diez_spans lines d-flex justify-content-center align-items-center">{props.w_by}</div>
-                        <div className="diez_spans lines d-flex justify-content-center align-items-center">{props.L}</div>
-                        <div className="diez_spans lines d-flex justify-content-center align-items-center">{props.L_by}</div>
+                        <div className="diezSiete_spans lines d-flex justify-content-center align-items-center">{props.w}</div>
+                        <div className="diezSiete_spans lines d-flex justify-content-center align-items-center">{props.w_ko_tko}</div>
+                        <div className="diezSiete_spans lines d-flex justify-content-center align-items-center">{props.w_sub}</div>
+                        <div className="diezSiete_spans lines d-flex justify-content-center align-items-center">{props.w_dec}</div>
+                        <div className="diezSiete_spans lines d-flex justify-content-center align-items-center">{props.w_others}</div>
+                        <div className="diezSiete_spans lines d-flex justify-content-center align-items-center">{props.L}</div>
+                        <div className="diezSiete_spans lines d-flex justify-content-center align-items-center">{props.L_ko_tko}</div>
+                        <div className="diezSiete_spans lines d-flex justify-content-center align-items-center">{props.L_sub}</div>
+                        <div className="diezSiete_spans lines d-flex justify-content-center align-items-center">{props.L_dec}</div>
+                        <div className="diezSiete_spans lines d-flex justify-content-center align-items-center">{props.L_others}</div>
                     </div>
                 </div>
             </div>

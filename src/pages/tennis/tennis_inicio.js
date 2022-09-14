@@ -11,12 +11,10 @@ import { Single_Tennis_More_Singles } from '../../components/tennis_more_singles
 function Tennis_Inicio() {
     const { store } = useContext(Context);
     let fecha = new Date();
-    // let dia = fecha.getDate();
-    // let year = fecha.getFullYear();
-    // let mes_actual = fecha.getMonth() + 1;
-    let dia = "26";
-    let year = "2022";
-    let mes_actual = "6";
+    let dia = fecha.getDate();
+    let year = fecha.getFullYear();
+    let mes_actual = fecha.getMonth() + 1;
+
 
     if (dia == "01") {
         mes_actual = fecha.getMonth();

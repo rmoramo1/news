@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import PropTypes from "prop-types";
 import DateTime from 'luxon/src/datetime'
 import { Context } from "../store/appContext";
 import { Single_Games_of_Day } from "./single_games_of_day";
@@ -9,9 +8,6 @@ export const Games_of_Day = props => {
     const monthLux = DateTime.now().month;
     const yearLux = DateTime.now().year;
     const dayLux = DateTime.now().day;
-    // const monthLux = "6";
-    // const yearLux = "2022";
-    // const dayLux = "29";
 
     let monthShow = [];
     if (monthLux < 10) {

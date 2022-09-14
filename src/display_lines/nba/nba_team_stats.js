@@ -98,14 +98,345 @@ function NBA_Team_stats_display() {
             },
         ],
     };
-
-    store.stats_nba_team.map((index) => {
-        data.labels.push(index.team);
+    const data2 = {
+        labels: [],
+        datasets: [
+            {
+                label: "",
+                data: [],
+                backgroundColor: [
+                    'rgba(230, 126, 34, 0.8)',
+                    'rgba(110, 155, 211, 0.8)',
+                    'rgba(241, 196, 15, 0.8)',
+                    'rgba(46, 134, 193, 0.8)',
+                    'rgba(231, 76, 60, 0.8)',
+                    'rgba(142, 68, 173, 0.8)',
+                    'rgba(235, 152, 78, 0.8)',
+                    'rgba(211, 84, 0, 0.8)',
+                    'rgba(170, 183, 184, 0.8)',
+                    'rgba(0, 102, 204, 0.8)',
+                    'rgba(255, 204, 51, 0.8)',
+                    'rgba(0, 153, 51, 0.8)',
+                    'rgba(51, 153, 102, 0.8)',
+                    'rgba(204, 51, 153, 0.8)',
+                    'rgba(0, 102, 153, 0.8)',
+                    'rgba(153, 0, 204, 0.8)',
+                    'rgba(0, 204, 0, 0.8)',
+                    'rgba(204, 0, 51, 0.8)',
+                    'rgba(204, 153, 51, 0.8)',
+                    'rgba(153, 51, 51, 0.8)',
+                    'rgba(51, 0, 102, 0.8)',
+                ],
+                borderColor: [
+                    'rgba(230, 126, 34, 0.8)',
+                    'rgba(110, 155, 211, 0.8)',
+                    'rgba(241, 196, 15, 0.8)',
+                    'rgba(46, 134, 193, 0.8)',
+                    'rgba(231, 76, 60, 0.8)',
+                    'rgba(142, 68, 173, 0.8)',
+                    'rgba(235, 152, 78, 0.8)',
+                    'rgba(211, 84, 0, 0.8)',
+                    'rgba(170, 183, 184, 0.8)',
+                    'rgba(0, 102, 204, 0.8)',
+                    'rgba(255, 204, 51, 0.8)',
+                    'rgba(0, 153, 51, 0.8)',
+                    'rgba(51, 153, 102, 0.8)',
+                    'rgba(204, 51, 153, 0.8)',
+                    'rgba(0, 102, 153, 0.8)',
+                    'rgba(153, 0, 204, 0.8)',
+                    'rgba(0, 204, 0, 0.8)',
+                    'rgba(204, 0, 51, 0.8)',
+                    'rgba(204, 153, 51, 0.8)',
+                    'rgba(153, 51, 51, 0.8)',
+                    'rgba(51, 0, 102, 0.8)',
+                ],
+                borderWidth: 0,
+            },
+        ],
+    };
+    const data3 = {
+        labels: [],
+        datasets: [
+            {
+                label: "",
+                data: [],
+                backgroundColor: [
+                    'rgba(230, 126, 34, 0.8)',
+                    'rgba(110, 155, 211, 0.8)',
+                    'rgba(241, 196, 15, 0.8)',
+                    'rgba(46, 134, 193, 0.8)',
+                    'rgba(231, 76, 60, 0.8)',
+                    'rgba(142, 68, 173, 0.8)',
+                    'rgba(235, 152, 78, 0.8)',
+                    'rgba(211, 84, 0, 0.8)',
+                    'rgba(170, 183, 184, 0.8)',
+                    'rgba(0, 102, 204, 0.8)',
+                    'rgba(255, 204, 51, 0.8)',
+                    'rgba(0, 153, 51, 0.8)',
+                    'rgba(51, 153, 102, 0.8)',
+                    'rgba(204, 51, 153, 0.8)',
+                    'rgba(0, 102, 153, 0.8)',
+                    'rgba(153, 0, 204, 0.8)',
+                    'rgba(0, 204, 0, 0.8)',
+                    'rgba(204, 0, 51, 0.8)',
+                    'rgba(204, 153, 51, 0.8)',
+                    'rgba(153, 51, 51, 0.8)',
+                    'rgba(51, 0, 102, 0.8)',
+                ],
+                borderColor: [
+                    'rgba(230, 126, 34, 0.8)',
+                    'rgba(110, 155, 211, 0.8)',
+                    'rgba(241, 196, 15, 0.8)',
+                    'rgba(46, 134, 193, 0.8)',
+                    'rgba(231, 76, 60, 0.8)',
+                    'rgba(142, 68, 173, 0.8)',
+                    'rgba(235, 152, 78, 0.8)',
+                    'rgba(211, 84, 0, 0.8)',
+                    'rgba(170, 183, 184, 0.8)',
+                    'rgba(0, 102, 204, 0.8)',
+                    'rgba(255, 204, 51, 0.8)',
+                    'rgba(0, 153, 51, 0.8)',
+                    'rgba(51, 153, 102, 0.8)',
+                    'rgba(204, 51, 153, 0.8)',
+                    'rgba(0, 102, 153, 0.8)',
+                    'rgba(153, 0, 204, 0.8)',
+                    'rgba(0, 204, 0, 0.8)',
+                    'rgba(204, 0, 51, 0.8)',
+                    'rgba(204, 153, 51, 0.8)',
+                    'rgba(153, 51, 51, 0.8)',
+                    'rgba(51, 0, 102, 0.8)',
+                ],
+                borderWidth: 0,
+            },
+        ],
+    };
+    const data4 = {
+        labels: [],
+        datasets: [
+            {
+                label: "",
+                data: [],
+                backgroundColor: [
+                    'rgba(230, 126, 34, 0.8)',
+                    'rgba(110, 155, 211, 0.8)',
+                    'rgba(241, 196, 15, 0.8)',
+                    'rgba(46, 134, 193, 0.8)',
+                    'rgba(231, 76, 60, 0.8)',
+                    'rgba(142, 68, 173, 0.8)',
+                    'rgba(235, 152, 78, 0.8)',
+                    'rgba(211, 84, 0, 0.8)',
+                    'rgba(170, 183, 184, 0.8)',
+                    'rgba(0, 102, 204, 0.8)',
+                    'rgba(255, 204, 51, 0.8)',
+                    'rgba(0, 153, 51, 0.8)',
+                    'rgba(51, 153, 102, 0.8)',
+                    'rgba(204, 51, 153, 0.8)',
+                    'rgba(0, 102, 153, 0.8)',
+                    'rgba(153, 0, 204, 0.8)',
+                    'rgba(0, 204, 0, 0.8)',
+                    'rgba(204, 0, 51, 0.8)',
+                    'rgba(204, 153, 51, 0.8)',
+                    'rgba(153, 51, 51, 0.8)',
+                    'rgba(51, 0, 102, 0.8)',
+                ],
+                borderColor: [
+                    'rgba(230, 126, 34, 0.8)',
+                    'rgba(110, 155, 211, 0.8)',
+                    'rgba(241, 196, 15, 0.8)',
+                    'rgba(46, 134, 193, 0.8)',
+                    'rgba(231, 76, 60, 0.8)',
+                    'rgba(142, 68, 173, 0.8)',
+                    'rgba(235, 152, 78, 0.8)',
+                    'rgba(211, 84, 0, 0.8)',
+                    'rgba(170, 183, 184, 0.8)',
+                    'rgba(0, 102, 204, 0.8)',
+                    'rgba(255, 204, 51, 0.8)',
+                    'rgba(0, 153, 51, 0.8)',
+                    'rgba(51, 153, 102, 0.8)',
+                    'rgba(204, 51, 153, 0.8)',
+                    'rgba(0, 102, 153, 0.8)',
+                    'rgba(153, 0, 204, 0.8)',
+                    'rgba(0, 204, 0, 0.8)',
+                    'rgba(204, 0, 51, 0.8)',
+                    'rgba(204, 153, 51, 0.8)',
+                    'rgba(153, 51, 51, 0.8)',
+                    'rgba(51, 0, 102, 0.8)',
+                ],
+                borderWidth: 0,
+            },
+        ],
+    };
+    const data5 = {
+        labels: [],
+        datasets: [
+            {
+                label: "",
+                data: [],
+                backgroundColor: [
+                    'rgba(230, 126, 34, 0.8)',
+                    'rgba(110, 155, 211, 0.8)',
+                    'rgba(241, 196, 15, 0.8)',
+                    'rgba(46, 134, 193, 0.8)',
+                    'rgba(231, 76, 60, 0.8)',
+                    'rgba(142, 68, 173, 0.8)',
+                    'rgba(235, 152, 78, 0.8)',
+                    'rgba(211, 84, 0, 0.8)',
+                    'rgba(170, 183, 184, 0.8)',
+                    'rgba(0, 102, 204, 0.8)',
+                    'rgba(255, 204, 51, 0.8)',
+                    'rgba(0, 153, 51, 0.8)',
+                    'rgba(51, 153, 102, 0.8)',
+                    'rgba(204, 51, 153, 0.8)',
+                    'rgba(0, 102, 153, 0.8)',
+                    'rgba(153, 0, 204, 0.8)',
+                    'rgba(0, 204, 0, 0.8)',
+                    'rgba(204, 0, 51, 0.8)',
+                    'rgba(204, 153, 51, 0.8)',
+                    'rgba(153, 51, 51, 0.8)',
+                    'rgba(51, 0, 102, 0.8)',
+                ],
+                borderColor: [
+                    'rgba(230, 126, 34, 0.8)',
+                    'rgba(110, 155, 211, 0.8)',
+                    'rgba(241, 196, 15, 0.8)',
+                    'rgba(46, 134, 193, 0.8)',
+                    'rgba(231, 76, 60, 0.8)',
+                    'rgba(142, 68, 173, 0.8)',
+                    'rgba(235, 152, 78, 0.8)',
+                    'rgba(211, 84, 0, 0.8)',
+                    'rgba(170, 183, 184, 0.8)',
+                    'rgba(0, 102, 204, 0.8)',
+                    'rgba(255, 204, 51, 0.8)',
+                    'rgba(0, 153, 51, 0.8)',
+                    'rgba(51, 153, 102, 0.8)',
+                    'rgba(204, 51, 153, 0.8)',
+                    'rgba(0, 102, 153, 0.8)',
+                    'rgba(153, 0, 204, 0.8)',
+                    'rgba(0, 204, 0, 0.8)',
+                    'rgba(204, 0, 51, 0.8)',
+                    'rgba(204, 153, 51, 0.8)',
+                    'rgba(153, 51, 51, 0.8)',
+                    'rgba(51, 0, 102, 0.8)',
+                ],
+                borderWidth: 0,
+            },
+        ],
+    };
+    const data6 = {
+        labels: [],
+        datasets: [
+            {
+                label: "",
+                data: [],
+                backgroundColor: [
+                    'rgba(230, 126, 34, 0.8)',
+                    'rgba(110, 155, 211, 0.8)',
+                    'rgba(241, 196, 15, 0.8)',
+                    'rgba(46, 134, 193, 0.8)',
+                    'rgba(231, 76, 60, 0.8)',
+                    'rgba(142, 68, 173, 0.8)',
+                    'rgba(235, 152, 78, 0.8)',
+                    'rgba(211, 84, 0, 0.8)',
+                    'rgba(170, 183, 184, 0.8)',
+                    'rgba(0, 102, 204, 0.8)',
+                    'rgba(255, 204, 51, 0.8)',
+                    'rgba(0, 153, 51, 0.8)',
+                    'rgba(51, 153, 102, 0.8)',
+                    'rgba(204, 51, 153, 0.8)',
+                    'rgba(0, 102, 153, 0.8)',
+                    'rgba(153, 0, 204, 0.8)',
+                    'rgba(0, 204, 0, 0.8)',
+                    'rgba(204, 0, 51, 0.8)',
+                    'rgba(204, 153, 51, 0.8)',
+                    'rgba(153, 51, 51, 0.8)',
+                    'rgba(51, 0, 102, 0.8)',
+                ],
+                borderColor: [
+                    'rgba(230, 126, 34, 0.8)',
+                    'rgba(110, 155, 211, 0.8)',
+                    'rgba(241, 196, 15, 0.8)',
+                    'rgba(46, 134, 193, 0.8)',
+                    'rgba(231, 76, 60, 0.8)',
+                    'rgba(142, 68, 173, 0.8)',
+                    'rgba(235, 152, 78, 0.8)',
+                    'rgba(211, 84, 0, 0.8)',
+                    'rgba(170, 183, 184, 0.8)',
+                    'rgba(0, 102, 204, 0.8)',
+                    'rgba(255, 204, 51, 0.8)',
+                    'rgba(0, 153, 51, 0.8)',
+                    'rgba(51, 153, 102, 0.8)',
+                    'rgba(204, 51, 153, 0.8)',
+                    'rgba(0, 102, 153, 0.8)',
+                    'rgba(153, 0, 204, 0.8)',
+                    'rgba(0, 204, 0, 0.8)',
+                    'rgba(204, 0, 51, 0.8)',
+                    'rgba(204, 153, 51, 0.8)',
+                    'rgba(153, 51, 51, 0.8)',
+                    'rgba(51, 0, 102, 0.8)',
+                ],
+                borderWidth: 0,
+            },
+        ],
+    };
+    store.stats_nba_team.map((item) => {
+        if (item.division == "Southeastern") {
+            data.labels.push(item.team);
+        }
+    })
+    store.stats_nba_team.map((item) => {
+        if (item.division == "Atlantic") {
+            data2.labels.push(item.team);
+        }
+    })
+    store.stats_nba_team.map((item) => {
+        if (item.division == "Central") {
+            data3.labels.push(item.team);
+        }
+    })
+    store.stats_nba_team.map((item) => {
+        if (item.division == "Northwest") {
+            data4.labels.push(item.team);
+        }
+    })
+    store.stats_nba_team.map((item) => {
+        if (item.division == "Southwest") {
+            data5.labels.push(item.team);
+        }
+    })
+    store.stats_nba_team.map((item) => {
+        if (item.division == "Pacific") {
+            data6.labels.push(item.team);
+        }
     })
 
-    store.stats_nba_team.map((index) => {
-        if(index.season == year){
-            data.datasets[0].data.push(index.w);
+    store.stats_nba_team.map((item) => {
+        if (item.season == year && item.division == "Southeastern") {
+            data.datasets[0].data.push(item.w);
+        }
+    })
+    store.stats_nba_team.map((item) => {
+        if (item.season == year && item.division == "Atlantic") {
+            data2.datasets[0].data.push(item.w);
+        }
+    })
+    store.stats_nba_team.map((item) => {
+        if (item.season == year && item.division == "Central") {
+            data3.datasets[0].data.push(item.w);
+        }
+    })
+    store.stats_nba_team.map((item) => {
+        if (item.season == year && item.division == "Northwest") {
+            data4.datasets[0].data.push(item.w);
+        }
+    })
+    store.stats_nba_team.map((item) => {
+        if (item.season == year && item.division == "Southwest") {
+            data5.datasets[0].data.push(item.w);
+        }
+    })
+    store.stats_nba_team.map((item) => {
+        if (item.season == year && item.division == "Pacific") {
+            data6.datasets[0].data.push(item.w);
         }
     })
 
@@ -195,10 +526,33 @@ function NBA_Team_stats_display() {
                     <div className="col-12 text-center fw-bold font_impact fs-3">
                         Juegos Ganados {year}
                     </div>
-                    <Bar height={500} options={options} data={data} />
+                    <div className="col-12 text-center">
+                        <h2>Southeastern</h2>
+                    </div>
+                    <Bar height={100} options={options} data={data} />
+                    <div className="col-12 text-center">
+                        <h2>Atlantic</h2>
+                    </div>
+                    <Bar height={100} options={options} data={data2} />
+                    <div className="col-12 text-center">
+                        <h2>Central</h2>
+                    </div>
+                    <Bar height={100} options={options} data={data3} />
+                    <div className="col-12 text-center">
+                        <h2>Northwest</h2>
+                    </div>
+                    <Bar height={100} options={options} data={data4} />
+                    <div className="col-12 text-center">
+                        <h2>Southwest</h2>
+                    </div>
+                    <Bar height={100} options={options} data={data5} />
+                    <div className="col-12 text-center">
+                        <h2>Pacific</h2>
+                    </div>
+                    <Bar height={100} options={options} data={data6} />
                 </div>
             </div>
-        </div>
+        </div >
     )
 };
 export default NBA_Team_stats_display;

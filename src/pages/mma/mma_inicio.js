@@ -11,12 +11,9 @@ import { Single_Peleas } from '../../components/single_peleas';
 function MMA_Inicio() {
     const { store } = useContext(Context);
     let fecha = new Date();
-    // let dia = fecha.getDate();
-    // let year = fecha.getFullYear();
-    // let mes_actual = fecha.getMonth() + 1;
-    let dia = "26";
-    let year = "2022";
-    let mes_actual = "6";
+    let dia = fecha.getDate();
+    let year = fecha.getFullYear();
+    let mes_actual = fecha.getMonth() + 1;
 
     if (dia == "01") {
         mes_actual = fecha.getMonth();
@@ -87,11 +84,11 @@ function MMA_Inicio() {
                             </div>
                             {
                                 resultados_mma.map((item, index) => {
-                                    let mes = item.date.slice(5,8);
+                                    let mes4 = item.date.slice(5,8);
                                     let ano = item.date.slice(0,4);
                                     let compara_day = mes_a_dt;
                                     let statu = item.status;
-                                    if (mes = compara_day && ano == year && statu == "Pending" ) {
+                                    if (mes4 = compara_day && ano == year && statu == "Pending" ) {
                                         return (
                                             <div className="col-12" key={index}>
                                                 <Single_Peleas

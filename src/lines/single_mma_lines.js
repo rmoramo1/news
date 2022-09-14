@@ -6,7 +6,7 @@ export const Single_MMA_Lines = props => {
     return (
         <div className="col-12 p-1 mt-1">
             <div className="row g-0">
-                <div className="col-12 shadow_spans rounded_span bg_gradient_light">
+                <div className="col-12 bb1px">
                     <Link className="text-decoration-none" to={`/mma_lines/${props.id}`}>
                         <div className="row g-0 text-center">
                             <div className="col-4">{props.fighter_One}</div>

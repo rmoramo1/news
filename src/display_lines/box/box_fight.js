@@ -31,7 +31,18 @@ function Box_Event () {
             selectMonth.push(i);
         }
     }
-
+    let lista_eventos_box = [];
+    let events = store.boxeo.map((item, index) => {
+        if (lista_eventos_box.includes(item.event) ) {
+          
+        }
+        else if(item.date.slice(5, 7) == month && item.date.slice(0, 4) == year) {
+            lista_eventos_box.push(item.event)
+        }
+         else {
+            
+        }
+    });
     return (
         <div className="rounded_span m-2 bg-white shadow_spans mh_display">
             <div className=" title_sport bg_base_dark text-white p-1 fs-5 font_bold">
@@ -68,21 +79,35 @@ function Box_Event () {
                 </div>
             </div>
             <div className="row g-0">
-                {store.boxeo.map((item, index) => {
-                    let mes = item.date.slice(5, 7);
-                    let ano = item.date.slice(0, 4);
-                    if (mes == R_date && ano == year) {
+                {
+                    lista_eventos_box.map((item_event, index) => {
                         return (
-                            <div key={index} className="col-lg-6 p-1">
-                                <Single_Box_Lines
-                                    id={index}
-                                    fighter_One={item.fighter_One}
-                                    fighter_Two={item.fighter_Two}
-                                />
+                            <div className="col-lg-4 p-3">
+                                <div className="col-12 bg_base_dark text-center text-white">
+                                    {item_event}
+                                </div>
+                                <div className="col-12 maxH shadow_spans">
+                                    {store.boxeo.map((item, index) => {
+                                        let mes = item.date.slice(5, 7);
+                                        let ano = item.date.slice(0, 4);
+                                        if (mes == R_date && ano == year && item.event == item_event ) {
+                                            return (
+                                                <div key={index} className="col">
+                                                    <Single_Box_Lines
+                                                        id={index}
+                                                        fighter_One={item.fighter_One}
+                                                        fighter_Two={item.fighter_Two}
+                                                    />
+                                                </div>
+                                            );
+                                        }
+                                    })}
+                                </div>
                             </div>
-                        );
-                    }
-                })}
+                        )
+                    })
+                }
+
             </div>
         </div>
     )

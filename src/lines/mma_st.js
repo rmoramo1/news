@@ -19,25 +19,55 @@ function MMA_st() {
                 label: "Wins",
                 data: [],
                 backgroundColor: [
-                    'rgba(217, 136, 128, 0.8)',
-                    'rgba(195, 155, 211, 0.8)',
-                    'rgba(127, 179, 213, 0.8)',
-                    'rgba(118, 215, 196, 0.8)',
-                    'rgba(115, 198, 182, 0.8)',
-                    'rgba(248, 196, 113, 0.8)',
+                    'rgba(230, 126, 34, 0.8)',
+                    'rgba(110, 155, 211, 0.8)',
+                    'rgba(241, 196, 15, 0.8)',
+                    'rgba(46, 134, 193, 0.8)',
+                    'rgba(231, 76, 60, 0.8)',
+                    'rgba(142, 68, 173, 0.8)',
+                    'rgba(235, 152, 78, 0.8)',
+                    'rgba(211, 84, 0, 0.8)',
+                    'rgba(170, 183, 184, 0.8)',
+                    'rgba(0, 102, 204, 0.8)',
+                    'rgba(255, 204, 51, 0.8)',
+                    'rgba(0, 153, 51, 0.8)',
+                    'rgba(51, 153, 102, 0.8)',
+                    'rgba(204, 51, 153, 0.8)',
+                    'rgba(0, 102, 153, 0.8)',
+                    'rgba(153, 0, 204, 0.8)',
+                    'rgba(0, 204, 0, 0.8)',
+                    'rgba(204, 0, 51, 0.8)',
+                    'rgba(204, 153, 51, 0.8)',
+                    'rgba(153, 51, 51, 0.8)',
+                    'rgba(51, 0, 102, 0.8)',
                 ],
                 borderColor: [
-                    'rgba(217, 136, 128, 1)',
-                    'rgba(195, 155, 211, 1)',
-                    'rgba(127, 179, 213, 1)',
-                    'rgba(118, 215, 196, 1)',
-                    'rgba(115, 198, 182, 1)',
-                    'rgba(248, 196, 113, 1)',
+                    'rgba(230, 126, 34, 0.8)',
+                    'rgba(110, 155, 211, 0.8)',
+                    'rgba(241, 196, 15, 0.8)',
+                    'rgba(46, 134, 193, 0.8)',
+                    'rgba(231, 76, 60, 0.8)',
+                    'rgba(142, 68, 173, 0.8)',
+                    'rgba(235, 152, 78, 0.8)',
+                    'rgba(211, 84, 0, 0.8)',
+                    'rgba(170, 183, 184, 0.8)',
+                    'rgba(0, 102, 204, 0.8)',
+                    'rgba(255, 204, 51, 0.8)',
+                    'rgba(0, 153, 51, 0.8)',
+                    'rgba(51, 153, 102, 0.8)',
+                    'rgba(204, 51, 153, 0.8)',
+                    'rgba(0, 102, 153, 0.8)',
+                    'rgba(153, 0, 204, 0.8)',
+                    'rgba(0, 204, 0, 0.8)',
+                    'rgba(204, 0, 51, 0.8)',
+                    'rgba(204, 153, 51, 0.8)',
+                    'rgba(153, 51, 51, 0.8)',
+                    'rgba(51, 0, 102, 0.8)',
                 ],
                 borderWidth: 1,
             },
         ],
-    }; 
+    };
     store.stats_mma_fighter.map((index) => {
         if (index.name == store.stats_mma_fighter[params.theid].name) {
             data.labels.push(index.season);
@@ -48,18 +78,17 @@ function MMA_st() {
             data.datasets[0].data.push(index.w);
         }
     })
-    console.log(data.datasets[0].data)
 
     ChartJS.register(ArcElement, Tooltip, Legend);
 
     return (
         <div className="rounded_span m-2 bg-white shadow_spans mh_display bg_light">
             <div className="row g-0">
-                <div className="col-3 border_right">
+                <div className="col-lg-3 border_right">
                     <Top_Headlines />
                     <Games_of_Day />
                 </div>
-                <div className="col-6 border_right">
+                <div className="col-lg-6 border_right">
                     <div className="row g-0">
                         <div className="col-lg-4 p-2 text-center">
                             <img className="img-fluid" src={store.stats_mma_fighter[params.theid] && store.stats_mma_fighter[params.theid].headshot} alt="headshot of the player"></img>
@@ -89,7 +118,7 @@ function MMA_st() {
                                     let f1 = item.fighter_One;
                                     let f2 = item.fighter_Two;
                                     let name = store.stats_mma_fighter[params.theid].name
-                                    if (f1 == name || f2 == name ) {
+                                    if (f1 == name || f2 == name) {
                                         return (
                                             <div key={index} className="col-lg-6 p-1">
                                                 <Single_MMA_Lines
@@ -105,21 +134,43 @@ function MMA_st() {
                         </div>
                     </div>
                 </div>
-                <div className="col-3 ">
+                <div className="col-lg-3 ">
                     <div className="row g-0 resultado_in_progress text-center fs-1 p-2">
-                        <div className="col-6 text-white fw-bold font_shadow">Wins</div>
+                        <div className="col-6 text-white fw-bold font_shadow">Ganes</div>
                         <div className="col-6 bg-white">{store.stats_mma_fighter[params.theid] && store.stats_mma_fighter[params.theid].w}</div>
                     </div>
                     <div className="row g-0 resultado_cancelled text-center fs-1 p-2">
-                        <div className="col-6 text-white fw-bold font_shadow">Losses</div>
+                        <div className="col-6 text-white fw-bold font_shadow">Perdidas</div>
                         <div className="col-6 bg-white">{store.stats_mma_fighter[params.theid] && store.stats_mma_fighter[params.theid].L}</div>
                     </div>
-                    {/* <div className="col-12">{store.stats_mma_fighter[params.theid] && store.stats_mma_fighter[params.theid].w_by}</div>
-                        <div className="col-12">{store.stats_mma_fighter[params.theid] && store.stats_mma_fighter[params.theid].L_by}</div> */}
-                    <div className="col-12 text-center fs-4">
-                        Wins per Year
+                    <div className="row g-0 text-center resultado_in_progress text-white">
+                        <div className="col-3">W KO/TKO</div>
+                        <div className="col-3">W SUB</div>
+                        <div className="col-3">W DEC</div>
+                        <div className="col-3">W OTHERS</div>
                     </div>
-                    <div className="chart mh-25 py-2">
+                    <div className="row g-0 text-center">
+                        <div className="col-3 border_right">{store.stats_mma_fighter[params.theid] && store.stats_mma_fighter[params.theid].w_ko_tko}</div>
+                        <div className="col-3 border_right">{store.stats_mma_fighter[params.theid] && store.stats_mma_fighter[params.theid].w_sub}</div>
+                        <div className="col-3 border_right">{store.stats_mma_fighter[params.theid] && store.stats_mma_fighter[params.theid].w_dec}</div>
+                        <div className="col-3">{store.stats_mma_fighter[params.theid] && store.stats_mma_fighter[params.theid].w_others}</div>
+                    </div>
+                    <div className="row g-0 text-center resultado_cancelled text-white">
+                        <div className="col-3">L KO/TKO</div>
+                        <div className="col-3">L SUB</div>
+                        <div className="col-3">L DEC</div>
+                        <div className="col-3">L OTHERS</div>
+                    </div>
+                    <div className="row g-0 text-center bb1px">
+                        <div className="col-3 border_right">{store.stats_mma_fighter[params.theid] && store.stats_mma_fighter[params.theid].L_ko_tko}</div>
+                        <div className="col-3 border_right">{store.stats_mma_fighter[params.theid] && store.stats_mma_fighter[params.theid].L_sub}</div>
+                        <div className="col-3 border_right">{store.stats_mma_fighter[params.theid] && store.stats_mma_fighter[params.theid].L_dec}</div>
+                        <div className="col-3">{store.stats_mma_fighter[params.theid] && store.stats_mma_fighter[params.theid].L_others}</div>
+                    </div>
+                    <div className="col-12 text-center fs-4">
+                        Ganes por año 
+                    </div>
+                    <div className="chart mh-25 py-2 mx-auto">
                         <Pie data={data} />
                     </div>
                 </div>

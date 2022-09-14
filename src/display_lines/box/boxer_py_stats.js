@@ -50,16 +50,22 @@ function Boxer_PY_STATS() {
                 </div>
                 <div className="row g-0 overflowX_scroll">
                     <div className="row g-0 text-center bg_lines text-white odds-list">
-                        <div className="diez_spans"></div>
-                        <div className="diez_spans">Name</div>
-                        <div className="diez_spans">Nickname</div>
-                        <div className="diez_spans">Height</div>
-                        <div className="diez_spans">Weight</div>
+                    <div className="diezSiete_spans"></div>
+                        <div className="diezSiete_spans">Name</div>
+                        <div className="diezSiete_spans">Nickname</div>
+                        <div className="diezSiete_spans">Height</div>
+                        <div className="diezSiete_spans">Weight</div>
                         <div className="diez_spans">Category</div>
-                        <div className="diez_spans">W</div>
-                        <div className="diez_spans">W By</div>
-                        <div className="diez_spans">L</div>
-                        <div className="diez_spans">L By</div>
+                        <div className="diezSiete_spans">W</div>
+                        <div className="diezSiete_spans">W KO/TKO</div>
+                        <div className="diezSiete_spans">W SUB</div>
+                        <div className="diezSiete_spans">W DEC</div>
+                        <div className="diezSiete_spans">W OTHERS</div>
+                        <div className="diezSiete_spans">L</div>
+                        <div className="diezSiete_spans">L KO/TKO</div>
+                        <div className="diezSiete_spans">L SUB</div>
+                        <div className="diezSiete_spans">L DEC</div>
+                        <div className="diezSiete_spans">L OTHERS</div>
                     </div>
                     {
                         store.stats_box_fighter.map((item, index) => {
@@ -68,17 +74,23 @@ function Boxer_PY_STATS() {
                             return (
                                 <div key={index} className="col-12">
                                     <Single_Boxers
-                                        id={index}
-                                        name={item.name}
-                                        headshot={item.headshot}
-                                        nickname={item.nickname}
-                                        height={item.height}
-                                        weight={item.weight}
-                                        category={item.category}
-                                        w={item.w}
-                                        w_by={item.w_by}
-                                        L={item.L}
-                                        L_by={item.L_by}
+                                            id={index}
+                                            name={item.name}
+                                            headshot={item.headshot}
+                                            nickname={item.nickname}
+                                            height={item.height}
+                                            weight={item.weight}
+                                            category={item.category}
+                                            w={item.w}
+                                            w_ko_tko={item.w_ko_tko}
+                                            w_sub={item.w_sub}
+                                            w_dec={item.w_dec}
+                                            w_others={item.w_others}
+                                            L={item.L}
+                                            L_ko_tko={item.L_ko_tko}
+                                            L_sub={item.L_sub}
+                                            L_dec={item.L_dec}
+                                            L_others={item.L_others}
                                     />
                                 </div>
                             )
