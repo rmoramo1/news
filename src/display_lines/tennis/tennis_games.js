@@ -73,7 +73,7 @@ function Tennis_Games(){
                         let ano = item.date.slice(0, 4);
                         if (mes == R_date && ano == year) {
                             return (
-                                <div key={index} className="col-4">
+                                <div key={index} className="col-lg-4">
                                     <Tennis_lines
                                         id={index}
                                         event={item.event}

@@ -39,7 +39,7 @@ function NHL_Games() {
 		return b.id - a.id;
 	});
     return (
-        <div className="rounded_span m-2 bg-white shadow_spans mh_display">
+        <div className="bg-white mh_display">
             <div className=" title_sport bg_base_dark text-white p-1 fs-5 font_bold">
                 <div className="row g-0">
                     <div className="col-lg-2">NHL Games</div>

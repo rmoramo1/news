@@ -10,31 +10,31 @@ export const Lines_Span_Home = () => {
             <div className="col-12 text-center py-3">
                 <div className="row">
                     <div className="col-6">
-                        <Link to="/nfl_all_data" className="btn_gradient_light">NFL</Link>
+                        <Link to="/nfl_all_data" data-bs-dismiss="offcanvas" className="btn_gradient_light">NFL</Link>
                     </div>
                     <div className="col-6">
-                        <Link to="/nba_all_data" className="btn_gradient_light">NBA</Link>
-                    </div>
-                </div>
-                <div className="row mt-4">
-                    <div className="col-6">
-                        <Link to="/mlb_all_data" className="btn_gradient_light">MLB</Link>
-                    </div>
-                    <div className="col-6">
-                        <Link to="/nhl_all_data" className="btn_gradient_light">NHL</Link>
+                        <Link to="/nba_all_data" data-bs-dismiss="offcanvas" className="btn_gradient_light">NBA</Link>
                     </div>
                 </div>
                 <div className="row mt-4">
                     <div className="col-6">
-                        <Link to="/ncaa_football_all_data" className="btn_gradient_light">NCAA F</Link>
+                        <Link to="/mlb_all_data" data-bs-dismiss="offcanvas" className="btn_gradient_light">MLB</Link>
                     </div>
                     <div className="col-6">
-                        <Link to="/ncaa_basketball_all_data" className="btn_gradient_light">NCAA B</Link>
+                        <Link to="/nhl_all_data" data-bs-dismiss="offcanvas" className="btn_gradient_light">NHL</Link>
+                    </div>
+                </div>
+                <div className="row mt-4">
+                    <div className="col-6">
+                        <Link to="/ncaa_football_all_data" data-bs-dismiss="offcanvas" className="btn_gradient_light">NCAA F</Link>
+                    </div>
+                    <div className="col-6">
+                        <Link to="/ncaa_basketball_all_data" data-bs-dismiss="offcanvas" className="btn_gradient_light">NCAA B</Link>
                     </div>
                 </div>
                 <div className="row mt-4">
                     <div className="col-12">
-                        <Link to="/ncaa_baseball_all_data" className="btn_gradient_light">COLLEGE BASEBALL</Link>
+                        <Link to="/ncaa_baseball_all_data" data-bs-dismiss="offcanvas" className="btn_gradient_light">COLLEGE BASEBALL</Link>
                     </div>
                 </div>
             </div>

@@ -129,7 +129,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ props: results });
 			},
 			nfl_team_stats: async () => {
-				const url = "https://www.sportsdata365.com/stats_nfl_team";
+				const url = "https://www.sportsdata365.com/standing_nfl_team";
 				const response = await fetch(url);
 				const results = await response.json();
 				setStore({ nfl_team_stats: results });

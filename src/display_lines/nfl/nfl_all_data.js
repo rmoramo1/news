@@ -87,7 +87,7 @@ function Nfl_All_Data() {
                                 </div>
                             </div>
                             <div className="col-lg-6">
-                                <div className="row g-0 text-center">
+                                <div className="row g-0">
                                     <div className="col p-1"><button className="btn_gradient_light" onClick={e => setEstados("1Q")} value={nfl_one_q}>1Q</button></div>
                                     <div className="col p-1"><button className="btn_gradient_light" onClick={e => setEstados("2Q")} value={nfl_two_q}>2Q</button></div>
                                     <div className="col p-1"><button className="btn_gradient_light" onClick={e => setEstados("3Q")} value={nfl_thre_q}>3Q</button></div>

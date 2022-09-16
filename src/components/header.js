@@ -42,7 +42,7 @@ export const Header = () => {
                         <img src={logo} alt="logo of the site" className="img-fluid"></img>
                     </Link>
                 </div>
-                <div className="col-lg-7 d-flex justify-content-center align-items-center">
+                <div className="col-lg-5 d-flex justify-content-center align-items-center">
                     <form onSubmit={enviar}>
                         <div className="row g-0">
                             <div className="col-4 p-1">
@@ -90,6 +90,21 @@ export const Header = () => {
                     <Link className="font_impact text-decoration-none fs-3">
                         Registro <i className="fa-solid fa-user-astronaut"></i>
                     </Link>
+                </div>
+                <div className="col-lg-2 d-flex justify-content-center align-items-center">
+                    <div className="row w-100 g-0 d-none d-lg-block">
+                        <div className="row g-0">
+                            <div className="col-4">
+                                <i className="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <div className="col-4">
+                                <i className="fa-brands fa-instagram"></i>
+                            </div>
+                            <div className="col-4">
+                                <i className="fa-brands fa-youtube"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className="col-12 bg_light text-white d-none d-lg-block">
                     <div className="container">
@@ -220,18 +235,13 @@ export const Header = () => {
                                                 </Link>
                                             </li>
                                             <li className="li_drop">
-                                                <Link className="text-decoration-none">
+                                                <Link to="/results_soccer" className="text-decoration-none">
                                                     Marcadores
                                                 </Link>
                                             </li>
                                             <li className="li_drop">
-                                                <Link className="text-decoration-none">
-                                                    Clasificación
-                                                </Link>
-                                            </li>
-                                            <li className="li_drop">
-                                                <Link className="text-decoration-none">
-                                                    Equipos
+                                                <Link to="/soccer_team_stats" className="text-decoration-none">
+                                                    Estadísticas de Equipos
                                                 </Link>
                                             </li>
                                         </ul>
@@ -254,6 +264,11 @@ export const Header = () => {
                                                 </Link>
                                             </li>
                                         </ul>
+                                    </li>
+                                    <li class="list-inline-item ul-drop px-3">
+                                        <Link to="/lineas_generales" className="text-decoration-none text-white">
+                                            Lineas <i className="fa-solid fa-ranking-star"></i>
+                                        </Link>
                                     </li>
                                     <li class="list-inline-item ul-drop-2 px-3">
                                         <i className="fa-solid fa-bars"></i>
@@ -324,19 +339,6 @@ export const Header = () => {
                                         </div>
                                     </li>
                                 </ul>
-                            </div>
-                            <div className="col-lg-2 d-flex justify-content-center align-items-center">
-                                <div className="row w-100 g-0">
-                                    <div className="col-4">
-                                        <i className="fa-brands fa-facebook-f"></i>
-                                    </div>
-                                    <div className="col-4">
-                                        <i className="fa-brands fa-instagram"></i>
-                                    </div>
-                                    <div className="col-4">
-                                        <i className="fa-brands fa-youtube"></i>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

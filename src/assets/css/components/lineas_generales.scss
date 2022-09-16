@@ -1,0 +1,5 @@
+.collapse{
+    .accordion-button:not(.collapsed) {
+        background: lighten($azul, 10)
+    }
+}

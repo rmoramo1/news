@@ -94,8 +94,6 @@ function NBA_All_Data() {
                                     <div className="col p-1"><button className="btn_gradient_light" onClick={e => setEstados("4Q")} value={NBA_four_q}>4Q</button></div>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>

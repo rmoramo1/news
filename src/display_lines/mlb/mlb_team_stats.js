@@ -47,44 +47,193 @@ function MLB_Team_stats_display() {
                 backgroundColor: [
                     'rgba(230, 126, 34, 0.8)',
                     'rgba(110, 155, 211, 0.8)',
-                    // 'rgba(241, 196, 15, 0.8)',
-                    // 'rgba(46, 134, 193, 0.8)',
-                    // 'rgba(231, 76, 60, 0.8)',
-                    // 'rgba(142, 68, 173, 0.8)',
-                    // 'rgba(235, 152, 78, 0.8)',
-                    // 'rgba(211, 84, 0, 0.8)',
-                    // 'rgba(170, 183, 184, 0.8)',
-                    // 'rgba(0, 102, 204, 0.8)',
-                    // 'rgba(255, 204, 51, 0.8)',
-                    // 'rgba(0, 153, 51, 0.8)',
-                    // 'rgba(51, 153, 102, 0.8)',
-                    // 'rgba(204, 51, 153, 0.8)',
-                    // 'rgba(0, 102, 153, 0.8)',
-                    // 'rgba(153, 0, 204, 0.8)',
-                    // 'rgba(0, 204, 0, 0.8)',
-                    // 'rgba(204, 0, 51, 0.8)',
-                    // 'rgba(204, 153, 51, 0.8)',
-                    // 'rgba(153, 51, 51, 0.8)',
-                    // 'rgba(51, 0, 102, 0.8)',
+                    'rgba(241, 196, 15, 0.8)',
+                    'rgba(46, 134, 193, 0.8)',
+                    'rgba(231, 76, 60, 0.8)',
+                    'rgba(142, 68, 173, 0.8)',
+                    'rgba(235, 152, 78, 0.8)',
+                    'rgba(211, 84, 0, 0.8)',
+                    'rgba(170, 183, 184, 0.8)',
+                    'rgba(0, 102, 204, 0.8)',
+                    'rgba(255, 204, 51, 0.8)',
+                    'rgba(0, 153, 51, 0.8)',
+                    'rgba(51, 153, 102, 0.8)',
+                    'rgba(204, 51, 153, 0.8)',
+                    'rgba(0, 102, 153, 0.8)',
+                    'rgba(153, 0, 204, 0.8)',
+                    'rgba(0, 204, 0, 0.8)',
+                    'rgba(204, 0, 51, 0.8)',
+                    'rgba(204, 153, 51, 0.8)',
+                    'rgba(153, 51, 51, 0.8)',
+                    'rgba(51, 0, 102, 0.8)',
                 ],
                 borderColor: [
-                    'rgba(230, 126, 34,, .3)',
+                    'rgba(230, 126, 34,, .3)',                    'rgba(230, 126, 34, 0.8)',
+                    'rgba(110, 155, 211, 0.8)',
+                    'rgba(241, 196, 15, 0.8)',
+                    'rgba(46, 134, 193, 0.8)',
+                    'rgba(231, 76, 60, 0.8)',
+                    'rgba(142, 68, 173, 0.8)',
+                    'rgba(235, 152, 78, 0.8)',
+                    'rgba(211, 84, 0, 0.8)',
+                    'rgba(170, 183, 184, 0.8)',
+                    'rgba(0, 102, 204, 0.8)',
+                    'rgba(255, 204, 51, 0.8)',
+                    'rgba(0, 153, 51, 0.8)',
+                    'rgba(51, 153, 102, 0.8)',
+                    'rgba(204, 51, 153, 0.8)',
+                    'rgba(0, 102, 153, 0.8)',
+                    'rgba(153, 0, 204, 0.8)',
+                    'rgba(0, 204, 0, 0.8)',
+                    'rgba(204, 0, 51, 0.8)',
+                    'rgba(204, 153, 51, 0.8)',
+                    'rgba(153, 51, 51, 0.8)',
+                    'rgba(51, 0, 102, 0.8)',                ],
+                borderWidth: 0,
+            },
+        ],
+    };
+    const data2 = {
+        labels: [],
+        datasets: [
+            {
+                label: "",
+                data: [],
+                backgroundColor: [
+                    'rgba(230, 126, 34, 0.8)',
+                    'rgba(110, 155, 211, 0.8)',
+                    'rgba(241, 196, 15, 0.8)',
+                    'rgba(46, 134, 193, 0.8)',
+                    'rgba(231, 76, 60, 0.8)',
+                    'rgba(142, 68, 173, 0.8)',
+                    'rgba(235, 152, 78, 0.8)',
+                    'rgba(211, 84, 0, 0.8)',
+                    'rgba(170, 183, 184, 0.8)',
+                    'rgba(0, 102, 204, 0.8)',
+                    'rgba(255, 204, 51, 0.8)',
+                    'rgba(0, 153, 51, 0.8)',
+                    'rgba(51, 153, 102, 0.8)',
+                    'rgba(204, 51, 153, 0.8)',
+                    'rgba(0, 102, 153, 0.8)',
+                    'rgba(153, 0, 204, 0.8)',
+                    'rgba(0, 204, 0, 0.8)',
+                    'rgba(204, 0, 51, 0.8)',
+                    'rgba(204, 153, 51, 0.8)',
+                    'rgba(153, 51, 51, 0.8)',
+                    'rgba(51, 0, 102, 0.8)',
                 ],
+                borderColor: [
+                    'rgba(230, 126, 34,, .3)',                    'rgba(230, 126, 34, 0.8)',
+                    'rgba(110, 155, 211, 0.8)',
+                    'rgba(241, 196, 15, 0.8)',
+                    'rgba(46, 134, 193, 0.8)',
+                    'rgba(231, 76, 60, 0.8)',
+                    'rgba(142, 68, 173, 0.8)',
+                    'rgba(235, 152, 78, 0.8)',
+                    'rgba(211, 84, 0, 0.8)',
+                    'rgba(170, 183, 184, 0.8)',
+                    'rgba(0, 102, 204, 0.8)',
+                    'rgba(255, 204, 51, 0.8)',
+                    'rgba(0, 153, 51, 0.8)',
+                    'rgba(51, 153, 102, 0.8)',
+                    'rgba(204, 51, 153, 0.8)',
+                    'rgba(0, 102, 153, 0.8)',
+                    'rgba(153, 0, 204, 0.8)',
+                    'rgba(0, 204, 0, 0.8)',
+                    'rgba(204, 0, 51, 0.8)',
+                    'rgba(204, 153, 51, 0.8)',
+                    'rgba(153, 51, 51, 0.8)',
+                    'rgba(51, 0, 102, 0.8)',                ],
+                borderWidth: 0,
+            },
+        ],
+    };
+    const data3 = {
+        labels: [],
+        datasets: [
+            {
+                label: "",
+                data: [],
+                backgroundColor: [
+                    'rgba(230, 126, 34, 0.8)',
+                    'rgba(110, 155, 211, 0.8)',
+                    'rgba(241, 196, 15, 0.8)',
+                    'rgba(46, 134, 193, 0.8)',
+                    'rgba(231, 76, 60, 0.8)',
+                    'rgba(142, 68, 173, 0.8)',
+                    'rgba(235, 152, 78, 0.8)',
+                    'rgba(211, 84, 0, 0.8)',
+                    'rgba(170, 183, 184, 0.8)',
+                    'rgba(0, 102, 204, 0.8)',
+                    'rgba(255, 204, 51, 0.8)',
+                    'rgba(0, 153, 51, 0.8)',
+                    'rgba(51, 153, 102, 0.8)',
+                    'rgba(204, 51, 153, 0.8)',
+                    'rgba(0, 102, 153, 0.8)',
+                    'rgba(153, 0, 204, 0.8)',
+                    'rgba(0, 204, 0, 0.8)',
+                    'rgba(204, 0, 51, 0.8)',
+                    'rgba(204, 153, 51, 0.8)',
+                    'rgba(153, 51, 51, 0.8)',
+                    'rgba(51, 0, 102, 0.8)',
+                ],
+                borderColor: [
+                    'rgba(230, 126, 34,, .3)',                    'rgba(230, 126, 34, 0.8)',
+                    'rgba(110, 155, 211, 0.8)',
+                    'rgba(241, 196, 15, 0.8)',
+                    'rgba(46, 134, 193, 0.8)',
+                    'rgba(231, 76, 60, 0.8)',
+                    'rgba(142, 68, 173, 0.8)',
+                    'rgba(235, 152, 78, 0.8)',
+                    'rgba(211, 84, 0, 0.8)',
+                    'rgba(170, 183, 184, 0.8)',
+                    'rgba(0, 102, 204, 0.8)',
+                    'rgba(255, 204, 51, 0.8)',
+                    'rgba(0, 153, 51, 0.8)',
+                    'rgba(51, 153, 102, 0.8)',
+                    'rgba(204, 51, 153, 0.8)',
+                    'rgba(0, 102, 153, 0.8)',
+                    'rgba(153, 0, 204, 0.8)',
+                    'rgba(0, 204, 0, 0.8)',
+                    'rgba(204, 0, 51, 0.8)',
+                    'rgba(204, 153, 51, 0.8)',
+                    'rgba(153, 51, 51, 0.8)',
+                    'rgba(51, 0, 102, 0.8)',                ],
                 borderWidth: 0,
             },
         ],
     };
 
-    store.stats_mlb_team.map((index) => {
-        data.labels.push(index.team);
-    })
-
-    store.stats_mlb_team.map((index) => {
-        if (index.season == year) {
-            data.datasets[0].data.push(index.w);
+    store.stats_mlb_team.map((item) => {
+        if (item.division == "East") {
+            data.labels.push(item.team);
         }
     })
-
+    store.stats_mlb_team.map((item) => {
+        if (item.division == "Central") {
+            data2.labels.push(item.team);
+        }
+    })
+    store.stats_mlb_team.map((item) => {
+        if (item.division == "West") {
+            data3.labels.push(item.team);
+        }
+    })
+    store.stats_mlb_team.map((item) => {
+        if (item.season == year && item.division == "East") {
+            data.datasets[0].data.push(item.w);
+        }
+    })
+    store.stats_mlb_team.map((item) => {
+        if (item.season == year && item.division == "Central") {
+            data2.datasets[0].data.push(item.w);
+        }
+    })
+    store.stats_mlb_team.map((item) => {
+        if (item.season == year && item.division == "West") {
+            data3.datasets[0].data.push(item.w);
+        }
+    })
     let selectYear = [];
     for (let i = 2002; i < 2025; i++) {
         selectYear.push(i);
@@ -100,10 +249,10 @@ function MLB_Team_stats_display() {
                 <div className="col-lg-8">
                     <div className="title_sport bg_base_dark text-white ps-lg-5 fs-2 font_bold">
                         <div className="row g-0">
-                            <div className="col-lg-4">MLB Team Stadings</div>
+                            <div className="col-lg-4 text-center">MLB Team Stadings</div>
                             <div className="col-lg-8">
                                 <div className="row g-0">
-                                    <div className="col-3 text-center">SEASON</div>
+                                    <div className="col-lg-3 text-center">SEASON</div>
                                     <div className="col-lg-3 d-flex align-items-center">
                                         <select className="form-select" name="year" aria-label="Default select example" defaultValue={year} onChange={e => setyear(e.target.value)} required>
                                             {
@@ -165,7 +314,18 @@ function MLB_Team_stats_display() {
                     <div className="col-12 text-center fw-bold font_impact fs-3">
                         Juegos Ganados {year}
                     </div>
-                    <Bar height={500} options={options} data={data} />
+                    <div className="col-12 text-center">
+                        <h2>East</h2>
+                    </div>
+                    <Bar height={150} options={options} data={data} />
+                    <div className="col-12 text-center">
+                        <h2>Central</h2>
+                    </div>
+                    <Bar height={150} options={options} data={data2} />
+                    <div className="col-12 text-center">
+                        <h2>West</h2>
+                    </div>
+                    <Bar height={150} options={options} data={data3} />
                 </div>
             </div>
 

@@ -41,8 +41,7 @@ function MLB_All_Data() {
             <div className="col-12 py-3">
                 <div className="row w-100 g-0">
                     <div className="col-lg-8 mx-auto">
-                        <div className="row g-0">
-
+                        <div className="row g-0 text-center">
                             <div className="col-lg-6">
                                 <div className="row g-0">
                                     <div className="col p-1"><button className="btn_gradient_light" onClick={e => setEstados("MLB")} value={MLB} >Games</button></div>

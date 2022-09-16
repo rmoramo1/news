@@ -1,12 +1,12 @@
 body {
   margin: 0;
-  background: $grey;
+  background: darken($azul, 20);
   font-family: 'Roboto', sans-serif;
 }
 
 //backgrounds
 .bg_base {
-  background-color: $base;
+  background-color: $azul;
 }
 
 .bg_grey {
@@ -14,19 +14,19 @@ body {
 }
 
 .bg_base_dark {
-  background: $azul;
+  background: darken($azul, 20);
 }
 
 .bg_light {
-  background: $base_light;
+  background: $azul_light;
 }
 
 .bg_azul {
-  background: $azul;
+  background:darken($azul, 20);
 }
 
 .bg_base_extra_light {
-  background: $base_extra_light;
+  background: $azul_extra_light;
 }
 
 .bg_gradient_light {
@@ -52,7 +52,7 @@ body {
 }
 
 .border_top {
-  border-top: 3px groove $base;
+  border-top: 3px groove $azul;
 }
 
 .border_right {
@@ -95,7 +95,7 @@ body {
 }
 
 .shadow_orange {
-  box-shadow: 0 0 15px $base_dark;
+  box-shadow: 0 0 15px $azul_dark;
 }
 
 .maxH {
@@ -113,7 +113,7 @@ body {
 
 /*bootstrap*/
 .offcanvas {
-  background: $azul;
+  background: darken($azul, 20);
 }
 
 .offcanvas {

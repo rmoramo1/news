@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import logo from '../assets/img/ins365_logo_blanco.png';
 export const Menu_Movil = () => {
     return (
-        <div className="container">
+        <div className="container" id="menu_movil">
             <div className="col-12 text-end">
                 <div className="row g-0">
-                    <div className="col-8 d-flex align-items-center">
+                    <div className="col-8 d-flex align-items-center text-center">
                         <div className="row w-100 g-0">
                             <div className="col-4">
                                 <i className="fa-brands fa-facebook-f"></i>
@@ -30,13 +30,15 @@ export const Menu_Movil = () => {
             <div className="offcanvas offcanvas-top" tabindex="-1" id="menu_movil_off" aria-labelledby="offcanvasExampleLabel">
                 <div className="offcanvas-header">
                     <h5 className="offcanvas-title" id="offcanvasExampleLabel">
+                        <a href="/home" data-bs-dismiss="offcanvas">
                         <img src={logo} className="img-fluid"></img>
+                        </a>
                     </h5>
-                    <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" className="btn text-white fs-1" data-bs-dismiss="offcanvas" aria-label="Close"> <i className="fa-solid fa-xmark"></i></button>
                 </div>
                 <div className="offcanvas-body">
                     <div className="col-12">
-                        <a class="btn btn-primary col-12" data-bs-toggle="collapse" href="#collapse_nfl" role="button" aria-expanded="false" aria-controls="collapse_nfl">
+                        <a class="btn btn_orange col-12" data-bs-toggle="collapse" href="#collapse_nfl" role="button" aria-expanded="false" aria-controls="collapse_nfl">
                             NFL <i className="fa-solid fa-football"></i>
                         </a>
                         <div class="collapse" id="collapse_nfl">
@@ -64,7 +66,7 @@ export const Menu_Movil = () => {
                         </div>
                     </div>
                     <div className="col-12 mt-4">
-                        <a class="btn btn-primary col-12" data-bs-toggle="collapse" href="#collapse_nba" role="button" aria-expanded="false" aria-controls="collapse_nba">
+                        <a class="btn btn_orange col-12" data-bs-toggle="collapse" href="#collapse_nba" role="button" aria-expanded="false" aria-controls="collapse_nba">
                             NBA <i className="fa-solid fa-basketball"></i>
                         </a>
                         <div class="collapse" id="collapse_nba">
@@ -92,7 +94,7 @@ export const Menu_Movil = () => {
                         </div>
                     </div>
                     <div className="col-12 mt-4">
-                        <a class="btn btn-primary col-12" data-bs-toggle="collapse" href="#collapse_mlb" role="button" aria-expanded="false" aria-controls="collapse_mlb">
+                        <a class="btn btn_orange col-12" data-bs-toggle="collapse" href="#collapse_mlb" role="button" aria-expanded="false" aria-controls="collapse_mlb">
                             MLB <i className="fa-solid fa-baseball-bat-ball"></i>
                         </a>
                         <div class="collapse" id="collapse_mlb">
@@ -120,7 +122,7 @@ export const Menu_Movil = () => {
                         </div>
                     </div>
                     <div className="col-12 mt-4">
-                        <a class="btn btn-primary col-12" data-bs-toggle="collapse" href="#collapse_nhl" role="button" aria-expanded="false" aria-controls="collapse_nhl">
+                        <a class="btn btn_orange col-12" data-bs-toggle="collapse" href="#collapse_nhl" role="button" aria-expanded="false" aria-controls="collapse_nhl">
                             NHL <i className="fa-solid fa-hockey-puck"></i>
                         </a>
                         <div class="collapse" id="collapse_nhl">
@@ -148,7 +150,7 @@ export const Menu_Movil = () => {
                         </div>
                     </div>
                     <div className="col-12 mt-4">
-                        <a class="btn btn-primary col-12" data-bs-toggle="collapse" href="#collapse_soccer" role="button" aria-expanded="false" aria-controls="collapse_soccer">
+                        <a class="btn btn_orange col-12" data-bs-toggle="collapse" href="#collapse_soccer" role="button" aria-expanded="false" aria-controls="collapse_soccer">
                             SOCCER <i className="fa-solid fa-futbol"></i>
                         </a>
                         <div class="collapse" id="collapse_soccer">
@@ -176,7 +178,7 @@ export const Menu_Movil = () => {
                         </div>
                     </div>
                     <div className="col-12 mt-4">
-                        <a class="btn btn-primary col-12" data-bs-toggle="collapse" href="#collapse_mma" role="button" aria-expanded="false" aria-controls="collapse_mma">
+                        <a class="btn btn_orange col-12" data-bs-toggle="collapse" href="#collapse_mma" role="button" aria-expanded="false" aria-controls="collapse_mma">
                             MMA <i className="fa-solid fa-hand-fist"></i>
                         </a>
                         <div class="collapse" id="collapse_mma">
@@ -196,42 +198,52 @@ export const Menu_Movil = () => {
                         </div>
                     </div>
                     <div className="col-12 mt-4">
-                        <a class="btn btn-primary col-12" data-bs-toggle="collapse" href="#collapse_mas_deportess" role="button" aria-expanded="false" aria-controls="collapse_mas_deportess">
+                        <a class="btn btn_orange col-12" data-bs-toggle="collapse" href="#collapse_mas_deportess" role="button" aria-expanded="false" aria-controls="collapse_mas_deportess">
                             Mas Deportes <i className="fa-solid fa-plus"></i>
                         </a>
                         <div class="collapse" id="collapse_mas_deportess">
                             <div class="card card-body">
                                 <Link className="text-decoration-none" data-bs-dismiss="offcanvas" to="/ncaa_f_inicio">
-                                NCAA <i className="fa-solid fa-football"></i>
+                                    NCAA <i className="fa-solid fa-football"></i>
                                 </Link>
 
                                 <Link to="/ncaa_basket_inicio" data-bs-dismiss="offcanvas" className="text-decoration-none">
-                                NCAA <i className="fa-solid fa-basketball"></i>
+                                    NCAA <i className="fa-solid fa-basketball"></i>
                                 </Link>
 
                                 <Link to="/wnba_inicio" data-bs-dismiss="offcanvas" className="text-decoration-none">
-                                WNBA <i className="fa-solid fa-basketball"></i>
+                                    WNBA <i className="fa-solid fa-basketball"></i>
                                 </Link>
                                 <Link to="/bs_mexico_inicio" data-bs-dismiss="offcanvas" className="text-decoration-none">
-                                MEX <i className="fa-solid fa-baseball-bat-ball"></i> 
+                                    MEX <i className="fa-solid fa-baseball-bat-ball"></i>
                                 </Link>
-                                <Link to="/bs_mexico_inicio" data-bs-dismiss="offcanvas" className="text-decoration-none">
-                                GOLF  <i className="fa-solid fa-golf-ball-tee"></i>
+                                <Link to="/golf_inicio" data-bs-dismiss="offcanvas" className="text-decoration-none">
+                                    GOLF  <i className="fa-solid fa-golf-ball-tee"></i>
                                 </Link>
                                 <Link to="/nascar_inicio" data-bs-dismiss="offcanvas" className="text-decoration-none">
-                                NASCAR  <i className="fa-solid fa-car-side"></i>
+                                    NASCAR  <i className="fa-solid fa-car-side"></i>
                                 </Link>
                                 <Link to="/moto_gp_inicio" data-bs-dismiss="offcanvas" className="text-decoration-none">
-                                MOTO GP  <i className="fa-solid fa-motorcycle"></i>
+                                    MOTO GP  <i className="fa-solid fa-motorcycle"></i>
                                 </Link>
                                 <Link to="/boxing_inicio" data-bs-dismiss="offcanvas" className="text-decoration-none">
-                                BOXING  <i className="fa-regular fa-hand-back-fist"></i>
+                                    BOXING  <i className="fa-regular fa-hand-back-fist"></i>
                                 </Link>
                                 <Link to="/tennis_inicio" data-bs-dismiss="offcanvas" className="text-decoration-none">
-                                TENNIS  
+                                    TENNIS
                                 </Link>
                             </div>
                         </div>
+                    </div>
+                    <div className="col-12 mt-3">
+                        <a class="btn btn_orange col-12" data-bs-dismiss="offcanvas" href="/lineas_generales">
+                            Lineas <i className="fa-solid fa-ranking-star"></i>
+                        </a>
+                    </div>
+                    <div className="col-12 mt-3">
+                        <a class="btn btn_orange col-12" data-bs-dismiss="offcanvas"  href="#">
+                            PODCAST <i className="fa-solid fa-microphone"></i>
+                        </a>
                     </div>
                 </div>
             </div>

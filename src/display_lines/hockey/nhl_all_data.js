@@ -31,10 +31,10 @@ function NHL_All_Data() {
             <div className="col-12 py-3">
                 <div className="row w-100 g-0">
                     <div className="col-lg-8 mx-auto">
-                        <div className="row g-0">
+                        <div className="row g-0 text-center">
                             <div className="col p-1"><button className="btn_gradient_light" onClick={e => setEstados("NHL")} value={NHL} >Games</button></div>
                             <div className="col p-1"><button className="btn_gradient_light" onClick={e => setEstados("1H")} value={NHL_F5_s}>1ST Q</button></div>
-                            <div className="col p-1"><button className="btn_gradient_light" onClick={e => setEstados("2H")} value={NHL_Extra}>QUARTERS SCORE</button></div>
+                            <div className="col-12 p-1"><button className="btn_gradient_light" onClick={e => setEstados("2H")} value={NHL_Extra}>QUARTERS SCORE</button></div>
                         </div>
                     </div>
                 </div>

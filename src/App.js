@@ -119,12 +119,15 @@ const Moto_GP_Runs = lazy(() => import('./display_lines/moto_gp/moto_gp_runs'));
 /*soccer */
 const SOCCER_py_st = lazy(() => import('./lines/soccer_py_st'));
 const Soccer_Team_stats_display = lazy(()=>import('./display_lines/soccer/soccer_team_stats'));
+const Results_SOCCER = lazy(()=>import('./display_lines/soccer/results_soccer'));
 /*noticias */
 const Noticia_Individual = lazy(() => import('./noticias/new'));
 /* odds */
 const Odds_To_Win = lazy(() => import('./display_lines/globals/odds_to_win'));
 /*erroer*/
 const Error = lazy(() => import('./pages/404'));
+// lineas generales
+const Lineas_Generales =lazy(()=>import('./pages/lineas_generales'));
 
 function App() {
 	return (
@@ -252,10 +255,13 @@ function App() {
 						{/* soccer */}
 						<Route path="/soccer_py_st/:theid" component={SOCCER_py_st} />
 						<Route path="/soccer_team_stats" component={Soccer_Team_stats_display} />
+						<Route path="/results_soccer" component={Results_SOCCER} />
 						{/* noticias */}
 						<Route path="/new/:theid" component={Noticia_Individual} />
 						{/* odds */}
 						<Route path="/odds_to_win/:theid" component={Odds_To_Win} />
+						{/* lineas_generales */}
+						<Route path="/lineas_generales" component={Lineas_Generales} />
 						<Route>
 							<Error />
 						</Route>
