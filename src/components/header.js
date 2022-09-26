@@ -4,17 +4,25 @@ import logo from '../assets/img/logo.webp';
 import { Link } from "react-router-dom";
 import { Menu_Movil } from "./menu_movil";
 export const Header = () => {
+    const { store } = useContext(Context);
     const { actions } = useContext(Context);
-    const [mail, setMail] = useState("");
+    const [user, setuser] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
-    const [auth, setAuth] = useState(false);
+    let actualizar = () => {
+        document.getElementById("loginForm").reset();
+    }
 
+    let refrescar = () => {
+        window.localStorage.removeItem("my_token");
+        window.location.reload(true)
+    };
     const enviar = e => {
+        actualizar(); 
         e.preventDefault();
-        const body = { mail: mail, password: password };
+        const body = { user: user, password: password };
 
-        fetch("https://sportsdata365.com/login", {
+        fetch("https://isn365.herokuapp.com/login", {
             method: "POST",
             body: JSON.stringify(body),
             headers: { "Content-Type": "application/json" }
@@ -30,10 +38,22 @@ export const Header = () => {
             .then(data => {
                 window.localStorage.setItem("my_token", JSON.stringify(data));
                 actions.changename(data.username);
-
             })
-            .catch(err => console.log(err));
+            .catch(error => alert("Usuario o contraseña incorrectos"));
     };
+    let roy = window.localStorage.getItem("my_token", JSON.stringify());
+    let btn;
+    let reg;
+    let lineas;
+    if (!roy) {
+        lineas="d-none";
+        btn = "d-none";
+        reg = "d-block font_impact text-decoration-none fs-3";
+    } else {
+        btn = "d-block col-1 float-left";
+        reg = "d-none";
+        lineas="d-inline list-inline-item ul-drop px-3";
+    }
     return (
         <div className="container-fluid p-0 bg-white fs-5">
             <div className="row g-0">
@@ -43,15 +63,15 @@ export const Header = () => {
                     </Link>
                 </div>
                 <div className="col-lg-5 d-flex justify-content-center align-items-center">
-                    <form onSubmit={enviar}>
+                    <form onSubmit={enviar} id="loginForm">
                         <div className="row g-0">
                             <div className="col-4 p-1">
                                 <div className="input-group mb-3 shadow ">
-                                    <span className="input-group-text" id="Usuario">@</span>
+                                    <span className="input-group-text" id="Usuario"><i className="fa-regular fa-user"></i></span>
                                     <input
-                                        id="mail"
-                                        onChange={e => setMail(e.target.value)}
-                                        name="mail"
+                                        id="user"
+                                        onChange={e => setuser(e.target.value)}
+                                        name="user"
                                         type="text"
                                         className="form-control "
                                         placeholder="Usuario"
@@ -87,9 +107,17 @@ export const Header = () => {
                     </form>
                 </div>
                 <div className="col-lg-2 py-2 d-flex justify-content-center align-items-center">
-                    <Link className="font_impact text-decoration-none fs-3">
+                    <Link to="/registro" className={reg}>
                         Registro <i className="fa-solid fa-user-astronaut"></i>
                     </Link>
+                    <div className="fw-bold">{store.username_temp}</div>
+                    <div className={btn} id="btnLogOut">
+                        <a href="#" onClick={refrescar} className="text-danger ps-3 fs-3">
+                            <span>
+                                <i className="fas fa-sign-out-alt" />
+                            </span>
+                        </a>
+                    </div>
                 </div>
                 <div className="col-lg-2 d-flex justify-content-center align-items-center">
                     <div className="row w-100 g-0 d-none d-lg-block">
@@ -265,9 +293,14 @@ export const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="list-inline-item ul-drop px-3">
+                                    <li class={lineas}>
                                         <Link to="/lineas_generales" className="text-decoration-none text-white">
                                             Lineas <i className="fa-solid fa-ranking-star"></i>
+                                        </Link>
+                                    </li>
+                                    <li class={lineas}>
+                                        <Link to="/perfil" className="text-decoration-none text-white">
+                                            Perfil <i className="fa-solid fa-user-tie"></i>
                                         </Link>
                                     </li>
                                     <li class="list-inline-item ul-drop-2 px-3">

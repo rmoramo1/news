@@ -53,7 +53,7 @@ function Home() {
 					</div>
 				</div>
 				<div className="col-lg-3 p-1 d-none d-lg-block">
-					<div className="col-12 rounded_span shadow_spans bg-white ">
+					<div className="col-12 rounded_span shadow_spans bg-white">
 						<Podcast />
 					</div>
 					<div className="col-12 mt-2 rounded_span shadow_spans bg-white">

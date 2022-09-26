@@ -128,7 +128,10 @@ const Odds_To_Win = lazy(() => import('./display_lines/globals/odds_to_win'));
 const Error = lazy(() => import('./pages/404'));
 // lineas generales
 const Lineas_Generales =lazy(()=>import('./pages/lineas_generales'));
-
+// registro
+const Registro = lazy(()=>import('./pages/registro'));
+//perfil
+const Perfil = lazy(()=>import('./pages/perfil'));
 function App() {
 	return (
 		<div className="App">
@@ -262,6 +265,8 @@ function App() {
 						<Route path="/odds_to_win/:theid" component={Odds_To_Win} />
 						{/* lineas_generales */}
 						<Route path="/lineas_generales" component={Lineas_Generales} />
+						<Route path="/registro" component={Registro} />
+						<Route path="/perfil" component={Perfil} />
 						<Route>
 							<Error />
 						</Route>

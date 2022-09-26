@@ -2,6 +2,15 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import logo from '../assets/img/ins365_logo_blanco.png';
 export const Menu_Movil = () => {
+    let roy = window.localStorage.getItem("my_token", JSON.stringify());
+    let btn;
+    let reg;
+    let lineas;
+    if (!roy) {
+        lineas="d-none";
+    } else {
+        lineas="col-12 mt-3";
+    }
     return (
         <div className="container" id="menu_movil">
             <div className="col-12 text-end">
@@ -235,7 +244,7 @@ export const Menu_Movil = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-12 mt-3">
+                    <div className={lineas}>
                         <a class="btn btn_orange col-12" data-bs-dismiss="offcanvas" href="/lineas_generales">
                             Lineas <i className="fa-solid fa-ranking-star"></i>
                         </a>

@@ -1,0 +1,44 @@
+import React, { useContext,useState } from 'react';
+import { Context } from "../store/appContext";
+import { Single_Usuario } from '../components/single_usuario';
+function Perfil() {
+    const { store } = useContext(Context);
+    let roy = window.localStorage.getItem("my_token", JSON.stringify());
+    if (!roy) {
+        window.location.href = '/';
+    } else {
+
+    }
+    const[roy_je, setRoy_je]= useState(store.username_temp);
+
+    console.log(store.username_temp)
+    return (
+        <div className="container-fluid p-2">
+            <div className="rounded_span shadow_spans bg-white">
+                <div className="container">
+                    {
+                        store.user.map((item, index) => {
+                            if (roy_je == item.user) {
+                                return (
+                                    <div key={index} className="">
+                                        <Single_Usuario
+                                            id={index}
+                                            country={item.country}
+                                            mail={item.mail}
+                                            user={item.user}
+                                            name={item.name}
+                                            born={item.born}
+                                        />
+                                    </div>
+                                )
+                            }
+                        })
+                    }
+                </div>
+
+            </div>
+        </div>
+    )
+}
+export default Perfil;
+

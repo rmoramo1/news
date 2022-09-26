@@ -15,6 +15,12 @@ import BS_MX_Games from "../display_lines/baseball_mexico/bs_mx_games";
 import Nascar_Runs from "../display_lines/nascar/nascar_runs";
 import Moto_GP_Runs from "../display_lines/moto_gp/moto_gp_runs";
 function Lineas_Generales() {
+    let roy = window.localStorage.getItem("my_token", JSON.stringify());
+        if (!roy) {
+        window.location.href = '/';
+    } else {
+
+    }
     return (
         <div className="container-fluid p-2" id="lineas_general">
             <div className="rounded_span shadow_spans bg-white">
