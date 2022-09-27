@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 import logo from '../assets/img/logo.webp';
 import { Link } from "react-router-dom";
@@ -18,7 +18,7 @@ export const Header = () => {
         window.location.reload(true)
     };
     const enviar = e => {
-        actualizar(); 
+        actualizar();
         e.preventDefault();
         const body = { user: user, password: password };
 
@@ -41,18 +41,22 @@ export const Header = () => {
             })
             .catch(error => alert("Usuario o contraseña incorrectos"));
     };
-    let roy = window.localStorage.getItem("my_token", JSON.stringify());
+
+    let roy = store.username_temp;
     let btn;
     let reg;
     let lineas;
+    let form;
     if (!roy) {
-        lineas="d-none";
+        lineas = "d-none";
         btn = "d-none";
         reg = "d-block font_impact text-decoration-none fs-3";
+        form = ""
     } else {
         btn = "d-block col-1 float-left";
         reg = "d-none";
-        lineas="d-inline list-inline-item ul-drop px-3";
+        lineas = "d-inline list-inline-item ul-drop px-3";
+        form = "d-none";
     }
     return (
         <div className="container-fluid p-0 bg-white fs-5">
@@ -63,10 +67,10 @@ export const Header = () => {
                     </Link>
                 </div>
                 <div className="col-lg-5 d-flex justify-content-center align-items-center">
-                    <form onSubmit={enviar} id="loginForm">
+                    <form className={form} onSubmit={enviar} id="loginForm">
                         <div className="row g-0">
                             <div className="col-4 p-1">
-                                <div className="input-group mb-3 shadow ">
+                                <div className="input-group mb-3 shadow">
                                     <span className="input-group-text" id="Usuario"><i className="fa-regular fa-user"></i></span>
                                     <input
                                         id="user"
@@ -166,6 +170,11 @@ export const Header = () => {
                                                     Jugadores
                                                 </Link>
                                             </li> */}
+                                            <li className="li_drop">
+                                                <Link to="/injurie_nfl" className="text-decoration-none">
+                                                    Leciones
+                                                </Link>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li class="list-inline-item ul-drop px-3">NBA <i className="fa-solid fa-basketball"></i>

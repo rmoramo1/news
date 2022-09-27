@@ -62,7 +62,7 @@ function Home() {
 				</div>
 			</div>
 			<div className="cont_off_top_head">
-				<div className="offcanvas offcanvas-start" tabindex="-1" id="Titulares_principales" aria-labelledby="offcanvasTopLabel">
+				<div className="offcanvas offcanvas-start" tabIndex="-1" id="Titulares_principales" aria-labelledby="offcanvasTopLabel">
 					<div className="offcanvas-header">
 						<button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 					</div>
@@ -70,7 +70,7 @@ function Home() {
 						<Top_Headlines />
 					</div>
 				</div>
-				<div className="offcanvas offcanvas-end" tabindex="-1" id="Lineas_Off_Can" aria-labelledby="offcanvasTopLabel">
+				<div className="offcanvas offcanvas-end" tabIndex="-1" id="Lineas_Off_Can" aria-labelledby="offcanvasTopLabel">
 					<div className="offcanvas-header">
 						<button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 					</div>
@@ -80,7 +80,7 @@ function Home() {
 						<div className="col-12 rounded_span shadow_spans bg-white mt-2"><Eventos /></div>
 					</div>
 				</div>
-				<div className="offcanvas offcanvas-end" tabindex="-1" id="Juegos_dia" aria-labelledby="offcanvasTopLabel">
+				<div className="offcanvas offcanvas-end" tabIndex="-1" id="Juegos_dia" aria-labelledby="offcanvasTopLabel">
 					<div className="offcanvas-header">
 						<button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 					</div>

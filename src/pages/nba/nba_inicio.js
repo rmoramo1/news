@@ -75,7 +75,7 @@ function NBA_Inicio() {
                         <div className="d-none d-lg-block">
 
                             <div className='col-12 font_impact fs-3 text-center'>
-                                <span className="font_color_base"><i class="fa-solid fa-newspaper"></i></span> <span className="">Titulares Principales</span>
+                                <span className="font_color_base"><i className="fa-solid fa-newspaper"></i></span> <span className="">Titulares Principales</span>
                             </div>
                             <div className="col-12">
                                 {noticiasFilter.map((item, index) => {
@@ -178,7 +178,7 @@ function NBA_Inicio() {
                 </div>
             </div>
             <div className='cont_off_top_head'>
-                <div className="offcanvas offcanvas-start" tabindex="-1" id="Titulares_principales" aria-labelledby="offcanvasTopLabel">
+                <div className="offcanvas offcanvas-start" tabIndex="-1" id="Titulares_principales" aria-labelledby="offcanvasTopLabel">
                     <div className="offcanvas-header">
                     <h5 className="font_bold">Titulares Principales</h5>
                         <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -200,7 +200,7 @@ function NBA_Inicio() {
                         </div>
                     </div>
                 </div>
-                <div className="offcanvas offcanvas-end" tabindex="-1" id="Lineas_Off_Can" aria-labelledby="offcanvasTopLabel">
+                <div className="offcanvas offcanvas-end" tabIndex="-1" id="Lineas_Off_Can" aria-labelledby="offcanvasTopLabel">
                     <div className="offcanvas-header">
                         <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
@@ -230,7 +230,7 @@ function NBA_Inicio() {
                         </div>
                     </div>
                 </div>
-                <div className="offcanvas offcanvas-bottom" tabindex="-1" id="Tabla_posiciones" aria-labelledby="offcanvasTopLabel">
+                <div className="offcanvas offcanvas-bottom" tabIndex="-1" id="Tabla_posiciones" aria-labelledby="offcanvasTopLabel">
                     <div className="offcanvas-header">
                         <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>

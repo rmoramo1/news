@@ -124,7 +124,7 @@ function Tenista() {
                         </div>
                         <div className="col-12 pt-3">
                             <div className='col-12 font_impact fs-4 text-center'>
-                                <span className="font_color_base"><i class="fa-solid fa-newspaper"></i></span> <span className="">Titulares Principales</span>
+                                <span className="font_color_base"><i className="fa-solid fa-newspaper"></i></span> <span className="">Titulares Principales</span>
                             </div>
                             {
                                 noticiasFilter.map((item, index) => {

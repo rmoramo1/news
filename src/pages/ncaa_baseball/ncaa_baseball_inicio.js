@@ -66,7 +66,7 @@ function NCAA_BASEBALL_Inicio() {
                             </div> */}
                         </div>
                         <div className='col-12 font_impact fs-3 text-center'>
-                            <span className="font_color_base"><i class="fa-solid fa-newspaper"></i></span> <span className="">Titulares Principales</span>
+                            <span className="font_color_base"><i className="fa-solid fa-newspaper"></i></span> <span className="">Titulares Principales</span>
                         </div>
                         <div className="col-12">
                             {noticiasFilter.map((item, index) => {

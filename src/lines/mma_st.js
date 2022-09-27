@@ -203,7 +203,7 @@ function MMA_st() {
                 </div>
             </div>
             <div className='cont_off_top_head'>
-                <div className="offcanvas offcanvas-start" tabindex="-1" id="Titulares_principales" aria-labelledby="offcanvasTopLabel">
+                <div className="offcanvas offcanvas-start" tabIndex="-1" id="Titulares_principales" aria-labelledby="offcanvasTopLabel">
                     <div className="offcanvas-header">
                         <h5 className="font_bold">Titulares Principales</h5>
                         <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -225,7 +225,7 @@ function MMA_st() {
                         </div>
                     </div>
                 </div>
-                <div className="offcanvas offcanvas-end" tabindex="-1" id="Lineas_Off_Can" aria-labelledby="offcanvasTopLabel">
+                <div className="offcanvas offcanvas-end" tabIndex="-1" id="Lineas_Off_Can" aria-labelledby="offcanvasTopLabel">
                     <div className="offcanvas-header">
                         <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>

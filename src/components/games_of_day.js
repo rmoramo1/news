@@ -23,29 +23,29 @@ export const Games_of_Day = props => {
         dayShow.push(dayLux);
     }
 
-    const [year, setyear] = useState(yearLux);
-    const [month, setmonth] = useState(monthShow);
+    const [year ] = useState(yearLux);
+    const [month] = useState(monthShow);
     let R_date = month;
 
     let nbaFilter = store.nba_games;
-    var byDate = nbaFilter;
-    byDate.sort(function (a, b) {
+    var byDate_nba = nbaFilter;
+    byDate_nba.sort(function (a, b) {
         return b.id - a.id;
     });
 
     let nflFilter = store.nfl;
-    var byDate = nflFilter;
-    byDate.sort(function (a, b) {
+    var byDate_nfl = nflFilter;
+    byDate_nfl.sort(function (a, b) {
         return b.id - a.id;
     });
     let mlbFilter = store.mlb;
-    var byDate = mlbFilter;
-    byDate.sort(function (a, b) {
+    var byDate_mlb = mlbFilter;
+    byDate_mlb.sort(function (a, b) {
         return b.id - a.id;
     });
     let nhlFilter = store.nhl;
-    var byDate = nhlFilter;
-    byDate.sort(function (a, b) {
+    var byDate_nhl = nhlFilter;
+    byDate_nhl.sort(function (a, b) {
         return b.id - a.id;
     });
     let mostrar_juegos = ["NFL", "NBA", "MLB", "NHL"];
@@ -54,25 +54,25 @@ export const Games_of_Day = props => {
     let class_display_nfl;
     let class_display_mlb;
     let class_display_nhl;
-    if (display == "NBA") {
+    if (display === "NBA") {
         class_display_nba = "d-block";
         class_display_nfl = "d-none";
         class_display_mlb = "d-none";
         class_display_nhl = "d-none";
     }
-    if (display == "NFL") {
+    if (display === "NFL") {
         class_display_nfl = "d-block";
         class_display_nba = "d-none";
         class_display_mlb = "d-none";
         class_display_nhl = "d-none";
     }
-    if (display == "MLB") {
+    if (display === "MLB") {
         class_display_mlb = "d-block";
         class_display_nfl = "d-none";
         class_display_nba = "d-none";
         class_display_nhl = "d-none";
     }
-    if (display == "NHL") {
+    if (display === "NHL") {
         class_display_nhl = "d-block";
         class_display_mlb = "d-none";
         class_display_nfl = "d-none";

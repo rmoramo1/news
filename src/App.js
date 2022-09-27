@@ -20,6 +20,7 @@ const Punting_Player_Stats = lazy(() => import('./lines/nfl_py_stats/punting_py'
 const Kicking_Player_Stats = lazy(() => import('./lines/nfl_py_stats/kicking_py'));
 const Nfl_All_Data = lazy(() => import('./display_lines/nfl/nfl_all_data'));
 const Nfl_Team_stats = lazy(() => import('./display_lines/nfl/nfl_team_stats'));
+const Single_Injurie = lazy(()=>import('./injuries/nfl/injurie_nfl'));
 /*nba*/
 const NBA_Inicio = lazy(() => import('./pages/nba/nba_inicio'));
 const Results_NBA = lazy(() => import('./display_lines/nba/results_nba'));
@@ -151,6 +152,7 @@ function App() {
 						<Route path="/jugadores_nfl" component={Jugadores_NFL} />
 						<Route path="/nfl_all_data" component={Nfl_All_Data} />
 						<Route path="/nfl_team_stats" component={Nfl_Team_stats} />
+						<Route path="/injurie_nfl" component={Single_Injurie} />
 						<Route path="/offensive_py/:theid" component={Offensive_Player_Stats} />
 						<Route path="/deffensive_py/:theid" component={Deffensive_Player_Stats} />
 						<Route path="/returning_py/:theid" component={Returning_Player_Stats} />

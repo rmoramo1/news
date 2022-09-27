@@ -3,13 +3,11 @@ import { Link } from "react-router-dom";
 import logo from '../assets/img/ins365_logo_blanco.png';
 export const Menu_Movil = () => {
     let roy = window.localStorage.getItem("my_token", JSON.stringify());
-    let btn;
-    let reg;
     let lineas;
     if (!roy) {
-        lineas="d-none";
+        lineas = "d-none";
     } else {
-        lineas="col-12 mt-3";
+        lineas = "col-12 mt-3";
     }
     return (
         <div className="container" id="menu_movil">
@@ -36,22 +34,22 @@ export const Menu_Movil = () => {
                 </div>
             </div>
 
-            <div className="offcanvas offcanvas-top" tabindex="-1" id="menu_movil_off" aria-labelledby="offcanvasExampleLabel">
+            <div className="offcanvas offcanvas-top" tabIndex="-1" id="menu_movil_off" aria-labelledby="offcanvasExampleLabel">
                 <div className="offcanvas-header">
                     <h5 className="offcanvas-title" id="offcanvasExampleLabel">
                         <a href="/home" data-bs-dismiss="offcanvas">
-                        <img src={logo} className="img-fluid"></img>
+                            <img src={logo} className="img-fluid"></img>
                         </a>
                     </h5>
                     <button type="button" className="btn text-white fs-1" data-bs-dismiss="offcanvas" aria-label="Close"> <i className="fa-solid fa-xmark"></i></button>
                 </div>
                 <div className="offcanvas-body">
                     <div className="col-12">
-                        <a class="btn btn_orange col-12" data-bs-toggle="collapse" href="#collapse_nfl" role="button" aria-expanded="false" aria-controls="collapse_nfl">
+                        <a className="btn btn_orange col-12" data-bs-toggle="collapse" href="#collapse_nfl" role="button" aria-expanded="false" aria-controls="collapse_nfl">
                             NFL <i className="fa-solid fa-football"></i>
                         </a>
-                        <div class="collapse" id="collapse_nfl">
-                            <div class="card card-body">
+                        <div className="collapse" id="collapse_nfl">
+                            <div className="card card-body">
                                 <Link className="text-decoration-none" data-bs-dismiss="offcanvas" to="/nfl_inicio">
                                     Portada
                                 </Link>
@@ -67,6 +65,9 @@ export const Menu_Movil = () => {
                                 <Link to="/nfl_team_stats" data-bs-dismiss="offcanvas" className="text-decoration-none">
                                     Estadísticas
                                 </Link>
+                                <Link to="/injurie_nfl" data-bs-dismiss="offcanvas" className="text-decoration-none">
+                                    Leciones
+                                </Link>
 
                                 {/* <Link to="/jugadores_nfl" data-bs-dismiss="offcanvas" className="text-decoration-none">
                                     Jugadores
@@ -75,11 +76,11 @@ export const Menu_Movil = () => {
                         </div>
                     </div>
                     <div className="col-12 mt-4">
-                        <a class="btn btn_orange col-12" data-bs-toggle="collapse" href="#collapse_nba" role="button" aria-expanded="false" aria-controls="collapse_nba">
+                        <a className="btn btn_orange col-12" data-bs-toggle="collapse" href="#collapse_nba" role="button" aria-expanded="false" aria-controls="collapse_nba">
                             NBA <i className="fa-solid fa-basketball"></i>
                         </a>
-                        <div class="collapse" id="collapse_nba">
-                            <div class="card card-body">
+                        <div className="collapse" id="collapse_nba">
+                            <div className="card card-body">
                                 <Link className="text-decoration-none" data-bs-dismiss="offcanvas" to="/nba_inicio">
                                     Portada
                                 </Link>
@@ -103,11 +104,11 @@ export const Menu_Movil = () => {
                         </div>
                     </div>
                     <div className="col-12 mt-4">
-                        <a class="btn btn_orange col-12" data-bs-toggle="collapse" href="#collapse_mlb" role="button" aria-expanded="false" aria-controls="collapse_mlb">
+                        <a className="btn btn_orange col-12" data-bs-toggle="collapse" href="#collapse_mlb" role="button" aria-expanded="false" aria-controls="collapse_mlb">
                             MLB <i className="fa-solid fa-baseball-bat-ball"></i>
                         </a>
-                        <div class="collapse" id="collapse_mlb">
-                            <div class="card card-body">
+                        <div className="collapse" id="collapse_mlb">
+                            <div className="card card-body">
                                 <Link className="text-decoration-none" data-bs-dismiss="offcanvas" to="/mlb_inicio">
                                     Portada
                                 </Link>
@@ -131,11 +132,11 @@ export const Menu_Movil = () => {
                         </div>
                     </div>
                     <div className="col-12 mt-4">
-                        <a class="btn btn_orange col-12" data-bs-toggle="collapse" href="#collapse_nhl" role="button" aria-expanded="false" aria-controls="collapse_nhl">
+                        <a className="btn btn_orange col-12" data-bs-toggle="collapse" href="#collapse_nhl" role="button" aria-expanded="false" aria-controls="collapse_nhl">
                             NHL <i className="fa-solid fa-hockey-puck"></i>
                         </a>
-                        <div class="collapse" id="collapse_nhl">
-                            <div class="card card-body">
+                        <div className="collapse" id="collapse_nhl">
+                            <div className="card card-body">
                                 <Link className="text-decoration-none" data-bs-dismiss="offcanvas" to="/nhl_inicio">
                                     Portada
                                 </Link>
@@ -159,11 +160,11 @@ export const Menu_Movil = () => {
                         </div>
                     </div>
                     <div className="col-12 mt-4">
-                        <a class="btn btn_orange col-12" data-bs-toggle="collapse" href="#collapse_soccer" role="button" aria-expanded="false" aria-controls="collapse_soccer">
+                        <a className="btn btn_orange col-12" data-bs-toggle="collapse" href="#collapse_soccer" role="button" aria-expanded="false" aria-controls="collapse_soccer">
                             SOCCER <i className="fa-solid fa-futbol"></i>
                         </a>
-                        <div class="collapse" id="collapse_soccer">
-                            <div class="card card-body">
+                        <div className="collapse" id="collapse_soccer">
+                            <div className="card card-body">
                                 <Link className="text-decoration-none" data-bs-dismiss="offcanvas" to="/soccer_inicio">
                                     Portada
                                 </Link>
@@ -187,11 +188,11 @@ export const Menu_Movil = () => {
                         </div>
                     </div>
                     <div className="col-12 mt-4">
-                        <a class="btn btn_orange col-12" data-bs-toggle="collapse" href="#collapse_mma" role="button" aria-expanded="false" aria-controls="collapse_mma">
+                        <a className="btn btn_orange col-12" data-bs-toggle="collapse" href="#collapse_mma" role="button" aria-expanded="false" aria-controls="collapse_mma">
                             MMA <i className="fa-solid fa-hand-fist"></i>
                         </a>
-                        <div class="collapse" id="collapse_mma">
-                            <div class="card card-body">
+                        <div className="collapse" id="collapse_mma">
+                            <div className="card card-body">
                                 <Link className="text-decoration-none" data-bs-dismiss="offcanvas" to="/mma_inicio">
                                     Portada
                                 </Link>
@@ -207,11 +208,11 @@ export const Menu_Movil = () => {
                         </div>
                     </div>
                     <div className="col-12 mt-4">
-                        <a class="btn btn_orange col-12" data-bs-toggle="collapse" href="#collapse_mas_deportess" role="button" aria-expanded="false" aria-controls="collapse_mas_deportess">
+                        <a className="btn btn_orange col-12" data-bs-toggle="collapse" href="#collapse_mas_deportess" role="button" aria-expanded="false" aria-controls="collapse_mas_deportess">
                             Mas Deportes <i className="fa-solid fa-plus"></i>
                         </a>
-                        <div class="collapse" id="collapse_mas_deportess">
-                            <div class="card card-body">
+                        <div className="collapse" id="collapse_mas_deportess">
+                            <div className="card card-body">
                                 <Link className="text-decoration-none" data-bs-dismiss="offcanvas" to="/ncaa_f_inicio">
                                     NCAA <i className="fa-solid fa-football"></i>
                                 </Link>
@@ -245,12 +246,17 @@ export const Menu_Movil = () => {
                         </div>
                     </div>
                     <div className={lineas}>
-                        <a class="btn btn_orange col-12" data-bs-dismiss="offcanvas" href="/lineas_generales">
+                        <a className="btn btn_orange col-12" data-bs-dismiss="offcanvas" href="/lineas_generales">
                             Lineas <i className="fa-solid fa-ranking-star"></i>
                         </a>
                     </div>
+                    <div className={lineas}>
+                        <a className="btn btn_orange col-12" data-bs-dismiss="offcanvas" href="/perfil">
+                            Perfil <i className="fa-solid fa-user-tie"></i>
+                        </a>
+                    </div>
                     <div className="col-12 mt-3">
-                        <a class="btn btn_orange col-12" data-bs-dismiss="offcanvas"  href="#">
+                        <a className="btn btn_orange col-12" data-bs-dismiss="offcanvas" href="#">
                             PODCAST <i className="fa-solid fa-microphone"></i>
                         </a>
                     </div>

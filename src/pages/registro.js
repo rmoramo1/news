@@ -9,13 +9,14 @@ import bg_register from '../assets/img/register.webp'
 
 function Registro() {
     const { store } = useContext(Context);
-    let roy = window.localStorage.getItem("my_token", JSON.stringify());
-    // if (!roy) {
-    //     window.location.href = '/';
-    // } else {
+    let roy = store.username_temp;
+    if (!roy) {
+        window.location.href = '/';
+    } else {
 
-    // }
+    }
     const [startDate, setStartDate] = useState(new Date());
+    console.log(startDate)
 
     const [name, setname] = useState();
     const [mail, setmail] = useState();
@@ -24,7 +25,6 @@ function Registro() {
 
     const [password, setpassword] = useState("roy");
     const [confirmPassword, setconfirmPassword] = useState();
-    const [error, setError] = useState(false);
     if (password == confirmPassword) {
         document.getElementById("btnSub").removeAttribute("disabled");
     }
@@ -51,16 +51,14 @@ function Registro() {
             .then(data => {
                 sessionStorage.setItem("my_token", data.token);
                 alert("Usuario creado con éxito");
-      
+
             })
             .catch(err => alert("No se ha podido crear el Usuario"));
     };
     const [passwordShown, setPasswordShown] = useState(false);
     const togglePassword = () => {
-        // When the handler is invoked
-        // inverse the boolean state of passwordShown
         setPasswordShown(!passwordShown);
-      };
+    };
     return (
         <div className="container-fluid rounded_span shadow_spans my-1 bg-white">
             <div className="col-12 text-center font_impact font_color_base my-4">
@@ -87,7 +85,14 @@ function Registro() {
                                     <input type="text" className="form-control selectInner" placeholder="País" name="pais" onChange={e => setcountry(e.target.value)} required />
                                 </div>
                                 <div className="col-12 my-3">
-                                    <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+                                    <DatePicker
+                                        dateFormat="dd/MM/yyyy"
+                                        selected={startDate}
+                                        peekNextMonth
+                                        showMonthDropdown
+                                        showYearDropdown
+                                        dropdownMode="select"
+                                        onChange={(date) => setStartDate(date)} />
                                 </div>
                                 <div className="col-12 my-3">
                                     <input type={passwordShown ? "text" : "password"} className="form-control selectInner" placeholder="Contraseña" name="Contraseña" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" onChange={e => setpassword(e.target.value)} required />
@@ -100,7 +105,7 @@ function Registro() {
                                     <input type={passwordShown ? "text" : "password"} className="form-control selectInner" placeholder="Confirme Contraseña" name="Confirme Contraseña" onChange={e => setconfirmPassword(e.target.value)} required />
                                 </div>
                                 <div className="col-12 my-3">
-                                    <button class="btn btn-primary" type="button" onClick={togglePassword}><i className="fa-regular fa-eye"></i></button>
+                                    <button className="btn btn-primary" type="button" onClick={togglePassword}><i className="fa-regular fa-eye"></i></button>
                                 </div>
                                 <div className="col-12 text-center py-3">
                                     <button id="btnSub" type="submit" className="btn btn-danger" disabled>Create</button>

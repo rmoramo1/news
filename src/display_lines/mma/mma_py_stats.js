@@ -22,7 +22,11 @@ function MMA_PY_STATS() {
     for (let i = 2002; i < 2025; i++) {
         selectYear.push(i);
     }
-
+	let mmaFilter = store.stats_mma_fighter;
+	var byWin = mmaFilter;
+	byWin.sort(function(a,b) {
+		return b.w - a.w;
+	});
     return (
         <div className="container-fluid p-2">
             <div className="rounded_span shadow_spans bg-white">
@@ -67,7 +71,7 @@ function MMA_PY_STATS() {
                         <div className="diezSiete_spans">L OTHERS</div>
                     </div>
                     {
-                        store.stats_mma_fighter.map((item, index) => {
+                        mmaFilter.map((item, index) => {
                             let ano = item.season;
                             if (ano == year) {
                                 return (

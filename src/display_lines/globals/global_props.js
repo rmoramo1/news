@@ -56,7 +56,6 @@ export const Nfl_Props = () => {
                 {
                     propsFilter.map((item, index) => {
                         if (item.sport == sport) {
-                            console.log(item.sport)
                             return (
                                 <div className="col-lg-6 p-2" key={index}>
                                     <Props

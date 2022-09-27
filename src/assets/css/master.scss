@@ -58,7 +58,9 @@ body {
 .border_right {
   border-right: 1px groove lighten($black, 98);
 }
-
+.border_left {
+  border-left: 1px groove lighten($black, 98);
+}
 .bb1px {
   border-bottom: 1px solid rgba($grey, .80);
 }

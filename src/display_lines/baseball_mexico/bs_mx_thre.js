@@ -19,7 +19,6 @@ export const NBA_Thre_q = () => {
     const [year, setyear] = useState(yearLux);
     const [month, setmonth] = useState(monthShow);
     const [typeOfLine, settypeOfLine] = useState("");
-    console.log(typeOfLine)
     let R_date = month;
     let selectYear = [];
     for (let i = 2002; i < 2025; i++) {

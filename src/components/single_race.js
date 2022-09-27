@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from "prop-types";
 
 export const Single_Race = props => {
-
     return (
         <div className="row g-0 bb1px">
             <div className="row g-0 text-center">

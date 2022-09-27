@@ -59,7 +59,7 @@ function Results_Nfl() {
                     <div className="col-lg-2 border_right">
                         <div className="d-none d-lg-block">
                             <div className='col-12 font_impact fs-4 text-center'>
-                                <span className="font_color_base"><i class="fa-solid fa-newspaper"></i></span> <span className="">Titulares Principales</span>
+                                <span className="font_color_base"><i className="fa-solid fa-newspaper"></i></span> <span className="">Titulares Principales</span>
                             </div>
                             <div className="col-12">
                                 {noticiasFilter.map((item, index) => {
@@ -154,14 +154,14 @@ function Results_Nfl() {
                 </div>
             </div>
             <div className='cont_off_top_head'>
-                <div className="offcanvas offcanvas-start" tabindex="-1" id="Titulares_principales" aria-labelledby="offcanvasTopLabel">
+                <div className="offcanvas offcanvas-start" tabIndex="-1" id="Titulares_principales" aria-labelledby="offcanvasTopLabel">
                     <div className="offcanvas-header">
                         <h5 className="font_bold">Titulares Principales</h5>
                         <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div className="offcanvas-body">
                         <div className='col-12 font_impact fs-4 text-center'>
-                            <span className="font_color_base"><i class="fa-solid fa-newspaper"></i></span> <span className="">Titulares Principales</span>
+                            <span className="font_color_base"><i className="fa-solid fa-newspaper"></i></span> <span className="">Titulares Principales</span>
                         </div>
                         <div className="col-12">
                             {noticiasFilter.map((item, index) => {
@@ -179,7 +179,7 @@ function Results_Nfl() {
                         </div>
                     </div>
                 </div>
-                <div className="offcanvas offcanvas-end" tabindex="-1" id="Games_of_Day" aria-labelledby="offcanvasTopLabel">
+                <div className="offcanvas offcanvas-end" tabIndex="-1" id="Games_of_Day" aria-labelledby="offcanvasTopLabel">
                     <div className="offcanvas-header">
                         <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>

@@ -52,7 +52,7 @@ function Results_NBA() {
                 <div className="row g-0">
                     <div className="col-lg-2 border_right">
                         <div className='col-12 font_impact fs-4 text-center'>
-                            <span className="font_color_base"><i class="fa-solid fa-newspaper"></i></span> <span className="">Titulares Principales</span>
+                            <span className="font_color_base"><i className="fa-solid fa-newspaper"></i></span> <span className="">Titulares Principales</span>
                         </div>
                         <div className="col-12">
                             {noticiasFilter.map((item, index) => {

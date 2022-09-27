@@ -3,15 +3,13 @@ import { Context } from "../store/appContext";
 import { Single_Usuario } from '../components/single_usuario';
 function Perfil() {
     const { store } = useContext(Context);
-    let roy = window.localStorage.getItem("my_token", JSON.stringify());
+    let roy = store.username_temp;
     if (!roy) {
         window.location.href = '/';
     } else {
 
     }
     const[roy_je, setRoy_je]= useState(store.username_temp);
-
-    console.log(store.username_temp)
     return (
         <div className="container-fluid p-2">
             <div className="rounded_span shadow_spans bg-white">

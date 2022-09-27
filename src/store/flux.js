@@ -531,7 +531,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			//name
 			changename: username => {
-				setStore({ username_temp: username });
+				let rs = JSON.parse( localStorage.getItem('my_token'));
+				if(!rs){
+
+				}else{
+					setStore({ username_temp: rs.username });
+				}
 			}
 		}
 	};
