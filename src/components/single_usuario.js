@@ -41,25 +41,25 @@ export const Single_Usuario = props => {
 				alert("The form was not submitted correctly");
 				console.log('FAILED...', err);
 			});
-			e.target.reset()
-		};
-		
-		const onChangeValueType = (e) => {
-			const valor = e.target.value
-			toSend.type = valor;
-			
-		}
+		e.target.reset()
+	};
+
+	const onChangeValueType = (e) => {
+		const valor = e.target.value
+		toSend.type = valor;
+
+	}
 	const handleArticulos = (e) => {
 		const target = e.target;
 		const value = target.type === 'checkbox' ? target.checked : target.value;
 		toSend.SportsCasinoHorses = value;
-		
+
 	}
 	const promoVipPerHead = (e) => {
 		const target = e.target;
 		const value = target.type === 'checkbox' ? target.checked : target.value;
 		toSend.LiveBettin = value;
-		
+
 	}
 	const bonoSportsbbok = (e) => {
 		const target = e.target;
@@ -71,7 +71,7 @@ export const Single_Usuario = props => {
 		const target = e.target;
 		const value = target.type === 'checkbox' ? target.checked : target.value;
 		toSend.LiveCasino = value;
-		
+
 	}
 	const alertResultados = (e) => {
 		const target = e.target;
@@ -98,17 +98,19 @@ export const Single_Usuario = props => {
 		const value = target.type === 'checkbox' ? target.checked : target.value;
 		toSend.equipos_nhl.push(target.value)
 	}
-	console.log(toSend.equipos_nfl);
 	const handlePropBuilder = (e) => {
 		const target = e.target;
 		const value = target.type === 'checkbox' ? target.checked : target.value;
 		toSend.PropBuilder = value;
-		
+
 	}
+	let rsj = props.born;
+	let rcj = rsj.slice(0,10);
+
 	return (
 		<div className="row g-0 bb1px">
 			<div className="col-12 text-center mt-3">
-				<h2>Bienvenido {props.name} </h2>
+				<h1>Bienvenido {props.name} </h1>
 			</div>
 			<div className="col-12 my-5">
 				<p>
@@ -123,7 +125,8 @@ export const Single_Usuario = props => {
 						<div className="col-12">Usuario: {props.user}</div>
 						<div className="col-12">País: {props.country}</div>
 						<div className="col-12">Email: {props.mail}</div>
-						<div className="col-12">Fecha de Nacimiento: {props.born}</div>
+						<div className="col-12">Fecha de Nacimiento: {rcj}</div>
+						<div className="col-12">Tipo de Subscripción: {props.subscription}</div>
 					</div>
 					<div className="col-12 py-5">
 						<p>Its hands were holograms that altered to match the convolutions of the Flatline as a construct, a hardwired ROM cassette replicating a dead man’s skills, obsessions, kneejerk responses. Images formed and reformed: a flickering montage of the Sprawl’s towers and ragged Fuller domes
@@ -132,7 +135,7 @@ export const Single_Usuario = props => {
 					<div className="col-12">
 						<form onSubmit={contacSend}>
 							<div className="row g-0">
-								<div className="col-lg-8">
+								<div className="col-lg-12">
 									<div className="row g-0" onChange={onChangeValueType}>
 										<div className="col-6">
 											<div className="form-check py-2">
@@ -145,13 +148,13 @@ export const Single_Usuario = props => {
 												<div className="form-check py-2">
 													<input className="form-check-input" type="checkbox" name="LiveBettin" id="LiveBettin" value="Live Bettin" onChange={promoVipPerHead} />
 													<label className="form-check-label" htmlFor="LiveBettin">
-														Promociones Especiales de Vip Per Head
+														Promociones Especiales de Per Head
 													</label>
 												</div>
 												<div className="form-check py-2">
 													<input className="form-check-input" type="checkbox" name="LiveBettin" id="LiveBettin" value="Live Bettin" onChange={bonoSportsbbok} />
 													<label className="form-check-label" htmlFor="LiveBettin">
-														Bonos Especiales Vip Sportsbook
+														Bonos Especiales de Sportsbooks
 													</label>
 												</div>
 												<div className="form-check py-2">
@@ -178,7 +181,7 @@ export const Single_Usuario = props => {
 										</div>
 									</div>
 								</div>
-								<div className="col-lg-4 text-center border_left ps-1 maxH">
+								<div className="col-lg-12 text-center ps-1">
 									<div className="col-12">
 										<h3>Equipos para Alertas</h3>
 									</div>
@@ -199,60 +202,77 @@ export const Single_Usuario = props => {
 										</ul>
 										<div className="tab-content p-2" id="pills-tabContent">
 											<div className="tab-pane fade show active" id="pills-nfl" role="tabpanel" aria-labelledby="pills-nfl-tab">
-												{
-													store.nfl_teams.map((index) => {
-														return (
-															<div className="form-check py-2">
-																<input className="form-check-input" type="checkbox" name="equiposNFL" id="equiposNFL" value={index} onChange={equiposNFL} />
-																<label className="form-check-label" value={index} htmlFor="equiposNFL">
-																	{index}
-																</label>
-															</div>
-														)
-													})
-												}
+												<div className="row g-0">
+
+													{
+														store.nfl_teams.map((index) => {
+															return (
+																<div className="col-2">
+																	<div className="form-check py-2">
+																		<input className="form-check-input" type="checkbox" name="equiposNFL" id="equiposNFL" value={index} onChange={equiposNFL} />
+																		<label className="form-check-label" value={index} htmlFor="equiposNFL">
+																			{index}
+																		</label>
+																	</div>
+																</div>
+															)
+														})
+													}
+												</div>
 											</div>
 											<div className="tab-pane fade" id="pills-nba" role="tabpanel" aria-labelledby="pills-nba-tab">
-											{
-													store.nba_teams.map((index) => {
-														return (
-															<div className="form-check py-2">
-																<input className="form-check-input" type="checkbox" name="equiposNBA" id="equiposNBA" value={index} onChange={equiposNBA} />
-																<label className="form-check-label" value={index} htmlFor="equiposNBA">
-																	{index}
-																</label>
-															</div>
-														)
-													})
-												}
+												<div className="row g-0">
+													{
+														store.nba_teams.map((index) => {
+															return (
+																<div className="col-2">
+																	<div className="form-check py-2">
+																		<input className="form-check-input" type="checkbox" name="equiposNBA" id="equiposNBA" value={index} onChange={equiposNBA} />
+																		<label className="form-check-label" value={index} htmlFor="equiposNBA">
+																			{index}
+																		</label>
+																	</div>
+																</div>
+															)
+														})
+													}
+												</div>
 											</div>
 											<div className="tab-pane fade" id="pills-mlb" role="tabpanel" aria-labelledby="pills-mlb-tab">
-											{
-													store.mlb_teams.map((index) => {
-														return (
-															<div className="form-check py-2">
-																<input className="form-check-input" type="checkbox" name="equiposMLB" id="equiposMLB" value={index} onChange={equiposMLB} />
-																<label className="form-check-label" value={index} htmlFor="equiposMLB">
-																	{index}
-																</label>
-															</div>
-														)
-													})
-												}
+												<div className="row g-0">
+													{
+														store.mlb_teams.map((index) => {
+															return (
+																<div className="col-2">
+																	<div className="form-check py-2">
+																		<input className="form-check-input" type="checkbox" name="equiposMLB" id="equiposMLB" value={index} onChange={equiposMLB} />
+																		<label className="form-check-label" value={index} htmlFor="equiposMLB">
+																			{index}
+																		</label>
+																	</div>
+																</div>
+															)
+														})
+													}
+												</div>
 											</div>
 											<div className="tab-pane fade" id="pills-NHL" role="tabpanel" aria-labelledby="pills-mlb-tab">
-											{
-													store.nhl_teams.map((index) => {
-														return (
-															<div className="form-check py-2">
-																<input className="form-check-input" type="checkbox" name="equiposNHL" id="equiposNHL" value={index} onChange={equiposNHL} />
-																<label className="form-check-label" value={index} htmlFor="equiposNHL">
-																	{index}
-																</label>
-															</div>
-														)
-													})
-												}
+												<div className="row g-0">
+													{
+														store.nhl_teams.map((index) => {
+															return (
+																<div className="col-2">
+																	<div className="form-check py-2">
+																		<input className="form-check-input" type="checkbox" name="equiposNHL" id="equiposNHL" value={index} onChange={equiposNHL} />
+																		<label className="form-check-label" value={index} htmlFor="equiposNHL">
+																			{index}
+																		</label>
+																	</div>
+																</div>
+															)
+														})
+													}
+												</div>
 											</div>
 										</div>
 									</div>
@@ -268,7 +288,9 @@ export const Single_Usuario = props => {
 					</div>
 				</div>
 				<div className="col-lg-2">
-					<img className="img-fluid" src={imge} alt="imagen de perfil"></img>
+					<div className="col-12 py-2">
+						<img className="img-fluid" src={imge} alt="imagen de perfil"></img>
+					</div>
 				</div>
 
 			</div>
@@ -282,4 +304,5 @@ Single_Usuario.propTypes = {
 	user: PropTypes.string,
 	country: PropTypes.string,
 	born: PropTypes.string,
+	subscription: PropTypes.string,
 };

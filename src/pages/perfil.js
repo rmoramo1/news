@@ -26,6 +26,7 @@ function Perfil() {
                                             user={item.user}
                                             name={item.name}
                                             born={item.born}
+                                            subscription={item.subscription}
                                         />
                                     </div>
                                 )

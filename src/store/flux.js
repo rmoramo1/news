@@ -14,7 +14,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			logos_baseball_mexico: [],
 			injuries: [],
 			futures: [],
-			props: [],
+			odds_to_win: [],
 			nfl: [],
 			nfl_team_stats: [],
 			nfl_player_offensive_stats: [],
@@ -87,6 +87,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			noticias: [],
 			//name temporal
 			username_temp: "",
+			//tipsters
+			perfil_tipster: "",
+			picks_tipster: "",
 			//teams
 			nfl_teams: [
 				"Arizona Cardinals", "Atlanta Falcons", "Baltimore Ravens", "Buffalo Bills", "Carolina Panthers", "Chicago Bears", "Cincinnati Bengals", "Cleveland Browns", "Dallas Cowboys", "Denver Broncos", "Detroit Lions", "Green Bay Packers", "Houston Texans", "Indianapolis Colts", "Jacksonville Jaguars", "Kansas City Chiefs", "Las Vegas Raiders", "Los Angeles Chargers", "Los Angeles Rams", "Miami Dolphins", "Minnesota Vikings", "New England Patriots", "New Orleans Saints", "New York Giants", "New York Jets", "Philadelphia Eagles", "Pittsburgh Steelers", "San Francisco 49ers", "Seattle Seahawks", "Tampa Bay Buccaneers", "Tennessee Titans", "Washington Football Team"
@@ -132,11 +135,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const results = await response.json();
 				setStore({ logos_nfl: results });
 			},
-			props: async () => {
+			odds_to_win: async () => {
 				const url = "https://sportsdata365.com/odds_to_win";
 				const response = await fetch(url);
 				const results = await response.json();
-				setStore({ props: results });
+				setStore({ odds_to_win: results });
 			},
 			nfl_team_stats: async () => {
 				const url = "https://www.sportsdata365.com/standing_nfl_team";
@@ -528,6 +531,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const response = await fetch(url);
 				const results = await response.json();
 				setStore({ noticias: results });
+			},
+			//perfil_tipster
+			load_perfil_tipster: async () => {
+				const url = "https://isn365.herokuapp.com/perfil_tipster";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ perfil_tipster: results });
+			},
+			load_picks_tipster: async () => {
+				const url = "https://isn365.herokuapp.com/picks_tipster";
+				const response = await fetch(url);
+				const results = await response.json();
+				setStore({ picks_tipster: results });
 			},
 			//name
 			changename: username => {

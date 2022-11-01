@@ -4,12 +4,12 @@ $white:#fff;
 $azul:#4C80C2;
 
 $text:$azul;
-$azul_extra_light:#F15A29;
-$azul_dark:$text;
-$azul_light:#F15A29;
+$orange:#F15A29;
+$azul_dark:darken($text, 20) ;
+$orange_light:lighten(#F15A29,15) ;
 $grey:$azul;
 
-$fished: $azul_light;
+$fished: $orange_light;
 $cancelled:rgb(250, 61, 61);
 $in_progress:rgb(18, 169, 18);
 $pending:#21aede;
@@ -17,5 +17,5 @@ $pending:#21aede;
 $gradient_w_g: linear-gradient(to bottom, $white 0%,darken($white,20) 80%);
 $gradient_w_g_reverse: linear-gradient(to bottom, darken($white,20) 0%,$white 80%);
 $azul_to_white: linear-gradient(135deg, $black 0%,$azul_dark 70%);
-$btn_gradient: linear-gradient(to bottom, $azul_extra_light 0%,darken($azul_extra_light,30) 70%);
-$btn_gradient_reverse: linear-gradient(to bottom, darken($azul_extra_light,30) 0%, $azul_extra_light 70%);
+$btn_gradient: linear-gradient(to bottom, $orange 0%,darken($orange,30) 70%);
+$btn_gradient_reverse: linear-gradient(to bottom, darken($orange,30) 0%, $orange 70%);

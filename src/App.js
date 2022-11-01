@@ -29,6 +29,7 @@ const NBA_Player_Stats = lazy(() => import('./lines/nba_py_st'));
 const NBA_All_Data = lazy(() => import('./display_lines/nba/nba_all_data'));
 const Nba_Games = lazy(() => import('./display_lines/nba/nba_games'));
 const NBA_Team_stats_display = lazy(() => import('./display_lines/nba/nba_team_stats'));
+const Injurie_Nba = lazy(()=>import('./injuries/nba/injurie_nba'));
 //wnba
 const WNBA_Inicio = lazy(()=>import('./pages/wnba/wnba_inicio'));
 const WNBA_All_Data = lazy(()=>import('./display_lines/wnba/wnba_all_data'));
@@ -43,6 +44,7 @@ const Mlb_py_st = lazy(() => import('./lines/mlb_py_st'));
 const MLB_All_Data = lazy(() => import('./display_lines/mlb/mlb_all_data'));
 const MLB_Games = lazy(() => import('./display_lines/mlb/mbl_games'));
 const MLB_Team_stats_display = lazy(() => import('./display_lines/mlb/mlb_team_stats'));
+const Injurie_MLB = lazy(()=>import('./injuries/mlb/injurie_mlb'));
 // base ball mexico
 const Bs_Mexico_Inicio = lazy (()=>import('./pages/baseball_mexico/bs_mexico_inicio'));
 const BS_MX_All_Data = lazy(()=>import('./display_lines/baseball_mexico/bs_mx__all_data'));
@@ -57,6 +59,7 @@ const NHL_py_st = lazy(() => import('./lines/nhl_py_st'));
 const NHL_All_Data = lazy(() => import('./display_lines/hockey/nhl_all_data'));
 const NHL_Games = lazy(() => import('./display_lines/hockey/nhl_games'));
 const NHL_Team_stats_display = lazy(() => import('./display_lines/hockey/nhl_team_stats'));
+const Injurie_NHL = lazy(()=>import('./injuries/nhl/injurie_nhl'));
 // soccer
 const Soccer_Inicio = lazy(()=>import('./pages/soccer/soccer_inicio'));
 const Soccer_All_Data =lazy(()=>import('./display_lines/soccer/soccer_all_data'));
@@ -124,7 +127,8 @@ const Results_SOCCER = lazy(()=>import('./display_lines/soccer/results_soccer'))
 /*noticias */
 const Noticia_Individual = lazy(() => import('./noticias/new'));
 /* odds */
-const Odds_To_Win = lazy(() => import('./display_lines/globals/odds_to_win'));
+const Odds_To_Win = lazy(() => import('./pages/odds_to_win/odds_to_win'));
+const Odd_View = lazy(() => import('./pages/odds_to_win/odd_view'));
 /*erroer*/
 const Error = lazy(() => import('./pages/404'));
 // lineas generales
@@ -133,6 +137,9 @@ const Lineas_Generales =lazy(()=>import('./pages/lineas_generales'));
 const Registro = lazy(()=>import('./pages/registro'));
 //perfil
 const Perfil = lazy(()=>import('./pages/perfil'));
+// tipsters
+const Tipsters_Cards = lazy(()=>import('./pages/tipsters/tipsters_cards'));
+const Tipster_Perfil =lazy(()=>import('./pages/tipsters/tipster_perfil'));
 function App() {
 	return (
 		<div className="App">
@@ -166,6 +173,7 @@ function App() {
 						<Route path="/nba_games" component={Nba_Games} />
 						<Route path="/nba_team_stats" component={NBA_Team_stats_display} />
 						<Route path="/wnba_team_stats" component={WNBA_Team_stats_display} />
+						<Route path="/injurie_nba" component={Injurie_Nba} />
 						<Route path="/nba_py_st/:theid" component={NBA_Player_Stats} />
 						{/* wnba */}
 						<Route path="/wnba_inicio" component={WNBA_Inicio} />
@@ -180,6 +188,7 @@ function App() {
 						<Route path="/mlb_all_data" component={MLB_All_Data} />
 						<Route path="/mlb_games" component={MLB_Games} />
 						<Route path="/mlb_team_stats" component={MLB_Team_stats_display} />
+						<Route path="/injurie_mlb" component={Injurie_MLB} />
 						<Route path="/mlb_py_st/:theid" component={Mlb_py_st} />
 						{/* baseball mexico */}
 						<Route path="/bs_mexico_inicio" component={Bs_Mexico_Inicio} />
@@ -194,6 +203,7 @@ function App() {
 						<Route path="/nhl_all_data" component={NHL_All_Data} />
 						<Route path="/nhl_games" component={NHL_Games} />
 						<Route path="/nhl_team_stats" component={NHL_Team_stats_display} />
+						<Route path="/injurie_nhl" component={Injurie_NHL} />
 						<Route path="/nhl_py_st/:theid" component={NHL_py_st} />
 						{/* soccer */}
 						<Route path="/soccer_inicio" component={Soccer_Inicio} />
@@ -264,11 +274,14 @@ function App() {
 						{/* noticias */}
 						<Route path="/new/:theid" component={Noticia_Individual} />
 						{/* odds */}
-						<Route path="/odds_to_win/:theid" component={Odds_To_Win} />
+						<Route path="/odds_to_win" component={Odds_To_Win} />
+						<Route path="/odd_view/:theid" component={Odd_View} />
 						{/* lineas_generales */}
 						<Route path="/lineas_generales" component={Lineas_Generales} />
 						<Route path="/registro" component={Registro} />
 						<Route path="/perfil" component={Perfil} />
+						<Route path="/tipsters_cards" component={Tipsters_Cards} />
+						<Route path="/tipster_perfil/:theid" component={Tipster_Perfil} />
 						<Route>
 							<Error />
 						</Route>

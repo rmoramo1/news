@@ -31,7 +31,7 @@ const injectContext = PassedComponent => {
 			 * state.actions.loadPlanets(); <---- calling this function from the flux.js actions
 			 *
 			 **/
-			state.actions.props();
+			state.actions.odds_to_win();
 			//user
 			state.actions.user();
 			//nfl
@@ -114,6 +114,9 @@ const injectContext = PassedComponent => {
 			state.actions.stats_soccer_team();
 			state.actions.logos_soccer();
 			state.actions.stats_soccer_player();
+			//tipsters
+			state.actions.load_perfil_tipster();
+			state.actions.load_picks_tipster();
 			//noticias
 			state.actions.load_noticias();
 			state.actions.changename();

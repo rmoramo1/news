@@ -47,16 +47,19 @@ export const Header = () => {
     let reg;
     let lineas;
     let form;
+    let enlace;
     if (!roy) {
         lineas = "d-none";
         btn = "d-none";
         reg = "d-block font_impact text-decoration-none fs-3";
         form = ""
+        enlace = "d-none";
     } else {
         btn = "d-block col-1 float-left";
         reg = "d-none";
         lineas = "d-inline list-inline-item ul-drop px-3";
         form = "d-none";
+        enlace = "li_drop";
     }
     return (
         <div className="container-fluid p-0 bg-white fs-5">
@@ -114,7 +117,11 @@ export const Header = () => {
                     <Link to="/registro" className={reg}>
                         Registro <i className="fa-solid fa-user-astronaut"></i>
                     </Link>
-                    <div className="fw-bold">{store.username_temp}</div>
+                    <div className="fw-bold">
+                        <Link to="/perfil" className="text-decoration-none">
+                            {store.username_temp}
+                        </Link>
+                        </div>
                     <div className={btn} id="btnLogOut">
                         <a href="#" onClick={refrescar} className="text-danger ps-3 fs-3">
                             <span>
@@ -141,7 +148,7 @@ export const Header = () => {
                 <div className="col-12 bg_light text-white d-none d-lg-block">
                     <div className="container">
                         <div className="row g-0">
-                            <div className="col-lg-10">
+                            <div className="col-lg-12">
                                 <ul className="list-unstyled list-inline col-12 m-0 ">
                                     <li class="list-inline-item ul-drop px-3">NFL <i className="fa-solid fa-football"></i>
                                         <ul className="text-start rounded shadow_spans">
@@ -170,9 +177,9 @@ export const Header = () => {
                                                     Jugadores
                                                 </Link>
                                             </li> */}
-                                            <li className="li_drop">
+                                            <li className={enlace}>
                                                 <Link to="/injurie_nfl" className="text-decoration-none">
-                                                    Leciones
+                                                    Lesiones
                                                 </Link>
                                             </li>
                                         </ul>
@@ -204,6 +211,11 @@ export const Header = () => {
                                                     Jugadores
                                                 </Link>
                                             </li> */}
+                                            <li className={enlace}>
+                                                <Link to="/injurie_nba" className="text-decoration-none">
+                                                    Lesiones
+                                                </Link>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li class="list-inline-item ul-drop px-3">MLB <i className="fa-solid fa-baseball-bat-ball"></i>
@@ -233,6 +245,11 @@ export const Header = () => {
                                                     Jugadores
                                                 </Link>
                                             </li> */}
+                                            <li className={enlace}>
+                                                <Link to="/injurie_mlb" className="text-decoration-none">
+                                                    Lesiones
+                                                </Link>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li class="list-inline-item ul-drop px-3">NHL <i className="fa-solid fa-hockey-puck"></i>
@@ -262,6 +279,11 @@ export const Header = () => {
                                                     Jugadores
                                                 </Link>
                                             </li> */}
+                                            <li className={enlace}>
+                                                <Link to="/injurie_nhl" className="text-decoration-none">
+                                                    Lesiones
+                                                </Link>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li class="list-inline-item ul-drop px-3">SOCCER <i className="fa-solid fa-futbol"></i>
@@ -308,8 +330,19 @@ export const Header = () => {
                                         </Link>
                                     </li>
                                     <li class={lineas}>
+                                        <Link to="/odds_to_win" className="text-decoration-none text-white">
+                                            Odds to Win <i className="fa-solid fa-list-ul"></i>
+                                        </Link>
+                                    </li>
+                                    <li class={lineas}>
                                         <Link to="/perfil" className="text-decoration-none text-white">
                                             Perfil <i className="fa-solid fa-user-tie"></i>
+                                        </Link>
+                                    </li>
+                                    <li className="d-inline list-inline-item ul-drop px-3">
+                                    {/* <li class={lineas}> */}
+                                        <Link to="/tipsters_cards" className="text-decoration-none text-white">
+                                        TIPSTERS <i className="fa-solid fa-address-book"></i>
                                         </Link>
                                     </li>
                                     <li class="list-inline-item ul-drop-2 px-3">

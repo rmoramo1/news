@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Single_Injurie } from '../single_injurie';
 import { Context } from '../../store/appContext';
 
-export default function Injurie_Nfl() {
+export default function Injurie_Nba() {
     const { store } = useContext(Context);
     let year = new Date();
     let ano = year.getFullYear();
@@ -32,7 +32,7 @@ export default function Injurie_Nfl() {
                 <div className="row g-0 bg_base text-center text-white border-bottom py-2">
                     <div className="col-lg-6 ">
                         <h1>
-                            Lesiones en Fooball Americano
+                            Lesiones en la NBA
                         </h1>
                     </div>
                     <div className="col-lg-3 d-flex align-items-center fs-2 justify-content-center">Año {ano}</div>
@@ -70,7 +70,7 @@ export default function Injurie_Nfl() {
                             </div>
                         </div>
                         {store.injuries.map((item, index) => {
-                            if (item.sport == "FOOTBALL" && item.date.slice(6, 10) == ano && item.date.slice(0, 2) == mesD) {
+                            if (item.sport == "NBA" && item.date.slice(6, 10) == ano && item.date.slice(0, 2) == mesD) {
                                 return (
                                     <div key={index} className="col-12">
                                         <Single_Injurie

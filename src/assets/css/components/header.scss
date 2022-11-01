@@ -36,7 +36,6 @@
         ul {
             display: block;
             z-index: 1231321;
-            
             &:hover {
                 .li_drop {
                     color: $white;
@@ -53,7 +52,7 @@
 
     .drop_span {
         position: absolute;
-        left: 35%;
+        left: 45%;
         min-width: 700px;
         z-index: 12355;
     }

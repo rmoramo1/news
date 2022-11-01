@@ -255,6 +255,11 @@ export const Menu_Movil = () => {
                             Perfil <i className="fa-solid fa-user-tie"></i>
                         </a>
                     </div>
+                    <div className={lineas}>
+                        <a className="btn btn_orange col-12" data-bs-dismiss="offcanvas" href="/odds_to_win">
+                            Odds to Win <i className="fa-solid fa-list-ul"></i>
+                        </a>
+                    </div>
                     <div className="col-12 mt-3">
                         <a className="btn btn_orange col-12" data-bs-dismiss="offcanvas" href="#">
                             PODCAST <i className="fa-solid fa-microphone"></i>
