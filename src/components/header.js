@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { Context } from "../store/appContext";
 import logo from '../assets/img/logo.webp';
 import { Link } from "react-router-dom";
@@ -150,7 +150,7 @@ export const Header = () => {
                         <div className="row g-0">
                             <div className="col-lg-12">
                                 <ul className="list-unstyled list-inline col-12 m-0 ">
-                                    <li class="list-inline-item ul-drop px-3">NFL <i className="fa-solid fa-football"></i>
+                                    <li className="list-inline-item ul-drop px-3">NFL <i className="fa-solid fa-football"></i>
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
                                                 <Link className="text-decoration-none" to="/nfl_inicio">
@@ -184,7 +184,7 @@ export const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="list-inline-item ul-drop px-3">NBA <i className="fa-solid fa-basketball"></i>
+                                    <li className="list-inline-item ul-drop px-3">NBA <i className="fa-solid fa-basketball"></i>
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
                                                 <Link to="/nba_inicio" className="text-decoration-none">
@@ -218,7 +218,7 @@ export const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="list-inline-item ul-drop px-3">MLB <i className="fa-solid fa-baseball-bat-ball"></i>
+                                    <li className="list-inline-item ul-drop px-3">MLB <i className="fa-solid fa-baseball-bat-ball"></i>
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
                                                 <Link to="/mlb_inicio" className="text-decoration-none">
@@ -252,7 +252,7 @@ export const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="list-inline-item ul-drop px-3">NHL <i className="fa-solid fa-hockey-puck"></i>
+                                    <li className="list-inline-item ul-drop px-3">NHL <i className="fa-solid fa-hockey-puck"></i>
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
                                                 <Link to="/nhl_inicio" className="text-decoration-none">
@@ -286,7 +286,7 @@ export const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="list-inline-item ul-drop px-3">SOCCER <i className="fa-solid fa-futbol"></i>
+                                    <li className="list-inline-item ul-drop px-3">SOCCER <i className="fa-solid fa-futbol"></i>
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
                                                 <Link to="/soccer_inicio" className="text-decoration-none">
@@ -305,7 +305,7 @@ export const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="list-inline-item ul-drop px-3">MMA <i className="fa-solid fa-hand-fist"></i>
+                                    <li className="list-inline-item ul-drop px-3">MMA <i className="fa-solid fa-hand-fist"></i>
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
                                                 <Link to="/mma_inicio" className="text-decoration-none">
@@ -324,28 +324,23 @@ export const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class={lineas}>
+                                    <li className={lineas}>
                                         <Link to="/lineas_generales" className="text-decoration-none text-white">
                                             Lineas <i className="fa-solid fa-ranking-star"></i>
                                         </Link>
                                     </li>
-                                    <li class={lineas}>
+                                    <li className={lineas}>
                                         <Link to="/odds_to_win" className="text-decoration-none text-white">
                                             Odds to Win <i className="fa-solid fa-list-ul"></i>
                                         </Link>
                                     </li>
-                                    <li class={lineas}>
-                                        <Link to="/perfil" className="text-decoration-none text-white">
-                                            Perfil <i className="fa-solid fa-user-tie"></i>
-                                        </Link>
-                                    </li>
-                                    <li className="d-inline list-inline-item ul-drop px-3">
-                                    {/* <li class={lineas}> */}
+                                    {/* <li className="d-inline list-inline-item ul-drop px-3"> */}
+                                    <li className={lineas}>
                                         <Link to="/tipsters_cards" className="text-decoration-none text-white">
                                         TIPSTERS <i className="fa-solid fa-address-book"></i>
                                         </Link>
                                     </li>
-                                    <li class="list-inline-item ul-drop-2 px-3">
+                                    <li className="list-inline-item ul-drop-2 px-3">
                                         <i className="fa-solid fa-bars"></i>
                                         <div className="row g-0 rounded shadow_spans drop_span bg-white">
                                             <div className="col-4">

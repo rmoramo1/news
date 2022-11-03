@@ -14,14 +14,14 @@ function Tipsters_Cards() {
             <div className="row g-0">
                 {
                     store.perfil_tipster.map((item, index) => {
-                        console.log(item.name)
                         {
                             return (
                                 <div key={index} className="col-lg-4 p-2">
                                     <Tipsters_Cards_Single
+                                        key={index}
+                                        id={index}
                                         name={item.name}
                                         title={item.title}
-                                        id={index}
                                     />
                                 </div>
                             );
@@ -31,4 +31,4 @@ function Tipsters_Cards() {
         </div>
     )
 };
-export default Tipsters_Cards
+export default Tipsters_Cards;

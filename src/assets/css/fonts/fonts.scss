@@ -12,7 +12,7 @@
     color: $azul;
 }
 .font_destacado{
-    color: $orange_light;
+    color: darken($orange_light,60) ;
 }
 .font_grey{
     color: lighten($black,50);

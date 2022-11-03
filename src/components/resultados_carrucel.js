@@ -57,7 +57,7 @@ export const Resultados_Carrucel = () => {
         return b.id - a.id;
     });
 
-    const [sport_sort_, setsport_sort_] = useState("MLB");
+    const [sport_sort_, setsport_sort_] = useState("NBA");
     let sports = ["NFL", "NBA", "MLB", "NHL"];
 
     let class_para_mlb = "d-none col-lg-10";

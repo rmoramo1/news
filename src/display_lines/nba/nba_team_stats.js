@@ -32,11 +32,11 @@ function NBA_Team_stats_display() {
         plugins: {
             legend: {
                 position: 'none',
-                text: 'Paridos Ganados',
+                text: 'Partidos Ganados',
             },
             title: {
                 display: false,
-                text: 'Paridos Ganados',
+                text: 'Partidos Ganados',
             },
         },
     };

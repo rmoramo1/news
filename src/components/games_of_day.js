@@ -49,7 +49,7 @@ export const Games_of_Day = props => {
         return b.id - a.id;
     });
     let mostrar_juegos = ["NFL", "NBA", "MLB", "NHL"];
-    const [display, setdisplay] = useState("MLB");
+    const [display, setdisplay] = useState("NBA");
     let class_display_nba;
     let class_display_nfl;
     let class_display_mlb;

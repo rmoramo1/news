@@ -33,14 +33,14 @@ function MMA_Event() {
     }
     let lista_eventos = [];
     let events = store.mma.map((item, index) => {
-        if (lista_eventos.includes(item.event) ) {
-          
+        if (lista_eventos.includes(item.event)) {
+
         }
-        else if(item.date.slice(5, 7) == month && item.date.slice(0, 4) == year) {
+        else if (item.date.slice(5, 7) == month && item.date.slice(0, 4) == year) {
             lista_eventos.push(item.event)
         }
-         else {
-            
+        else {
+
         }
     });
     return (
@@ -90,7 +90,7 @@ function MMA_Event() {
                                     {store.mma.map((item, index) => {
                                         let mes = item.date.slice(5, 7);
                                         let ano = item.date.slice(0, 4);
-                                        if (mes == R_date && ano == year && item.event == item_event ) {
+                                        if (mes == R_date && ano == year && item.event == item_event) {
                                             return (
                                                 <div key={index} className="col">
                                                     <Single_MMA_Lines
