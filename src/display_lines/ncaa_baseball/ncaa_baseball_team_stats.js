@@ -115,7 +115,7 @@ function NCAA_BASEBALL_Team_stats_display() {
         return b.id - a.id;
     });
     return (
-        <div className="rounded_span m-2 bg-white shadow_spans mh_display">
+        <div className=" m-2 bg-white shadow_spans mh_display">
             <div className="row g-0">
                 <div className="col-lg-8">
                     <div className="title_sport bg_base_dark text-white p-2 fs-5 font_bold">

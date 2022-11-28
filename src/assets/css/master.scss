@@ -25,21 +25,8 @@ body {
   background:darken($azul, 20);
 }
 
-.bg_base_extra_light {
-  background: $orange;
-}
-
-.bg_gradient_light {
-  background: $gradient_w_g;
-}
-
 .shadow_spans {
   box-shadow: 0 0 5px $black;
-}
-
-.rounded_span {
-  border-radius: 15px;
-  overflow: hidden;
 }
 
 .loader {

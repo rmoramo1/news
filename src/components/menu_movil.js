@@ -13,16 +13,22 @@ export const Menu_Movil = () => {
         <div className="container" id="menu_movil">
             <div className="col-12 text-end">
                 <div className="row g-0">
-                    <div className="col-8 d-flex align-items-center text-center">
-                        <div className="row w-100 g-0">
-                            <div className="col-4">
+                    <div className="col-8 d-flex align-items-center">
+                        <div className="row g-0 w-100">
+                            <div className="col">
                                 <i className="fa-brands fa-facebook-f"></i>
                             </div>
-                            <div className="col-4">
+                            <div className="col">
+                                <i className="fa-brands fa-twitter"></i>
+                            </div>
+                            <div className="col">
                                 <i className="fa-brands fa-instagram"></i>
                             </div>
-                            <div className="col-4">
+                            <div className="col">
                                 <i className="fa-brands fa-youtube"></i>
+                            </div>
+                            <div className="col">
+                                <i className="fa-brands fa-reddit-alien"></i>
                             </div>
                         </div>
                     </div>

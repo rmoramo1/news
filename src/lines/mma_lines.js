@@ -27,11 +27,11 @@ function MMA_lines() {
         <div className="container-fluid">
             <div className="row g-0 text-center">
                 <div className="col-lg-3 p-1 d-none d-lg-block">
-                    <div className="col-12 rounded_span shadow_spans bg-white"><Top_Headlines /></div>
-                    <div className="col-12 rounded_span shadow_spans bg-white mt-3"><Games_of_Day /></div>
+                    <div className="col-12  shadow_spans bg-white"><Top_Headlines /></div>
+                    <div className="col-12  shadow_spans bg-white mt-3"><Games_of_Day /></div>
                 </div>
                 <div className="col-lg-9 p-1">
-                    <div className="col-12 py-3 rounded_span shadow_spans bg-white">
+                    <div className="col-12 py-3  shadow_spans bg-white">
                         <div className="col-lg-12">
                             <div className="bg_gradient_light">
                                 <div className="col-12 fs-1">
@@ -139,8 +139,8 @@ function MMA_lines() {
                     </div>
                 </div>
                 <div className="col-lg-3 p-1 d-block d-lg-none">
-                    <div className="col-12 rounded_span shadow_spans bg-white"><Top_Headlines /></div>
-                    <div className="col-12 rounded_span shadow_spans bg-white mt-3"><Games_of_Day /></div>
+                    <div className="col-12  shadow_spans bg-white"><Top_Headlines /></div>
+                    <div className="col-12  shadow_spans bg-white mt-3"><Games_of_Day /></div>
                 </div>
             </div>
 

@@ -9,9 +9,9 @@ export const Single_MMA_Lines = props => {
                 <div className="col-12 bb1px">
                     <Link className="text-decoration-none" to={`/mma_lines/${props.id}`}>
                         <div className="row g-0 text-center">
-                            <div className="col-4">{props.fighter_One}</div>
-                            <div className="col-4">VRS</div>
-                            <div className="col-4">{props.fighter_Two}</div>
+                            <div className="col-5">{props.fighter_One} {props.money_Line_One}</div>
+                            <div className="col-2">VRS</div>
+                            <div className="col-5">{props.fighter_Two} {props.money_Line_Two}</div>
                         </div>
                     </Link>
                 </div>
@@ -23,4 +23,6 @@ Single_MMA_Lines.propTypes = {
     id: PropTypes.number,
     fighter_One: PropTypes.string,
     fighter_Two: PropTypes.string,
+    money_Line_One: PropTypes.string,
+    money_Line_Two: PropTypes.string,
 };

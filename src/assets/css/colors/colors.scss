@@ -1,13 +1,13 @@
 /*solids*/
 $black:#000;
 $white:#fff;
-$azul:#4C80C2;
+$azul:#0177cc;
 
 $text:$azul;
-$orange:#F15A29;
+$orange:#ff2410;
 $azul_dark:darken($text, 20) ;
-$orange_light:lighten(#F15A29,15) ;
-$grey:$azul;
+$orange_light:lighten(#ff2410,15) ;
+$grey:rgb(75, 75, 75);
 
 $fished: $orange_light;
 $cancelled:rgb(250, 61, 61);

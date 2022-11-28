@@ -61,7 +61,7 @@ function MMA_Inicio() {
                     Tabla de Posiciones
                 </button>
             </div>
-            <div className="rounded_span shadow_spans bg-white">
+            <div className=" shadow_spans bg-white">
                 <div className="row g-0">
                     <div className="col-lg-2 border_right">
                         <div className="row g-0">
@@ -144,7 +144,7 @@ function MMA_Inicio() {
                     <div className="col-lg-2 d-none d-lg-block">
                         <div className="row g-0">
                             <div className='col-12 font_impact fs-4 text-center'>
-                                <span className="font_color_base"><i className="fa-solid fa-table-list"></i></span> <span className="">Estadísticas del año</span>
+                                <span className="font_color_base"><i className="fa-solid fa-table-list"></i></span> <span className="">Historial de Peleas</span>
                             </div>
                             <div className="row g-0 text-center fw-bold bg_azul text-white">
                                 <div className="col-8">Peleador</div>

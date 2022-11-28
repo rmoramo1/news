@@ -51,7 +51,7 @@ function Tipster_Perfil() {
     let total_loss = loss_NHL + loss_NBA + loss_NFL + loss_MLB;
 
     return (
-        <div className="container-fluid rounded_span shadow_spans_spans my-1 bg-white">
+        <div className="container-fluid  shadow_spans_spans my-1 bg-white">
             <div className="row g-0">
                 <div className="col-lg-4 border_right py-5">
                     <div className="col-12 ">

@@ -54,7 +54,7 @@ function Results_Nfl() {
                     Juegos del Día
                 </button>
             </div>
-            <div className="rounded_span shadow_spans bg-white mh_display">
+            <div className=" shadow_spans bg-white mh_display">
                 <div className="row g-0">
                     <div className="col-lg-2 border_right">
                         <div className="d-none d-lg-block">

@@ -8,6 +8,7 @@ import { Header } from './components/header';
 import { Footer } from './components/footer';
 /* pages*/
 import Loader from './components/loader';
+
 const Home = lazy(() => import('./pages/home'));
 /*nfl */
 const Nfl_Inicio = lazy(() => import('./pages/nfl/nfl_inicio'));
@@ -69,6 +70,7 @@ const MMA_PY_STATS = lazy(() => import('./display_lines/mma/mma_py_stats'));
 const MMA_lines = lazy(() => import('./lines/mma_lines'));
 const MMA_st = lazy(() => import('./lines/mma_st'));
 const MMA_Event = lazy(() => import('./display_lines/mma/mma_fight'));
+const Resultados_Peleas_MMA = lazy(()=>import('./pages/mma/resultados_peleas_mma'));
 /*box */
 const BOXING_Inicio = lazy(() => import('./pages/boxing/boxing_inicio'));
 const Boxer_PY_STATS = lazy(() => import('./display_lines/box/boxer_py_stats'));
@@ -214,6 +216,7 @@ function App() {
 						<Route path="/mma_inicio" component={MMA_Inicio} />
 						<Route path="/mma_py_stats" component={MMA_PY_STATS} />
 						<Route path="/mma_fight" component={MMA_Event} />
+						<Route path="/resultados_peleas_mma" component={Resultados_Peleas_MMA} />
 						<Route path="/mma_lines/:theid" component={MMA_lines} />
 						<Route path="/mma_st/:theid" component={MMA_st} />
 						{/* box */}

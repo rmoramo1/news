@@ -56,7 +56,7 @@ function Results_NBA() {
                     Juegos del Día
                 </button>
             </div>
-            <div className="rounded_span shadow_spans bg-white mh_display">
+            <div className=" shadow_spans bg-white mh_display">
                 <div className="row g-0">
                     <div className="col-lg-2 border_right d-none d-lg-block">
                         <div className='col-12 font_impact fs-4 text-center'>

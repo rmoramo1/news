@@ -205,9 +205,9 @@ export const Single_Usuario = props => {
 												<div className="row g-0">
 
 													{
-														store.nfl_teams.map((index) => {
+														store.nfl_teams.map((index,item) => {
 															return (
-																<div className="col-2">
+																<div className="col-2" key={item}>
 																	<div className="form-check py-2">
 																		<input className="form-check-input" type="checkbox" name="equiposNFL" id="equiposNFL" value={index} onChange={equiposNFL} />
 																		<label className="form-check-label" value={index} htmlFor="equiposNFL">
@@ -223,11 +223,11 @@ export const Single_Usuario = props => {
 											<div className="tab-pane fade" id="pills-nba" role="tabpanel" aria-labelledby="pills-nba-tab">
 												<div className="row g-0">
 													{
-														store.nba_teams.map((index) => {
+														store.nba_teams.map((index , item) => {
 															return (
-																<div className="col-2">
+																<div className="col-2" key={item}>
 																	<div className="form-check py-2">
-																		<input className="form-check-input" type="checkbox" name="equiposNBA" id="equiposNBA" value={index} onChange={equiposNBA} />
+																		<input className="form-check-input"  type="checkbox" name="equiposNBA" id="equiposNBA" value={index} onChange={equiposNBA} />
 																		<label className="form-check-label" value={index} htmlFor="equiposNBA">
 																			{index}
 																		</label>
@@ -241,9 +241,9 @@ export const Single_Usuario = props => {
 											<div className="tab-pane fade" id="pills-mlb" role="tabpanel" aria-labelledby="pills-mlb-tab">
 												<div className="row g-0">
 													{
-														store.mlb_teams.map((index) => {
+														store.mlb_teams.map((index , item) => {
 															return (
-																<div className="col-2">
+																<div className="col-2" key={item}>
 																	<div className="form-check py-2">
 																		<input className="form-check-input" type="checkbox" name="equiposMLB" id="equiposMLB" value={index} onChange={equiposMLB} />
 																		<label className="form-check-label" value={index} htmlFor="equiposMLB">
@@ -259,9 +259,9 @@ export const Single_Usuario = props => {
 											<div className="tab-pane fade" id="pills-NHL" role="tabpanel" aria-labelledby="pills-mlb-tab">
 												<div className="row g-0">
 													{
-														store.nhl_teams.map((index) => {
+														store.nhl_teams.map((index, item) => {
 															return (
-																<div className="col-2">
+																<div className="col-2" key={item}>
 																	<div className="form-check py-2">
 																		<input className="form-check-input" type="checkbox" name="equiposNHL" id="equiposNHL" value={index} onChange={equiposNHL} />
 																		<label className="form-check-label" value={index} htmlFor="equiposNHL">

@@ -5,7 +5,7 @@ import NCAAA_BASEBALL from '../../display_lines/ncaa_baseball/ncaa_baseball_py_s
 function Jugadores_NCAA_Baseball() {
     return (
         <div className="container-fluid p-2">
-            <div className="rounded_span shadow_spans bg-white mh_display">
+            <div className=" shadow_spans bg-white mh_display">
                 <NCAAA_BASEBALL/>
             </div>
         </div>

@@ -92,7 +92,7 @@ function Ncaa_Football_Team_stats() {
     }
 
     return (
-        <div className="rounded_span m-2 bg-white shadow_spans mh_display">
+        <div className=" m-2 bg-white shadow_spans mh_display">
             <div className="row g-0">
                 <div className="col-lg-8">
                     <div className="title_sport bg_base_dark text-white ps-lg-5 fs-2 font_bold">

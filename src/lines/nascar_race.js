@@ -7,7 +7,7 @@ export default function Nascar_Race() {
     const params = useParams();
     const { store } = useContext(Context);
     return (
-        <div className="rounded_span m-2 bg-white shadow_spans mh_display">
+        <div className=" m-2 bg-white shadow_spans mh_display">
             <div className="row g-0">
                 <div className="col-lg-3 border_right">
                     <Top_Headlines/>

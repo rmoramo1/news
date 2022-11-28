@@ -5,7 +5,7 @@ function Tipsters_Cards() {
     const { store } = useContext(Context);
 
     return (
-        <div className="container-fluid rounded_span shadow_spans_spans my-1 bg-white">
+        <div className="container-fluid shadow_spans_spans my-1 bg-white">
             <div className="col-12 text-center ">
                 <h1>
                     Tarjeta de Tipsters

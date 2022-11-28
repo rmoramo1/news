@@ -1,8 +1,9 @@
 import React, { useState, useContext } from "react";
 import { Context } from "../store/appContext";
-import logo from '../assets/img/logo.webp';
+import logo_2 from '../assets/img/logo_v2.2.png';
 import { Link } from "react-router-dom";
 import { Menu_Movil } from "./menu_movil";
+import Caroucel_Juegos from "./caroucel_juegos";
 export const Header = () => {
     const { store } = useContext(Context);
     const { actions } = useContext(Context);
@@ -48,104 +49,129 @@ export const Header = () => {
     let lineas;
     let form;
     let enlace;
+    let perfil;
+
     if (!roy) {
         lineas = "d-none";
         btn = "d-none";
-        reg = "d-block font_impact text-decoration-none fs-3";
+        reg = "d-block btn btn_gradient";
         form = ""
+        perfil = "d-none";
         enlace = "d-none";
     } else {
         btn = "d-block col-1 float-left";
         reg = "d-none";
-        lineas = "d-inline list-inline-item ul-drop px-3";
+        lineas = "list-inline-item ul-drop px-3";
         form = "d-none";
         enlace = "li_drop";
+        perfil = "fw-bold d-flex justify-content-center align-items-center col-1";
     }
     return (
-        <div className="container-fluid p-0 bg-white fs-5">
+        <div className="container-fluid p-0 bg-white">
             <div className="row g-0">
-                <div className="col-lg-3 text-center">
-                    <Link to="/">
-                        <img src={logo} alt="logo of the site" className="img-fluid"></img>
-                    </Link>
-                </div>
-                <div className="col-lg-5 d-flex justify-content-center align-items-center">
-                    <form className={form} onSubmit={enviar} id="loginForm">
-                        <div className="row g-0">
-                            <div className="col-4 p-1">
-                                <div className="input-group mb-3 shadow">
-                                    <span className="input-group-text" id="Usuario"><i className="fa-regular fa-user"></i></span>
-                                    <input
-                                        id="user"
-                                        onChange={e => setuser(e.target.value)}
-                                        name="user"
-                                        type="text"
-                                        className="form-control "
-                                        placeholder="Usuario"
-                                        aria-label="Usuario"
-                                        aria-describedby="Usuario"
-
-                                    />
-                                </div>
-                            </div>
-                            <div className="col-4 p-1">
-                                <div className="input-group mb-3 shadow">
-                                    <span className="input-group-text" id="Contraseña">
-                                        <i className="fas fa-key" />
-                                    </span>
-                                    <input
-                                        type="password"
-                                        onChange={e => setPassword(e.target.value)}
-                                        id="password"
-                                        name="password"
-                                        className="form-control "
-                                        placeholder="Contraseña"
-                                        aria-label="pass"
-                                        aria-describedby="Contraseña"
-                                    />
-                                </div>
-                            </div>
-                            <div className="col-4 p-1">
-                                <button type="submit" className="btn btn_gradient">
-                                    Ingresar
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div className="col-lg-2 py-2 d-flex justify-content-center align-items-center">
-                    <Link to="/registro" className={reg}>
-                        Registro <i className="fa-solid fa-user-astronaut"></i>
-                    </Link>
-                    <div className="fw-bold">
-                        <Link to="/perfil" className="text-decoration-none">
-                            {store.username_temp}
-                        </Link>
-                        </div>
-                    <div className={btn} id="btnLogOut">
-                        <a href="#" onClick={refrescar} className="text-danger ps-3 fs-3">
-                            <span>
-                                <i className="fas fa-sign-out-alt" />
-                            </span>
-                        </a>
-                    </div>
-                </div>
                 <div className="col-lg-2 d-flex justify-content-center align-items-center">
-                    <div className="row w-100 g-0 d-none d-lg-block">
-                        <div className="row g-0">
-                            <div className="col-4">
-                                <i className="fa-brands fa-facebook-f"></i>
+                    <Link to="/">
+                        <img src={logo_2} alt="logo of the site" className="img-fluid"></img>
+                    </Link>
+                </div>
+                <div className="col-lg-7">
+                    <Caroucel_Juegos />
+                </div>
+                <div className="col-lg-3 py-1">
+                    <div className="row g-0">
+                        <div className="col-12">
+                            <form className={form} onSubmit={enviar} id="loginForm">
+                                <div className="row g-0">
+                                    <div className="col-6 p-1">
+                                        <div className="input-group mb-3 shadow">
+                                            <span className="input-group-text" id="Usuario"><i className="fa-regular fa-user"></i></span>
+                                            <input
+                                                id="user"
+                                                onChange={e => setuser(e.target.value)}
+                                                name="user"
+                                                type="text"
+                                                className="form-control "
+                                                placeholder="Usuario"
+                                                aria-label="Usuario"
+                                                aria-describedby="Usuario"
+
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="col-6 p-1">
+                                        <div className="input-group shadow">
+                                            <span className="input-group-text" id="Contraseña">
+                                                <i className="fas fa-key" />
+                                            </span>
+                                            <input
+                                                type="password"
+                                                onChange={e => setPassword(e.target.value)}
+                                                id="password"
+                                                name="password"
+                                                className="form-control "
+                                                placeholder="Contraseña"
+                                                aria-label="pass"
+                                                aria-describedby="Contraseña"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="col-12 text-center">
+                                        <div className="row g-0">
+                                            <div className="col-6 px-2">
+                                                <button type="submit" className="btn btn_gradient col-12">
+                                                    Ingresar
+                                                </button>
+                                            </div>
+                                            <div className="col-6 px-2">
+                                                <Link to="/registro" className={reg}>
+                                                    Registro
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div className="row g-0 justify-content-center align-items-center">
+                                <div className={perfil}>
+                                    <Link to="/perfil" className="text-decoration-none">
+                                        {store.username_temp}
+                                    </Link>
+                                </div>
+                                <div className={btn} id="btnLogOut">
+                                    <a href="#" onClick={refrescar} className="text-danger ps-3 fs-3">
+                                        <span>
+                                            <i className="fas fa-sign-out-alt" />
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
-                            <div className="col-4">
-                                <i className="fa-brands fa-instagram"></i>
-                            </div>
-                            <div className="col-4">
-                                <i className="fa-brands fa-youtube"></i>
+                        </div>
+
+                        <div className="col-lg-6 mx-auto">
+                            <div className="row w-100 g-0 d-none d-lg-block">
+                                <div className="row g-0">
+                                    <div className="col">
+                                        <i className="fa-brands fa-facebook-f"></i>
+                                    </div>
+                                    <div className="col">
+                                        <i className="fa-brands fa-twitter"></i>
+                                    </div>
+                                    <div className="col">
+                                        <i className="fa-brands fa-instagram"></i>
+                                    </div>
+                                    <div className="col">
+                                        <i className="fa-brands fa-youtube"></i>
+                                    </div>
+                                    <div className="col">
+                                        <i className="fa-brands fa-reddit-alien"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="col-12 bg_light text-white d-none d-lg-block">
+
+                <div className="col-12 bg_light text-white d-none d-lg-block fs-5">
                     <div className="container">
                         <div className="row g-0">
                             <div className="col-lg-12">
@@ -295,7 +321,7 @@ export const Header = () => {
                                             </li>
                                             <li className="li_drop">
                                                 <Link to="/results_soccer" className="text-decoration-none">
-                                                    Marcadores
+                                                    Resultados
                                                 </Link>
                                             </li>
                                             <li className="li_drop">
@@ -318,26 +344,31 @@ export const Header = () => {
                                                 </Link>
                                             </li>
                                             <li className="li_drop">
+                                                <Link to="/resultados_peleas_mma" className="text-decoration-none">
+                                                    Resultados
+                                                </Link>
+                                            </li>
+                                            <li className="li_drop">
                                                 <Link to="/mma_py_stats" className="text-decoration-none">
                                                     Estadísticas de Peleadores
                                                 </Link>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li className={lineas}>
-                                        <Link to="/lineas_generales" className="text-decoration-none text-white">
-                                            Lineas <i className="fa-solid fa-ranking-star"></i>
+                                    <li className="list-inline-item ul-drop px-3">
+                                        <Link to="/#" className="text-decoration-none text-white">
+                                            PODCAST <i className="fa-solid fa-microphone"></i>
                                         </Link>
                                     </li>
                                     <li className={lineas}>
-                                        <Link to="/odds_to_win" className="text-decoration-none text-white">
-                                            Odds to Win <i className="fa-solid fa-list-ul"></i>
+                                        <Link to="/lineas_generales" className="text-decoration-none text-white">
+                                            LINEAS <i className="fa-solid fa-ranking-star"></i>
                                         </Link>
                                     </li>
                                     {/* <li className="d-inline list-inline-item ul-drop px-3"> */}
                                     <li className={lineas}>
                                         <Link to="/tipsters_cards" className="text-decoration-none text-white">
-                                        TIPSTERS <i className="fa-solid fa-address-book"></i>
+                                            TIPSTERS <i className="fa-solid fa-address-book"></i>
                                         </Link>
                                     </li>
                                     <li className="list-inline-item ul-drop-2 px-3">

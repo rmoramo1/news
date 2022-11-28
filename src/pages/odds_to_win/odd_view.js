@@ -12,7 +12,7 @@ export default function Odd_View() {
     const params = useParams();
     const { store } = useContext(Context);
     return (
-        <div className="rounded_span m-2 bg-white shadow_spans mh_display">
+        <div className=" m-2 bg-white shadow_spans mh_display">
             <div className="fs-5">
                 <div className="row g-0">
                     <div className="col-lg-6 text-center fs-1">

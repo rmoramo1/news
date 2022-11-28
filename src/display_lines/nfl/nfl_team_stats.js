@@ -1,14 +1,22 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../../store/appContext";
-import {   Chart as ChartJS,CategoryScale,LinearScale,BarElement,Title,Tooltip,Legend,} from 'chart.js';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 
 import { Football_Team_Stats } from "../../lines/football_team_stas";
 
 function Nfl_Team_stats() {
+    let ann = new Date();
+    let ane = ann.getFullYear();
     const { store } = useContext(Context);
-    const [year, setyear] = useState("2022");
-    let date =new Date();
+    const [year, setyear] = useState(ane);
+
+    const [typeTempo, setTypeTempo] = useState("Regular Season");
+    const [compara, setCompara] = useState("League")
+    let typeTem = ["Regular Season", "Preseason"];
+    let compa = ["League", "Conference", "Division"];
+
+    let date = new Date();
     let ano = date.getFullYear();
 
     ChartJS.register(
@@ -18,26 +26,26 @@ function Nfl_Team_stats() {
         Title,
         Tooltip,
         Legend
-      );
-            
-      const options = {
+    );
+
+    const options = {
         indexAxis: 'y',
         elements: {
-          bar: {
-            borderWidth: 0,
-          },
+            bar: {
+                borderWidth: 0,
+            },
         },
         responsive: true,
         plugins: {
-          legend: {
-            position: 'none',
-          },
-          title: {
-            display: false,
-            text: 'Chart.js Horizontal Bar Chart',
-          },
+            legend: {
+                position: 'none',
+            },
+            title: {
+                display: false,
+                text: 'Chart.js Horizontal Bar Chart',
+            },
         },
-      };
+    };
     const data = {
         labels: [],
         datasets: [
@@ -315,32 +323,61 @@ function Nfl_Team_stats() {
     }
 
     return (
-        <div className="rounded_span m-2 bg-white shadow_spans mh_display">
-            <div className="row g-0">
-                <div className="col-lg-7">
-                    <div className="title_sport bg_base_dark text-white p-1 ps-lg-5 fs-2 font_bold">
-                        <div className="row g-0">
-                            <div className="col-lg-6">Estadística de equipos de la NFL</div>
-                            <div className="col-lg-6">
-                                <div className="row g-0">
-                                    <div className="col-6 text-center">Temporada</div>
-                                    <div className="col-lg-3 d-flex align-items-center">
-                                        <select className="form-select" name="year" aria-label="Default select example" defaultValue={year} onChange={e => setyear(e.target.value)} required>
-                                            {
-                                                selectYear.map((index) => {
-                                                    return (
-                                                        <option key={index} name="year" value={index}>{index}</option>
-                                                    )
-                                                })
-                                            }
-                                        </select>
-                                    </div>
+        <div className=" m-2 bg-white shadow_spans mh_display">
+                <div className="title_sport bg_base_dark text-white p-2 font_bold">
+                    <div className="row g-0">
+                        <div className="col-lg-1 d-flex align-items-center justify-content-center fs-2">NFL</div>
+                        <div className="col-lg-2 pe-2">
+                            <div className="row g-0">
+                                <div className="col d-flex align-items-center">
+                                    <select className="form-select" name="year" aria-label="Default select example" defaultValue={year} onChange={e => setyear(e.target.value)} required>
+                                        {
+                                            selectYear.map((index) => {
+                                                return (
+                                                    <option key={index} name="year" value={index}>{index}</option>
+                                                )
+                                            })
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-2 pe-2">
+                            <div className="row g-0">
+                                <div className="col d-flex align-items-center">
+                                    <select className="form-select" name="tipo" aria-label="Default select example" defaultValue="Regular Season" onChange={e => setTypeTempo(e.target.value)} required>
+                                        {
+                                            typeTem.map((index) => {
+                                                return (
+                                                    <option key={index} name="tipo" value={index}>{index}</option>
+                                                )
+                                            })
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-2 pe-2">
+                            <div className="row g-0">
+                                <div className="col d-flex align-items-center">
+                                    <select className="form-select" name="year" aria-label="Default select example" defaultValue="League" onChange={e => setCompara(e.target.value)} required>
+                                        {
+                                            compa.map((index) => {
+                                                return (
+                                                    <option key={index} name="compa" value={index}>{index}</option>
+                                                )
+                                            })
+                                        }
+                                    </select>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            <div className="row g-0">
+                <div className="col-lg-7">
                     <div className="overflowX_scroll">
-                        <div className="row g-0 bg_lines text-white text-center odds-list">
+                        <div className="row g-0 bg_lines text-white text-center odds-list bg_azul_light">
                             <div className="quince_spans"></div>
                             <div className="eight_spans">Team</div>
                             <div className="quince_spans">W</div>
@@ -355,7 +392,7 @@ function Nfl_Team_stats() {
                             <div className="quince_spans">STRK</div>
                         </div>
                         {store.nfl_team_stats.map((item, index) => {
-                            if (item.season == year) {
+                            if (item.season == year && item.season_type == typeTempo && item.group_type_comparation ==  compara) {
                                 return (
                                     <div key={index} className="odds-list">
                                         <Football_Team_Stats

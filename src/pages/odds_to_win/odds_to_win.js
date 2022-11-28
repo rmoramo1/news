@@ -51,10 +51,10 @@ function Odds_To_Win() {
     const [drMes, setDrMes] = useState(mes_a_dt);
     return (
         <div className="container-fluid p-2">
-            <div className="rounded_span shadow_spans bg-white mh_display">
-                <div className="row g-0 text-center bg_base text-white py-2 fs-2">
+            <div className="bg-white mh_display">
+                <div className="row g-0 text-center bg_azul text-white py-2">
                     <div className="col-lg-6">
-                        <h1>Odds To Win</h1>
+                        <h2>Odds To Win</h2>
                     </div>
                     <div className="col-lg-2">
                         Año {year}

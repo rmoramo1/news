@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Context } from '../../store/appContext';
 
-export const Tipsters_Cards_Single = props => {
+export const Single_Home_Sipsters_Span = props => {
     const { store } = useContext(Context);
     let nameRJC = props.name;
     let win_NHL = 0;
@@ -15,7 +15,7 @@ export const Tipsters_Cards_Single = props => {
     let loss_NBA = 0;
     let loss_NFL = 0;
     let loss_MLB = 0;
- 
+
     store.picks_tipster.map((item) => {
         if (item.name == nameRJC && item.resultado == "Win" && item.deporte == "NHL" && item.estado != "Pending") {
             win_NHL = win_NHL + 1;
@@ -47,14 +47,38 @@ export const Tipsters_Cards_Single = props => {
     let total;
     total = win_NHL + loss_NHL + win_NBA + win_NFL + win_MLB + loss_NBA + loss_NFL + loss_MLB;
     let total_win = win_NHL + win_NBA + win_NFL + win_MLB;
+
+    let log ="text-decoration-none d-block";
+    let nolog ="text-decoration-none d-none";
+
+    let roy = store.username_temp;
+    if (!roy) {
+        log ="d-none";
+        nolog ="d-block";
+    } else {
+        log ="text-decoration-none py-1 d-block";
+        nolog ="d-none";
+
+    }
     return (
-        <Link className="text-decoration-none" to={`/tipster_perfil/${props.id}`}>
-            <div className="row g-0 shadow_spans ">
+        <div>
+            <Link className={log} to={`/tipster_perfil/${props.id}`}>
                 <div className='col-12 bg_base_dark text-white text-center'>
                     <h3>{props.name}</h3>
                 </div>
-                <div className="col-12 p-1 bb1px">
-                    {props.title}
+                <div className="col-12 p-1 ">
+                    Estadisticas:
+                </div>
+                <div className="col-12 p-1 fw-bold font_grey">
+                    <p>{total_win} Ganados de {total} publicados</p>
+                </div>
+                <div className="col-12 text-center">
+                    <button className="btn btn_gradient_light">Ver Perfil de {props.name}</button>
+                </div>
+            </Link>
+            <div className={nolog}>
+                <div className='col-12 bg_base_dark text-white text-center'>
+                    <h3>{props.name}</h3>
                 </div>
                 <div className="col-12 p-1 ">
                     Estadisticas:
@@ -63,12 +87,12 @@ export const Tipsters_Cards_Single = props => {
                     <p>{total_win} Ganados de {total} publicados</p>
                 </div>
             </div>
-        </Link>
+        </div>
 
     )
 };
 
-Tipsters_Cards_Single.propTypes = {
+Single_Home_Sipsters_Span.propTypes = {
     id: PropTypes.number,
     name: PropTypes.string,
     title: PropTypes.string,

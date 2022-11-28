@@ -114,7 +114,7 @@ function Tenista() {
 
     return (
         <div className="container-fluid p-2">
-            <div className="rounded_span shadow_spans bg-white mh_display">
+            <div className=" shadow_spans bg-white mh_display">
                 <div className="row g-0">
                     <div className="col-lg-2 border_right">
                         <div className="row g-0">

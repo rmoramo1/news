@@ -61,7 +61,7 @@ function Golf_Inicio() {
                     Tabla de Posiciones
                 </button>
             </div>
-            <div className="rounded_span shadow_spans bg-white">
+            <div className=" shadow_spans bg-white">
                 <div className="row g-0">
                     <div className="col-lg-2 border_right">
                         <div className="row g-0">

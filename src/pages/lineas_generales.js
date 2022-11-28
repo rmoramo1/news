@@ -14,6 +14,7 @@ import WNba_Games from "../display_lines/wnba/wnba_games";
 import BS_MX_Games from "../display_lines/baseball_mexico/bs_mx_games";
 import Nascar_Runs from "../display_lines/nascar/nascar_runs";
 import Moto_GP_Runs from "../display_lines/moto_gp/moto_gp_runs";
+import Odds_To_Win from "./odds_to_win/odds_to_win";
 function Lineas_Generales() {
     let roy = window.localStorage.getItem("my_token", JSON.stringify());
         if (!roy) {
@@ -23,7 +24,7 @@ function Lineas_Generales() {
     }
     return (
         <div className="container-fluid p-2" id="lineas_general">
-            <div className="rounded_span shadow_spans bg-white">
+            <div className=" shadow_spans bg-white">
                 <div className="row g-0" id="lineas_bg">
                     <div className="col-lg-2">
                         <div className="col-12 text-center">
@@ -112,6 +113,11 @@ function Lineas_Generales() {
                                 </button>
                             </div>
                         </div>
+                        <div className="col-12 text-center">
+                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ODDS_WIN" aria-expanded="true" aria-controls="ODDS_WIN">
+                                ODDS TO WIN
+                            </button>
+                        </div>
                     </div>
                     <div className="col-lg-10">
                         <div className="accordion-collapse collapse show" id="NFL_COLLAPSE" aria-labelledby="uno" data-bs-parent="#lineas_general">
@@ -155,6 +161,9 @@ function Lineas_Generales() {
                         </div>
                         <div className="accordion-collapse collapse " id="MOTO_COLLAPSE" aria-labelledby="doce" data-bs-parent="#lineas_general">
                             <Moto_GP_Runs />  
+                        </div>
+                        <div className="accordion-collapse collapse " id="ODDS_WIN" aria-labelledby="trece" data-bs-parent="#lineas_general">
+                           <Odds_To_Win/> 
                         </div>
                     </div>
                 </div>

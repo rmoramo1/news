@@ -1,9 +1,10 @@
 import React, { useContext, useState } from "react";
-import DateTime from '../../../node_modules/luxon/src/datetime.js'
 import { Context } from "../../store/appContext";
+import DateTime from '../../../node_modules/luxon/src/datetime.js'
+import { Link } from 'react-router-dom';
+import { Single_Resultados_Peleas } from '../../components/single_resultados_peleas';
 
-import { Single_MMA_Lines } from "../../lines/single_mma_lines.js";
-function MMA_Event() {
+export default function Resultados_Peleas_MMA() {
     const { store } = useContext(Context);
     const monthLux = DateTime.now().month;
     const yearLux = DateTime.now().year;
@@ -18,6 +19,7 @@ function MMA_Event() {
     const [year, setyear] = useState(yearLux);
     const [month, setmonth] = useState(monthShow);
     let R_date = month;
+
     let selectYear = [];
     for (let i = 2002; i < 2025; i++) {
         selectYear.push(i);
@@ -31,6 +33,8 @@ function MMA_Event() {
             selectMonth.push(i);
         }
     }
+
+
     let lista_eventos = [];
     let events = store.mma.map((item, index) => {
         if (lista_eventos.includes(item.event)) {
@@ -47,7 +51,7 @@ function MMA_Event() {
         <div className="bg-white mh_display">
             <div className=" title_sport bg_base_dark text-white p-1 fs-5 font_bold">
                 <div className="row g-0">
-                    <div className="col-lg-2">MMA EVENTOS</div>
+                    <div className="col-lg-2">MMA RESULTADOS</div>
                     <div className="col-lg-10">
                         <div className="row g-0">
                             <div className="col-2 text-center">Año</div>
@@ -82,23 +86,29 @@ function MMA_Event() {
                 {
                     lista_eventos.map((item_event, index) => {
                         return (
-                            <div className="col-lg-4 p-3">
+                            <div className="col-lg-6 p-3">
                                 <div className="col-12 bg_base_dark text-center text-white">
                                     {item_event}
                                 </div>
-                                <div className="col-12 maxH shadow_spans">
+                                <div className="row g-0 text-center text-white bg_azul_light">
+                                    <div className="col-3">Peleador</div>
+                                    <div className="col-3"></div>
+                                    <div className="col-3">Peleador</div>
+                                    <div className="col-3">Ganador</div>
+                                </div>
+                                <div className="col-12 maxH ">
                                     {store.mma.map((item, index) => {
                                         let mes = item.date.slice(5, 7);
                                         let ano = item.date.slice(0, 4);
                                         if (mes == R_date && ano == year && item.event == item_event) {
                                             return (
                                                 <div key={index} className="col">
-                                                    <Single_MMA_Lines
+                                                    <Single_Resultados_Peleas
                                                         id={index}
+                                                        status={item.status}
+                                                        winner={item.winner}
                                                         fighter_One={item.fighter_One}
                                                         fighter_Two={item.fighter_Two}
-                                                        money_Line_One={item.money_Line_One}
-                                                        money_Line_Two={item.money_Line_Two}
                                                     />
                                                 </div>
                                             );
@@ -109,9 +119,7 @@ function MMA_Event() {
                         )
                     })
                 }
-
             </div>
         </div>
     )
-};
-export default MMA_Event;
+}

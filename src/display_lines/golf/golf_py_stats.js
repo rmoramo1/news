@@ -26,7 +26,7 @@ function Golfer_PY_STATS() {
 
     return (
         <div className="col-12 p-2">
-            <div className="rounded_span shadow_spans bg-white mh_display">
+            <div className=" shadow_spans bg-white mh_display">
                 <div className=" title_sport bg_base_dark text-white p-1 fs-5 font_bold">
                     <div className="row g-0">
                         <div className="col-lg-2">Estadísticas de los Golfistas</div>

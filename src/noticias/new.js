@@ -24,7 +24,7 @@ export default function Noticia_Individual() {
           Titulares Principales
         </button>
       </div>
-      <div className="row m-3 rounded_span shadow_spans bg-white">
+      <div className="row m-3  shadow_spans bg-white">
         <div className="row g-0">
           <div className="col-lg-3 text-center border_right d-none d-lg-block">
             <Top_Headlines />

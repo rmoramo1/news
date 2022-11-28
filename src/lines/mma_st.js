@@ -97,7 +97,7 @@ function MMA_st() {
                     Juegos del Día
                 </button>
             </div>
-            <div className="rounded_span m-2 bg-white shadow_spans mh_display bg_light">
+            <div className=" m-2 bg-white shadow_spans mh_display bg_light">
                 <div className="row g-0">
                     <div className="col-lg-3 border_right d-none d-lg-block">
                         {noticiasFilter.map((item, index) => {

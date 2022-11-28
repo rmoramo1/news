@@ -6,8 +6,18 @@ import { Bar } from 'react-chartjs-2';
 import { NHL_Team_Stats } from "../../lines/nhl_team_stats";
 
 function NHL_Team_stats_display() {
+    let ann = new Date();
+    let ane = ann.getFullYear();
     const { store } = useContext(Context);
-    const [year, setyear] = useState("2022");
+    const [year, setyear] = useState(ane);
+
+    const [typeTempo, setTypeTempo] = useState("Regular Season");
+    const [compara, setCompara] = useState("Division")
+    let typeTem = ["Regular Season", "Preseason"];
+    let compa = ["Division","League", "Conference"];
+
+    let date = new Date();
+    let ano = date.getFullYear();
 
     ChartJS.register(
         CategoryScale,
@@ -313,32 +323,61 @@ function NHL_Team_stats_display() {
         return b.w - a.w;
     });
     return (
-        <div className="rounded_span m-2 bg-white shadow_spans mh_display">
+        <div className=" m-2 bg-white shadow_spans mh_display">
             <div className="row g-0">
-                <div className="col-lg-8">
-                    <div className="title_sport bg_base_dark text-white ps-lg-5 fs-2 font_bold">
-                        <div className="row g-0">
-                            <div className="col-lg-4">NHL Team Stadings</div>
-                            <div className="col-lg-8">
-                                <div className="row g-0">
-                                    <div className="col-3 text-center">SEASON</div>
-                                    <div className="col-lg-3 d-flex align-items-center">
-                                        <select className="form-select" name="year" aria-label="Default select example" defaultValue={year} onChange={e => setyear(e.target.value)} required>
-                                            {
-                                                selectYear.map((index) => {
-                                                    return (
-                                                        <option key={index} name="year" value={index}>{index}</option>
-                                                    )
-                                                })
-                                            }
-                                        </select>
-                                    </div>
+                <div className="title_sport bg_base_dark text-white p-2 font_bold">
+                    <div className="row g-0">
+                        <div className="col-lg-1 d-flex align-items-center justify-content-center fs-2">NHL</div>
+                        <div className="col-lg-2 pe-2">
+                            <div className="row g-0">
+                                <div className="col d-flex align-items-center">
+                                    <select className="form-select" name="year" aria-label="Default select example" defaultValue={year} onChange={e => setyear(e.target.value)} required>
+                                        {
+                                            selectYear.map((index) => {
+                                                return (
+                                                    <option key={index} name="year" value={index}>{index}</option>
+                                                )
+                                            })
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-2 pe-2">
+                            <div className="row g-0">
+                                <div className="col d-flex align-items-center">
+                                    <select className="form-select" name="tipo" aria-label="Default select example" defaultValue="Regular Season" onChange={e => setTypeTempo(e.target.value)} required>
+                                        {
+                                            typeTem.map((index) => {
+                                                return (
+                                                    <option key={index} name="tipo" value={index}>{index}</option>
+                                                )
+                                            })
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-2 pe-2">
+                            <div className="row g-0">
+                                <div className="col d-flex align-items-center">
+                                    <select className="form-select" name="year" aria-label="Default select example" defaultValue="Division" onChange={e => setCompara(e.target.value)} required>
+                                        {
+                                            compa.map((index) => {
+                                                return (
+                                                    <option key={index} name="compa" value={index}>{index}</option>
+                                                )
+                                            })
+                                        }
+                                    </select>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="col-lg-8">
                     <div className="accordion-item overflowX_scroll">
-                        <div className="row g-0 bg_lines text-white text-center odds-list">
+                        <div className="row g-0 bg_lines text-white text-center odds-list bg_azul_light">
                             <div className="diez_ocho_spans"></div>
                             <div className="diez_ocho_spans">Team</div>
                             <div className="diez_ocho_spans">GP</div>
@@ -360,7 +399,7 @@ function NHL_Team_stats_display() {
                         </div>
                         <div className="accordion-collapse collapse show" w="nba_stats_teamCollapse" data-bs-parent="#sports">
                             {nhlFilter.map((item, index) => {
-                                if (item.season == year) {
+                                if (item.season == year && item.season_type == typeTempo && item.group_type_comparation ==  compara) {
                                     return (
                                         <div key={index}>
                                             <NHL_Team_Stats
