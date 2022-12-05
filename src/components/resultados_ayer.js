@@ -60,39 +60,39 @@ export const Resultados_Carrucel = () => {
     const [sport_sort_, setsport_sort_] = useState("NBA");
     let sports = ["NFL", "NBA", "MLB", "NHL"];
 
-    let class_para_mlb = "d-none col-lg-10";
-    let class_para_nba = "d-none col-lg-10";
-    let class_para_nfl = "d-none col-lg-10";
-    let class_para_nhl = "d-none col-lg-10";
+    let class_para_mlb = "d-none col-lg-11";
+    let class_para_nba = "d-none col-lg-11";
+    let class_para_nfl = "d-none col-lg-11";
+    let class_para_nhl = "d-none col-lg-11";
     if (sport_sort_ == "MLB") {
-        class_para_mlb = "d-block col-lg-10";
-        class_para_nba = "d-none col-lg-10";
-        class_para_nfl = "d-none col-lg-10";
-        class_para_nhl = "d-none col-lg-10";
+        class_para_mlb = "d-block col-lg-11";
+        class_para_nba = "d-none col-lg-11";
+        class_para_nfl = "d-none col-lg-11";
+        class_para_nhl = "d-none col-lg-11";
     }
     if (sport_sort_ == "NBA") {
-        class_para_mlb = "d-none col-lg-10";
-        class_para_nba = "d-block col-lg-10";
-        class_para_nfl = "d-none col-lg-10";
-        class_para_nhl = "d-none col-lg-10";
+        class_para_mlb = "d-none col-lg-11";
+        class_para_nba = "d-block col-lg-11";
+        class_para_nfl = "d-none col-lg-11";
+        class_para_nhl = "d-none col-lg-11";
     }
     if (sport_sort_ == "NFL") {
-        class_para_nfl = "d-block col-lg-10";
-        class_para_mlb = "d-none col-lg-10";
-        class_para_nba = "d-none col-lg-10";
-        class_para_nhl = "d-none col-lg-10";
+        class_para_nfl = "d-block col-lg-11";
+        class_para_mlb = "d-none col-lg-11";
+        class_para_nba = "d-none col-lg-11";
+        class_para_nhl = "d-none col-lg-11";
     }
     if (sport_sort_ == "NHL") {
-        class_para_nhl = "d-block col-lg-10";
-        class_para_nfl = "d-none col-lg-10";
-        class_para_mlb = "d-none col-lg-10";
-        class_para_nba = "d-none col-lg-10";
+        class_para_nhl = "d-block col-lg-11";
+        class_para_nfl = "d-none col-lg-11";
+        class_para_mlb = "d-none col-lg-11";
+        class_para_nba = "d-none col-lg-11";
     }
 
 
     return (
-        <div className="row bg-white" id="sports">
-            <div className="col-lg-2 p-3">
+        <div className="row g-0 bg-white" id="sports">
+            <div className="col-lg-1 p-1">
                 <div className="col-12 text-center fw-bold">Resultados de Ayer</div>
                 <div className="col-12">
                     <select className="form-select" name="Day" aria-label="Default select example" defaultValue={sport_sort_} onChange={e => setsport_sort_(e.target.value)} required>

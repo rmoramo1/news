@@ -128,65 +128,67 @@ function Registro() {
                                         </div>
                                     </div>
                                     <div className="col-lg-4 p-1">
-                                        <div className="card shadow_spans p-1">
-                                            <div className="col-12">
+                                        <div className="card shadow_spans p-">
+                                            <div className="col-12 text-center  bg_light text-white">
                                                 <h3>Resgistrate</h3>
                                             </div>
-                                            <div className="col-12 my-3">
-                                                <input type="text" className="form-control selectInner" placeholder="Nombre Completo" name="Nombre" onChange={e => setname(e.target.value)} required />
-                                            </div>
-                                            <div className="col-12 my-3">
-                                                <input type="email" className="form-control selectInner" placeholder="Correo Electrónico" name="email" onChange={e => setmail(e.target.value)} required />
-                                            </div>
-                                            <div className="col-12 my-3">
-                                                <input type="text" className="form-control selectInner" placeholder="Usuario" name="Usuario" onChange={e => setuser(e.target.value)} required />
-                                            </div>
-                                            <div className="col-12 my-3">
-                                                <input type="text" className="form-control selectInner" placeholder="País" name="pais" onChange={e => setcountry(e.target.value)} required />
-                                            </div>
-                                            <div className="col-12 my-3">
-                                                <DatePicker
-                                                    dateFormat="dd/MM/yyyy"
-                                                    selected={startDate}
-                                                    peekNextMonth
-                                                    showMonthDropdown
-                                                    showYearDropdown
-                                                    dropdownMode="select"
-                                                    onChange={(date) => setStartDate(date)} />
-                                            </div>
-                                            <div className="col-12 my-3">
-                                                <input type={passwordShown ? "text" : "password"} className="form-control selectInner" placeholder="Contraseña" name="Contraseña" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" onChange={e => setpassword(e.target.value)} required />
-                                                <p className="small"></p>
-                                                <figcaption className="blockquote-footer">
-                                                    <cite title="Source Title">la contraseña requiere mayusculas, minusculas y numeros - longitud minima 8 caracteres</cite>
-                                                </figcaption>
-                                            </div>
-                                            <div className="col-12 my-3">
-                                                <input type={passwordShown ? "text" : "password"} className="form-control selectInner" placeholder="Confirme Contraseña" name="Confirme Contraseña" onChange={e => setconfirmPassword(e.target.value)} required />
-                                            </div>
-                                            <div className="col-12 my-3">
-                                                <button className="btn btn-primary" type="button" onClick={togglePassword}><i className="fa-regular fa-eye"></i></button>
-                                            </div>
-                                            <div className="row g-0" defaultValue="Cuenta Básica" onChange={onChangeSetSubscripcion} required>
-                                                <div className="col">
-                                                    <div className="form-check py-2">
-                                                        <input className="form-check-input" type="radio" name="cuenta" id="cuenta2" value="Cuenta Intermedia" />
-                                                        <label className="form-check-label" htmlFor="cuenta2">
-                                                            Cuenta Intermedia
-                                                        </label>
+                                            <div className="p-2">
+                                                <div className="col-12 my-3">
+                                                    <input type="text" className="form-control selectInner" placeholder="Nombre Completo" name="Nombre" onChange={e => setname(e.target.value)} required />
+                                                </div>
+                                                <div className="col-12 my-3">
+                                                    <input type="email" className="form-control selectInner" placeholder="Correo Electrónico" name="email" onChange={e => setmail(e.target.value)} required />
+                                                </div>
+                                                <div className="col-12 my-3">
+                                                    <input type="text" className="form-control selectInner" placeholder="Usuario" name="Usuario" onChange={e => setuser(e.target.value)} required />
+                                                </div>
+                                                <div className="col-12 my-3">
+                                                    <input type="text" className="form-control selectInner" placeholder="País" name="pais" onChange={e => setcountry(e.target.value)} required />
+                                                </div>
+                                                <div className="col-12 my-3">
+                                                    <DatePicker
+                                                        dateFormat="dd/MM/yyyy"
+                                                        selected={startDate}
+                                                        peekNextMonth
+                                                        showMonthDropdown
+                                                        showYearDropdown
+                                                        dropdownMode="select"
+                                                        onChange={(date) => setStartDate(date)} />
+                                                </div>
+                                                <div className="col-12 my-3">
+                                                    <input type={passwordShown ? "text" : "password"} className="form-control selectInner" placeholder="Contraseña" name="Contraseña" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" onChange={e => setpassword(e.target.value)} required />
+                                                    <p className="small"></p>
+                                                    <figcaption className="blockquote-footer">
+                                                        <cite title="Source Title">la contraseña requiere mayusculas, minusculas y numeros - longitud minima 8 caracteres</cite>
+                                                    </figcaption>
+                                                </div>
+                                                <div className="col-12 my-3">
+                                                    <input type={passwordShown ? "text" : "password"} className="form-control selectInner" placeholder="Confirme Contraseña" name="Confirme Contraseña" onChange={e => setconfirmPassword(e.target.value)} required />
+                                                </div>
+                                                <div className="col-12 my-3">
+                                                    <button className="btn btn-primary" type="button" onClick={togglePassword}><i className="fa-regular fa-eye"></i></button>
+                                                </div>
+                                                <div className="row g-0" defaultValue="Cuenta Básica" onChange={onChangeSetSubscripcion} required>
+                                                    <div className="col">
+                                                        <div className="form-check py-2">
+                                                            <input className="form-check-input" type="radio" name="cuenta" id="cuenta2" value="Cuenta Intermedia" />
+                                                            <label className="form-check-label" htmlFor="cuenta2">
+                                                                Cuenta Intermedia
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div className="col">
+                                                        <div className="form-check py-2">
+                                                            <input className="form-check-input" type="radio" name="cuenta" id="cuenta3" value="Cuenta Premium" />
+                                                            <label className="form-check-label" htmlFor="cuenta3">
+                                                                Cuenta Premium
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div className="col">
-                                                    <div className="form-check py-2">
-                                                        <input className="form-check-input" type="radio" name="cuenta" id="cuenta3" value="Cuenta Premium" />
-                                                        <label className="form-check-label" htmlFor="cuenta3">
-                                                            Cuenta Premium
-                                                        </label>
-                                                    </div>
+                                                <div className="col-12 text-center py-3">
+                                                    <button id="btnSub" type="submit" className="btn btn-danger" disabled>Crear</button>
                                                 </div>
-                                            </div>
-                                            <div className="col-12 text-center py-3">
-                                                <button id="btnSub" type="submit" className="btn btn-danger" disabled>Crear</button>
                                             </div>
                                         </div>
                                     </div>

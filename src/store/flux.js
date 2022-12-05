@@ -117,7 +117,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			//user
 			user: async () => {
-				const url = "https://isn365.herokuapp.com/user";
+				const url = "https://isn-365.herokuapp.com/user";
 				const response = await fetch(url);
 				const results = await response.json();
 				setStore({ user: results });
@@ -534,13 +534,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			//perfil_tipster
 			load_perfil_tipster: async () => {
-				const url = "https://isn365.herokuapp.com/perfil_tipster";
+				const url = "https://isn-365.herokuapp.com/perfil_tipster";
 				const response = await fetch(url);
 				const results = await response.json();
 				setStore({ perfil_tipster: results });
 			},
 			load_picks_tipster: async () => {
-				const url = "https://isn365.herokuapp.com/picks_tipster";
+				const url = "https://isn-365.herokuapp.com/picks_tipster";
 				const response = await fetch(url);
 				const results = await response.json();
 				setStore({ picks_tipster: results });

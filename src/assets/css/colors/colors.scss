@@ -5,7 +5,7 @@ $azul:#0177cc;
 
 $text:$azul;
 $orange:#ff2410;
-$azul_dark:darken($text, 20) ;
+$azul_dark:darken($azul, 20) ;
 $orange_light:lighten(#ff2410,15) ;
 $grey:rgb(75, 75, 75);
 
@@ -16,6 +16,6 @@ $pending:#21aede;
 /*GRADIENTES*/
 $gradient_w_g: linear-gradient(to bottom, $white 0%,darken($white,20) 80%);
 $gradient_w_g_reverse: linear-gradient(to bottom, darken($white,20) 0%,$white 80%);
-$azul_to_white: linear-gradient(135deg, $black 0%,$azul_dark 70%);
+$azul_to_dark: linear-gradient(to top, $azul 0%,$azul_dark 70%);
 $btn_gradient: linear-gradient(to bottom, $orange 0%,darken($orange,30) 70%);
 $btn_gradient_reverse: linear-gradient(to bottom, darken($orange,30) 0%, $orange 70%);

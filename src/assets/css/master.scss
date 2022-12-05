@@ -16,7 +16,9 @@ body {
 .bg_base_dark {
   background: darken($azul, 20);
 }
-
+.bg_gadient_dark{
+  background: $azul_to_dark;
+}
 .bg_light {
   background: $orange;
 }

@@ -1,12 +1,8 @@
-import { Link } from "react-router-dom";
-import { HashLink } from 'react-router-hash-link';
 import { Helmet } from "react-helmet";
-import React, { useState, useEffect, useContext } from "react";
-import { Context } from "../store/appContext";
+import React, { useEffect, useContext } from "react";
 import AOS from "aos";
 import "../../node_modules/aos/dist/aos.css";
 /*componentes*/
-import { Resultados_Carrucel } from "../components/resultados_ayer";
 import { Noticias_Para_Desplegar } from "../noticias/noticias_para desplegar";
 import { Stadings_Home_Btns } from "../components/stadings_home_btns";
 import { Top_Headlines } from "../components/top_headlines";
@@ -20,26 +16,24 @@ import { Eventos } from "../components/eventos";
 export const config = { amp: true }
 
 function Home() {
-	const { store, actions } = useContext(Context);
 	useEffect(() => {
 		AOS.init({ duration: 1500 });
 	}, []);
 	return (
 		<div className="container-fluid p-2">
-			<div className="container-fluid  shadow_spans my-1">
-				<Resultados_Carrucel />
-			</div>
 			<div className="row g-0 mt-2" id="accordion_general">
 				<div className="col-12 d-block d-lg-none">
-					<button className="btn btn_orange" type="button" data-bs-toggle="offcanvas" data-bs-target="#Titulares_principales" aria-controls="Titulares_principales">
-						TiTulares Principales
-					</button>
-					<button className="btn float-end col-6 btn_orange" type="button" data-bs-toggle="offcanvas" data-bs-target="#Lineas_Off_Can" aria-controls="Lineas_Off_Can">
-						Lineas
-					</button>
-					<button className="btn col-12 btn_orange mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#Juegos_dia" aria-controls="Juegos_dia">
-						Juegos del Día
-					</button>
+					<div className="row g-0">
+						<button className="btn btn_orange col-6" type="button" data-bs-toggle="offcanvas" data-bs-target="#Titulares_principales" aria-controls="Titulares_principales">
+							Titulares Principales
+						</button>
+						<button className="btn float-end col-6 btn_orange" type="button" data-bs-toggle="offcanvas" data-bs-target="#Lineas_Off_Can" aria-controls="Lineas_Off_Can">
+							Lineas
+						</button>
+						<button className="btn col-12 btn_orange mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#Juegos_dia" aria-controls="Juegos_dia">
+							Juegos del Día
+						</button>
+					</div>
 				</div>
 				<div className="col-lg-2 p-1">
 					<div className="col-12  shadow_spans bg-white d-none d-lg-block"><Top_Headlines /> </div>

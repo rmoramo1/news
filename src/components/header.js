@@ -3,7 +3,11 @@ import { Context } from "../store/appContext";
 import logo_2 from '../assets/img/logo_v2.2.png';
 import { Link } from "react-router-dom";
 import { Menu_Movil } from "./menu_movil";
-import Caroucel_Juegos from "./caroucel_juegos";
+import { Resultados_Carrucel } from "../components/resultados_ayer";
+import promo from "../assets/img/promo.jpg";
+import promo_2 from "../assets/img/promo_2.jpg";
+import promo_3 from "../assets/img/promo_3.jpg";
+import promo_4 from "../assets/img/promo_4.jpg";
 export const Header = () => {
     const { store } = useContext(Context);
     const { actions } = useContext(Context);
@@ -23,7 +27,7 @@ export const Header = () => {
         e.preventDefault();
         const body = { user: user, password: password };
 
-        fetch("https://isn365.herokuapp.com/login", {
+        fetch("https://ins-365.herokuapp.com/login", {
             method: "POST",
             body: JSON.stringify(body),
             headers: { "Content-Type": "application/json" }
@@ -61,7 +65,7 @@ export const Header = () => {
     } else {
         btn = "d-block col-1 float-left";
         reg = "d-none";
-        lineas = "list-inline-item ul-drop px-3";
+        lineas = "list-inline-item ul-drop px-";
         form = "d-none";
         enlace = "li_drop";
         perfil = "fw-bold d-flex justify-content-center align-items-center col-1";
@@ -74,10 +78,10 @@ export const Header = () => {
                         <img src={logo_2} alt="logo of the site" className="img-fluid"></img>
                     </Link>
                 </div>
-                <div className="col-lg-7">
-                    <Caroucel_Juegos />
+                <div className="col-lg-10">
+                    <Resultados_Carrucel />
                 </div>
-                <div className="col-lg-3 py-1">
+                {/* <div className="col-lg-3 py-1">
                     <div className="row g-0">
                         <div className="col-12">
                             <form className={form} onSubmit={enviar} id="loginForm">
@@ -98,7 +102,7 @@ export const Header = () => {
                                             />
                                         </div>
                                     </div>
-                                    <div className="col-6 p-1">
+                                    <div className="col-6">
                                         <div className="input-group shadow">
                                             <span className="input-group-text" id="Contraseña">
                                                 <i className="fas fa-key" />
@@ -169,14 +173,14 @@ export const Header = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="col-12 bg_light text-white d-none d-lg-block fs-5">
-                    <div className="container">
-                        <div className="row g-0">
-                            <div className="col-lg-12">
+                    <div className="container-fluid">
+                        <div className="row g-0 justify-content-center align-items-center">
+                            <div className="col-lg-8">
                                 <ul className="list-unstyled list-inline col-12 m-0 ">
-                                    <li className="list-inline-item ul-drop px-3">NFL <i className="fa-solid fa-football"></i>
+                                    <li className="list-inline-item ul-drop px-1">NFL <i className="fa-solid fa-football"></i>
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
                                                 <Link className="text-decoration-none" to="/nfl_inicio">
@@ -210,7 +214,7 @@ export const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li className="list-inline-item ul-drop px-3">NBA <i className="fa-solid fa-basketball"></i>
+                                    <li className="list-inline-item ul-drop px-">NBA <i className="fa-solid fa-basketball"></i>
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
                                                 <Link to="/nba_inicio" className="text-decoration-none">
@@ -244,7 +248,7 @@ export const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li className="list-inline-item ul-drop px-3">MLB <i className="fa-solid fa-baseball-bat-ball"></i>
+                                    <li className="list-inline-item ul-drop px-">MLB <i className="fa-solid fa-baseball-bat-ball"></i>
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
                                                 <Link to="/mlb_inicio" className="text-decoration-none">
@@ -278,7 +282,7 @@ export const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li className="list-inline-item ul-drop px-3">NHL <i className="fa-solid fa-hockey-puck"></i>
+                                    <li className="list-inline-item ul-drop px-">NHL <i className="fa-solid fa-hockey-puck"></i>
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
                                                 <Link to="/nhl_inicio" className="text-decoration-none">
@@ -312,7 +316,7 @@ export const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li className="list-inline-item ul-drop px-3">SOCCER <i className="fa-solid fa-futbol"></i>
+                                    <li className="list-inline-item ul-drop px-">SOCCER <i className="fa-solid fa-futbol"></i>
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
                                                 <Link to="/soccer_inicio" className="text-decoration-none">
@@ -331,7 +335,7 @@ export const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li className="list-inline-item ul-drop px-3">MMA <i className="fa-solid fa-hand-fist"></i>
+                                    <li className="list-inline-item ul-drop px-">MMA <i className="fa-solid fa-hand-fist"></i>
                                         <ul className="text-start rounded shadow_spans">
                                             <li className="li_drop">
                                                 <Link to="/mma_inicio" className="text-decoration-none">
@@ -355,7 +359,7 @@ export const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li className="list-inline-item ul-drop px-3">
+                                    <li className="list-inline-item ul-drop px-">
                                         <Link to="/#" className="text-decoration-none text-white">
                                             PODCAST <i className="fa-solid fa-microphone"></i>
                                         </Link>
@@ -365,13 +369,13 @@ export const Header = () => {
                                             LINEAS <i className="fa-solid fa-ranking-star"></i>
                                         </Link>
                                     </li>
-                                    {/* <li className="d-inline list-inline-item ul-drop px-3"> */}
+                                    {/* <li className="d-inline list-inline-item ul-drop px-"> */}
                                     <li className={lineas}>
                                         <Link to="/tipsters_cards" className="text-decoration-none text-white">
                                             TIPSTERS <i className="fa-solid fa-address-book"></i>
                                         </Link>
                                     </li>
-                                    <li className="list-inline-item ul-drop-2 px-3">
+                                    <li className="list-inline-item ul-drop-2 px-">
                                         <i className="fa-solid fa-bars"></i>
                                         <div className="row g-0 rounded shadow_spans drop_span bg-white">
                                             <div className="col-4">
@@ -441,11 +445,184 @@ export const Header = () => {
                                     </li>
                                 </ul>
                             </div>
+                            <div className="col-lg-4">
+                                <form className={form} onSubmit={enviar} id="loginForm">
+                                    <div className="row g-0">
+                                        <div className="col-3 p-1">
+                                            <input
+                                                id="user"
+                                                onChange={e => setuser(e.target.value)}
+                                                name="user"
+                                                type="text"
+                                                className="form-control "
+                                                placeholder="Usuario"
+                                                aria-label="Usuario"
+                                                aria-describedby="Usuario"
+
+                                            />
+                                        </div>
+                                        <div className="col-3 p-1">
+                                            <div className="input-group shadow">
+                                                <input
+                                                    type="password"
+                                                    onChange={e => setPassword(e.target.value)}
+                                                    id="password"
+                                                    name="password"
+                                                    className="form-control "
+                                                    placeholder="Contraseña"
+                                                    aria-label="pass"
+                                                    aria-describedby="Contraseña"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="col-3 p-1">
+                                            <button type="submit" className="btn btn_gradient col-12">
+                                                Ingresar
+                                            </button>
+                                        </div>
+                                        <div className="col-3 p-1">
+                                            <Link to="/registro" className={reg}>
+                                                Registro
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div className="row g-0 justify-content-center align-items-center">
+                                    <div className={perfil}>
+                                        <Link to="/perfil" className="text-decoration-none text-white">
+                                            {store.username_temp}
+                                        </Link>
+                                    </div>
+                                    <div className={btn} id="btnLogOut">
+                                        <a href="#" onClick={refrescar} className="text-white ps-3 fs-3">
+                                            <span>
+                                                <i className="fas fa-sign-out-alt" />
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div className="col-12 bg_light text-white d-block d-lg-none">
+                    <div className="col-lg-3">
+                        <form className={form} onSubmit={enviar} id="loginForm">
+                            <div className="row g-0">
+                                <div className="col-6 p-1">
+                                    <input
+                                        id="user"
+                                        onChange={e => setuser(e.target.value)}
+                                        name="user"
+                                        type="text"
+                                        className="form-control "
+                                        placeholder="Usuario"
+                                        aria-label="Usuario"
+                                        aria-describedby="Usuario"
+
+                                    />
+                                </div>
+                                <div className="col-6 p-1">
+                                    <div className="input-group shadow">
+                                        <input
+                                            type="password"
+                                            onChange={e => setPassword(e.target.value)}
+                                            id="password"
+                                            name="password"
+                                            className="form-control "
+                                            placeholder="Contraseña"
+                                            aria-label="pass"
+                                            aria-describedby="Contraseña"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="col-6 p-1">
+                                    <button type="submit" className="btn btn_gradient col-12">
+                                        Ingresar
+                                    </button>
+                                </div>
+                                <div className="col-6 p-1">
+                                    <Link to="/registro" className={reg}>
+                                        Registro
+                                    </Link>
+                                </div>
+                            </div>
+                        </form>
+                        <div className="row g-0 justify-content-center align-items-center">
+                            <div className={perfil}>
+                                <Link to="/perfil" className="text-decoration-none text-white">
+                                    {store.username_temp}
+                                </Link>
+                            </div>
+                            <div className={btn} id="btnLogOut">
+                                <a href="#" onClick={refrescar} className="text-white ps-3 fs-3">
+                                    <span>
+                                        <i className="fas fa-sign-out-alt" />
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <Menu_Movil />
+                </div>
+            </div>
+            <div className="col-12">
+                <div className="row g-0">
+                    <div className="col-lg-9">
+                        <div className="row g-0">
+                            <div className="col-lg-6">
+                                <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+                                    <div className="carousel-inner">
+                                        <div className="carousel-item active">
+                                            <img src={promo} className="d-block w-100" alt="..." />
+                                        </div>
+                                        <div className="carousel-item">
+                                            <img src={promo_3} className="d-block w-100" alt="..." />
+                                        </div>
+                                        <div className="carousel-item">
+                                            <img src={promo_2} className="d-block w-100" alt="..." />
+                                        </div>
+                                        <div className="carousel-item">
+                                            <img src={promo_4} className="d-block w-100" alt="..." />
+                                        </div>
+                                    </div>
+                                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Previous</span>
+                                    </button>
+                                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div className="col-lg-6 p-2 p-lg-0 px-lg-4 d-flex justify-content-center align-items-center">
+                                <input
+                                    type="text"
+                                    onChange={e => setPassword(e.target.value)}
+                                    id="busqueda"
+                                    name="busqueda"
+                                    className="form-control "
+                                    placeholder="Busqueda de Equipo"
+                                    aria-label="pass"
+                                    aria-describedby="Busqueda de Equipo"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-3 bg_gadient_dark text-center">
+                        <a className="text-white fs-4 text-decoration-none" href="#">
+                            <div className="row g-0">
+                                <div className="col-6 d-flex justify-content-center align-items-center">
+                                    Muro <i className="fa-solid fa-earth-americas"></i>
+                                </div>
+                                <div className="col-6 fs-5">
+                                    <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
