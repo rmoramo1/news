@@ -6,20 +6,20 @@ import { Result_Quarters_Hockey } from "./result_quarters_hockey";
 function NHL_All_Data() {
 
     const [estados, setEstados] = useState("NHL");
-    if (estados === "NHL") {
+    if (estados == "NHL") {
         var NHL = "d-block";
         var NHL_F5_s = "d-none";
         var NHL_Extra = "d-none";
         var NHL_thre_q = "d-none";
         var NHL_four_q = "d-none";
     }
-    if (estados === "1H") {
+    if (estados == "1H") {
         NHL_F5_s = "d-block";
         NHL = "d-none";
         NHL_Extra = "d-none";
         NHL_thre_q = "d-none";
     }
-    if (estados === "2H") {
+    if (estados == "2H") {
         NHL_Extra = "d-block";
         NHL_F5_s = "d-none";
         NHL = "d-none";

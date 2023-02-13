@@ -14,22 +14,28 @@ export const Menu_Movil = () => {
             <div className="col-12 text-end">
                 <div className="row g-0">
                     <div className="col-8 d-flex align-items-center">
-                        <div className="row g-0 w-100">
-                            <div className="col">
+                        <div className="row g-0 w-100 fs-1">
+                            {/* <div className="col">
                                 <i className="fa-brands fa-facebook-f"></i>
+                            </div> */}
+                            <div className="col">
+                                <a className="text-white" href="https://twitter.com/isn_365" target="_blank">
+                                    <i className="fa-brands fa-twitter"></i>
+                                </a>
                             </div>
                             <div className="col">
-                                <i className="fa-brands fa-twitter"></i>
+                                <a className="text-white" href="https://www.instagram.com/isn_365/" target="_blank">
+                                    <i className="fa-brands fa-instagram"></i>
+                                </a>
                             </div>
                             <div className="col">
-                                <i className="fa-brands fa-instagram"></i>
+                            <a className="text-white" href="https://www.youtube.com/channel/UCti5xshPxUn8E4FHVBBwBEQ" target="_blank">
+                            <i className="fa-brands fa-youtube"></i>
+                                </a>
                             </div>
-                            <div className="col">
-                                <i className="fa-brands fa-youtube"></i>
-                            </div>
-                            <div className="col">
+                            {/* <div className="col">
                                 <i className="fa-brands fa-reddit-alien"></i>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="col-4 p-3">

@@ -58,7 +58,6 @@ export const Single_Home_Sipsters_Span = props => {
     } else {
         log ="text-decoration-none py-1 d-block";
         nolog ="d-none";
-
     }
     return (
         <div>

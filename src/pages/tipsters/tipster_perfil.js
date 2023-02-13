@@ -146,7 +146,7 @@ function Tipster_Perfil() {
                     <div className="overflowX_scroll">
                         {
                             store.picks_tipster.map((item, index) => {
-                                if (item.name === nameRJC && item.estado != "Pending") {
+                                if (item.name == nameRJC && item.estado != "Pending") {
                                     return (
                                         <Historial_Tipsters
                                             key={index}

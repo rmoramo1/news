@@ -14,7 +14,7 @@ export const Resultados_Carrucel = () => {
     if (mostrar_ayer == "01") {
         mes_actual = fecha.getMonth();
     }
-    
+
     if (mostrar_ayer < 10) {
         mostrar_ayer = "0" + mostrar_ayer;
     }
@@ -89,7 +89,30 @@ export const Resultados_Carrucel = () => {
         class_para_nba = "d-none col-lg-11";
     }
 
-
+    let onclick = () => {
+        document.getElementById('scroll_over').scrollLeft -= 300;
+    };
+    let onclickLNBA = () => {
+        document.getElementById('scroll_over').scrollLeft += 300;
+    };
+    let onclickMLBR = () => {
+        document.getElementById('scroll_overMLB').scrollLeft -= 300;
+    };
+    let onclickMLBL = () => {
+        document.getElementById('scroll_overMLB').scrollLeft += 300;
+    };
+    let onclickNFLR = () => {
+        document.getElementById('scroll_overNFL').scrollLeft -= 300;
+    };
+    let onclickNFLL = () => {
+        document.getElementById('scroll_overNFL').scrollLeft += 300;
+    };
+    let onclickNHLR = () => {
+        document.getElementById('scroll_overNHL').scrollLeft -= 300;
+    };
+    let onclickNHLL = () => {
+        document.getElementById('scroll_overNHL').scrollLeft += 300;
+    };
     return (
         <div className="row g-0 bg-white" id="sports">
             <div className="col-lg-1 p-1">
@@ -107,92 +130,108 @@ export const Resultados_Carrucel = () => {
                 </div>
             </div>
             <div className={class_para_mlb}>
-                <div className="scroll_over display_en_linea col-12">
+                <div id="scroll_overMLB" className="scroll_over display_en_linea col-12">
                     {
                         teamFilter.map((item, index) => {
-                            let compara_day = year + "-" + mes_a_dt + "-" + mostrar_ayer;
-                            if (item.date == compara_day) {
-                                return (
-                                    <div className="campo_resultado" key={index}>
-                                        <Single_Resultados
-                                            status={item.status}
-                                            away={item.away}
-                                            home={item.home}
-                                            final_score_away={item.final_score_away}
-                                            final_score_home={item.final_score_home}
-                                        />
-                                    </div>
-                                )
+                            if (index < 120) {
+                                let compara_day = year + "-" + mes_a_dt + "-" + mostrar_ayer;
+                                if (item.date == compara_day) {
+                                    return (
+                                        <div className="campo_resultado" key={index}>
+                                            <Single_Resultados
+                                                status={item.status}
+                                                away={item.away}
+                                                home={item.home}
+                                                final_score_away={item.final_score_away}
+                                                final_score_home={item.final_score_home}
+                                            />
+                                        </div>
+                                    )
+                                }
                             }
                         })
                     }
                 </div>
+                <button className="btn d-none d-lg-block btn_left" type="button" onClick={onclickMLBL}><i className="fa-solid fa-chevron-left"></i></button>
+                <button className="btn d-none d-lg-block btn_right" type="button" onClick={onclickMLBR}><i className="fa-solid fa-chevron-right"></i></button>
             </div>
             <div className={class_para_nba}>
-                <div className="scroll_over display_en_linea col-12">
+                <div id="scroll_over" className="scroll_over display_en_linea col-12">
                     {
                         teamFilter_nba_games.map((item, index) => {
-                            let compara_day = year + "-" + mes_a_dt + "-" + mostrar_ayer;
-                            if (item.date == compara_day) {
-                                return (
-                                    <div className="campo_resultado" key={index}>
-                                        <Single_Resultados
-                                            status={item.status}
-                                            away={item.away}
-                                            home={item.home}
-                                            final_score_away={item.final_score_away}
-                                            final_score_home={item.final_score_home}
-                                        />
-                                    </div>
-                                )
+                            if (index < 120) {
+                                let compara_day = year + "-" + mes_a_dt + "-" + mostrar_ayer;
+                                if (item.date == compara_day) {
+                                    return (
+                                        <div className="campo_resultado" key={index}>
+                                            <Single_Resultados
+                                                status={item.status}
+                                                away={item.away}
+                                                home={item.home}
+                                                final_score_away={item.final_score_away}
+                                                final_score_home={item.final_score_home}
+                                            />
+                                        </div>
+                                    )
+                                }
                             }
                         })
                     }
                 </div>
+                <button className="btn d-none d-lg-block btn_left" type="button" onClick={onclickLNBA}><i className="fa-solid fa-chevron-left"></i></button>
+                <button className="btn d-none d-lg-block btn_right" type="button" onClick={onclick}><i className="fa-solid fa-chevron-right"></i></button>
             </div>
-            <div className={class_para_nfl}>
+            <div id="scroll_overNFL" className={class_para_nfl}>
                 <div className="scroll_over display_en_linea col-12">
                     {
                         teamFilter_nfl.map((item, index) => {
-                            let compara_day = year + "-" + mes_a_dt + "-" + mostrar_ayer;
-                            if (item.date == compara_day) {
-                                return (
-                                    <div className="campo_resultado" key={index}>
-                                        <Single_Resultados
-                                            status={item.status}
-                                            away={item.away}
-                                            home={item.home}
-                                            final_score_away={item.final_score_away}
-                                            final_score_home={item.final_score_home}
-                                        />
-                                    </div>
-                                )
+                            if (index < 120) {
+                                let compara_day = year + "-" + mes_a_dt + "-" + mostrar_ayer;
+                                if (item.date == compara_day) {
+                                    return (
+                                        <div className="campo_resultado" key={index}>
+                                            <Single_Resultados
+                                                status={item.status}
+                                                away={item.away}
+                                                home={item.home}
+                                                final_score_away={item.final_score_away}
+                                                final_score_home={item.final_score_home}
+                                            />
+                                        </div>
+                                    )
+                                }
                             }
                         })
                     }
                 </div>
+                <button className="btn d-none d-lg-block btn_left" type="button" onClick={onclickNFLL}><i className="fa-solid fa-chevron-left"></i></button>
+                <button className="btn d-none d-lg-block btn_right" type="button" onClick={onclickNFLR}><i className="fa-solid fa-chevron-right"></i></button>
             </div>
             <div className={class_para_nhl}>
-                <div className="scroll_over display_en_linea col-12">
+                <div id="scroll_overNHL" className="scroll_over display_en_linea col-12">
                     {
                         teamFilter_nhl.map((item, index) => {
-                            let compara_day = year + "-" + mes_a_dt + "-" + mostrar_ayer;
-                            if (item.date == compara_day) {
-                                return (
-                                    <div className="campo_resultado" key={index}>
-                                        <Single_Resultados
-                                            status={item.status}
-                                            away={item.away}
-                                            home={item.home}
-                                            final_score_away={item.final_score_away}
-                                            final_score_home={item.final_score_home}
-                                        />
-                                    </div>
-                                )
+                            if (index < 120) {
+                                let compara_day = year + "-" + mes_a_dt + "-" + mostrar_ayer;
+                                if (item.date == compara_day) {
+                                    return (
+                                        <div className="campo_resultado" key={index}>
+                                            <Single_Resultados
+                                                status={item.status}
+                                                away={item.away}
+                                                home={item.home}
+                                                final_score_away={item.final_score_away}
+                                                final_score_home={item.final_score_home}
+                                            />
+                                        </div>
+                                    )
+                                }
                             }
                         })
                     }
                 </div>
+                <button className="btn d-none d-lg-block btn_left" type="button" onClick={onclickNHLR}><i className="fa-solid fa-chevron-left"></i></button>
+                <button className="btn d-none d-lg-block btn_right" type="button" onClick={onclickNHLL}><i className="fa-solid fa-chevron-right"></i></button>
             </div>
         </div>
     )

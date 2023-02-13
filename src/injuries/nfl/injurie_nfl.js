@@ -6,7 +6,7 @@ export default function Injurie_Nfl() {
     const { store } = useContext(Context);
     let year = new Date();
     let ano = year.getFullYear();
-    console.log(ano)
+
     let mes = year.getMonth() + 1;
 
     let monthShow = [];

@@ -10,7 +10,7 @@ import { WNBA_Two_q } from "./wnba_two_q";
 function WNBA_All_Data() {
 
     const [estados, setEstados] = useState("WNBA");
-    if (estados === "WNBA") {
+    if (estados == "WNBA") {
         var WNBA = "d-block";
         var NBA_1half_sp = "d-none";
         var NBA_2half_sp = "d-none";
@@ -19,7 +19,7 @@ function WNBA_All_Data() {
         var NBA_one_q_s = "d-none";
         var NBA_Two_q_s = "d-none";
     }
-    if (estados === "1H") {
+    if (estados == "1H") {
         NBA_1half_sp = "d-block";
         WNBA = "d-none";
         NBA_2half_sp = "d-none";
@@ -28,7 +28,7 @@ function WNBA_All_Data() {
         NBA_one_q_s = "d-none";
         NBA_Two_q_s = "d-none";
     }
-    if (estados === "2H") {
+    if (estados == "2H") {
         NBA_2half_sp = "d-block";
         NBA_1half_sp = "d-none";
         WNBA = "d-none";
@@ -37,7 +37,7 @@ function WNBA_All_Data() {
         NBA_one_q_s = "d-none";
         NBA_Two_q_s = "d-none";
     }
-    if (estados === "3Q") {
+    if (estados == "3Q") {
         NBA_thre_q = "d-block";
         NBA_2half_sp = "d-none";
         NBA_1half_sp = "d-none";
@@ -46,7 +46,7 @@ function WNBA_All_Data() {
         NBA_one_q_s = "d-none";
         NBA_Two_q_s = "d-none";
     }
-    if (estados === "4Q") {
+    if (estados == "4Q") {
         NBA_four_q = "d-block";
         NBA_thre_q = "d-none";
         NBA_2half_sp = "d-none";
@@ -55,7 +55,7 @@ function WNBA_All_Data() {
         NBA_one_q_s = "d-none";
         NBA_Two_q_s = "d-none";
     }
-    if (estados === "1Q") {
+    if (estados == "1Q") {
         NBA_one_q_s = "d-block";
         NBA_four_q = "d-none";
         NBA_thre_q = "d-none";
@@ -64,7 +64,7 @@ function WNBA_All_Data() {
         WNBA = "d-none";
         NBA_Two_q_s = "d-none";
     }
-    if (estados === "2Q") {
+    if (estados == "2Q") {
         NBA_Two_q_s = "d-block";
         NBA_one_q_s = "d-none";
         NBA_four_q = "d-none";

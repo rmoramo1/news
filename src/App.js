@@ -21,7 +21,7 @@ const Punting_Player_Stats = lazy(() => import('./lines/nfl_py_stats/punting_py'
 const Kicking_Player_Stats = lazy(() => import('./lines/nfl_py_stats/kicking_py'));
 const Nfl_All_Data = lazy(() => import('./display_lines/nfl/nfl_all_data'));
 const Nfl_Team_stats = lazy(() => import('./display_lines/nfl/nfl_team_stats'));
-const Single_Injurie = lazy(()=>import('./injuries/nfl/injurie_nfl'));
+const Single_Injurie = lazy(() => import('./injuries/nfl/injurie_nfl'));
 /*nba*/
 const NBA_Inicio = lazy(() => import('./pages/nba/nba_inicio'));
 const Results_NBA = lazy(() => import('./display_lines/nba/results_nba'));
@@ -30,13 +30,13 @@ const NBA_Player_Stats = lazy(() => import('./lines/nba_py_st'));
 const NBA_All_Data = lazy(() => import('./display_lines/nba/nba_all_data'));
 const Nba_Games = lazy(() => import('./display_lines/nba/nba_games'));
 const NBA_Team_stats_display = lazy(() => import('./display_lines/nba/nba_team_stats'));
-const Injurie_Nba = lazy(()=>import('./injuries/nba/injurie_nba'));
+const Injurie_Nba = lazy(() => import('./injuries/nba/injurie_nba'));
 //wnba
-const WNBA_Inicio = lazy(()=>import('./pages/wnba/wnba_inicio'));
-const WNBA_All_Data = lazy(()=>import('./display_lines/wnba/wnba_all_data'));
-const WNBA_Team_stats_display =lazy(()=>import('./display_lines/wnba/wnba_team_stats'));
-const Jugadores_WNBA = lazy(()=>import('./pages/wnba/jugadores_wnba'));
-const WNBA_Player_Stats = lazy(()=>import('./lines/wnba_py_st'));
+const WNBA_Inicio = lazy(() => import('./pages/wnba/wnba_inicio'));
+const WNBA_All_Data = lazy(() => import('./display_lines/wnba/wnba_all_data'));
+const WNBA_Team_stats_display = lazy(() => import('./display_lines/wnba/wnba_team_stats'));
+const Jugadores_WNBA = lazy(() => import('./pages/wnba/jugadores_wnba'));
+const WNBA_Player_Stats = lazy(() => import('./lines/wnba_py_st'));
 /*MLB */
 const MLB_Inicio = lazy(() => import('./pages/mlb/mlb_inicio'));
 const Results_MLB = lazy(() => import('./display_lines/mlb/results_mlb'));
@@ -45,13 +45,13 @@ const Mlb_py_st = lazy(() => import('./lines/mlb_py_st'));
 const MLB_All_Data = lazy(() => import('./display_lines/mlb/mlb_all_data'));
 const MLB_Games = lazy(() => import('./display_lines/mlb/mbl_games'));
 const MLB_Team_stats_display = lazy(() => import('./display_lines/mlb/mlb_team_stats'));
-const Injurie_MLB = lazy(()=>import('./injuries/mlb/injurie_mlb'));
+const Injurie_MLB = lazy(() => import('./injuries/mlb/injurie_mlb'));
 // base ball mexico
-const Bs_Mexico_Inicio = lazy (()=>import('./pages/baseball_mexico/bs_mexico_inicio'));
-const BS_MX_All_Data = lazy(()=>import('./display_lines/baseball_mexico/bs_mx__all_data'));
-const BS_MX_Team_stats_display = lazy(()=>import('./display_lines/baseball_mexico/bs_mx_team_stats_display'));
-const Jugadores_BS_MX = lazy(()=>import('./pages/baseball_mexico/jugadores_baseball_mexico'));
-const BS_MX_py_st = lazy(()=>import('./lines/bs_mx_py_st'));
+const Bs_Mexico_Inicio = lazy(() => import('./pages/baseball_mexico/bs_mexico_inicio'));
+const BS_MX_All_Data = lazy(() => import('./display_lines/baseball_mexico/bs_mx__all_data'));
+const BS_MX_Team_stats_display = lazy(() => import('./display_lines/baseball_mexico/bs_mx_team_stats_display'));
+const Jugadores_BS_MX = lazy(() => import('./pages/baseball_mexico/jugadores_baseball_mexico'));
+const BS_MX_py_st = lazy(() => import('./lines/bs_mx_py_st'));
 /*nhl */
 const NHL_Inicio = lazy(() => import('./pages/nhl/nhl_inicio'));
 const Results_NHL = lazy(() => import('./display_lines/hockey/results_nhl'));
@@ -60,17 +60,17 @@ const NHL_py_st = lazy(() => import('./lines/nhl_py_st'));
 const NHL_All_Data = lazy(() => import('./display_lines/hockey/nhl_all_data'));
 const NHL_Games = lazy(() => import('./display_lines/hockey/nhl_games'));
 const NHL_Team_stats_display = lazy(() => import('./display_lines/hockey/nhl_team_stats'));
-const Injurie_NHL = lazy(()=>import('./injuries/nhl/injurie_nhl'));
+const Injurie_NHL = lazy(() => import('./injuries/nhl/injurie_nhl'));
 // soccer
-const Soccer_Inicio = lazy(()=>import('./pages/soccer/soccer_inicio'));
-const Soccer_All_Data =lazy(()=>import('./display_lines/soccer/soccer_all_data'));
+const Soccer_Inicio = lazy(() => import('./pages/soccer/soccer_inicio'));
+const Soccer_All_Data = lazy(() => import('./display_lines/soccer/soccer_all_data'));
 /*mma */
 const MMA_Inicio = lazy(() => import('./pages/mma/mma_inicio'));
 const MMA_PY_STATS = lazy(() => import('./display_lines/mma/mma_py_stats'));
 const MMA_lines = lazy(() => import('./lines/mma_lines'));
 const MMA_st = lazy(() => import('./lines/mma_st'));
 const MMA_Event = lazy(() => import('./display_lines/mma/mma_fight'));
-const Resultados_Peleas_MMA = lazy(()=>import('./pages/mma/resultados_peleas_mma'));
+const Resultados_Peleas_MMA = lazy(() => import('./pages/mma/resultados_peleas_mma'));
 /*box */
 const BOXING_Inicio = lazy(() => import('./pages/boxing/boxing_inicio'));
 const Boxer_PY_STATS = lazy(() => import('./display_lines/box/boxer_py_stats'));
@@ -94,38 +94,38 @@ const Jugadores_NCAA_Basket = lazy(() => import('./pages/ncaa_basket/jugadores_n
 const NCAA_BASKET_Player_Stats = lazy(() => import('./lines/ncaa_basket_py'));
 const Ncaa_Basket_All_Data = lazy(() => import('./display_lines/ncaa_basket/ncaa_basketball_all_data'));
 /*ncaa baseball */
-const NCAA_BASEBALL_Inicio = lazy(()=>import('./pages/ncaa_baseball/ncaa_baseball_inicio'));
-const NCAA_BASEBALL_Team_stats_display = lazy(()=>import('./display_lines/ncaa_baseball/ncaa_baseball_team_stats'));
+const NCAA_BASEBALL_Inicio = lazy(() => import('./pages/ncaa_baseball/ncaa_baseball_inicio'));
+const NCAA_BASEBALL_Team_stats_display = lazy(() => import('./display_lines/ncaa_baseball/ncaa_baseball_team_stats'));
 const Ncaa_Baseball_py_st = lazy(() => import('./lines/ncaa_baseball_py_st'));
-const Jugadores_NCAA_Baseball = lazy(()=>import('./pages/ncaa_baseball/jugadores_ncaa_baseball'));
+const Jugadores_NCAA_Baseball = lazy(() => import('./pages/ncaa_baseball/jugadores_ncaa_baseball'));
 const NCAA_BASEBALL_All_Data = lazy(() => import('./display_lines/ncaa_baseball/ncaa_baseball_all_data'));
 /*golf */
 const Golf_Inicio = lazy(() => import('./pages/golf/golf_inicio'));
 const Golfer_st = lazy(() => import('./lines/golfer_st'));
 const Golf_Event = lazy(() => import('./lines/golf_event'));
 const GOLF_Games = lazy(() => import('./display_lines/golf/golf_games'));
-const Golfer_PY_STATS = lazy(()=>import('./display_lines/golf/golf_py_stats'));
+const Golfer_PY_STATS = lazy(() => import('./display_lines/golf/golf_py_stats'));
 // tenis
-const Tennis_Inicio = lazy(()=>import('./pages/tennis/tennis_inicio'));
-const Tennis_Games = lazy (()=>import('./display_lines/tennis/tennis_games'));
-const Tennis_event = lazy(()=>import('./lines/tennis_event'));
-const Tennista_STATS = lazy(()=>import('./display_lines/tennis/tennista_stats'));
-const Tenista = lazy(()=>import('./lines/tenista'));
+const Tennis_Inicio = lazy(() => import('./pages/tennis/tennis_inicio'));
+const Tennis_Games = lazy(() => import('./display_lines/tennis/tennis_games'));
+const Tennis_event = lazy(() => import('./lines/tennis_event'));
+const Tennista_STATS = lazy(() => import('./display_lines/tennis/tennista_stats'));
+const Tenista = lazy(() => import('./lines/tenista'));
 /*nascar */
-const Nascar_Inicio = lazy(()=>import('./pages/nascar/nascar_inicio'));
+const Nascar_Inicio = lazy(() => import('./pages/nascar/nascar_inicio'));
 const Nascar_Driver_Stats = lazy(() => import('./lines/nascar_driver_st'));
 const Nascar_Race = lazy(() => import('./lines/nascar_race'));
 const Nascar_Runs = lazy(() => import('./display_lines/nascar/nascar_runs'));
-const NASCAR_PY_STATS = lazy(()=>import('./display_lines/nascar/nascar_py_stats'));
+const NASCAR_PY_STATS = lazy(() => import('./display_lines/nascar/nascar_py_stats'));
 /*moto */
-const Moto_GP_Inicio = lazy(()=>import('./pages/moto_gp/moto_gp_inicio'));
+const Moto_GP_Inicio = lazy(() => import('./pages/moto_gp/moto_gp_inicio'));
 const Moto_GP_PY_STATS = lazy(() => import('./lines/moto_gp_driver_st'));
 const Moto_GP_Race = lazy(() => import('./lines/moto_gp_race'));
 const Moto_GP_Runs = lazy(() => import('./display_lines/moto_gp/moto_gp_runs'));
 /*soccer */
 const SOCCER_py_st = lazy(() => import('./lines/soccer_py_st'));
-const Soccer_Team_stats_display = lazy(()=>import('./display_lines/soccer/soccer_team_stats'));
-const Results_SOCCER = lazy(()=>import('./display_lines/soccer/results_soccer'));
+const Soccer_Team_stats_display = lazy(() => import('./display_lines/soccer/soccer_team_stats'));
+const Results_SOCCER = lazy(() => import('./display_lines/soccer/results_soccer'));
 /*noticias */
 const Noticia_Individual = lazy(() => import('./noticias/new'));
 /* odds */
@@ -134,15 +134,18 @@ const Odd_View = lazy(() => import('./pages/odds_to_win/odd_view'));
 /*erroer*/
 const Error = lazy(() => import('./pages/404'));
 // lineas generales
-const Lineas_Generales =lazy(()=>import('./pages/lineas_generales'));
+const Lineas_Generales = lazy(() => import('./pages/lineas_generales'));
 // registro
-const Registro = lazy(()=>import('./pages/registro'));
+const Registro = lazy(() => import('./pages/registro'));
 //perfil
-const Perfil = lazy(()=>import('./pages/perfil'));
+const Perfil = lazy(() => import('./pages/perfil'));
 // tipsters
-const Tipsters_Cards = lazy(()=>import('./pages/tipsters/tipsters_cards'));
-const Tipster_Perfil =lazy(()=>import('./pages/tipsters/tipster_perfil'));
+const Tipsters_Cards = lazy(() => import('./pages/tipsters/tipsters_cards'));
+const Tipster_Perfil = lazy(() => import('./pages/tipsters/tipster_perfil'));
+//muro
+const Muro = lazy(() => import('./pages/muro'));
 function App() {
+
 	return (
 		<div className="App">
 			<BrowserRouter>
@@ -285,6 +288,7 @@ function App() {
 						<Route path="/perfil" component={Perfil} />
 						<Route path="/tipsters_cards" component={Tipsters_Cards} />
 						<Route path="/tipster_perfil/:theid" component={Tipster_Perfil} />
+						<Route path="/muro" component={Muro} />
 						<Route>
 							<Error />
 						</Route>

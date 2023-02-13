@@ -12,7 +12,7 @@ export const Single_Resultados_Peleas = props => {
                     <div className="col-3">{props.fighter_One}</div>
                     <div className="col-3">VRS</div>
                     <div className="col-3">{props.fighter_Two}</div>
-                    <div className="col-3">{props.winner}</div>
+                    <div className="col-3 text-danger">{props.winner}</div>
                 </div>
             </Link>
         </div>

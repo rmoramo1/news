@@ -54,25 +54,25 @@ export const Games_of_Day = props => {
     let class_display_nfl;
     let class_display_mlb;
     let class_display_nhl;
-    if (display === "NBA") {
+    if (display == "NBA") {
         class_display_nba = "d-block";
         class_display_nfl = "d-none";
         class_display_mlb = "d-none";
         class_display_nhl = "d-none";
     }
-    if (display === "NFL") {
+    if (display == "NFL") {
         class_display_nfl = "d-block";
         class_display_nba = "d-none";
         class_display_mlb = "d-none";
         class_display_nhl = "d-none";
     }
-    if (display === "MLB") {
+    if (display == "MLB") {
         class_display_mlb = "d-block";
         class_display_nfl = "d-none";
         class_display_nba = "d-none";
         class_display_nhl = "d-none";
     }
-    if (display === "NHL") {
+    if (display == "NHL") {
         class_display_nhl = "d-block";
         class_display_mlb = "d-none";
         class_display_nfl = "d-none";

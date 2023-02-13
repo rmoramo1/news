@@ -88,7 +88,7 @@ function Results_NBA() {
                                     <div className="row g-0">
                                         <div className="col-2 text-center">Year</div>
                                         <div className="col-lg-2 d-flex align-items-center">
-                                            <select className="form-select" name="week" aria-label="Default select example" defaultValue={year} onChange={e => setyear(e.target.value)} required>
+                                            <select className="form-select" multiple={false} name="week" aria-label="Default select example" value={year} onChange={e => setyear(e.target.value)} required>
                                                 {
                                                     selectYear.map((index) => {
                                                         return (
@@ -100,7 +100,7 @@ function Results_NBA() {
                                         </div>
                                         <div className="col-2 text-center">Month</div>
                                         <div className="col-lg-2 d-flex align-items-center">
-                                            <select className="form-select" name="month" aria-label="Default select example" defaultValue={month} onChange={e => setmonth(e.target.value)} required>
+                                            <select className="form-select" multiple={false} name="month" aria-label="Default select example" value={month} onChange={e => setmonth(e.target.value)} required>
                                                 {
                                                     selectMonth.map((index) => {
                                                         return (

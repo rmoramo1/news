@@ -98,10 +98,10 @@ export default function Noticia_Individual() {
               </p>
               <div className="row g-0">
                 <div className={video_sp_1}>
-                  <iframe width="100%" height="315" src={store.noticias[params.theid] && store.noticias[params.theid].video_1} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="100%" height="315" src={store.noticias[params.theid] && store.noticias[params.theid].video_1} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div className={video_sp_2}>
-                  <iframe width="100%" height="315" src={store.noticias[params.theid] && store.noticias[params.theid].video_2} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="100%" height="315" src={store.noticias[params.theid] && store.noticias[params.theid].video_2} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
             </div>

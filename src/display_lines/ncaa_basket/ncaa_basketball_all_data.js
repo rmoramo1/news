@@ -11,7 +11,7 @@ import { NCAA_BASKET_Two_q } from "./ncaa_basket_two_q";
 function Ncaa_Basket_All_Data() {
 
     const [estados, setEstados] = useState("NBA");
-    if (estados === "NBA") {
+    if (estados == "NBA") {
         var NBA = "d-block";
         var NBA_1half_sp = "d-none";
         var NBA_2half_sp = "d-none";
@@ -20,7 +20,7 @@ function Ncaa_Basket_All_Data() {
         var NBA_one_q_s = "d-none";
         var NBA_Two_q_s = "d-none";
     }
-    if (estados === "1H") {
+    if (estados == "1H") {
         NBA_1half_sp = "d-block";
         NBA = "d-none";
         NBA_2half_sp = "d-none";
@@ -29,7 +29,7 @@ function Ncaa_Basket_All_Data() {
         NBA_one_q_s = "d-none";
         NBA_Two_q_s = "d-none";
     }
-    if (estados === "2H") {
+    if (estados == "2H") {
         NBA_2half_sp = "d-block";
         NBA_1half_sp = "d-none";
         NBA = "d-none";
@@ -38,7 +38,7 @@ function Ncaa_Basket_All_Data() {
         NBA_one_q_s = "d-none";
         NBA_Two_q_s = "d-none";
     }
-    if (estados === "3Q") {
+    if (estados == "3Q") {
         NBA_thre_q = "d-block";
         NBA_2half_sp = "d-none";
         NBA_1half_sp = "d-none";
@@ -47,7 +47,7 @@ function Ncaa_Basket_All_Data() {
         NBA_one_q_s = "d-none";
         NBA_Two_q_s = "d-none";
     }
-    if (estados === "4Q") {
+    if (estados == "4Q") {
         NBA_four_q = "d-block";
         NBA_thre_q = "d-none";
         NBA_2half_sp = "d-none";
@@ -56,7 +56,7 @@ function Ncaa_Basket_All_Data() {
         NBA_one_q_s = "d-none";
         NBA_Two_q_s = "d-none";
     }
-    if (estados === "1Q") {
+    if (estados == "1Q") {
         NBA_one_q_s = "d-block";
         NBA_four_q = "d-none";
         NBA_thre_q = "d-none";
@@ -65,7 +65,7 @@ function Ncaa_Basket_All_Data() {
         NBA = "d-none";
         NBA_Two_q_s = "d-none";
     }
-    if (estados === "2Q") {
+    if (estados == "2Q") {
         NBA_Two_q_s = "d-block";
         NBA_one_q_s = "d-none";
         NBA_four_q = "d-none";

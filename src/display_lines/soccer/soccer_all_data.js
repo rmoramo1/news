@@ -6,20 +6,20 @@ import Soccer_Halfs from './soccer_halfs';
 function Soccer_All_Data() {
 
     const [estados, setEstados] = useState("SOCCER");
-    if (estados === "SOCCER") {
+    if (estados == "SOCCER") {
         var SOCCER = "d-block";
         var NHL_F5_s = "d-none";
         var NHL_Extra = "d-none";
         var NHL_thre_q = "d-none";
         var NHL_four_q = "d-none";
     }
-    if (estados === "1H") {
+    if (estados == "1H") {
         NHL_F5_s = "d-block";
         SOCCER = "d-none";
         NHL_Extra = "d-none";
         NHL_thre_q = "d-none";
     }
-    if (estados === "2H") {
+    if (estados == "2H") {
         NHL_Extra = "d-block";
         NHL_F5_s = "d-none";
         SOCCER = "d-none";

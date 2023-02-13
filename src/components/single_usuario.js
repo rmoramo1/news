@@ -51,56 +51,56 @@ export const Single_Usuario = props => {
 	}
 	const handleArticulos = (e) => {
 		const target = e.target;
-		const value = target.type === 'checkbox' ? target.checked : target.value;
+		const value = target.type == 'checkbox' ? target.checked : target.value;
 		toSend.SportsCasinoHorses = value;
 
 	}
 	const promoVipPerHead = (e) => {
 		const target = e.target;
-		const value = target.type === 'checkbox' ? target.checked : target.value;
+		const value = target.type == 'checkbox' ? target.checked : target.value;
 		toSend.LiveBettin = value;
 
 	}
 	const bonoSportsbbok = (e) => {
 		const target = e.target;
-		const value = target.type === 'checkbox' ? target.checked : target.value;
+		const value = target.type == 'checkbox' ? target.checked : target.value;
 		toSend.LiveBettin = value;
 
 	}
 	const alertLesiones = (e) => {
 		const target = e.target;
-		const value = target.type === 'checkbox' ? target.checked : target.value;
+		const value = target.type == 'checkbox' ? target.checked : target.value;
 		toSend.LiveCasino = value;
 
 	}
 	const alertResultados = (e) => {
 		const target = e.target;
-		const value = target.type === 'checkbox' ? target.checked : target.value;
+		const value = target.type == 'checkbox' ? target.checked : target.value;
 		toSend.DynamicBetting = value;
 	}
 	const equiposNFL = (e) => {
 		const target = e.target;
-		const value = target.type === 'checkbox' ? target.checked : target.value;
+		const value = target.type == 'checkbox' ? target.checked : target.value;
 		toSend.equipos_nfl.push(target.value)
 	}
 	const equiposNBA = (e) => {
 		const target = e.target;
-		const value = target.type === 'checkbox' ? target.checked : target.value;
+		const value = target.type == 'checkbox' ? target.checked : target.value;
 		toSend.equipos_nba.push(target.value)
 	}
 	const equiposMLB = (e) => {
 		const target = e.target;
-		const value = target.type === 'checkbox' ? target.checked : target.value;
+		const value = target.type == 'checkbox' ? target.checked : target.value;
 		toSend.equipos_mlb.push(target.value)
 	}
 	const equiposNHL = (e) => {
 		const target = e.target;
-		const value = target.type === 'checkbox' ? target.checked : target.value;
+		const value = target.type == 'checkbox' ? target.checked : target.value;
 		toSend.equipos_nhl.push(target.value)
 	}
 	const handlePropBuilder = (e) => {
 		const target = e.target;
-		const value = target.type === 'checkbox' ? target.checked : target.value;
+		const value = target.type == 'checkbox' ? target.checked : target.value;
 		toSend.PropBuilder = value;
 
 	}
@@ -112,14 +112,9 @@ export const Single_Usuario = props => {
 			<div className="col-12 text-center mt-3">
 				<h1>Bienvenido {props.name} </h1>
 			</div>
-			<div className="col-12 my-5">
-				<p>
-					Why bother with the movement of the train, their high heels like polished hooves against the gray metal of the room where Case waited. The semiotics of the previous century. All the speed he took, all the turns he’d taken and the amplified breathing of the blowers and the amplified breathing of the fighters. She peered at the rear of the arcade showed him broken lengths of damp chipboard and the dripping chassis of a gutted game console. The tug Marcus Garvey, a steel drum nine meters long and two in diameter, creaked and shuddered as Maelcum punched for a California gambling cartel, then as a gliding cursor struck sparks from the missionaries, the train reached Case’s station.
 
-				</p>
-			</div>
 			<div className="row g-0 text-start">
-				<div className="col-lg-10 ">
+				<div className="col-lg-12">
 					<div className="row fs-3">
 						<div className="col-12">Nombre: {props.name}</div>
 						<div className="col-12">Usuario: {props.user}</div>
@@ -129,7 +124,7 @@ export const Single_Usuario = props => {
 						<div className="col-12">Tipo de Subscripción: {props.subscription}</div>
 					</div>
 					<div className="col-12 py-5">
-						<p>Its hands were holograms that altered to match the convolutions of the Flatline as a construct, a hardwired ROM cassette replicating a dead man’s skills, obsessions, kneejerk responses. Images formed and reformed: a flickering montage of the Sprawl’s towers and ragged Fuller domes
+						<p>A continuación podrá encontrar todas las opciones a las que puede acceder desde ISN365. Estas opciones se ofrecen de acuerdo a su membresía. Podrá escoger y seleccionar los diferentes accesos de os cuáles obtendrá una mayor cantidad de contenido.
 						</p>
 					</div>
 					<div className="col-12">
@@ -280,19 +275,13 @@ export const Single_Usuario = props => {
 
 									</div>
 								</div>
-								<div className="col-12 text-end py-5">
+								<div className="col-12 text-center py-5">
 									<button className="btn btn_gradient" type="submit">Enviar</button>
 								</div>
 							</div>
 						</form>
 					</div>
 				</div>
-				<div className="col-lg-2">
-					<div className="col-12 py-2">
-						<img className="img-fluid" src={imge} alt="imagen de perfil"></img>
-					</div>
-				</div>
-
 			</div>
 		</div>
 	)

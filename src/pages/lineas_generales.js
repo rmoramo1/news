@@ -1,5 +1,3 @@
-import react from "react";
-
 import Nba_Games from "../display_lines/nba/nba_games";
 import Nfl_Games from "../display_lines/nfl/nfl_games";
 import MLB_Games from "../display_lines/mlb/mbl_games";
@@ -17,7 +15,7 @@ import Moto_GP_Runs from "../display_lines/moto_gp/moto_gp_runs";
 import Odds_To_Win from "./odds_to_win/odds_to_win";
 function Lineas_Generales() {
     let roy = window.localStorage.getItem("my_token", JSON.stringify());
-        if (!roy) {
+    if (!roy) {
         window.location.href = '/';
     } else {
 
@@ -43,7 +41,7 @@ function Lineas_Generales() {
                         </div>
                         <div className="col-12 text-center">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#BASKKETT_COLLA" aria-expanded="false" aria-controls="BASKKETT_COLLA">
-                                BASKET
+                                BASKETBALL
                             </button>
                             <div className="collapse" id="BASKKETT_COLLA" aria-labelledby="2" data-bs-parent="#lineas_bg">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#NBA_COLLAPSE" aria-expanded="true" aria-controls="NBA_COLLAPSE">
@@ -87,7 +85,7 @@ function Lineas_Generales() {
                         </div>
                         <div className="col-12 text-center">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#PELEAS" aria-expanded="false" aria-controls="PELEAS">
-                                PELEAS
+                            DEPORTE DE CONBATE
                             </button>
                             <div className="collapse" id="PELEAS" aria-labelledby="3" data-bs-parent="#lineas_bg">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#MMA_COLLAPSE" aria-expanded="true" aria-controls="MMA_COLLAPSE">
@@ -154,16 +152,16 @@ function Lineas_Generales() {
                             <WNba_Games />
                         </div>
                         <div className="accordion-collapse collapse " id="bs_mx" aria-labelledby="onze" data-bs-parent="#lineas_general">
-                            <BS_MX_Games /> 
+                            <BS_MX_Games />
                         </div>
                         <div className="accordion-collapse collapse " id="Nascar_COLLAPSE" aria-labelledby="doce" data-bs-parent="#lineas_general">
-                            <Nascar_Runs />  
+                            <Nascar_Runs />
                         </div>
                         <div className="accordion-collapse collapse " id="MOTO_COLLAPSE" aria-labelledby="doce" data-bs-parent="#lineas_general">
-                            <Moto_GP_Runs />  
+                            <Moto_GP_Runs />
                         </div>
                         <div className="accordion-collapse collapse " id="ODDS_WIN" aria-labelledby="trece" data-bs-parent="#lineas_general">
-                           <Odds_To_Win/> 
+                            <Odds_To_Win />
                         </div>
                     </div>
                 </div>

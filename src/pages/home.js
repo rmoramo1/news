@@ -12,7 +12,6 @@ import { Lines_Span_Home } from "../components/lines_span_home";
 import { Eventos } from "../components/eventos";
 //acordion
 
-
 export const config = { amp: true }
 
 function Home() {
@@ -42,7 +41,7 @@ function Home() {
 					<div className="col-12  shadow_spans bg-white mt-2 d-none d-lg-block"><Eventos /></div>
 				</div>
 				<div className="col-lg-7 p-1">
-					<div className="col-12  shadow_spans bg-white ">
+					<div className="col-12 shadow_spans bg-white">
 						<Noticias_Para_Desplegar />
 					</div>
 				</div>

@@ -10,26 +10,26 @@ import { Extra_Inning_NCAA_BASEBALL } from "./extra_inning_ncaa_baseball";
 function NCAA_BASEBALL_All_Data() {
 
     const [estados, setEstados] = useState("MLB");
-    if (estados === "MLB") {
+    if (estados == "MLB") {
         var MLB = "d-block";
         var MLB_F5_s = "d-none";
         var MLB_Extra = "d-none";
         var MLB_thre_q = "d-none";
         var MLB_four_q = "d-none";
     }
-    if (estados === "1H") {
+    if (estados == "1H") {
         MLB_F5_s = "d-block";
         MLB = "d-none";
         MLB_Extra = "d-none";
         MLB_thre_q = "d-none";
     }
-    if (estados === "2H") {
+    if (estados == "2H") {
         MLB_Extra = "d-block";
         MLB_F5_s = "d-none";
         MLB = "d-none";
         MLB_thre_q = "d-none";
     }
-    if (estados === "3Q") {
+    if (estados == "3Q") {
         MLB_thre_q = "d-block";
         MLB_Extra = "d-none";
         MLB_F5_s = "d-none";

@@ -11,7 +11,7 @@ import { Ncaa_Football_Games } from "./ncaa_football_games";
 function NCAA_Football_All_Data() {
 
     const [estados, setEstados] = useState("NFL");
-    if (estados === "NFL") {
+    if (estados == "NFL") {
         var NFL = "d-block";
         var nfl_1half = "d-none";
         var nfl_2half = "d-none";
@@ -20,7 +20,7 @@ function NCAA_Football_All_Data() {
         var nfl_one_q = "d-none";
         var nfl_two_q = "d-none";
     }
-    if (estados === "1H") {
+    if (estados == "1H") {
         nfl_1half = "d-block";
         NFL = "d-none";
         nfl_2half = "d-none";
@@ -29,7 +29,7 @@ function NCAA_Football_All_Data() {
         nfl_one_q = "d-none";
         nfl_two_q = "d-none";
     }
-    if (estados === "2H") {
+    if (estados == "2H") {
         nfl_2half = "d-block";
         nfl_1half = "d-none";
         NFL = "d-none";
@@ -38,7 +38,7 @@ function NCAA_Football_All_Data() {
         nfl_one_q = "d-none";
         nfl_two_q = "d-none";
     }
-    if (estados === "3Q") {
+    if (estados == "3Q") {
         nfl_thre_q = "d-block";
         nfl_2half = "d-none";
         nfl_1half = "d-none";
@@ -47,7 +47,7 @@ function NCAA_Football_All_Data() {
         nfl_two_q = "d-none";
         nfl_one_q = "d-none";
     }
-    if (estados === "4Q") {
+    if (estados == "4Q") {
         nfl_four_q = "d-block";
         nfl_thre_q = "d-none";
         nfl_2half = "d-none";
@@ -56,7 +56,7 @@ function NCAA_Football_All_Data() {
         nfl_one_q = "d-none";
         nfl_two_q = "d-none";
     }
-    if (estados === "1Q") {
+    if (estados == "1Q") {
         nfl_one_q = "d-block";
         nfl_four_q = "d-none";
         nfl_thre_q = "d-none";
@@ -65,7 +65,7 @@ function NCAA_Football_All_Data() {
         NFL = "d-none";
         nfl_two_q = "d-none";
     }
-    if (estados === "2Q") {
+    if (estados == "2Q") {
         nfl_two_q = "d-block";
         nfl_one_q = "d-none";
         nfl_four_q = "d-none";

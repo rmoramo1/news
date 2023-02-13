@@ -3,7 +3,9 @@ body {
   background: darken($azul, 20);
   font-family: 'Roboto', sans-serif;
 }
-
+.mx-hv-100{
+  max-height: 100vh;
+}
 //backgrounds
 .bg_base {
   background-color: $azul;
@@ -109,5 +111,20 @@ body {
 
 .offcanvas {
   height: 100vh;
+}
 
+
+@media only screen and (max-width: 600px) {
+  #search_input{
+    .offcanvas {
+      height: 100vh;
+      background: $white;
+    }
+  }
+}
+#search_input{
+  .offcanvas {
+    height: 85vh;
+    background: $white;
+  }
 }

@@ -32,10 +32,16 @@
     background: $orange;
     border-radius: 5px;
     box-shadow: 0 0 5px $black;
-    color:$white;
-    border: 1px dotted $white;
+    color: $white;
+    border: 1px inset lighten($orange, 20);
 }
-.btn_muro{
 
+.btn_left,
+.btn_right {
+    position: absolute;
+    top: 3.8vh;
+}
 
+.btn_right {
+    left: 96%;
 }

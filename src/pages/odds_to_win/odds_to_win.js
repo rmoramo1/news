@@ -84,7 +84,7 @@ function Odds_To_Win() {
                 </div>
                 <div className="row g-0">
                     {odds_to_win_Filter.map((item, index) => {
-                        console.log(item.sport)
+          
                         if (item.sport == drSoprts && item.date.slice(0, 4) == year && item.date.slice(5, 7) == drMes) {
                             return (
                                 <div key={index} className="col-lg-3 p-2">
